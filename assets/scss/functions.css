@@ -1,0 +1,139 @@
+:root {
+  --base-max-width:1920;
+  --base-pc-width:1540;
+  --base-sp-width:400;
+  --vwPC: calc(100vw / 1540);
+  --vwSP: calc(100vw / 400);
+  --easeInQuad:cubic-bezier(.55, .085, .68, .53);
+  --easeOutQuad:cubic-bezier(0.23, 1, 0.32, 1);
+  --easeOutQuint:cubic-bezier(.25, .46, .45, .94);
+  --easeOutSine:cubic-bezier(0.39, 0.575, 0.565, 1);
+  --easeOutCubic:cubic-bezier(0.215, 0.61, 0.355, 1);
+  --easeInOutQuad:cubic-bezier(0.45, 0, 0.55, 1);
+  --easeInOutCubic:cubic-bezier(0.65, 0, 0.35, 1);
+  --easePopUp:cubic-bezier(0.17, 0.88, 0.30, 1.28);
+  --easeInCirc:cubic-bezier(0.55, 0, 1, 0.45);
+  --theme-color:#b93937;
+  --base-text-color:#000;
+  --base-bg-color:#e8ebed;
+  --base-bg-color02:#eeeeee;
+  --base-bg-color03:#c3ced5;
+  --base-color-blue:#0064b4;
+  --base-color-black:#000;
+  --base-color-white:#fff;
+  --base-color-white02:#f1f3f4;
+  --base-color-gray:#888;
+  --base-color-gray02:#777;
+  --base-color-gray03:#8a979f;
+  --base-border-color:#000;
+  --hanten:scale(-1, -1);
+  --hantenX:scale(-1, 1);
+  --hantenY:scaleY(-1);
+  --transition-scale:transform 0.8s var(--easeOutCubic);
+  --delay: 0s; }
+
+:root {
+  --head-mt:150px; }
+
+@media screen and (max-width: 800px) {
+  :root {
+    --head-mt:120px; } }
+@media screen and (min-width: 801px) {
+  :root {
+    --vwPC: calc(100vw / 1540);
+    --fz8: max(.8rem, 8px);
+    --fz9: max(.9rem, 9px);
+    --fz10: max(1rem, 9px);
+    --fz11: max(1.1rem, 10px);
+    --fz12: max(1.2rem, 11px);
+    --fz13: max(1.3rem, 12px);
+    --fz14: max(1.4rem, 12px);
+    --fz15: max(1.5rem, 13px);
+    --fz16: max(1.6rem, 14px);
+    --fz17: max(1.7rem, 15px);
+    --fz18: max(1.8rem, 16px);
+    --fz19: max(1.9rem, 17px);
+    --fz20: max(2.0rem, 18px);
+    --fz21: max(2.1rem, 18px);
+    --fz22: max(2.2rem, 18px);
+    --fz23: max(2.3rem, 20px);
+    --fz24: max(2.4rem, 20px);
+    --fz25: max(2.5rem, 21px);
+    --fz26: max(2.6rem, 22px);
+    --fz27: max(2.7rem, 23px);
+    --fz28: max(2.8rem, 24px);
+    --fz29: max(2.9rem, 25px);
+    --fz30: max(3rem, 26px);
+    --fz32: max(3.2rem, 28px);
+    --fz33: max(3.3rem, 29px);
+    --fz34: max(3.4rem, 30px);
+    --fz35: max(3.5rem, 31px);
+    --fz36: max(3.6rem, 32px);
+    --fz37: max(3.7rem, 33px);
+    --fz38: max(3.8rem, 34px);
+    --fz39: max(3.9rem, 35px);
+    --fz40: max(4rem, 36px);
+    --fz41: max(4.1rem, 37px);
+    --fz42: max(4.2rem, 38px);
+    --fz44: max(4.4rem, 40px);
+    --fz45: max(4.5rem, 41px);
+    --fz46: max(4.6rem, 42px);
+    --fz48: max(4.8rem, 44px);
+    --fz50: max(5rem, 48px);
+    --fz52: max(5.2rem, 48px);
+    --fz54: max(5.4rem, 50px);
+    --fz55: max(5.5rem, 51px);
+    --fz56: max(5.6rem, 52px);
+    --fz58: max(5.8rem, 54px);
+    --fz59: max(5.9rem, 55px);
+    --fz60: max(6rem, 56px);
+    --fz64: max(6.4rem, 60px);
+    --fz72: max(7.2rem, 68px);
+    --fz78: max(7.8rem, 74px);
+    --fz96: max(9.6rem, 90px); } }
+@media screen and (max-width: 800px) {
+  :root {
+    --vwSP: calc(100vw / 375);
+    --fz7: clamp(.7rem, calc(7 * var(--vwSP)), .9rem);
+    --fz8: clamp(.8rem, calc(8 * var(--vwSP)), 1rem);
+    --fz9: clamp(.9rem, calc(9 * var(--vwSP)), 1.1rem);
+    --fz10: clamp(1rem, calc(10 * var(--vwSP)), 1.2rem);
+    --fz11: clamp(1.1rem, calc(11 * var(--vwSP)), 1.3rem);
+    --fz12: clamp(1.2rem, calc(12 * var(--vwSP)), 1.4rem);
+    --fz13: clamp(1.3rem, calc(13 * var(--vwSP)), 1.4rem);
+    --fz14: clamp(1.4rem, calc(14 * var(--vwSP)), 1.6rem);
+    --fz15: clamp(1.5rem, calc(15 * var(--vwSP)), 1.7rem);
+    --fz16: clamp(1.6rem, calc(16 * var(--vwSP)), 1.8rem);
+    --fz17: clamp(1.7rem, calc(17 * var(--vwSP)), 1.9rem);
+    --fz18: clamp(1.8rem, calc(18 * var(--vwSP)), 2rem);
+    --fz19: clamp(1.9rem, calc(19 * var(--vwSP)), 2.1rem);
+    --fz20: clamp(2rem, calc(20 * var(--vwSP)), 2.2rem);
+    --fz21: clamp(2.1rem, calc(21 * var(--vwSP)), 2.3rem);
+    --fz22: clamp(2.2rem, calc(22 * var(--vwSP)), 2.4rem);
+    --fz23: clamp(2.3rem, calc(23 * var(--vwSP)), 2.5rem);
+    --fz24: clamp(2.4rem, calc(24 * var(--vwSP)), 2.6rem);
+    --fz25: clamp(2.5rem, calc(25 * var(--vwSP)), 2.7rem);
+    --fz26: clamp(2.6rem, calc(26 * var(--vwSP)), 2.8rem);
+    --fz27: clamp(2.7rem, calc(27 * var(--vwSP)), 2.9rem);
+    --fz28: clamp(2.8rem, calc(28 * var(--vwSP)), 3rem);
+    --fz30: clamp(3rem, calc(30 * var(--vwSP)), 3.2rem);
+    --fz31: clamp(3.1rem, calc(31 * var(--vwSP)), 3.3rem);
+    --fz32: clamp(3.2rem, calc(32 * var(--vwSP)), 3.5rem);
+    --fz33: clamp(3.3rem, calc(33 * var(--vwSP)), 3.5rem);
+    --fz34: clamp(3.4rem, calc(34 * var(--vwSP)), 3.7rem);
+    --fz35: clamp(3.5rem, calc(35 * var(--vwSP)), 3.9rem);
+    --fz37: clamp(3.7rem, calc(37 * var(--vwSP)), 4.1rem);
+    --fz36: clamp(3.6rem, calc(36 * var(--vwSP)), 4rem);
+    --fz38: clamp(3.8rem, calc(38 * var(--vwSP)), 4.2rem);
+    --fz40: clamp(4rem, calc(40 * var(--vwSP)), 4.4rem);
+    --fz42: clamp(4.2rem, calc(42 * var(--vwSP)), 4.6rem);
+    --fz44: clamp(4.4rem, calc(44 * var(--vwSP)), 4.8rem);
+    --fz45: clamp(4.5rem, calc(45 * var(--vwSP)), 4.9rem);
+    --fz47: clamp(4.7rem, calc(47 * var(--vwSP)), 5.1rem);
+    --fz48: clamp(4.8rem, calc(48 * var(--vwSP)), 5.2rem);
+    --fz49: clamp(4.9rem, calc(49 * var(--vwSP)), 5.3rem);
+    --fz51: clamp(5.1rem, calc(51 * var(--vwSP)), 5.6rem);
+    --fz56: clamp(5.6rem, calc(56 * var(--vwSP)), 6rem);
+    --fz64: clamp(6.4rem, calc(64 * var(--vwSP)), 6.8rem); } }
+
+/*# sourceMappingURL=functions.css.map */

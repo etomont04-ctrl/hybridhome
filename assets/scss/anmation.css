@@ -1,0 +1,370 @@
+@charset "UTF-8";
+/* ==========================================================================
+	ユーティリティ関数
+========================================================================== */
+/* --------------------------------------------------------------------------
+	ビューポート・比率計算
+-------------------------------------------------------------------------- */
+/* ==========================================================================
+	フォント関連
+========================================================================== */
+/* --------------------------------------------------------------------------
+	フォントサイズ（vw+clamp）
+-------------------------------------------------------------------------- */
+/* --------------------------------------------------------------------------
+	font関数ラッパ（min/maxのCSS関数をSassで出力）
+-------------------------------------------------------------------------- */
+/* ==========================================================================
+	余白・パディング関連
+========================================================================== */
+/* --------------------------------------------------------------------------
+	marginをvw+clampで出力（mb/mr/ml/mt）
+-------------------------------------------------------------------------- */
+/* --------------------------------------------------------------------------
+	paddingをvw+clampで出力（pb/pr/pl/pt）
+-------------------------------------------------------------------------- */
+/* ==========================================================================
+	幅・最大幅関連
+========================================================================== */
+/* --------------------------------------------------------------------------
+	最大幅
+-------------------------------------------------------------------------- */
+/* --------------------------------------------------------------------------
+	幅（PC基準:1500）をclampで出力
+-------------------------------------------------------------------------- */
+/* --------------------------------------------------------------------------
+	幅（SP基準:375）
+-------------------------------------------------------------------------- */
+/* ==========================================================================
+	レイアウト関連
+========================================================================== */
+/* --------------------------------------------------------------------------
+	ホバー時だけ適用（hover対応端末のみ）
+-------------------------------------------------------------------------- */
+/* --------------------------------------------------------------------------
+	中央寄せラッパ（最大幅）
+-------------------------------------------------------------------------- */
+/* --------------------------------------------------------------------------
+	Flexセット
+-------------------------------------------------------------------------- */
+/* --------------------------------------------------------------------------
+	map埋め込み
+-------------------------------------------------------------------------- */
+/* --------------------------------------------------------------------------
+	メニュー用余白設定
+-------------------------------------------------------------------------- */
+/* ==========================================================================
+	メディアクエリー用ミックスイン
+========================================================================== */
+/* --------------------------------------------------------------------------
+	min / max / between
+-------------------------------------------------------------------------- */
+/* ==========================================================================
+	テキスト装飾・背景
+========================================================================== */
+/* --------------------------------------------------------------------------
+	グラデーション背景
+-------------------------------------------------------------------------- */
+/* --------------------------------------------------------------------------
+	下線（通常/ホバーアニメ）
+-------------------------------------------------------------------------- */
+/* ==========================================================================
+	行高トリミング
+========================================================================== */
+/* --------------------------------------------------------------------------
+	ラインハイトの上下余白をカット（視覚調整）
+-------------------------------------------------------------------------- */
+/* ==========================================================================
+	汎用root
+========================================================================== */
+:root {
+  --base-max-width:1920;
+  --base-pc-width:1500;
+  --base-sp-width:400;
+  --vwPC: calc(100vw / 1500);
+  --vwSP: calc(100vw / 400);
+  --easeInQuad:cubic-bezier(.55, .085, .68, .53);
+  --easeOutQuad:cubic-bezier(0.23, 1, 0.32, 1);
+  --easeOutQuint:cubic-bezier(.25, .46, .45, .94);
+  --easeOutSine:cubic-bezier(0.39, 0.575, 0.565, 1);
+  --easeOutCubic:cubic-bezier(0.215, 0.61, 0.355, 1);
+  --easeInOutQuad:cubic-bezier(0.45, 0, 0.55, 1);
+  --easeInOutCubic:cubic-bezier(0.65, 0, 0.35, 1);
+  --easePopUp:cubic-bezier(0.17, 0.88, 0.30, 1.28);
+  --easeInCirc:cubic-bezier(0.55, 0, 1, 0.45);
+  --theme-color:#b93937;
+  --base-text-color:#000;
+  --base-bg-color:#e8ebed;
+  --base-bg-color02:#eeeeee;
+  --base-color-blue:#;
+  --base-color-black:#000;
+  --base-border-color:#cdc4c5;
+  --base-border-color02:#d3d3d3;
+  --base-border-color03:#a1a1a1;
+  --base-border-color04:#bbb;
+  --base-border-color05:#999;
+  --hanten:scale(-1, -1);
+  --hantenX:scale(-1, 1);
+  --hantenY:scaleY(-1);
+  --transition-scale:transform 0.8s var(--easeOutCubic); }
+
+/* ==========================================================================
+	汎用スタイルroot
+========================================================================== */
+:root {
+  --head-mt:150px; }
+
+@media screen and (max-width: 800px) {
+  :root {
+    --head-mt:150px; } }
+/* ==========================================================================
+	フォントサイズ設定：PC
+========================================================================== */
+@media screen and (min-width: 801px) {
+  :root {
+    --vwPC: calc(100vw / 1500);
+    --fz8: max(.8rem, 8px);
+    --fz9: max(.9rem, 9px);
+    --fz10: max(1rem, 9px);
+    --fz11: max(1.1rem, 10px);
+    --fz12: max(1.2rem, 11px);
+    --fz13: max(1.3rem, 12px);
+    --fz14: max(1.4rem, 12px);
+    --fz15: max(1.5rem, 13px);
+    --fz16: max(1.6rem, 14px);
+    --fz17: max(1.7rem, 15px);
+    --fz18: max(1.8rem, 16px);
+    --fz19: max(1.9rem, 17px);
+    --fz20: max(2.0rem, 18px);
+    --fz21: max(2.1rem, 18px);
+    --fz22: max(2.2rem, 18px);
+    --fz23: max(2.3rem, 20px);
+    --fz24: max(2.4rem, 20px);
+    --fz25: max(2.5rem, 21px);
+    --fz26: max(2.6rem, 22px);
+    --fz27: max(2.7rem, 23px);
+    --fz28: max(2.8rem, 24px);
+    --fz29: max(2.9rem, 25px);
+    --fz30: max(3rem, 26px);
+    --fz32: max(3.2rem, 28px);
+    --fz33: max(3.3rem, 29px);
+    --fz34: max(3.4rem, 30px);
+    --fz35: max(3.5rem, 31px);
+    --fz36: max(3.6rem, 32px);
+    --fz37: max(3.7rem, 33px);
+    --fz38: max(3.8rem, 34px);
+    --fz39: max(3.9rem, 35px);
+    --fz40: max(4rem, 36px);
+    --fz41: max(4.1rem, 37px);
+    --fz42: max(4.2rem, 38px);
+    --fz44: max(4.4rem, 40px);
+    --fz45: max(4.5rem, 41px);
+    --fz46: max(4.6rem, 42px);
+    --fz48: max(4.8rem, 44px);
+    --fz50: max(5rem, 48px);
+    --fz52: max(5.2rem, 48px);
+    --fz54: max(5.4rem, 50px);
+    --fz55: max(5.5rem, 51px);
+    --fz56: max(5.6rem, 52px);
+    --fz58: max(5.8rem, 54px);
+    --fz59: max(5.9rem, 55px);
+    --fz60: max(6rem, 56px);
+    --fz64: max(6.4rem, 60px);
+    --fz72: max(7.2rem, 68px);
+    --fz78: max(7.8rem, 74px);
+    --fz96: max(9.6rem, 90px); } }
+/* ==========================================================================
+	フォントサイズ設定：SP
+========================================================================== */
+@media screen and (max-width: 800px) {
+  :root {
+    --vwSP: calc(100vw / 400);
+    --fz7: clamp(7px, calc(7 * var(--vwSP)), 9px);
+    --fz8: clamp(8px, calc(8 * var(--vwSP)), 10px);
+    --fz9: clamp(9px, calc(9 * var(--vwSP)), 11px);
+    --fz10: clamp(10px, calc(10 * var(--vwSP)), 12px);
+    --fz11: clamp(11px, calc(11 * var(--vwSP)), 13px);
+    --fz12: clamp(12px, calc(12 * var(--vwSP)), 14px);
+    --fz13: clamp(13px, calc(13 * var(--vwSP)), 14px);
+    --fz14: clamp(14px, calc(14 * var(--vwSP)), 16px);
+    --fz15: clamp(15px, calc(15 * var(--vwSP)), 17px);
+    --fz16: clamp(16px, calc(16 * var(--vwSP)), 18px);
+    --fz17: clamp(17px, calc(17 * var(--vwSP)), 19px);
+    --fz18: clamp(18px, calc(18 * var(--vwSP)), 20px);
+    --fz19: clamp(19px, calc(19 * var(--vwSP)), 21px);
+    --fz20: clamp(20px, calc(20 * var(--vwSP)), 22px);
+    --fz21: clamp(21px, calc(21 * var(--vwSP)), 23px);
+    --fz22: clamp(22px, calc(22 * var(--vwSP)), 24px);
+    --fz23: clamp(23px, calc(23 * var(--vwSP)), 25px);
+    --fz24: clamp(24px, calc(24 * var(--vwSP)), 26px);
+    --fz25: clamp(25px, calc(25 * var(--vwSP)), 27px);
+    --fz26: clamp(26px, calc(26 * var(--vwSP)), 28px);
+    --fz27: clamp(27px, calc(27 * var(--vwSP)), 29px);
+    --fz28: clamp(28px, calc(28 * var(--vwSP)), 30px);
+    --fz30: clamp(30px, calc(30 * var(--vwSP)), 32px);
+    --fz31: clamp(31px, calc(31 * var(--vwSP)), 33px);
+    --fz32: clamp(32px, calc(32 * var(--vwSP)), 35px);
+    --fz33: clamp(33px, calc(33 * var(--vwSP)), 35px);
+    --fz34: clamp(34px, calc(34 * var(--vwSP)), 37px);
+    --fz35: clamp(35px, calc(35 * var(--vwSP)), 39px);
+    --fz37: clamp(37px, calc(37 * var(--vwSP)), 41px);
+    --fz36: clamp(36px, calc(36 * var(--vwSP)), 40px);
+    --fz38: clamp(38px, calc(38 * var(--vwSP)), 42px);
+    --fz40: clamp(40px, calc(40 * var(--vwSP)), 44px);
+    --fz42: clamp(42px, calc(42 * var(--vwSP)), 46px);
+    --fz44: clamp(44px, calc(44 * var(--vwSP)), 48px);
+    --fz45: clamp(45px, calc(45 * var(--vwSP)), 49px);
+    --fz47: clamp(47px, calc(47 * var(--vwSP)), 51px);
+    --fz48: clamp(48px, calc(48 * var(--vwSP)), 52px);
+    --fz49: clamp(49px, calc(49 * var(--vwSP)), 53px);
+    --fz51: clamp(51px, calc(51 * var(--vwSP)), 56px);
+    --fz56: clamp(56px, calc(56 * var(--vwSP)), 60px);
+    --fz64: clamp(64px, calc(64 * var(--vwSP)), 68px); } }
+/* ==========================================================================
+	アニメーション
+========================================================================== */
+@keyframes cover-reveal {
+  0% {
+    transform: scaleX(0);
+    transform-origin: left center; }
+  40% {
+    transform: scaleX(1);
+    transform-origin: left center; }
+  50% {
+    transform: scaleX(1);
+    transform-origin: right center; }
+  100% {
+    transform: scaleX(0);
+    transform-origin: right center; } }
+@keyframes loop-slide {
+  from {
+    transform: translateX(0); }
+  to {
+    transform: translateX(-100%); } }
+@keyframes loop-slide-rev {
+  from {
+    transform: translateX(-100%); }
+  to {
+    transform: translateX(0); } }
+@keyframes loop-slideY {
+  0% {
+    transform: translateY(0%); }
+  100% {
+    transform: translateY(100%); } }
+@keyframes loop-slideY-rev {
+  0% {
+    transform: translateY(0%); }
+  100% {
+    transform: translateY(-50%); } }
+@keyframes hamburger_top {
+  0% {
+    top: 0; }
+  50% {
+    top: calc(50% - 3px);
+    -webkit-transform: rotate(0);
+    transform: rotate(0); }
+  100% {
+    transform: rotate(45deg);
+    top: calc(50% - 3px); } }
+@keyframes hamburger_top_rev {
+  0% {
+    transform: rotate(45deg);
+    top: calc(50% - 3px); }
+  50% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+    top: calc(50% - 3px); }
+  100% {
+    top: 0;
+    -webkit-transform: rotate(0); } }
+@keyframes hamburger_center {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0); }
+  50% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0); }
+  100% {
+    transform: rotate(-45deg); } }
+@keyframes hamburger_center_rev {
+  0% {
+    transform: rotate(-45deg); }
+  50% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0); }
+  100% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0); } }
+@keyframes hamburger_bottom {
+  0% {
+    bottom: 0;
+    margin: auto;
+    opacity: 1; }
+  50% {
+    bottom: calc(50% - 3px);
+    opacity: 0; }
+  100% {
+    bottom: calc(50% - 3px);
+    opacity: 0; } }
+@keyframes hamburger_bottom_rev {
+  0% {
+    bottom: calc(50% - 3px);
+    opacity: 0; }
+  50% {
+    bottom: calc(50% - 3px);
+    opacity: 1; }
+  100% {
+    bottom: 0;
+    margin: auto;
+    opacity: 1; } }
+@media screen and (max-width: 800px) {
+  @keyframes hamburger_top {
+    0% {
+      top: 0; }
+    50% {
+      top: calc(50% - 2.5px);
+      -webkit-transform: rotate(0);
+      transform: rotate(0); }
+    100% {
+      transform: rotate(45deg);
+      top: calc(50% - 2.5px); } }
+  @keyframes hamburger_top_rev {
+    0% {
+      transform: rotate(45deg);
+      top: calc(50% - 2.5px); }
+    50% {
+      -webkit-transform: rotate(0);
+      transform: rotate(0);
+      top: calc(50% - 2.5px); }
+    100% {
+      top: 0;
+      -webkit-transform: rotate(0); } }
+  @keyframes hamburger_bottom {
+    0% {
+      bottom: 0;
+      margin: auto;
+      opacity: 1; }
+    50% {
+      bottom: calc(50% - 2.5px);
+      opacity: 0; }
+    100% {
+      bottom: calc(50% - 2.5px);
+      opacity: 0; } }
+  @keyframes hamburger_bottom_rev {
+    0% {
+      bottom: calc(50% - 2.5px);
+      opacity: 0; }
+    50% {
+      bottom: calc(50% - 2.5px);
+      opacity: 1; }
+    100% {
+      bottom: 0;
+      margin: auto;
+      opacity: 1; } } }
+@keyframes fadeInFix {
+  0% {
+    opacity: 0.3; }
+  100% {
+    opacity: 1; } }
+
+/*# sourceMappingURL=anmation.css.map */

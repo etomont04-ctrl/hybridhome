@@ -1,0 +1,472 @@
+/* ==========================================================================
+   HTML5 Reset
+========================================================================== */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+	display: block;
+}
+
+audio,
+canvas,
+video {
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+}
+
+audio:not([controls]) {
+	height: 0;
+	display: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+/* ==========================================================================
+   Base
+========================================================================== */
+
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 100%;
+	vertical-align: baseline;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+	-webkit-font-smoothing: antialiased;
+
+}
+
+html,
+button,
+input,
+select,
+textarea {
+	font-family: sans-serif;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+
+}
+
+
+/* ==========================================================================
+   Links
+========================================================================== */
+
+
+a:active,
+a:hover,
+a:focus {
+	outline: 0;
+}
+
+
+/* ==========================================================================
+   Typography
+========================================================================== */
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span
+ {
+	margin: 0;
+	font-size: 100%;
+}
+
+b,
+strong {
+	font-weight: bold;
+}
+
+p,
+pre {
+	margin: 0;
+	padding: 0;
+}
+
+caption {
+	text-align: left;
+}
+
+
+/* ==========================================================================
+   Lists
+========================================================================== */
+
+
+dl,
+menu,
+ol,
+ul,
+li,
+dt,
+dd {
+	margin: 0;
+	padding: 0;
+}
+
+ul,
+ol {
+	list-style: none;
+	list-style-image: none;
+}
+
+
+/* ==========================================================================
+   Embedded content
+========================================================================== */
+
+
+img {
+	border: 0;
+	-ms-interpolation-mode: bicubic;
+}
+
+svg:not(:root) {
+	overflow: hidden;
+}
+
+
+/* ==========================================================================
+	Figures
+========================================================================== */
+
+
+figure {
+	margin: 0;
+}
+
+
+/* ==========================================================================
+	Forms
+========================================================================== */
+
+
+form {
+	margin: 0;
+	padding: 0;
+}
+
+input, textarea,{
+	margin: 0;
+	padding: 0;
+}
+
+textarea {
+	overflow: auto;
+	vertical-align: top;
+}
+
+fieldset {
+	border: 0;
+}
+
+button,
+input,
+select,
+textarea {
+	margin: 0;
+	padding: 0;
+	vertical-align: baseline;
+}
+
+button,
+input {
+	line-height: normal;
+}
+
+button,
+select {
+	ext-transform: none;
+}
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	-webkit-appearance: button;
+	cursor: pointer;
+}
+
+button[disabled],
+html input[disabled] {
+	cursor: default;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+	box-sizing: border-box;
+	padding: 0;
+}
+
+input[type="search"] {
+	-webkit-appearance: textfield;
+	-moz-box-sizing: content-box;
+	-webkit-box-sizing: content-box;
+	box-sizing: content-box;
+}
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+	-webkit-appearance: none;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+	border: 0;
+	padding: 0;
+}
+
+
+/* ==========================================================================
+   Tables
+========================================================================== */
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+td {
+	padding: 0;
+}
+
+th {
+	text-align: left;
+}
+/* ==========================================================================
+	html
+========================================================================== */
+html.wf-active {
+  visibility: visible;
+}
+html {
+	font: normal normal normal 62.5%/1 "Inter","Zen Kaku Gothic New","Zen Kaku Gothic Antique", Hiragino Kaku Gothic Pro, 'ヒラギノ角ゴ Pro W3', 'ヒラギノ角ゴ Pro', 'メイリオ', '游ゴシック体', 'ＭＳ Ｐゴシック', 'Yu Gothic', YuGothic, 'Meiryo', メイリオ, 'MS PGothic', sans-serif;
+	font-feature-settings: "palt";
+	scroll-behavior: smooth;
+	word-break: break-word;
+	overflow-wrap: break-word;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
+}
+body {
+	position: relative;
+	margin: 0;
+	padding: 0;
+	background-color:var(--base-bg-color);
+	color: var(--base-text-color);
+	text-rendering: optimizeLegibility;
+	font-feature-settings : "palt" 1;
+	-webkit-text-size-adjust: none;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-kerning: normal;
+			font-kerning: normal;
+	-webkit-backface-visibility: hidden;
+			backface-visibility: hidden;
+	letter-spacing: 0;
+	font-size: 62.5%;
+	scroll-behavior: smooth;
+	// filter: blur(30px);
+	// opacity:.8;
+	// transition: 1s all var(--easeOutSine);
+}
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+// body.fade-in {
+//     filter: blur(0);
+//     opacity:1;
+//     transition: 1s filter var(--easeOutSine);
+// }
+
+span{
+	font-weight:inherit;
+	font-size:inherit;
+}
+
+body.nav-open{
+	overflow: hidden;
+}
+/*
+	htmlのフォントサイズは、下記のブラウザ幅では62.5%ではなくvwに。
+	・1280px ~ 1024px
+	・768px ~ 561px
+	・375px ~
+ */
+@media screen and (max-width: 1050px) and (min-width: 801px) {
+	html {
+		// font-size: 0.78125vw;
+		font-size: 1.11111vw;
+	}
+}
+
+
+@media screen and (max-width: 800px) and (min-width: 376px) {
+	html {
+		// font-size: 1.30208vw;
+		font-size: 1.8vw;
+	}
+}
+@media screen and (max-width: 430px) and (min-width: 376px) {
+	html {
+		font-size: 2.659vw;
+	}
+}
+
+@media screen and (max-width: 375px) {
+	html {
+		font-size: 2.66667vw;
+		/*
+		font-size: 3vw;
+		*/
+	}
+}
+
+
+button,input, select, textarea {
+  font-family : inherit;
+  font-size   : 100%;
+}
+a {
+	color:var(--base-text-color);
+	text-decoration: none;
+	// transition: all 0.4s var(--easeOutQuad);
+	transition: all 0.4s var(--easeOutCubic);
+}
+
+a:hover,
+.trns:hover{
+	// transition: all 0.4s var(--easeOutQuad);
+	transition: all 0.4s var(--easeOutCubic);
+}
+input,
+select,
+textarea,
+button,
+*:before,
+*:after {
+	-webkit-transition:  opacity 0.4s all var(--easeOutQuad);
+			transition:  opacity 0.4s var(--easeOutQuad);
+	-webkit-transform: translate3d(0, 0, 0);
+			transform: translate3d(0, 0, 0);
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: none;
+}
+
+img {
+	width: 100%;
+	vertical-align: bottom;
+	-ms-interpolation-mode: bicubic;
+		interpolation-mode: bicubic;
+	-webkit-backface-visibility: hidden !Important;
+}
+svg{
+	width: 100%;
+	height: auto;
+}
+.svg{
+	// display: block;
+	object-fit: contain;
+	visibility: hidden;
+	display: none;
+	&.replaced-svg{
+		display: block;
+		visibility: visible;
+	}
+}
+
+path{
+	transition: fill 0.4s var(--easeOutQuad);
+}
+
+.pc_off{
+	display:none !important;
+}
+.sp_off{
+	display:block !Important;
+}
+
+img.preload{
+	display:none;
+}
+
+::-moz-selection{
+	background:#ff6900;
+}
+::selection{
+	background:#ff6900;
+}
+/* Safari */
+::-moz-selection{
+	background:#ff6900;
+}
+
+.of-wrap{
+	position: relative;
+	// overflow: hidden;
+	overflow: clip;
+}
+
+@media (min-width: 851px) {
+	a[href*="tel:"] {
+	pointer-events: none;
+	cursor: default;
+	text-decoration: none;
+	}
+}
+
+.en{
+	font-family: "Inter", sans-serif;
+	font-optical-sizing: auto;
+}

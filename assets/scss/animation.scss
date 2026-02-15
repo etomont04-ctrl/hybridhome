@@ -1,0 +1,145 @@
+@import "functions.scss";
+/* ==========================================================================
+	アニメーション
+========================================================================== */
+
+/* --------------------------------------------------------------------------
+	横から出現
+-------------------------------------------------------------------------- */
+@keyframes box-grow{
+	to { clip-path: inset(0 0 0 0); }
+}
+@keyframes cover-wipe{
+	to { transform: scaleX(0); }
+}
+
+
+/* --------------------------------------------------------------------------
+	スライド関連
+-------------------------------------------------------------------------- */
+@keyframes loop-slide {
+  from {transform: translateX(0); }
+  to {transform: translateX(-100%);}
+}
+@keyframes loop-slide-rev {
+  from {transform: translateX(-100%);}
+  to {transform: translateX(0);}
+}
+
+
+@keyframes loop-slideY {
+	0% {
+		transform: translateY(0%);
+	}
+
+	100% {
+		transform: translateY(100%);
+	}
+}
+@keyframes loop-slideY-rev {
+	0% {
+		transform: translateY(0%);
+	}
+
+	100% {
+		transform: translateY(-50%);
+	}
+}
+
+/* --------------------------------------------------------------------------
+	ハンバーガーメニュー
+-------------------------------------------------------------------------- */
+@keyframes hamburger_top{
+	0%{
+		top:0;
+	}
+	50%{
+		bottom: 0;
+		-webkit-transform:rotate(0);
+		transform:rotate(0);
+	}
+	100%{
+		transform:rotate(30deg);
+		bottom: 0;
+	}
+}
+@keyframes hamburger_top_rev{
+	0%{
+		transform:rotate(30deg);
+		bottom: 0;
+	}
+	50%{
+		-webkit-transform:rotate(0);
+		transform:rotate(0);
+		bottom: 0;
+	}
+	100%{
+		bottom: auto;
+		-webkit-transform:rotate(0);
+	}
+}
+@keyframes hamburger_center{
+	0%{
+		-webkit-transform:rotate(0);
+		transform:rotate(0);
+	}
+	50%{
+		-webkit-transform:rotate(0);
+		transform:rotate(0);
+		top: 0;
+	}
+	100%{
+		transform: rotate(-30deg);
+		top: 0;
+	}
+}
+@keyframes hamburger_center_rev{
+	0%{
+		transform: rotate(-30deg);
+		top: 0;
+	}
+	50%{
+		-webkit-transform:rotate(0);
+		transform:rotate(0);
+		top: 0;
+	}
+	100%{
+		-webkit-transform:rotate(0);
+		transform:rotate(0);
+		top: auto;
+	}
+}
+
+// --------------------------------------------------------------------------
+// くるりんぱ
+// --------------------------------------------------------------------------
+@keyframes flipY{
+	0%   { transform: rotateY(0deg); }
+	5%  { transform: rotateY(180deg); }
+	10% { transform: rotateY(360deg); }
+	100%{transform: rotateY(360deg); }
+}
+
+/* --------------------------------------------------------------------------
+	鳥
+-------------------------------------------------------------------------- */
+@keyframes bird-float{
+	0%{ transform: translate3d(0, 0, 0); }
+	50%{ transform: translate3d(0, -40px, 0); }
+	100%{ transform: translate3d(0, 0, 0); }
+}
+@keyframes bird-float-rev{
+	0%{ transform: translate3d(0, 0, 0); }
+	50%{ transform: translate3d(0, 40px, 0); }
+	100%{ transform: translate3d(0, 0, 0); }
+}
+@keyframes bird-sway{
+	0%{ transform: translate3d(0, 0, 0) rotate(-2deg); }
+	50%{ transform: translate3d(6px, 0, 0) rotate(2deg); }
+	100%{ transform: translate3d(0, 0, 0) rotate(-2deg); }
+}
+@keyframes bird-sway-rev{
+	0%{ transform: translate3d(0, 0, 0) rotate(2deg); }
+	50%{ transform: translate3d(6px, 0, 0) rotate(-2deg); }
+	100%{ transform: translate3d(0, 0, 0) rotate(2deg); }
+}
