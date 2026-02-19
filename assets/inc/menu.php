@@ -1,4 +1,7 @@
 <header class="head <?= ($uri === 'index') ? 'index' : '' ?> <?= isset($head_class) ? htmlspecialchars($head_class) : '' ?>">
+	<?php if($uri === 'index'){ ?>
+
+	<?php }else{ ?>
 	<p class="logo"><a href="<?= $ROOT_DIR; ?>">
 		<img src="<?= $ROOT_DIR; ?>assets/img/common/logo.svg" alt="獅子 SHISHIINC." />
 	</a></p>
@@ -40,6 +43,7 @@
 			</div>
 		</nav><!-- /g-nav -->
 	</div><!-- /head_link-area -->
+	<?php } ?>
 </header>
 <nav class="global-nav">
 	<div class="nav_inr">
@@ -74,30 +78,7 @@
 		<div class="global-nav_link-box">
 			<a href="<?= $news_link; ?>" class="global-nav_link ">お知らせ<i class="arrow -black -w17" aria-hidden="true"><img src="<?= $img_path; ?>common/arrow.svg" alt="" decoding="async" class="svg"></i></a>
 			<i class="c-button"></i>
-			<div class="oc_area">
-				<?php
-				if (function_exists('get_categories')) {
-					$cats = get_categories([
-						'taxonomy'		=> 'category',
-						'hide_empty'	=> true,   // 投稿があるカテゴリだけ（全部出すなら false）
-						'orderby'		=> 'name',
-						'order'			=> 'ASC',
-					]);
 
-					if (!empty($cats) && !is_wp_error($cats)) {
-						foreach ($cats as $cat) {
-							$news_link = get_category_link($cat->term_id);
-							$cat_name  = $cat->name;
-
-							if (is_wp_error($news_link) || empty($news_link)) continue;
-							?>
-							<a href="<?= esc_url($news_link); ?>" class="global-nav_sub-link"><?= esc_html($cat_name); ?></a>
-							<?php
-						}
-					}
-				}
-				?>
-			</div>
 		</div>
 		<div class="half-area">
 			<div class="global-nav_link-box">

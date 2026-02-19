@@ -4,13 +4,16 @@
 ========================================================================== */
 .head {
 	position: absolute;
-	@include fl;
 	width: 100%;
-	padding: 28px get_calc(83,3000) 0 get_calc(74,3000);
 	box-sizing:border-box;
 	z-index:100;
 	opacity:1;
 	transition: all 0.3s ease;
+	&:not(.index){
+		@include fl;
+		padding: 28px get_calc(83,3000) 0 get_calc(74,3000);
+	}
+
 	.logo{
 		width: 318px;
 		// width: clamp(250px,get_calc(318,1540),318px);
