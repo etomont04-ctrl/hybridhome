@@ -297,3 +297,81 @@
 	50%{ transform: translateX(-12px) rotate(-2.2deg); }
 	100%{ transform: translateX(0) rotate(0deg); }
 }
+@keyframes move-x-left-to-right{
+	0%{ transform: translateX(-120%); }
+	100%{ transform: translateX(0); }
+}
+
+@keyframes anim-move-lr{
+	from{
+		transform: translate3d(0,0,0);
+	}
+	to{
+		transform: translate3d(var(--dist),0,0);
+	}
+}
+
+@media (prefers-reduced-motion: reduce){
+	.animal-move{
+		animation: none !important;
+	}
+}
+@keyframes pyoko-bounce{
+	0%{ transform: translateY(0); }
+
+	12%{ transform: translateY(-16px); }
+	18%{ transform: translateY(0); }
+
+	32%{ transform: translateY(-14px); }
+	38%{ transform: translateY(0); }
+
+	52%{ transform: translateY(-16px); }
+	58%{ transform: translateY(0); }
+
+	72%{ transform: translateY(-12px); }
+	78%{ transform: translateY(0); }
+
+	100%{ transform: translateY(0); }
+}
+@keyframes lightBlink{
+	0%{
+		opacity: var(--base, .2);
+	}
+	20%{
+		opacity:.6;
+	}
+	40%{
+		opacity: var(--base, .2);
+	}
+	100%{
+		opacity: var(--base, .2);
+	}
+}
+@keyframes Blink{
+	0%{
+		opacity: 1;
+	}
+	50%{
+		opacity:.7;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+
+@keyframes LoopY{
+	0%{
+		transform: translate3d(0,0,0);
+	}
+	100%{
+		transform: translate3d(0,-50%,0);
+	}
+}
+@keyframes LoopX{
+	0%{
+		transform: translate3d(0,0,0);
+	}
+	100%{
+		transform: translate3d(-50%,0,0);
+	}
+}

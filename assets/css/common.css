@@ -32,7 +32,7 @@
   --base-bg-color03:#c3ced5;
   --base-bg-color04:#f5f5f5;
   --base-color-green:#32929e;
-  --base-color-wood:#b2b400;
+  --base-color-wood:#6d240e;
   --base-color-blue:#14a5b6;
   --base-color-blue02:#32a4ab;
   --base-color-mizu:#00b4b2;
@@ -54,6 +54,8 @@
   --base-border-color02:#d2d2d2;
   --base-btn-color01:#1f858b;
   --base-btn-color01-hv:#137a80;
+  --base-btn-color02:#c93c02;
+  --base-btn-color02-hv:#ba3600;
   --hanten:scale(-1, -1);
   --hantenX:scale(-1, 1);
   --hantenY:scaleY(-1);
@@ -644,7 +646,7 @@ img.preload {
   --base-bg-color03:#c3ced5;
   --base-bg-color04:#f5f5f5;
   --base-color-green:#32929e;
-  --base-color-wood:#b2b400;
+  --base-color-wood:#6d240e;
   --base-color-blue:#14a5b6;
   --base-color-blue02:#32a4ab;
   --base-color-mizu:#00b4b2;
@@ -666,6 +668,8 @@ img.preload {
   --base-border-color02:#d2d2d2;
   --base-btn-color01:#1f858b;
   --base-btn-color01-hv:#137a80;
+  --base-btn-color02:#c93c02;
+  --base-btn-color02-hv:#ba3600;
   --hanten:scale(-1, -1);
   --hantenX:scale(-1, 1);
   --hantenY:scaleY(-1);
@@ -1689,6 +1693,226 @@ img.preload {
             transform: translateX(0) rotate(0deg);
   }
 }
+@-webkit-keyframes move-x-left-to-right {
+  0% {
+    -webkit-transform: translateX(-120%);
+            transform: translateX(-120%);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+@keyframes move-x-left-to-right {
+  0% {
+    -webkit-transform: translateX(-120%);
+            transform: translateX(-120%);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+@-webkit-keyframes anim-move-lr {
+  from {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+  to {
+    -webkit-transform: translate3d(var(--dist), 0, 0);
+            transform: translate3d(var(--dist), 0, 0);
+  }
+}
+@keyframes anim-move-lr {
+  from {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+  to {
+    -webkit-transform: translate3d(var(--dist), 0, 0);
+            transform: translate3d(var(--dist), 0, 0);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .animal-move {
+    -webkit-animation: none !important;
+            animation: none !important;
+  }
+}
+@-webkit-keyframes pyoko-bounce {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  12% {
+    -webkit-transform: translateY(-16px);
+            transform: translateY(-16px);
+  }
+  18% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  32% {
+    -webkit-transform: translateY(-14px);
+            transform: translateY(-14px);
+  }
+  38% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  52% {
+    -webkit-transform: translateY(-16px);
+            transform: translateY(-16px);
+  }
+  58% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  72% {
+    -webkit-transform: translateY(-12px);
+            transform: translateY(-12px);
+  }
+  78% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+@keyframes pyoko-bounce {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  12% {
+    -webkit-transform: translateY(-16px);
+            transform: translateY(-16px);
+  }
+  18% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  32% {
+    -webkit-transform: translateY(-14px);
+            transform: translateY(-14px);
+  }
+  38% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  52% {
+    -webkit-transform: translateY(-16px);
+            transform: translateY(-16px);
+  }
+  58% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  72% {
+    -webkit-transform: translateY(-12px);
+            transform: translateY(-12px);
+  }
+  78% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+@-webkit-keyframes lightBlink {
+  0% {
+    opacity: var(--base, 0.2);
+  }
+  20% {
+    opacity: 0.6;
+  }
+  40% {
+    opacity: var(--base, 0.2);
+  }
+  100% {
+    opacity: var(--base, 0.2);
+  }
+}
+@keyframes lightBlink {
+  0% {
+    opacity: var(--base, 0.2);
+  }
+  20% {
+    opacity: 0.6;
+  }
+  40% {
+    opacity: var(--base, 0.2);
+  }
+  100% {
+    opacity: var(--base, 0.2);
+  }
+}
+@-webkit-keyframes Blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes Blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes LoopY {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(0, -50%, 0);
+            transform: translate3d(0, -50%, 0);
+  }
+}
+@keyframes LoopY {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(0, -50%, 0);
+            transform: translate3d(0, -50%, 0);
+  }
+}
+@-webkit-keyframes LoopX {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(-50%, 0, 0);
+            transform: translate3d(-50%, 0, 0);
+  }
+}
+@keyframes LoopX {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(-50%, 0, 0);
+            transform: translate3d(-50%, 0, 0);
+  }
+}
 /* ==========================================================================
 	transition
 ========================================================================== */
@@ -1722,7 +1946,7 @@ img.preload {
   --base-bg-color03:#c3ced5;
   --base-bg-color04:#f5f5f5;
   --base-color-green:#32929e;
-  --base-color-wood:#b2b400;
+  --base-color-wood:#6d240e;
   --base-color-blue:#14a5b6;
   --base-color-blue02:#32a4ab;
   --base-color-mizu:#00b4b2;
@@ -1744,6 +1968,8 @@ img.preload {
   --base-border-color02:#d2d2d2;
   --base-btn-color01:#1f858b;
   --base-btn-color01-hv:#137a80;
+  --base-btn-color02:#c93c02;
+  --base-btn-color02-hv:#ba3600;
   --hanten:scale(-1, -1);
   --hantenX:scale(-1, 1);
   --hantenY:scaleY(-1);
@@ -2612,7 +2838,7 @@ img.preload {
   --base-bg-color03:#c3ced5;
   --base-bg-color04:#f5f5f5;
   --base-color-green:#32929e;
-  --base-color-wood:#b2b400;
+  --base-color-wood:#6d240e;
   --base-color-blue:#14a5b6;
   --base-color-blue02:#32a4ab;
   --base-color-mizu:#00b4b2;
@@ -2634,6 +2860,8 @@ img.preload {
   --base-border-color02:#d2d2d2;
   --base-btn-color01:#1f858b;
   --base-btn-color01-hv:#137a80;
+  --base-btn-color02:#c93c02;
+  --base-btn-color02-hv:#ba3600;
   --hanten:scale(-1, -1);
   --hantenX:scale(-1, 1);
   --hantenY:scaleY(-1);
@@ -2757,12 +2985,34 @@ img.preload {
 .inr.-m2000 {
   max-width: 2000px;
 }
+@media screen and (min-width: 2000px) {
+  .inr.-m2000.-rg {
+    -webkit-mask-image: -webkit-gradient(linear, left top, right top, from(rgb(0, 0, 0)), color-stop(88%, rgb(0, 0, 0)), to(rgba(0, 0, 0, 0)));
+    -webkit-mask-image: linear-gradient(to right, rgb(0, 0, 0) 0%, rgb(0, 0, 0) 88%, rgba(0, 0, 0, 0) 100%);
+    mask-image: -webkit-gradient(linear, left top, right top, from(rgb(0, 0, 0)), color-stop(88%, rgb(0, 0, 0)), to(rgba(0, 0, 0, 0)));
+    mask-image: linear-gradient(to right, rgb(0, 0, 0) 0%, rgb(0, 0, 0) 88%, rgba(0, 0, 0, 0) 100%);
+  }
+  .inr.-m2000.-lrg {
+    -webkit-mask-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0)), color-stop(12%, rgb(0, 0, 0)), color-stop(88%, rgb(0, 0, 0)), to(rgba(0, 0, 0, 0)));
+    -webkit-mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 12%, rgb(0, 0, 0) 88%, rgba(0, 0, 0, 0) 100%);
+    mask-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0)), color-stop(12%, rgb(0, 0, 0)), color-stop(88%, rgb(0, 0, 0)), to(rgba(0, 0, 0, 0)));
+    mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 12%, rgb(0, 0, 0) 88%, rgba(0, 0, 0, 0) 100%);
+  }
+}
 .inr.-w1440 {
   width: clamp(841.5584415584px, 93.5064935065vw, 1795.3246753247px);
 }
 @media screen and (max-width: 1050px) {
   .inr.-w1440 {
     width: 95%;
+  }
+}
+@media screen and (min-width: 2000px) {
+  .inr.-m2000.-rg {
+    -webkit-mask-image: -webkit-gradient(linear, left top, right top, from(rgb(0, 0, 0)), color-stop(88%, rgb(0, 0, 0)), to(rgba(0, 0, 0, 0)));
+    -webkit-mask-image: linear-gradient(to right, rgb(0, 0, 0) 0%, rgb(0, 0, 0) 88%, rgba(0, 0, 0, 0) 100%);
+    mask-image: -webkit-gradient(linear, left top, right top, from(rgb(0, 0, 0)), color-stop(88%, rgb(0, 0, 0)), to(rgba(0, 0, 0, 0)));
+    mask-image: linear-gradient(to right, rgb(0, 0, 0) 0%, rgb(0, 0, 0) 88%, rgba(0, 0, 0, 0) 100%);
   }
 }
 
@@ -3368,6 +3618,8 @@ img.preload {
   z-index: 2;
   background: url(../img/common/link-btn_border.png);
   background-size: cover;
+  -webkit-transition: opacity 0.4s var(--easeOutSine);
+  transition: opacity 0.4s var(--easeOutSine);
 }
 .link_btn::after {
   content: "";
@@ -3404,14 +3656,23 @@ img.preload {
 .link_btn.-blue {
   --color:var(--base-btn-color01);
 }
+.link_btn.-red {
+  --color:var(--base-btn-color02);
+}
 
 @media screen and (min-width: 801px) {
+  a:hover .link_btn:before {
+    opacity: 0;
+  }
   a:hover .link_btn .arrow {
     -webkit-animation-play-state: paused;
             animation-play-state: paused;
   }
   a:hover .link_btn.-blue {
     --color:var(--base-btn-color01-hv);
+  }
+  a:hover .link_btn.-red {
+    --color:var(--base-btn-color02-hv) ;
   }
 }
 @media screen and (max-width: 800px) {
@@ -4339,7 +4600,7 @@ img.preload {
   --base-bg-color03:#c3ced5;
   --base-bg-color04:#f5f5f5;
   --base-color-green:#32929e;
-  --base-color-wood:#b2b400;
+  --base-color-wood:#6d240e;
   --base-color-blue:#14a5b6;
   --base-color-blue02:#32a4ab;
   --base-color-mizu:#00b4b2;
@@ -4361,6 +4622,8 @@ img.preload {
   --base-border-color02:#d2d2d2;
   --base-btn-color01:#1f858b;
   --base-btn-color01-hv:#137a80;
+  --base-btn-color02:#c93c02;
+  --base-btn-color02-hv:#ba3600;
   --hanten:scale(-1, -1);
   --hantenX:scale(-1, 1);
   --hantenY:scaleY(-1);

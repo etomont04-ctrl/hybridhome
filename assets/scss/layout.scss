@@ -18,6 +18,38 @@
 	margin-inline:auto;
 	&.-m2000{
 		max-width: 2000px;
+		@include min-width(2000){
+			&.-rg{
+				-webkit-mask-image: linear-gradient(
+				to right,
+				rgba(0,0,0,1) 0%,
+				rgba(0,0,0,1) 88%,
+				rgba(0,0,0,0) 100%
+			);
+			mask-image: linear-gradient(
+				to right,
+				rgba(0,0,0,1) 0%,
+				rgba(0,0,0,1) 88%,
+				rgba(0,0,0,0) 100%
+			);
+			}
+			&.-lrg{
+				-webkit-mask-image: linear-gradient(
+				to right,
+				rgba(0,0,0,0) 0%,
+				rgba(0,0,0,1) 12%,
+				rgba(0,0,0,1) 88%,
+				rgba(0,0,0,0) 100%
+			);
+			mask-image: linear-gradient(
+				to right,
+				rgba(0,0,0,0) 0%,
+				rgba(0,0,0,1) 12%,
+				rgba(0,0,0,1) 88%,
+				rgba(0,0,0,0) 100%
+			);
+			}
+		}
 	}
 	&.-w1440{
 		@include w_vw(1440);
@@ -25,6 +57,24 @@
 			width:95%;
 		}
 	}
+
+	@include min-width(2000){
+		&.-m2000.-rg{
+			-webkit-mask-image: linear-gradient(
+			to right,
+			rgba(0,0,0,1) 0%,
+			rgba(0,0,0,1) 88%,
+			rgba(0,0,0,0) 100%
+		);
+		mask-image: linear-gradient(
+			to right,
+			rgba(0,0,0,1) 0%,
+			rgba(0,0,0,1) 88%,
+			rgba(0,0,0,0) 100%
+		);
+		}
+	}
+
 }
 @include max-width(800){
 	.inr{
@@ -531,6 +581,7 @@
 		z-index:2;
 		background:url(../img/common/link-btn_border.png);
 		background-size:cover;
+		@include transition(opacity);
 	}
 	&::after{
 		content:"";
@@ -567,16 +618,23 @@
 	&.-blue{
 		--color:var(--base-btn-color01);
 	}
+	&.-red{
+		--color:var(--base-btn-color02);
+	}
 }
 
 
 @include min-width(801){
 	a:hover .link_btn{
+		&:before{opacity:0;}
 		.arrow{
 			animation-play-state: paused;
 		}
 		&.-blue{
 			--color:var(--base-btn-color01-hv);
+		}
+		&.-red{
+			--color:var(--base-btn-color02-hv)
 		}
 	}
 }
