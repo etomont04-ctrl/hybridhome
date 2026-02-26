@@ -347,6 +347,42 @@ $this_img_path = $img_path .  "top/";
 			</div><!-- /staff-contents_area -->
 		</div><!-- /inr -->
 	</section><!-- /staff -->
+	<section class="partners">
+		<div class="inr -m2000 -lrg">
+			<div class="partners-construction_area">
+				<figure class="duck">
+					<img src="<?= $this_img_path; ?>partners-duck.webp" alt="" decoding="async">
+				</figure>
+				<figure class="risu"><img src="<?= $this_img_path; ?>partners-risu.webp" alt="" decoding="async"></figure>
+				<figure class="risu-kage"><img src="<?= $this_img_path; ?>partners-risu-kage.webp" alt="" decoding="async"></figure>
+				<figure class="illust_base">
+					<img src="<?= $this_img_path; ?>partners_illust-base.webp" alt="" decoding="async">
+				</figure>
+			</div><!--/partners-construction_area -->
+			<div class="partners-contents_area">
+				<h2><img src="<?= $this_img_path; ?>partners_title.webp" alt="ハイブリッドの仲間たち Our Partners" decoding="async"></h2>
+				<div class="text_area">
+					<p class="n_txt">ハイブリッドホームでは一つの工事を仕上げるのに、多くの職人たちと連携しています。<br>
+それぞれの専門の分野で活躍する腕利きの職人たちにハイブリッドホームの家づくりについて話を聞きました。</p>
+					<a href="<?= $partners_link ?>" class="link_wrap">
+						<p class="link_btn -red">
+							<span class="text">詳細ページへ</span>
+							<i class="arrow"><img src="<?= $img_path; ?>common/arrow-w.png" alt="" decoding="async"></i>
+						</p>
+					</a>
+				</div>
+				<figure class="light inview"><img src="<?= $this_img_path; ?>partners-light.webp" alt="" decoding="async"></figure>
+				<div class="photo_area inview bt">
+					<figure class="photo photo01"><img src="<?= $this_img_path; ?>partners-photo01.webp" alt="" decoding="async"></figure>
+					<figure class="photo photo02"><img src="<?= $this_img_path; ?>partners-photo02.webp" alt="" decoding="async"></figure>
+					<figure class="photo photo03"><img src="<?= $this_img_path; ?>partners-photo03.webp" alt="" decoding="async"></figure>
+				</div>
+				<figrure class="illust_base">
+					<img src="<?= $this_img_path; ?>partners-contents_base.webp" alt="" decoding="async">
+				</figure>
+			</div><!-- /partners-contents_area -->
+		</div><!-- /inr -->
+	</section><!-- /partners -->
 
 	</main>
 <?php /*include($root_path . '/assets/inc/footer.php');*/ ?>

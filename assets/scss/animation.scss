@@ -311,11 +311,6 @@
 	}
 }
 
-@media (prefers-reduced-motion: reduce){
-	.animal-move{
-		animation: none !important;
-	}
-}
 @keyframes pyoko-bounce{
 	0%{ transform: translateY(0); }
 
@@ -372,6 +367,27 @@
 		transform: translate3d(0,0,0);
 	}
 	100%{
-		transform: translate3d(-50%,0,0);
+		transform: translate3d(-100%,0,0);
+	}
+}
+
+@keyframes p-risumove{
+	0%{
+		transform: translateX(0%);
+	}
+	100%{
+		transform: translateX(-250%);
+	}
+}
+
+@keyframes animalHop{
+	0%{
+		transform: translate3d(0,0,0);
+	}
+	50%{
+		transform: translate3d(0,-8px,0);
+	}
+	100%{
+		transform: translate3d(0,0,0);
 	}
 }
