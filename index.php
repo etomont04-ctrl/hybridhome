@@ -383,9 +383,88 @@ $this_img_path = $img_path .  "top/";
 			</div><!-- /partners-contents_area -->
 		</div><!-- /inr -->
 	</section><!-- /partners -->
+	<section class="news">
+		<div class="inr -m2000 -lrg">
+			<div class="news-balcony_area">
+				<figure class="leaf">
+					<img src="<?= $this_img_path; ?>news-leaf.webp" alt="" decoding="async">
+				</figure>
+				<figure class="chou chou01"><img src="<?= $this_img_path; ?>news-chou01.webp" alt="" decoding="async"></figure>
+				<figure class="chou chou02"><img src="<?= $this_img_path; ?>news-chou02.webp" alt="" decoding="async"></figure>
+				<figure class="girl"><img src="<?= $this_img_path; ?>news-girl.webp" alt="" decoding="async"></figure>
+				<figure class="illust_base">
+					<img src="<?= $this_img_path; ?>news_illust-base.webp" alt="" decoding="async">
+				</figure>
+			</div><!--/partners-construction_area -->
+			<div class="news-contents_area">
+				<div class="text_area">
+					<h2><img src="<?= $this_img_path; ?>news_title.webp" alt="ハイブリッドの仲間たち Our Partners" decoding="async"></h2>
+					<a href="<?= $partners_link ?>" class="link_wrap">
+						<p class="link_btn -blue">
+							<span class="text">詳細ページへ</span>
+							<i class="arrow"><img src="<?= $img_path; ?>common/arrow-w.png" alt="" decoding="async"></i>
+						</p>
+					</a>
+					<a href="#" class="news-link">
+						<div class="img_area">
+							<figure class="img_inr">
+								<img src="<?= $this_img_path; ?>blog-dummy.png" alt="" decoding="async" class="fit_img">
+							</figure>
+						</div>
+						<div class="link_text">
+							<div>
+								<span class="en">2025 12.30</span>
+								<span class="cate">お知らせ</span>
+								<p>WEBサイトをリニューアルしました</p>
+							</div>
+						</div>
+					</a>
+					<a href="#" class="news-link">
+						<figure class="img_area"><img src="<?= $this_img_path; ?>blog-dummy.png" alt="" decoding="async" class="fit_img"></figure>
+						<div class="link_text">
+							<div>
+								<span class="en">2025 12.30</span>
+								<span class="cate">お知らせ</span>
+								<p>WEBサイトをリニューアルしました</p>
+							</div>
+						</div>
+					</a>
+					<a href="#" class="news-link">
+						<figure class="img_area"><img src="<?= $this_img_path; ?>blog-dummy.png" alt="" decoding="async" class="fit_img"></figure>
+						<div class="link_text">
+							<div>
+								<span class="en">2025 12.30</span>
+								<span class="cate">お知らせ</span>
+								<p>ブログのタイトルが入ります。この文章はデザイン確認用のダミー文章です。</p>
+							</div>
+						</div>
+					</a>
+				</div>
+				<figrure class="illust_base">
+					<img src="<?= $this_img_path; ?>news_contents-base.webp" alt="" decoding="async">
+				</figure>
+			</div><!-- /partners-contents_area -->
+		</div><!-- /inr -->
+	</section><!-- /partners -->
 
+	<section class="lv">
+		<div class="inr -m2000 -lrg">
+			<figure class="lv-house"><img src="<?= $this_img_path; ?>lv-house.webp" alt="" decoding="async"></figure>
+			<div class="sc-area">
+				<div class="town-area">
+					<figure class="cloud03"><img src="<?= $this_img_path; ?>lv-town.webp" alt="" decoding="async"></figure>
+				</div>
+				<figure class="lv-cloud cloud01"><img src="<?= $this_img_path; ?>lv-cloud01.webp" alt="" decoding="async"></figure>
+				<figure class="lv-cloud cloud02"><img src="<?= $this_img_path; ?>lv-cloud02.webp" alt="" decoding="async"></figure>
+				<figure class="lv-cloud cloud03"><img src="<?= $this_img_path; ?>lv-cloud03.webp" alt="" decoding="async"></figure>
+				<figure class="lv-cloud cloud04"><img src="<?= $this_img_path; ?>lv-cloud04.webp" alt="" decoding="async"></figure>
+				<figure class="lv-cloud cloud05"><img src="<?= $this_img_path; ?>lv-cloud05.webp" alt="" decoding="async"></figure>
+				<figure class="lv-cloud cloud06"><img src="<?= $this_img_path; ?>lv-cloud06.webp" alt="" decoding="async"></figure>
+			</div>
+		</div>
+	</section><!-- /lv -->
 	</main>
-<?php /*include($root_path . '/assets/inc/footer.php');*/ ?>
+<?php include($root_path . '/assets/inc/footer.php'); ?>
 
 </div><!-- /of_wrap -->
 </body>

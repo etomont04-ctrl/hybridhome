@@ -208,6 +208,16 @@
 	50%{ transform: translate3d(0, 40px, 0); }
 	100%{ transform: translate3d(0, 0, 0); }
 }
+@keyframes bird-float-s{
+	0%{ transform: translate3d(0, 0, 0); }
+	50%{ transform: translate3d(0, -20px, 0); }
+	100%{ transform: translate3d(0, 0, 0); }
+}
+@keyframes bird-float-rev-s{
+	0%{ transform: translate3d(0, 0, 0); }
+	50%{ transform: translate3d(0, 20px, 0); }
+	100%{ transform: translate3d(0, 0, 0); }
+}
 @keyframes bird-sway{
 	0%{ transform: translate3d(0, 0, 0) rotate(-2deg); }
 	50%{ transform: translate3d(6px, 0, 0) rotate(2deg); }

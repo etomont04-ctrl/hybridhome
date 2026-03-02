@@ -3,7 +3,7 @@
 
 	<?php }else{ ?>
 	<p class="logo"><a href="<?= $ROOT_DIR; ?>">
-		<img src="<?= $ROOT_DIR; ?>assets/img/common/logo.svg" alt="獅子 SHISHIINC." />
+		<img src="<?= $ROOT_DIR; ?>assets/img/common/logo.svg" alt="ハイブリットホーム HYBRID HOME" />
 	</a></p>
 	<div class="head_link-area">
 		<nav class="g-nav">

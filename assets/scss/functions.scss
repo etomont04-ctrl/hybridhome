@@ -6,7 +6,7 @@
 // 	ビューポート・比率計算
 // --------------------------------------------------------------------------
 // get_vw: 指定サイズを基準ビューポートに対するvwに変換
-@function get_vw($size, $viewport:1540){
+@function get_vw($size, $viewport:1500){
 	$rate: 100 / $viewport;
 	@return $rate * $size * 1vw;
 }
@@ -24,7 +24,7 @@
 // 	フォントサイズ（vw+clamp）
 // --------------------------------------------------------------------------
 // fz_vw: vwベースで最小/最大をclamp
-@mixin fz_vw($font_size:10,$viewport:1540){
+@mixin fz_vw($font_size:10,$viewport:1500){
 	$rate: 100 / $viewport;
 	$font_size_vw : $rate * $font_size * 1vw;
 	$fz : $font_size - 2;
@@ -53,7 +53,7 @@
 // 	marginをvw+clampで出力（mb/mr/ml/mt）
 // --------------------------------------------------------------------------
 // mg_vw: $property は 'mb'|'mr'|'ml'|'mt'
-@mixin mg_vw($size: 10, $property: 'mb', $viewport: 1540) {
+@mixin mg_vw($size: 10, $property: 'mb', $viewport: 1500) {
 	$rate: 100 / $viewport;
 	$Nsize: $size / $viewport * 100;
 	$Xsize: $size * 1.28;
@@ -78,7 +78,7 @@
 // 	paddingをvw+clampで出力（pb/pr/pl/pt）
 // --------------------------------------------------------------------------
 // pd_vw: $property は 'pb'|'pr'|'pl'|'pt'
-@mixin pd_vw($size: 10, $property: 'pb', $viewport: 1540) {
+@mixin pd_vw($size: 10, $property: 'pb', $viewport: 1500) {
 	$rate: 100 / $viewport;
 	$Nsize: $size / $viewport * 100;
 	$Xsize: $size * 1.28;
@@ -99,6 +99,22 @@
 	}
 
 	#{$property-value}: clamp(#{$Ssize}px, #{$Nsize}vw, #{$Xsize}px);
+}
+
+// ==========================================================================
+// 	min関数
+// ==========================================================================
+
+@function get_min($value, $baseWidth: 1500, $capWidth: 2000, $roundUp: false){
+	$vw: $value / $baseWidth * 100;
+	$capPx: $value * ($capWidth / $baseWidth);
+
+	@if $roundUp == true {
+		$vw: ceil($vw * 100) / 100;
+		$capPx: ceil($capPx);
+	}
+
+	@return min(#{$vw}vw, #{$capPx}px);
 }
 
 
@@ -122,11 +138,11 @@
 
 
 // --------------------------------------------------------------------------
-// 	幅（PC基準:1540）をclampで出力
+// 	幅（PC基準:1500）をclampで出力
 // --------------------------------------------------------------------------
 // w_vw: min=900基準 / 中間=vw / max=1920基準
 @mixin w_vw($wsize){
-	$b_size : $wsize / 1540;
+	$b_size : $wsize / 1500;
 	$Xw_size : 1920 * $b_size;
 	$Sw_size : 900 * $b_size;
 	width:clamp(#{$Sw_size}px, #{get_vw($wsize)}, #{$Xw_size}px);
@@ -472,10 +488,10 @@
 :root {
 
 	--base-max-width:1920;
-	--base-pc-width:1540;
+	--base-pc-width:1500;
 	--base-sp-width:400;
 
-	--vwPC: calc(100vw / 1540);
+	--vwPC: calc(100vw / 1500);
 	--vwSP: calc(100vw / 400);
 
 	--easeInQuad:cubic-bezier(.55, .085, .68, .53);
@@ -503,7 +519,7 @@
 	--base-color-blue02:#32a4ab;
 	--base-color-mizu:#00b4b2;
 	--base-color-orange:#e78a14;
-	--base-color-black:#000;
+	--base-color-black:#29221f;
 	--base-color-white:#fff;
 	--base-color-white02:#f1f3f4;
 	--base-color-gray:#888;
@@ -555,7 +571,7 @@
 
 @include min-width(801){
 	:root {
-		--vwPC: calc(100vw / 1540);
+		--vwPC: calc(100vw / 1500);
 		--fz8: max(.8rem, 8px);
 		--fz9: max(.9rem, 9px);
 		--fz10: max(1rem, 9px);

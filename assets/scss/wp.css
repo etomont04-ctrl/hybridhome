@@ -10,9 +10,9 @@
 ========================================================================== */
 :root {
   --base-max-width:1920;
-  --base-pc-width:1540;
+  --base-pc-width:1500;
   --base-sp-width:400;
-  --vwPC: calc(100vw / 1540);
+  --vwPC: calc(100vw / 1500);
   --vwSP: calc(100vw / 400);
   --easeInQuad:cubic-bezier(.55, .085, .68, .53);
   --easeInQuint:cubic-bezier(0.0, 0, 0.99, 0);
@@ -37,7 +37,7 @@
   --base-color-blue02:#32a4ab;
   --base-color-mizu:#00b4b2;
   --base-color-orange:#e78a14;
-  --base-color-black:#000;
+  --base-color-black:#29221f;
   --base-color-white:#fff;
   --base-color-white02:#f1f3f4;
   --base-color-gray:#888;
@@ -66,7 +66,7 @@
 
 @media screen and (min-width: 801px) {
   :root {
-    --vwPC: calc(100vw / 1540);
+    --vwPC: calc(100vw / 1500);
     --fz8: max(.8rem, 8px);
     --fz9: max(.9rem, 9px);
     --fz10: max(1rem, 9px);
