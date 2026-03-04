@@ -32,12 +32,14 @@
   --base-bg-color03:#c3ced5;
   --base-bg-color04:#f5f5f5;
   --base-color-green:#32929e;
+  --base-color-green02:#9dd1d0;
   --base-color-wood:#6d240e;
   --base-color-blue:#14a5b6;
   --base-color-blue02:#32a4ab;
   --base-color-mizu:#00b4b2;
   --base-color-orange:#e78a14;
   --base-color-black:#29221f;
+  --base-color-black02:#131313;
   --base-color-white:#fff;
   --base-color-white02:#f1f3f4;
   --base-color-gray:#888;
@@ -56,6 +58,8 @@
   --base-btn-color01-hv:#137a80;
   --base-btn-color02:#c93c02;
   --base-btn-color02-hv:#ba3600;
+  --base-btn-color03:#3da4a3;
+  --base-btn-color01-hv:#137a80;
   --hanten:scale(-1, -1);
   --hantenX:scale(-1, 1);
   --hantenY:scaleY(-1);
@@ -178,6 +182,7 @@
   opacity: 1;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  display: none;
 }
 .head:not(.index) {
   display: -webkit-box;
@@ -189,6 +194,122 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 28px 2.7666666667% 0 2.4666666667%;
+}
+.head.index {
+  height: 100%;
+}
+.head .index_head_link-area {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 50;
+}
+.head .index_head_link-area .main-nav {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 24px;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  left: 3.1333333333%;
+  bottom: 14.472361809%;
+}
+.head .index_head_link-area .hv_ar {
+  font-size: 16px;
+  letter-spacing: 0.04em;
+  color: var(--base-color-blue);
+}
+.head .index_head_link-area .copy {
+  font-size: 11px;
+  padding-left: 12px;
+  color: var(--base-color-blue);
+  margin-top: 25px;
+  letter-spacing: 0.13em;
+}
+.head .index_head_link-area .info-nav {
+  position: absolute;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: -webkit-max-content 12px -webkit-max-content;
+  -ms-grid-columns: max-content 12px max-content;
+  grid-template-columns: repeat(2, -webkit-max-content);
+  grid-template-columns: repeat(2, max-content);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 12px;
+  width: 168px;
+  right: 4%;
+  top: 4.5226130653%;
+}
+.head .index_head_link-area .w_link {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-height: 30px;
+  padding: 0 14px;
+  background: #fff;
+  border-radius: 999px;
+  color: var(--base-text-color02);
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  -webkit-box-shadow: 1.4px 1.4px 6px 0 rgba(203, 250, 252, 0.8);
+          box-shadow: 1.4px 1.4px 6px 0 rgba(203, 250, 252, 0.8);
+  -webkit-transition: background 0.4s var(--easeOutSine);
+  transition: background 0.4s var(--easeOutSine);
+}
+.head .index_head_link-area .w_link:hover {
+  background: var();
+}
+.head .index_head_link-area .contact_link {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  grid-column: 1/-1;
+  width: 100%;
+  aspect-ratio: 169/50;
+  color: #fff;
+  background: url(../img/common/head_contact-btn_bg.png);
+  background-size: cover;
+}
+.head .index_head_link-area .contact_link::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url(../img/common/head_contact-btn_bg-af.png);
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  -webkit-transition: opacity 0.4s var(--easeOutSine);
+  transition: opacity 0.4s var(--easeOutSine);
+  pointer-events: none;
+}
+.head .index_head_link-area .contact_link:hover::after {
+  opacity: 1;
+}
+.head .index_head_link-area .contact_link img {
+  position: relative;
+  width: 49.1124260355%;
+  z-index: 10;
 }
 .head .logo {
   width: 318px;
@@ -294,6 +415,7 @@
   opacity: 1;
   background: var(--base-bg-color);
   padding-bottom: 20px;
+  display: none !important;
 }
 .head.fix .head_link-area {
   padding-top: 0;

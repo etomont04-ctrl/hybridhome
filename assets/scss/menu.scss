@@ -9,9 +9,100 @@
 	z-index:100;
 	opacity:1;
 	transition: all 0.3s ease;
+	display: none;
 	&:not(.index){
 		@include fl;
 		padding: 28px get_calc(83,3000) 0 get_calc(74,3000);
+	}
+	&.index{
+		height: 100%;
+	}
+	.index_head_link-area{
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		$conW:1500;
+		$conH:995;
+		z-index: 50;
+		.main-nav{
+			position: absolute;
+			display:flex;
+			flex-direction:column;
+			gap: 24px;
+			align-items:flex-start;
+			left: get_calc(47,$conW);
+			bottom: get_calc(144,$conH);
+		}
+		.hv_ar{
+			font-size: 16px;
+			letter-spacing: 0.04em;
+			color:var(--base-color-blue);
+		}
+		.copy{
+			font-size: 11px;
+			padding-left: 12px;
+			color:var(--base-color-blue);
+			margin-top: 25px;
+			letter-spacing:0.13em;
+		}
+
+		.info-nav{
+			position: absolute;
+			display: grid;
+			grid-template-columns: repeat(2, max-content);
+			justify-content: center;
+			gap: 12px;
+			width: 168px;
+			right: get_calc(60,$conW);
+			top: get_calc(45,$conH);
+		}
+		.w_link{
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			min-height: 30px;
+			padding: 0 14px;
+			background: #fff;
+			border-radius: 999px;
+			color: var(--base-text-color02);
+			font-size: 13px;
+			letter-spacing: 0.04em;
+			box-shadow: 1.4px 1.4px 6px 0 rgba(203, 250, 252, .8);
+			@include transition(background);
+			&:hover{
+				background:var()
+			}
+		}
+		.contact_link{
+			position: relative;
+			@include fc;
+			grid-column: 1 / -1;
+			width: 100%;
+			aspect-ratio:169/50;
+			color: #fff;
+			background:url(../img/common/head_contact-btn_bg.png);
+			background-size:cover;
+			&::after{
+				content:"";
+				position:absolute;
+				inset:0;
+				background:url(../img/common/head_contact-btn_bg-af.png);
+				background-size:cover;
+				background-position:center;
+				opacity:0;
+				transition: opacity .4s var(--easeOutSine);
+				pointer-events:none;
+			}
+
+			&:hover::after{
+				opacity:1;
+			}
+			img{
+				position: relative;
+				width: get_calc(83,169);
+				z-index: 10;
+			}
+		}
 	}
 
 	.logo{
@@ -87,6 +178,7 @@
 		opacity:1;
 		background:var(--base-bg-color);
 		padding-bottom: 20px;
+		display: none !Important;
 		.head_link-area{
 			padding-top: 0;
 		}

@@ -1,5 +1,6 @@
 <footer class="footer <?= ($uri === 'index') ? 'index' : '' ?>" id="footer">
 	<section class="contents_wrap inr -m2000 -lrg">
+		<figure class="cloud"><img src="<?= $img_path; ?>common/illust/footer-cloud.webp" alt="" decoding="async"></figure>
 		<div class="inr -w1400 inview">
 			<div class="contents">
 				<div class="footer_logo-area">
@@ -7,7 +8,7 @@
 					<div class="footer_logo-area_text">
 						<p class="n_txt -mid">株式会社ハイブリッドホーム<br>営業時間：9:00～18:00<span>（日・月曜・祝祭日定休）</span></p>
 						<a href="<?= $about_link ?>" class="link_wrap">
-							<p class="link_btn -blue">
+							<p class="link_btn -blue2">
 								<span class="text">メールでお問い合わせ</span>
 								<i class="arrow"><img src="<?= $img_path; ?>common/arrow-w.png" alt="" decoding="async"></i>
 							</p>
@@ -16,28 +17,74 @@
 				</div><!-- /footer_logo-area -->
 				<div class="footer_link-area">
 					<div class="company-area">
-						<a href="<?= $ROOT_DIR; ?>" class="n_link">トップページ</a>
-						<a href="<?= $about_link; ?>" class="n_link">私たちについて</a>
-						<a href="<?= $visit_journal_link; ?>" class="n_link">お客様探訪録</a>
-						<a href="<?= $data_link; ?>" class="n_link">データで見る獅子</a>
-						<a href="<?= $interview_link; ?>" class="n_link">社員インタビュー</a>
-						<a href="<?= $company_link; ?>" class="n_link">会社情報</a>
-						<a href="<?= $recruit_link; ?>" class="n_link">採用情報</a>
-						<a href="<?= $contact_link; ?>" class="n_link">お問い合わせ</a>
-					</div>
-					<div class="r-area">
-						<a href="<?= $service_link; ?>" class="n_link">サービス紹介</a>
-						<a href="<?= $service01_link; ?>" class="s_link">マーケティング戦略</a>
-						<a href="<?= $service02_link; ?>" class="s_link">ブランド構築支援</a>
-						<a href="<?= $service03_link; ?>" class="s_link">市場創出ラボ</a>
-						<a href="<?= $news_link; ?>" class="n_link">お知らせ</a>
-
-						<span class="copy spv_txt">© SHI SHI inc. All Rights Reserved.</span>
-					</div>
+						<div class="company-block">
+							<h3>本社リノベーション事業部</h3>
+							<p class="n_txt">東京都千代田区神田鍛冶町3-7-6<br>翔和鍛冶町ビル4階<br>TEL：03-3252-8100　FAX：03-3252-8566
+							</p>
+							<a href="<?= $map_hon ?>" taget="_blank" class="map_link">
+								<i class="map_icon"><img src="<?= $img_path; ?>common/map_icon.webp" alt="" decoding="async"></i>
+									Google Map
+							</a>
+						</div>
+						<div class="company-block">
+							<h3>本社リノベーション事業部</h3>
+							<p class="n_txt">東京都千代田区神田鍛冶町3-7-6<br>翔和鍛冶町ビル4階<br>TEL：03-3252-8100　FAX：03-3252-8566
+							</p>
+							<a href="<?= $map_hon ?>" taget="_blank" class="map_link">
+								<i class="map_icon"><img src="<?= $img_path; ?>common/map_icon.webp" alt="" decoding="async"></i>
+									Google Map
+							</a>
+						</div>
+						<div class="company-block">
+							<h3>本社リノベーション事業部</h3>
+							<p class="n_txt">東京都千代田区神田鍛冶町3-7-6<br>翔和鍛冶町ビル4階<br>TEL：03-3252-8100　FAX：03-3252-8566
+							</p>
+							<a href="<?= $map_hon ?>" taget="_blank" class="map_link">
+								<i class="map_icon"><img src="<?= $img_path; ?>common/map_icon.webp" alt="" decoding="async"></i>
+									Google Map
+							</a>
+						</div>
+					</div><!-- /company-area -->
+					<ul class="link-area">
+						<li>
+							<a href="<?= $ROOT_DIR; ?>" class="hv_ar link"><i class="arrow -w10"><img src="<?= $img_path; ?>common/arrow-g.png" alt="" decoding="async"></i>トップページ</a>
+							<a href="<?= $about_link; ?>" class="hv_ar link"><i class="arrow -w10"><img src="<?= $img_path; ?>common/arrow-g.png" alt="" decoding="async"></i>私たちについて</a>
+							<a href="<?= $about_link; ?>" class="hv_ar link"><i class="arrow -w10"><img src="<?= $img_path; ?>common/arrow-g.png" alt="" decoding="async"></i>リフォーム＆リノベーション</a>
+							<a href="<?= $about_link; ?>" class="hv_ar link"><i class="arrow -w10"><img src="<?= $img_path; ?>common/arrow-g.png" alt="" decoding="async"></i>施工事例</a>
+							<a href="<?= $about_link; ?>" class="hv_ar link"><i class="arrow -w10"><img src="<?= $img_path; ?>common/arrow-g.png" alt="" decoding="async"></i>お客様の声</a>
+						</li>
+						<li>
+							<a href="<?= $ROOT_DIR; ?>" class="hv_ar link"><i class="arrow -w10"><img src="<?= $img_path; ?>common/arrow-g.png" alt="" decoding="async"></i>社員紹介</a>
+							<a href="<?= $about_link; ?>" class="hv_ar link"><i class="arrow -w10"><img src="<?= $img_path; ?>common/arrow-g.png" alt="" decoding="async"></i>ハイブリッドの仲間たち</a>
+							<a href="<?= $about_link; ?>" class="hv_ar link"><i class="arrow -w10"><img src="<?= $img_path; ?>common/arrow-g.png" alt="" decoding="async"></i>会社概要</a>
+							<a href="<?= $about_link; ?>" class="hv_ar link"><i class="arrow -w10"><img src="<?= $img_path; ?>common/arrow-g.png" alt="" decoding="async"></i>採用情報</a>
+							<a href="<?= $about_link; ?>" class="hv_ar link"><i class="arrow -w10"><img src="<?= $img_path; ?>common/arrow-g.png" alt="" decoding="async"></i>お問い合わせ</a>
+						</li>
+						<li>
+							<a href="<?= $ROOT_DIR; ?>" class="hv_ar link"><i class="arrow -w10"><img src="<?= $img_path; ?>common/arrow-g.png" alt="" decoding="async"></i>ブログ</a>
+							<a href="<?= $about_link; ?>" class="s_link">お知らせ</a>
+							<a href="<?= $about_link; ?>" class="s_link">よくある質問</a>
+							<a href="<?= $about_link; ?>" class="s_link">動画配信サービス</a>
+							<a href="<?= $about_link; ?>" class="s_link">お客様アンケート</a>
+						</li>
+					</ul><!--/link-area -->
 				</div><!-- /footer_link-area -->
 			</div><!--/contents -->
+			<a href="#top" class="pagetop">
+				<div class="arrow-area">
+					<i class="arrow"><img src="<?= $img_path; ?>common/arrow-top.png" alt="" decoding="async"></i>
+				</div>
+				<div class="illust_area">
+					<div class="tori">
+						<img src="<?= $img_path; ?>common/illust/footer-tori.webp" alt="" decoding="async" class="bf">
+						<img src="<?= $img_path; ?>common/illust/footer-tori_af.webp" alt="" decoding="async" class="af">
+					</div>
+					<figure class="post"><img src="<?= $img_path; ?>common/illust/footer-post.webp" alt="" decoding="async"></figure>
+				</div>
+
+			</a>
+			<span class="en copy">©2026 Hybrid Home inc. All Rights Reserved.</span>
 		</div><!--/inr -->
-		<a href="#top" class="pagetop"><i class="arrow -w17" aria-hidden="true"><img src="<?= $img_path; ?>common/arrow.svg" alt="" decoding="async"></i><p class="v_txt spy_txt -sY90">pagetop</p></a>
 		<figure class="footer_illust-area">
 			<img src="<?= $img_path; ?>common/illust/footer-illust.webp" alt="" decoding="async">
 		</figure>

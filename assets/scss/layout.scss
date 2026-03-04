@@ -618,6 +618,9 @@
 	&.-blue{
 		--color:var(--base-btn-color01);
 	}
+	&.-blue2{
+		--color:var(--base-btn-color03);
+	}
 	&.-red{
 		--color:var(--base-btn-color02);
 	}
@@ -1409,6 +1412,31 @@
     }
 }
 
+
+
+
+/* ==========================================================================
+	map_link
+========================================================================== */
+.map_link{
+	position: relative;
+	display: inline-flex;
+	align-items: center;
+	border:1px solid var(--base-color-black02);
+	font-size: 13px;
+	font-weight: 500;
+	border-radius:15px;
+	padding:5px 20px 7px 35px;
+	text-transform:uppercase;
+	.map_icon{
+		display: block;
+		position: absolute;
+		width: 24px;
+		z-index: 10;
+		left: 10px;
+		bottom: 6px;
+	}
+}
 /* ==========================================================================
 	hover arrow link
 ========================================================================== */
@@ -1425,11 +1453,16 @@
 	align-items: center;
 	justify-content: center;
 	width: 12px;
+	margin-right: -12px;
 	flex: 0 0 auto;
 	opacity: 0;
 	transform: translateX(-0.4em);
 	pointer-events: none;
 	transition: opacity .4s ease, transform .4s ease, margin .4s ease;
+	&.-w10{
+		width: 10px;
+		margin-right: -10px;
+	}
 }
 
 .hv_ar .arrow img{
@@ -1447,12 +1480,12 @@
 .hv_ar:hover,
 .hv_ar:focus-visible{
 	font-weight: 500;
-	padding-left: 12px;
+	// padding-left: 12px;
 }
 
 .hv_ar:hover .arrow,
 .hv_ar:focus-visible .arrow{
 	opacity: 1;
 	transform: translateX(0);
-	margin-right: 6px;
+	margin-right: 3px!Important;
 }

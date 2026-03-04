@@ -32,12 +32,14 @@
   --base-bg-color03:#c3ced5;
   --base-bg-color04:#f5f5f5;
   --base-color-green:#32929e;
+  --base-color-green02:#9dd1d0;
   --base-color-wood:#6d240e;
   --base-color-blue:#14a5b6;
   --base-color-blue02:#32a4ab;
   --base-color-mizu:#00b4b2;
   --base-color-orange:#e78a14;
   --base-color-black:#29221f;
+  --base-color-black02:#131313;
   --base-color-white:#fff;
   --base-color-white02:#f1f3f4;
   --base-color-gray:#888;
@@ -56,6 +58,8 @@
   --base-btn-color01-hv:#137a80;
   --base-btn-color02:#c93c02;
   --base-btn-color02-hv:#ba3600;
+  --base-btn-color03:#3da4a3;
+  --base-btn-color01-hv:#137a80;
   --hanten:scale(-1, -1);
   --hantenX:scale(-1, 1);
   --hantenY:scaleY(-1);
@@ -1989,7 +1993,6 @@ html.is-loading::after {
   position: relative;
   width: 100%;
   z-index: 5;
-  padding-bottom: 300px;
   background: -webkit-gradient(linear, left bottom, left top, from(rgb(197, 252, 253)), to(rgb(247, 255, 255)));
   background: linear-gradient(0deg, rgb(197, 252, 253) 0%, rgb(247, 255, 255) 100%);
 }
