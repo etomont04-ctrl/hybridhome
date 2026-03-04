@@ -41,7 +41,7 @@ $this_img_path = $img_path .  "top/";
 	<section id="kv" class="inview">
 		<div class="inr -m2000">
 			<div class="index_head_link-area">
-				<nav class="main-nav">
+				<nav class="main-nav tab_off">
 					<a href="<?= $about_link; ?>" class="hv_ar"><i class="arrow"><img src="<?= $img_path; ?>common/arrow-g.png" alt="" decoding="async"></i>私たちについて</a>
 					<a href="<?= $reform_link; ?>" class="hv_ar"><i class="arrow"><img src="<?= $img_path; ?>common/arrow-g.png" alt="" decoding="async"></i>リフォーム＆リノベーション</a>
 					<a href="<?= $works_link; ?>" class="hv_ar"><i class="arrow"><img src="<?= $img_path; ?>common/arrow-g.png" alt="" decoding="async"></i>施工事例</a>
@@ -50,7 +50,7 @@ $this_img_path = $img_path .  "top/";
 					<a href="<?= $member_link; ?>" class="hv_ar"><i class="arrow"><img src="<?= $img_path; ?>common/arrow-g.png" alt="" decoding="async"></i>ハイブリッドの仲間たち</a>
 					<p class="en copy">(C) Hybrid Home inc.</p>
 				</nav>
-				<div class="info-nav">
+				<div class="info-nav tab_off">
 					<a href="<?= $company_link; ?>" class="w_link">会社概要</a>
 					<a href="<?= $recruit_link; ?>" class="w_link">採用情報</a>
 					<a href="<?= $contact_link; ?>" class="contact_link"><img src="<?= $img_path; ?>common/head_contact-btn_txt.png" alt="お問い合わせ" decoding="async"></a>
@@ -60,7 +60,11 @@ $this_img_path = $img_path .  "top/";
 			<h2 class="kv_chatch"><img src="<?= $this_img_path; ?>chatch.webp" alt="WELCOME TO HYBRID HOME!" decoding="async"></h2>
 			<div class="yane-area">
 				<h3 class="kv_sub-chatch"><img src="<?= $this_img_path; ?>sub-chatch.webp" alt="ようこそ！ハイブリットホームへ" decoding="async"></h3>
-				<figure class="yane"><img src="<?= $this_img_path; ?>fv-yane.webp" alt="" decoding="async"></figure>
+				<figure class="yane">
+					<picture>
+						<source media="(max-width: 1050px)" srcset="<?= $this_img_path; ?>fv-yane_sp.webp">
+						<img src="<?= $this_img_path; ?>fv-yane.webp" alt="">
+					</picture>
 			</div>
 			<a href="#" class="blog-link_area">
 				<figure class="img_area"><img src="<?= $this_img_path; ?>blog-dummy.png" alt="" decoding="async" class="fit_img"></figure>
@@ -72,7 +76,7 @@ $this_img_path = $img_path .  "top/";
 				</div>
 			</a>
 			<figure class="bird bird01"><img src="<?= $img_path; ?>common/illust/bird01.webp" alt="" decoding="async"></figure>
-			<figure class="bird bird02"><img src="<?= $img_path; ?>common/illust/bird02.webp" alt="" decoding="async"></figure>
+			<figure class="bird bird02 tab_off"><img src="<?= $img_path; ?>common/illust/bird02.webp" alt="" decoding="async"></figure>
 			<?php
 			$month = (int) date('n');
 			$season = '-winter';
@@ -87,21 +91,27 @@ $this_img_path = $img_path .  "top/";
 			}
 			?>
 			<div class="bg-leaf_area <?= $season; ?>">
-				<div class="bg-leaf leaf01"></div>
+				<div class="bg-leaf leaf01 tab_off"></div>
 				<div class="bg-leaf leaf02"></div>
 				<div class="bg-leaf leaf03"></div>
 				<div class="bg-leaf leaf04"></div>
-				<div class="bg-leaf leaf05"></div>
+				<div class="bg-leaf leaf05 tab_off"></div>
 			</div>
 			<div class="bg-cloud_area">
 				<figure class="bg-cloud bgcloud01"><img src="<?= $this_img_path; ?>fv-bg_cloud01.png" alt="" decoding="async"></figure>
 				<figure class="bg-cloud bgcloud02"><img src="<?= $this_img_path; ?>fv-bg_cloud02.png" alt="" decoding="async"></figure>
 			</div>
 			<figure class="cloud cloud01"><img src="<?= $this_img_path; ?>fv-cloud01.webp" alt="" decoding="async"></figure>
-			<figure class="cloud cloud02"><img src="<?= $this_img_path; ?>fv-cloud02.webp" alt="" decoding="async"></figure>
-			<figure class="cloud cloud03"><img src="<?= $this_img_path; ?>fv-cloud03.webp" alt="" decoding="async"></figure>
+			<figure class="cloud cloud02 tab_off"><img src="<?= $this_img_path; ?>fv-cloud02.webp" alt="" decoding="async"></figure>
+			<figure class="cloud cloud03"><img src="<?= $this_img_path; ?>fv-cloud03.webp" alt="">
+			</figure>
 			<div class="town_bg"></div>
-			<figure class="cloud cloud04"><img src="<?= $this_img_path; ?>fv-cloud04.webp" alt="" decoding="async"></figure>
+			<figure class="cloud cloud04">
+				<picture>
+					<source media="(max-width: 800px)" srcset="<?= $this_img_path; ?>fv-cloud04-sp.webp">
+					<img src="<?= $this_img_path; ?>fv-cloud04.webp" alt="">
+				</picture>
+			</figure>
 			<figure class="cloud cloud05"><img src="<?= $this_img_path; ?>fv-cloud05.webp" alt="" decoding="async"></figure>
 			<figure class="cloud cloud06"><img src="<?= $this_img_path; ?>fv-cloud06.webp" alt="" decoding="async"></figure>
 		</div>

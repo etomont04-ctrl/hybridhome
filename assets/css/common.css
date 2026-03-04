@@ -4063,7 +4063,7 @@ img.preload {
 }
 @media screen and (max-width: 1050px) {
   .tab_off {
-    display: none;
+    display: none !important;
   }
   .tab_on {
     display: block;

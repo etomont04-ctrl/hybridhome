@@ -772,7 +772,7 @@
 	.tab_on{display: none;}
 }
 @include max-width(1050){
-	.tab_off{display: none;}
+	.tab_off{display: none !important;}
 	.tab_on{display:block;}
 }
 @include max-width(800){

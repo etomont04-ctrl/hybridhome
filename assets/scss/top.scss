@@ -253,8 +253,8 @@ html.is-loading::after{
 	h1{
 		position: relative;
 		z-index:50;
-		margin-top:getCqw(50,1500);
-		width: getCqw(202,1500);
+		margin-top:getCqw(50,$conW);
+		width: getCqw(202,$conW);
 		margin-inline:auto;
 		margin-bottom: getCqw(50,$conW);
 	}
@@ -273,11 +273,22 @@ html.is-loading::after{
 		$W:969;
 		$H:440;
 		z-index: 5;
+		@include max-width(1050){
+			width:100%;
+			aspect-ratio:1600/922;
+			$W:1600;
+			$H:922;
+		}
 		h3{
 			position: absolute;
-			width: get_calc(513,969);
+			width: get_calc(513,$W);
 			left: get_calc(202,$W);
 			top: get_calc(-87,$H);
+			@include max-width(1050){
+				width: get_calc(1220,$W);
+				left: get_calc(132,$W);
+				top: get_calc(-224,$H);
+			}
 		}
 		.yane{
 			position: absolute;
@@ -434,7 +445,6 @@ html.is-loading::after{
 				}
 			}
 		}
-
 	}
 	.bg-cloud_area{
 		position: absolute;
@@ -451,7 +461,6 @@ html.is-loading::after{
 			will-change: transform;
 			transform: translate3d(0,0,0);
 			--duration: 240s;
-			--gap: 120px;
 			animation: cloudFlow var(--duration) linear infinite;
 			img{
 				width: auto;
@@ -527,7 +536,117 @@ html.is-loading::after{
 		background-size:1752px 392px;
 		z-index: 1;
 	}
-
+	@include max-width(1050){
+		$conW:1600;
+		$conH:2430;
+		h1{
+			margin-top:getCqw(138,$conW);
+			width: getCqw(606,$conW);
+			margin-bottom: getCqw(230,$conW);
+		}
+		h2{
+			margin-top:getCqw(138,$conW);
+			width: getCqw(1308,$conW);
+			margin-bottom: getCqw(320,$conW);
+		}
+		.yane-area{
+			width:100%;
+			aspect-ratio:1600/922;
+			$W:1600;
+			$H:922;
+			h3{
+				width: get_calc(1220,$W);
+				left: get_calc(132,$W);
+				top: get_calc(-224,$H);
+			}
+		}
+		.cloud01{
+			width: get_calc(1507,$conW);
+			left: get_calc(1125,$conW);
+			top: get_calc(-100,$conH);
+		}
+		.cloud03{
+			width: get_calc(3614,$conW);
+			left: get_calc(131,$conW);
+			bottom: get_calc(-658,$conH);
+		}
+		.cloud04{
+			width: get_calc(2176,$conW);
+			left: auto;
+			right: get_calc(808,$conW);
+			top: auto;
+			bottom: get_calc(-350,$conH);
+		}
+		.blog-link_area{
+			width: get_calc(1440,$conW);
+			left: 0;
+			right: 0;
+			bottom: get_calc(-350,$conH);
+			margin: auto;
+			.img_area{
+				position: relative;
+				width: get_calc(200,720);
+				border:2px solid var(--base-color-white);
+				&:before{
+					left: 7px;
+					top: 7px;
+				}
+				}
+			.text_area{
+				margin-left: get_calc(47,720);
+			}
+			.en{
+				font-size: 14px;
+				margin-bottom: 12px;
+				@include transition(color);
+			}
+			p{
+				font-size: 14px;
+			}
+		}
+		.bird01{
+			width: get_calc(466,$conW);
+			top: 0;
+			left: get_calc(-90,$conW);
+		}
+		.bg-leaf_area{
+			top: get_calc(408,$conH);
+			height: get_calc(1886,$conH);
+			$leafH:1886;
+			.leaf02{
+				height: get_calc(192,$leafH);
+				top: 0;
+				left: get_calc(1440,$conW);
+			}
+			.leaf03{
+				height: get_calc(114,$leafH);
+				top:  get_calc(938,$leafH);
+				left: get_calc(1402,$conW);
+			}
+			.leaf04{
+				height: get_calc(404,$leafH);
+				left: get_calc(-50,$conW);
+				top: auto;
+				bottom: 0;
+			}
+		}
+		.bg-cloud_area{
+			.bg-cloud{
+				height: get_calc(305,685);
+				--duration: 120s;
+			}
+			.bgcloud02{
+				--duration:140s;
+			}
+		}
+		.town_bg{
+			bottom: get_calc(170,$conH);
+			aspect-ratio:400/192;
+			height: auto;
+			background-image:url(../img/top/kv_town-sp.webp);
+			background-size:cover;
+		}
+	}
 }
 
 // ==========================================================================

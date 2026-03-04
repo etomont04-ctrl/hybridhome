@@ -459,11 +459,24 @@ html.is-loading::after {
   margin-inline: auto;
   z-index: 5;
 }
+@media screen and (max-width: 1050px) {
+  #kv .yane-area {
+    width: 100%;
+    aspect-ratio: 1600/922;
+  }
+}
 #kv .yane-area h3 {
   position: absolute;
-  width: 52.9411764706%;
-  left: 20.8462332301%;
-  top: -19.7727272727%;
+  width: 32.0625%;
+  left: 12.625%;
+  top: -9.4360086768%;
+}
+@media screen and (max-width: 1050px) {
+  #kv .yane-area h3 {
+    width: 76.25%;
+    left: 8.25%;
+    top: -24.295010846%;
+  }
 }
 #kv .yane-area .yane {
   position: absolute;
@@ -729,7 +742,6 @@ html.is-loading::after {
   -webkit-transform: translate3d(0, 0, 0);
           transform: translate3d(0, 0, 0);
   --duration: 240s;
-  --gap: 120px;
   -webkit-animation: cloudFlow var(--duration) linear infinite;
           animation: cloudFlow var(--duration) linear infinite;
 }
@@ -807,6 +819,111 @@ html.is-loading::after {
   background: url(../img/top/kv_town.webp) center repeat-x;
   background-size: 1752px 392px;
   z-index: 1;
+}
+@media screen and (max-width: 1050px) {
+  #kv h1 {
+    margin-top: 8.625cqw;
+    width: 37.875cqw;
+    margin-bottom: 14.375cqw;
+  }
+  #kv h2 {
+    margin-top: 8.625cqw;
+    width: 81.75cqw;
+    margin-bottom: 20cqw;
+  }
+  #kv .yane-area {
+    width: 100%;
+    aspect-ratio: 1600/922;
+  }
+  #kv .yane-area h3 {
+    width: 76.25%;
+    left: 8.25%;
+    top: -24.295010846%;
+  }
+  #kv .cloud01 {
+    width: 94.1875%;
+    left: 70.3125%;
+    top: -4.1152263374%;
+  }
+  #kv .cloud03 {
+    width: 225.875%;
+    left: 8.1875%;
+    bottom: -27.0781893004%;
+  }
+  #kv .cloud04 {
+    width: 136%;
+    left: auto;
+    right: 50.5%;
+    top: auto;
+    bottom: -14.4032921811%;
+  }
+  #kv .blog-link_area {
+    width: 90%;
+    left: 0;
+    right: 0;
+    bottom: -14.4032921811%;
+    margin: auto;
+  }
+  #kv .blog-link_area .img_area {
+    position: relative;
+    width: 27.7777777778%;
+    border: 2px solid var(--base-color-white);
+  }
+  #kv .blog-link_area .img_area:before {
+    left: 7px;
+    top: 7px;
+  }
+  #kv .blog-link_area .text_area {
+    margin-left: 6.5277777778%;
+  }
+  #kv .blog-link_area .en {
+    font-size: 14px;
+    margin-bottom: 12px;
+    -webkit-transition: color 0.4s var(--easeOutSine);
+    transition: color 0.4s var(--easeOutSine);
+  }
+  #kv .blog-link_area p {
+    font-size: 14px;
+  }
+  #kv .bird01 {
+    width: 29.125%;
+    top: 0;
+    left: -5.625%;
+  }
+  #kv .bg-leaf_area {
+    top: 16.7901234568%;
+    height: 77.6131687243%;
+  }
+  #kv .bg-leaf_area .leaf02 {
+    height: 10.1802757158%;
+    top: 0;
+    left: 90%;
+  }
+  #kv .bg-leaf_area .leaf03 {
+    height: 6.0445387063%;
+    top: 49.7348886532%;
+    left: 87.625%;
+  }
+  #kv .bg-leaf_area .leaf04 {
+    height: 21.4209968187%;
+    left: -3.125%;
+    top: auto;
+    bottom: 0;
+  }
+  #kv .bg-cloud_area .bg-cloud {
+    height: 44.5255474453%;
+    --duration: 120s;
+  }
+  #kv .bg-cloud_area .bgcloud02 {
+    --duration:140s;
+  }
+  #kv .town_bg {
+    bottom: 6.9958847737%;
+    aspect-ratio: 400/192;
+    height: auto;
+    background-image: url(../img/top/kv_town-sp.webp);
+    background-size: cover;
+  }
 }
 
 .sv {
