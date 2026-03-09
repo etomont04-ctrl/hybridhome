@@ -69,10 +69,6 @@
   --delay: 0s;
 }
 
-:root {
-  --head-mt:100px;
-}
-
 @media screen and (min-width: 801px) {
   :root {
     --vwPC: calc(100vw / 1500);

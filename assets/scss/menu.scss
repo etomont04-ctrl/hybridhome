@@ -9,14 +9,19 @@
 	z-index:100;
 	opacity:1;
 	transition: all 0.3s ease;
-	display: none;
+	$areaW:1420;
+	&.index{
+		display: none;
+	}
 	&:not(.index){
 		@include fl;
 		padding: 28px get_calc(83,3000) 0 get_calc(74,3000);
-
 	}
 	&.index{
 		height: 100%;
+	}
+	.logo{
+		width: get_calc(223,$areaW);
 	}
 	.index_head_link-area{
 		position: absolute;
@@ -70,9 +75,6 @@
 			letter-spacing: 0.04em;
 			box-shadow: 1.4px 1.4px 6px 0 rgba(203, 250, 252, .8);
 			@include transition(background);
-			&:hover{
-				background:var()
-			}
 		}
 		.contact_link{
 			position: relative;
@@ -126,26 +128,72 @@
 	}
 	.g-nav{
 		@include fl;
+		.info-nav{
+			display: grid;
+			grid-template-columns: repeat(3, max-content);
+			justify-content: center;
+			align-items:center;
+			gap: 12px;
+			width: 340px;
+		}
+		.w_link{
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			min-height: 30px;
+			padding: 0 14px;
+			background: var(--base-color-black);
+			border-radius: 999px;
+			color: var(--base-color-white);
+			font-size: 13px;
+			letter-spacing: 0.04em;
+			@include transition(background);
+		}
+		.contact_link{
+			position: relative;
+			@include fc;
+			width: 100%;
+			aspect-ratio:169/50;
+			color: #fff;
+			background:url(../img/common/head_contact-btn_bg.png);
+			background-size:cover;
+			&::after{
+				content:"";
+				position:absolute;
+				inset:0;
+				background:url(../img/common/head_contact-btn_bg-af.png);
+				background-size:cover;
+				background-position:center;
+				opacity:0;
+				transition: opacity .4s var(--easeOutSine);
+				pointer-events:none;
+			}
+
+			&:hover::after{
+				opacity:1;
+			}
+			img{
+				position: relative;
+				width: get_calc(83,169);
+				z-index: 10;
+			}
+		}
 	}
 	.main-nav{
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-between;
-		align-items: end;
+		align-items:center;
 		flex:1;
-		gap:32px;
+		gap:26px;
 		margin-right: 25px;
 	}
 	.text{
 		position: relative;
 		display:inline-block;
 		--color:var(--base-text-color);
-		&.-about{--width:111px;}
-		&.-service{--width:96px;}
-		&.-data{--width:127px;}
-		&.-journal{--width:100px;}
-		&.-interview{--width:122px;}
-		&.-news{--width:62px;}
+		font-size: var(--fz14);
+		font-weight: 500;
 		@include min-width(801){
 			&:hover{
 				--color:var(--theme-color);

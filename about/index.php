@@ -15,12 +15,9 @@ if ($host === 'localhost' || $host === '127.0.0.1') {
 	// 本番環境
 	include($_SERVER['DOCUMENT_ROOT'] . '/assets/inc/root.php');
 }
-$UNIQUE_CSS = '<link rel="stylesheet" href="assets/css/splide.min.css?'.$Ymd.'">';
-$UNIQUE_CSS .= '<link rel="stylesheet" href="assets/css/top.css?'.$Ymd.'">';
-$UNIQUE_SCRIPT = '<script src="assets/js/splide.min.js?'.$Ymd.'"></script>';
-$UNIQUE_SCRIPT .= '<script src="assets/js/top.js?'.$Ymd.'"></script>';
-$uri = "index";
-$this_img_path = $img_path .  "top/";
+$UNIQUE_CSS = '<link rel="stylesheet" href="../assets/css/about.css?'.$Ymd.'">';
+$UNIQUE_SCRIPT = '';
+$uri = "about";
 ?>
 <!DOCTYPE html>
 <html lang="ja">
@@ -29,91 +26,12 @@ $this_img_path = $img_path .  "top/";
 </head>
 <body id="top">
 <div class="of-wrap">
-<!-- 	<div class="load">
-		<div class="logo-area">
-			<figure class="symbol -top"><img src="<?= $img_path; ?>common/logo-symbol-top.svg" alt="" decoding="async"></figure>
-			<figure class="text"><img src="<?= $img_path; ?>common/logo-text.svg" alt="" decoding="async"></figure>
-			<figure class="symbol -bottom"><img src="<?= $img_path; ?>common/logo-symbol-bottom.svg" alt="" decoding="async"></figure>
-		</div>
-	</div> -->
-	<main>
 	<?php include($root_path . 'assets/inc/menu.php'); ?>
+	<main>
 	<section id="kv" class="inview">
 		<div class="inr -m2000">
-			<div class="index_head_link-area">
-				<nav class="main-nav tab_off">
-					<a href="<?= $about_link; ?>" class="hv_ar"><i class="arrow"><img src="<?= $img_path; ?>common/arrow-g.png" alt="" decoding="async"></i>私たちについて</a>
-					<a href="<?= $reform_link; ?>" class="hv_ar"><i class="arrow"><img src="<?= $img_path; ?>common/arrow-g.png" alt="" decoding="async"></i>リフォーム＆リノベーション</a>
-					<a href="<?= $works_link; ?>" class="hv_ar"><i class="arrow"><img src="<?= $img_path; ?>common/arrow-g.png" alt="" decoding="async"></i>施工事例</a>
-					<a href="<?= $voice_link; ?>" class="hv_ar"><i class="arrow"><img src="<?= $img_path; ?>common/arrow-g.png" alt="" decoding="async"></i>お客様の声</a>
-					<a href="<?= $staff_link; ?>" class="hv_ar"><i class="arrow"><img src="<?= $img_path; ?>common/arrow-g.png" alt="" decoding="async"></i>社員紹介</a>
-					<a href="<?= $member_link; ?>" class="hv_ar"><i class="arrow"><img src="<?= $img_path; ?>common/arrow-g.png" alt="" decoding="async"></i>ハイブリッドの仲間たち</a>
-					<p class="en copy">(C) Hybrid Home inc.</p>
-				</nav>
-				<div class="info-nav tab_off">
-					<a href="<?= $company_link; ?>" class="w_link">会社概要</a>
-					<a href="<?= $recruit_link; ?>" class="w_link">採用情報</a>
-					<a href="<?= $contact_link; ?>" class="contact_link"><img src="<?= $img_path; ?>common/head_contact-btn_txt.png" alt="お問い合わせ" decoding="async"></a>
-				</div>
-			</div>
-			<h1 class="kv_logo"><img src="<?= $img_path; ?>common/logo.png" alt="ハイブリッドホーム HYBRID HOME" decoding="async"></h1>
-			<h2 class="kv_chatch"><img src="<?= $this_img_path; ?>chatch.webp" alt="WELCOME TO HYBRID HOME!" decoding="async"></h2>
-			<div class="yane-area">
-				<h3 class="kv_sub-chatch"><img src="<?= $this_img_path; ?>sub-chatch.webp" alt="ようこそ！ハイブリットホームへ" decoding="async"></h3>
-				<figure class="yane">
-					<picture>
-						<source media="(max-width: 1050px)" srcset="<?= $this_img_path; ?>fv-yane_sp.webp">
-						<img src="<?= $this_img_path; ?>fv-yane.webp" alt="">
-					</picture>
-			</div>
-			<a href="#" class="blog-link_area">
-				<figure class="img_area"><img src="<?= $this_img_path; ?>blog-dummy.png" alt="" decoding="async" class="fit_img"></figure>
-				<div class="text_area">
-					<div>
-						<span class="en">2025 12.30</span>
-						<p>ブログの最新記事が１件のみ表示されます。</p>
-					</div>
-				</div>
-			</a>
-			<figure class="bird bird01"><img src="<?= $img_path; ?>common/illust/bird01.webp" alt="" decoding="async"></figure>
-			<figure class="bird bird02 tab_off"><img src="<?= $img_path; ?>common/illust/bird02.webp" alt="" decoding="async"></figure>
-			<?php
-			$month = (int) date('n');
-			$season = '-winter';
-			if ($month >= 3 && $month <= 5) {
-				$season = '-spring';
-			} elseif ($month >= 6 && $month <= 8) {
-				$season = '-summer';
-			} elseif ($month >= 9 && $month <= 11) {
-				$season = '-autumn';
-			} else {
-				$season = '-winter';
-			}
-			?>
-			<div class="bg-leaf_area <?= $season; ?>">
-				<div class="bg-leaf leaf01 tab_off"></div>
-				<div class="bg-leaf leaf02"></div>
-				<div class="bg-leaf leaf03"></div>
-				<div class="bg-leaf leaf04"></div>
-				<div class="bg-leaf leaf05 tab_off"></div>
-			</div>
-			<div class="bg-cloud_area">
-				<figure class="bg-cloud bgcloud01"><img src="<?= $this_img_path; ?>fv-bg_cloud01.png" alt="" decoding="async"></figure>
-				<figure class="bg-cloud bgcloud02"><img src="<?= $this_img_path; ?>fv-bg_cloud02.png" alt="" decoding="async"></figure>
-			</div>
-			<figure class="cloud cloud01"><img src="<?= $this_img_path; ?>fv-cloud01.webp" alt="" decoding="async"></figure>
-			<figure class="cloud cloud02 tab_off"><img src="<?= $this_img_path; ?>fv-cloud02.webp" alt="" decoding="async"></figure>
-			<figure class="cloud cloud03"><img src="<?= $this_img_path; ?>fv-cloud03.webp" alt="">
-			</figure>
-			<div class="town_bg"></div>
-			<figure class="cloud cloud04">
-				<picture>
-					<source media="(max-width: 800px)" srcset="<?= $this_img_path; ?>fv-cloud04-sp.webp">
-					<img src="<?= $this_img_path; ?>fv-cloud04.webp" alt="">
-				</picture>
-			</figure>
-			<figure class="cloud cloud05"><img src="<?= $this_img_path; ?>fv-cloud05.webp" alt="" decoding="async"></figure>
-			<figure class="cloud cloud06"><img src="<?= $this_img_path; ?>fv-cloud06.webp" alt="" decoding="async"></figure>
+			<figure class="kv-img"><img src="<?= $this_img_path; ?>kv.webp" class="fit_img" alt="" decoding="async"></figure>
+
 		</div>
 	</section><!-- /kv -->
 	<section class="sv">

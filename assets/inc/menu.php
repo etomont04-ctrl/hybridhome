@@ -3,43 +3,22 @@
 
 	<?php }else{ ?>
 	<p class="logo"><a href="<?= $ROOT_DIR; ?>">
-		<img src="<?= $ROOT_DIR; ?>assets/img/common/logo.svg" alt="ハイブリットホーム HYBRID HOME" />
+		<img src="<?= $ROOT_DIR; ?>assets/img/common/logo-y.png" alt="ハイブリットホーム HYBRID HOME" />
 	</a></p>
 	<div class="head_link-area">
 		<nav class="g-nav">
 			<div class="main-nav">
-				<a href="<?= $about_link; ?>" class="text -about"><img src="<?= $img_path; ?>common/text/menu_about.svg" class="svg" alt=""><span class="sr-only">私たちについて</span></a>
-				<a href="<?= $service_link; ?>" class="text -service"><img src="<?= $img_path; ?>common/text/menu_service.svg" class="svg" alt=""><span class="sr-only">サービス紹介</span></a>
-				<a href="<?= $data_link; ?>" class="text -data"><img src="<?= $img_path; ?>common/text/menu_data.svg" class="svg" alt=""><span class="sr-only">データで見る獅子</span></a>
-				<a href="<?= $visit_journal_link; ?>" class="text -journal"><img src="<?= $img_path; ?>common/text/menu_journal.svg" class="svg" alt=""><span class="sr-only">お客様探訪録</span></a>
-				<a href="<?= $interview_link; ?>" class="text -interview"><img src="<?= $img_path; ?>common/text/menu_interview.svg" class="svg" alt=""><span class="sr-only">社員インタビュー</span></a>
-				<a href="<?= $news_link; ?>" class="text -news"><img src="<?= $img_path; ?>common/text/menu_news.svg" class="svg" alt=""><span class="sr-only">お知らせ</span></a>
+				<a href="<?= $about_link; ?>" class="text">私たちについて</a>
+				<a href="<?= $reform_link; ?>" class="text">リフォーム&amp;リノベーション</a>
+				<a href="<?= $works_link; ?>" class="text">施工事例</a>
+				<a href="<?= $voice_link; ?>" class="text">お客様の声</a>
+				<a href="<?= $staff_link; ?>" class="text">社員紹介</a>
+				<a href="<?= $member_link; ?>" class="text">ハイブリッドの仲間たち</a>
 			</div>
-			<div class="company-nav">
-				<a href="<?= $company_link; ?>" class="link_wrap">
-					<p class="link_btn -border -black">
-						<span class="text -company"><img src="<?= $img_path; ?>common/text/menu_company.svg" alt="" decoding="async" class="svg"></span>
-						<span class="sr-only">会社情報</span>
-						<i class="arrow -black" aria-hidden="true"><img src="<?= $img_path; ?>common/arrow.svg" alt="" decoding="async" class="svg"></i>
-					</p>
-				</a>
-				<a href="<?= $recruit_link; ?>" class="link_wrap">
-					<p class="link_btn -border -black">
-						<span class="text -recruit"><img src="<?= $img_path; ?>common/text/menu_recruit.svg" alt="" decoding="async" class="svg"></span>
-						<span class="sr-only">採用情報</span>
-						<i class="arrow -black" aria-hidden="true"><img src="<?= $img_path; ?>common/arrow.svg" alt="" decoding="async" class="svg"></i>
-					</p>
-				</a>
-			</div>
-			<div class="contact-nav">
-				<a href="<?= $contact_link; ?>" class="link_wrap">
-					<p class="link_btn -menu -black">
-						<span class="text"><img src="<?= $img_path; ?>common/text/menu_contact.svg" alt="" decoding="async" class="svg -white"></span>
-						<span class="sr-only">お問い合わせ</span>
-						<i class="arrow -white -w17" aria-hidden="true"><img src="<?= $img_path; ?>common/arrow.svg" alt="" decoding="async" class="svg"></i>
-					</p>
-				</a>
-
+			<div class="info-nav">
+				<a href="<?= $company_link; ?>" class="w_link">会社概要</a>
+				<a href="<?= $recruit_link; ?>" class="w_link">採用情報</a>
+				<a href="<?= $contact_link; ?>" class="contact_link"><img src="<?= $img_path; ?>common/head_contact-btn_txt.png" alt="お問い合わせ" decoding="async"></a>
 			</div>
 		</nav><!-- /g-nav -->
 	</div><!-- /head_link-area -->

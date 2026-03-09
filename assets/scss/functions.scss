@@ -518,6 +518,7 @@
 	--base-color-wood:#6d240e;
 	--base-color-blue:#14a5b6;
 	--base-color-blue02:#32a4ab;
+	--base-color-blue03:#37a9af;
 	--base-color-mizu:#00b4b2;
 	--base-color-orange:#e78a14;
 	--base-color-black:#29221f;
@@ -564,6 +565,7 @@
 // 	汎用スタイルroot
 // ==========================================================================
 :root {
+	--head-mt:100px;
 }
 
 @include max-width(800){

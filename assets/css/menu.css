@@ -36,6 +36,7 @@
   --base-color-wood:#6d240e;
   --base-color-blue:#14a5b6;
   --base-color-blue02:#32a4ab;
+  --base-color-blue03:#37a9af;
   --base-color-mizu:#00b4b2;
   --base-color-orange:#e78a14;
   --base-color-black:#29221f;
@@ -66,6 +67,10 @@
   --transition-scale:transform 0.8s var(--easeOutCubic);
   --gothic: "Zen Kaku Gothic New","Zen Kaku Gothic Antique",sans-serif;
   --delay: 0s;
+}
+
+:root {
+  --head-mt:100px;
 }
 
 @media screen and (min-width: 801px) {
@@ -182,6 +187,8 @@
   opacity: 1;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
+}
+.head.index {
   display: none;
 }
 .head:not(.index) {
@@ -197,6 +204,9 @@
 }
 .head.index {
   height: 100%;
+}
+.head .logo {
+  width: 15.7042253521%;
 }
 .head .index_head_link-area {
   position: absolute;
@@ -270,9 +280,6 @@
   -webkit-transition: background 0.4s var(--easeOutSine);
   transition: background 0.4s var(--easeOutSine);
 }
-.head .index_head_link-area .w_link:hover {
-  background: var();
-}
 .head .index_head_link-area .contact_link {
   position: relative;
   display: -webkit-box;
@@ -341,6 +348,79 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
+.head .g-nav .info-nav {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: -webkit-max-content 12px -webkit-max-content 12px -webkit-max-content;
+  -ms-grid-columns: max-content 12px max-content 12px max-content;
+  grid-template-columns: repeat(3, -webkit-max-content);
+  grid-template-columns: repeat(3, max-content);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 12px;
+  width: 340px;
+}
+.head .g-nav .w_link {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-height: 30px;
+  padding: 0 14px;
+  background: var(--base-color-black);
+  border-radius: 999px;
+  color: var(--base-color-white);
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  -webkit-transition: background 0.4s var(--easeOutSine);
+  transition: background 0.4s var(--easeOutSine);
+}
+.head .g-nav .contact_link {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  aspect-ratio: 169/50;
+  color: #fff;
+  background: url(../img/common/head_contact-btn_bg.png);
+  background-size: cover;
+}
+.head .g-nav .contact_link::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url(../img/common/head_contact-btn_bg-af.png);
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  -webkit-transition: opacity 0.4s var(--easeOutSine);
+  transition: opacity 0.4s var(--easeOutSine);
+  pointer-events: none;
+}
+.head .g-nav .contact_link:hover::after {
+  opacity: 1;
+}
+.head .g-nav .contact_link img {
+  position: relative;
+  width: 49.1124260355%;
+  z-index: 10;
+}
 .head .main-nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -350,37 +430,21 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  gap: 32px;
+  gap: 26px;
   margin-right: 25px;
 }
 .head .text {
   position: relative;
   display: inline-block;
   --color:var(--base-text-color);
-}
-.head .text.-about {
-  --width:111px;
-}
-.head .text.-service {
-  --width:96px;
-}
-.head .text.-data {
-  --width:127px;
-}
-.head .text.-journal {
-  --width:100px;
-}
-.head .text.-interview {
-  --width:122px;
-}
-.head .text.-news {
-  --width:62px;
+  font-size: var(--fz14);
+  font-weight: 500;
 }
 @media screen and (min-width: 801px) {
   .head .text:hover {

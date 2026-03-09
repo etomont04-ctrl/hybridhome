@@ -36,6 +36,7 @@
   --base-color-wood:#6d240e;
   --base-color-blue:#14a5b6;
   --base-color-blue02:#32a4ab;
+  --base-color-blue03:#37a9af;
   --base-color-mizu:#00b4b2;
   --base-color-orange:#e78a14;
   --base-color-black:#29221f;
@@ -66,6 +67,10 @@
   --transition-scale:transform 0.8s var(--easeOutCubic);
   --gothic: "Zen Kaku Gothic New","Zen Kaku Gothic Antique",sans-serif;
   --delay: 0s;
+}
+
+:root {
+  --head-mt:100px;
 }
 
 @media screen and (min-width: 801px) {

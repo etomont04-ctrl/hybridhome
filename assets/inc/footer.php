@@ -1,10 +1,15 @@
 <footer class="footer <?= ($uri === 'index') ? 'index' : '' ?>" id="footer">
 	<section class="contents_wrap inr -m2000 -lrg">
-		<figure class="cloud"><img src="<?= $img_path; ?>common/illust/footer-cloud.webp" alt="" decoding="async"></figure>
+		<figure class="cloud tab_off"><img src="<?= $img_path; ?>common/illust/footer-cloud.webp" alt="" decoding="async"></figure>
 		<div class="inr -w1400 inview">
 			<div class="contents">
 				<div class="footer_logo-area">
-					<h2><a href="<?= $ROOT_DIR; ?>"><img src="<?= $img_path; ?>common/logo.png" alt="ハイブリットホーム HYBRID HOME" decoding="async"></a></h2>
+					<h2><a href="<?= $ROOT_DIR; ?>">
+						<picture>
+							<source media="(max-width: 1050px)" srcset="<?= $img_path; ?>common/foot-logo_sp.png">
+							<img src="<?= $img_path; ?>common/logo-y.png" alt="ハイブリットホーム HYBRID HOME">
+						</picture>
+					</a></h2>
 					<div class="footer_logo-area_text">
 						<p class="n_txt -mid">株式会社ハイブリッドホーム<br>営業時間：9:00～18:00<span>（日・月曜・祝祭日定休）</span></p>
 						<a href="<?= $about_link ?>" class="link_wrap">
@@ -49,7 +54,7 @@
 						<li>
 							<a href="<?= $ROOT_DIR; ?>" class="hv_ar link"><i class="arrow -w10"><img src="<?= $img_path; ?>common/arrow-g.png" alt="" decoding="async"></i>トップページ</a>
 							<a href="<?= $about_link; ?>" class="hv_ar link"><i class="arrow -w10"><img src="<?= $img_path; ?>common/arrow-g.png" alt="" decoding="async"></i>私たちについて</a>
-							<a href="<?= $about_link; ?>" class="hv_ar link"><i class="arrow -w10"><img src="<?= $img_path; ?>common/arrow-g.png" alt="" decoding="async"></i>リフォーム＆リノベーション</a>
+							<a href="<?= $about_link; ?>" class="hv_ar link -ls"><i class="arrow -w10"><img src="<?= $img_path; ?>common/arrow-g.png" alt="" decoding="async"></i>リフォーム＆リノベーション</a>
 							<a href="<?= $about_link; ?>" class="hv_ar link"><i class="arrow -w10"><img src="<?= $img_path; ?>common/arrow-g.png" alt="" decoding="async"></i>施工事例</a>
 							<a href="<?= $about_link; ?>" class="hv_ar link"><i class="arrow -w10"><img src="<?= $img_path; ?>common/arrow-g.png" alt="" decoding="async"></i>お客様の声</a>
 						</li>
@@ -69,24 +74,26 @@
 						</li>
 					</ul><!--/link-area -->
 				</div><!-- /footer_link-area -->
-			</div><!--/contents -->
 			<a href="#top" class="pagetop">
 				<div class="arrow-area">
 					<i class="arrow"><img src="<?= $img_path; ?>common/arrow-top.png" alt="" decoding="async"></i>
 				</div>
-				<div class="illust_area">
+				<div class="illust_area tab_off">
 					<div class="tori">
 						<img src="<?= $img_path; ?>common/illust/footer-tori.webp" alt="" decoding="async" class="bf">
 						<img src="<?= $img_path; ?>common/illust/footer-tori_af.webp" alt="" decoding="async" class="af">
 					</div>
 					<figure class="post"><img src="<?= $img_path; ?>common/illust/footer-post.webp" alt="" decoding="async"></figure>
 				</div>
-
 			</a>
-			<span class="en copy">©2026 Hybrid Home inc. All Rights Reserved.</span>
+			</div><!--/contents -->
+			<span class="en copy">©2026 Hybrid Home inc. <br class="tab_on">All Rights Reserved.</span>
 		</div><!--/inr -->
 		<figure class="footer_illust-area">
-			<img src="<?= $img_path; ?>common/illust/footer-illust.webp" alt="" decoding="async">
+			<picture>
+				<source media="(max-width: 1050px)" srcset="<?= $img_path; ?>common/illust/footer-illust-sp.webp">
+				<img src="<?= $img_path; ?>common/illust/footer-illust.webp" alt="">
+			</picture>
 		</figure>
 	</section><!-- /inr -->
 </footer>

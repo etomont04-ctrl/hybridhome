@@ -4,6 +4,8 @@
 	fv
 ========================================================================== */
 .fv{
+	position: relative;
+	margin-top: var(--head-mt);
 }
 
 
@@ -654,8 +656,6 @@
 
 @include max-width(800){
 	.link_btn{
-		padding: 12px 19px;
-		gap:8px;
 		&.-xxlarge{
 			padding:22px 13px 22px 20px;
 			gap:10px;
@@ -838,157 +838,26 @@
 // --------------------------------------------------------------------------
 //	装飾関連
 //---------------------------------------------------------------------------
-.dq-icon{
-	position: absolute;
-	left: var(--dqL);
-	top:var(--dqT);
-	width: 29px;
-	aspect-ratio:57/45;
-	z-index:5;
-	&.-small{
-		width: 25px;
-	}
-	&.-midium{
-		width: 31px;
-	}
-	&.-semi-large{
-		width: 37px;
-	}
-	&.-large{
-		width: 42px;
-	}
-}
-@include max-width(800){
-	.dq-icon{
-		width: 17px;
-		&.-small{
-			width: 17px;
-		}
-		&.-midium{
-			width: 18px;
-		}
-		&.-large{
-			width: 25px;
-		}
-	}
-}
-
-
-.shift-bg{
-	position: relative;
-	&:before{
+.sb{
+	&:after{
 		content:"";
 		display:block;
 		position: absolute;
-		width: 100%;
-		height: 100%;
-		background:var(--base-bg-color03);
-		border-radius:10px;
-		border:1px solid var(--base-border-color);
-		z-index:1;
-	}
-	&:not(img,figure){
-		&:after{
-			content:"";
-			display:block;
-			position: absolute;
-			left: 0;
-			top: 0;
-			width: 100%;
-			height: 100%;
-			background:var(--base-color-white);
-			border-radius:10px;
-			border:1px solid var(--base-border-color);
-			z-index:2;
-		}
-	}
-	> img, > picture > img{
-		position: relative;
-		border-radius:10px;
-		border:1px solid var(--base-border-color);
+		width: calc((var(--bW) / var(--W)) * 100%);
+		top:  calc((var(--bT) / var(--H)) * 100%);
+		left: calc((var(--bL) / var(--W)) * 100%);
 		opacity:0;
-		z-index:5;
-		transition:	opacity .4s var(--easeOutQuad) 0s,transform .6s ease .3s;
+		transform:translateY(10px);
+		background-image: var(--imgURL);
+		background-size:cover;
+		transition:transform 1s var(--easeOutQuad),opacity 1s ease;
 	}
-	&.-lb{
-		&:before{
-			left: -20px;
-			bottom: -25px;
-		}
-		> img, > picture > *{
-			transform:translate(-20px,25px);
-		}
-	}
-	&.-lt{
-		&:before{
-			left: -15px;
-			top: -15px;
-		}
-		> img, > picture > *{
-			transform:translate(-15px,-15px);
-		}
-		&.-little{
-			&:before{
-				left: -10px;
-				top: -10px;
-			}
-			> img, > picture > *{
-				transform:translate(-10px,-10px);
-			}
-
-		}
-	}
-	&.-rt{
-		&:before{
-			right: -20px;
-			top: -25px;
-		}
-		> img, > picture > *{
-			transform:translate(20px,-25px);
-		}
-		&.-little{
-			&:before{
-				right: -10px;
-				top: -10px;
-			}
-			> img, > picture > *{
-				transform:translate(10px,-10px);
-			}
-
-		}
-	}
-	&.-rb{
-		&:before{
-			right: -20px;
-			top: 25px;
-		}
-		> img, > picture > *{
-			transform:translate(20px,25px);
-		}
-		&.-midium{
-			&:before{
-				right: -15px;
-				top: 15px;
-			}
-			> img, > picture > *{
-				transform:translate(15px,15px);
-			}
-
-		}
-		&.-little{
-			&:before{
-				right: -10px;
-				top: 10px;
-			}
-			> img, > picture > *{
-				transform:translate(10px,10px);
-			}
-		}
-		// &:after{
-		// 	transform:translate(2rem,2.5rem);
-		// }
+	&.move:after{
+		opacity:1;
+		transform:translateY(0);
 	}
 }
+
 .move .shift-bg,.shift-bg.move{
 	> img, > picture > *{
 		opacity:1;
@@ -1435,6 +1304,17 @@
 		z-index: 10;
 		left: 10px;
 		bottom: 6px;
+	}
+	@include max-width(1050){
+		font-size: 14px;
+		border-radius:15px;
+		padding:5px 17px 7px 36px;
+		.map_icon{
+			width: 21px;
+			left: 11px;
+			bottom: 7px;
+		}
+
 	}
 }
 /* ==========================================================================
