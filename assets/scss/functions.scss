@@ -125,13 +125,13 @@
 // --------------------------------------------------------------------------
 // 	最大幅
 // --------------------------------------------------------------------------
-// mw_vw: 1920基準の最大幅px指定
-@function mw_vw($value, $base: 3080, $target: 1920px) {
+// mw_vw: 2000基準の最大幅px指定
+@function mw_vw($value, $base: 1500, $target: 2000px) {
 	$v: strip-unit($value);
 	$b: strip-unit($base);
 	$t: strip-unit($target);
 	$ratio: $v / $b;          // 値 / ベース
-	$raw: $ratio * $t;        // 1920 に換算
+	$raw: $ratio * $t;        // 1500 に換算
 	$floor: floor($raw);      // 小数点以下切り捨て
 	@return $floor * 1px;     // px で返す
 }
@@ -513,6 +513,7 @@
 	--base-bg-color02:#eeeeee;
 	--base-bg-color03:#c3ced5;
 	--base-bg-color04:#f5f5f5;
+	--base-bg-color05:#c5fcfd;;
 	--base-color-green:#32929e;
 	--base-color-green02:#9dd1d0;
 	--base-color-wood:#6d240e;
@@ -537,6 +538,7 @@
 	--base-color-bronze:#664e1a;
 	--base-border-color:#000;
 	--base-border-color02:#d2d2d2;
+	--base-shadow-color:#ade2e3;
 
 	--base-btn-color01:#1f858b;
 	--base-btn-color01-hv:#137a80;
@@ -570,6 +572,7 @@
 
 @include max-width(800){
 	:root {
+	--head-mt:80px;
 	}
 }
 // ==========================================================================

@@ -23,8 +23,8 @@ $img_path      = $ROOT_DIR . 'assets/img/';
 // 現在のURLのパスだけ取り出す
 $url_path = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 
-// /ugokko 以降を取得
-$relative_path = str_ireplace('/shishi/', '', $url_path);
+// ドメイン 以降を取得
+$relative_path = str_ireplace('/hybridhome/', '', $url_path);
 
 // パスを / で分割
 $segments = explode('/', trim($relative_path, '/'));

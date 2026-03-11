@@ -471,13 +471,15 @@ $this_img_path = $img_path .  "top/";
 					</picture>
 				</figure>
 				<div class="partners-loop">
-					<div class="partners-loop__inner">
-						<img src="<?= $this_img_path; ?>partners_loop-txt.webp" alt="Our Partner" decoding="async"  class="partners-loop__img">
-						<img src="<?= $this_img_path; ?>partners_loop-txt.webp" alt="Our Partner" decoding="async"  class="partners-loop__img -second">
-					</div>
-					<div class="partners-loop__inner">
-						<img src="<?= $this_img_path; ?>partners_loop-txt.webp" alt="Our Partner" decoding="async"  class="partners-loop__img">
-						<img src="<?= $this_img_path; ?>partners_loop-txt.webp" alt="Our Partner" decoding="async"  class="partners-loop__img -second">
+					<div class="partners-loop__track">
+						<div class="partners-loop__unit">
+							<img src="<?= $this_img_path; ?>partners_loop-txt.webp" alt="Our Partner" decoding="async" class="partners-loop__img">
+							<img src="<?= $this_img_path; ?>partners_loop-txt.webp" alt="Our Partner" decoding="async" class="partners-loop__img -second">
+						</div>
+						<div class="partners-loop__unit">
+							<img src="<?= $this_img_path; ?>partners_loop-txt.webp" alt="Our Partner" decoding="async" class="partners-loop__img">
+							<img src="<?= $this_img_path; ?>partners_loop-txt.webp" alt="Our Partner" decoding="async" class="partners-loop__img -second">
+						</div>
 					</div>
 				</div>
 			</div><!-- /partners-contents_area -->
@@ -565,7 +567,6 @@ $this_img_path = $img_path .  "top/";
 		<figure class="kumo kumo02"><img src="<?= $this_img_path; ?>news-kumo02.webp" alt="" decoding="async"></figure>
 		<figure class="bird inview bt_one"><img src="<?= $this_img_path; ?>lv-bird.webp" alt="" decoding="async"></figure>
 	</section><!-- /partners -->
-
 	<section class="lv">
 		<div class="inr -m2000 -lrg">
 			<figure class="lv-house">

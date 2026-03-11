@@ -700,6 +700,9 @@ html.is-loading::after{
 	.link_btn{
 		width: getCqw(250,$conW);
 		border-radius:getCqw(30,$conW);
+		&:before{
+		border-radius:getCqw(30,$conW);
+	}
 		.text{
 			font-size: getCqw(19,$conW);
 		}
@@ -933,6 +936,9 @@ html.is-loading::after{
 		.link_btn{
 			width: getCqw(460,$conW);
 			border-radius:getCqw(100,$conW);
+			&:before{
+				border-radius:getCqw(100,$conW);
+			}
 			.text{
 				font-size: getCqw(32,$conW);
 			}
@@ -1186,6 +1192,9 @@ html.is-loading::after{
 	.link_btn{
 		width: getCqw(250,$conW);
 		border-radius:getCqw(30,$conW);
+		&:before{
+			border-radius:getCqw(30,$conW);
+		}
 		.text{
 			font-size: getCqw(19,$conW);
 		}
@@ -1417,6 +1426,9 @@ html.is-loading::after{
 			bottom: getCqw(260,$conW);
 			width: getCqw(460,$conW);
 			border-radius:getCqw(100,$conW);
+			&:before{
+				border-radius:getCqw(100,$conW);
+			}
 			.text{
 				font-size: getCqw(32,$conW);
 			}
@@ -1562,6 +1574,9 @@ html.is-loading::after{
 			.link_btn{
 				width: getCqw(250,$conW);
 				border-radius:getCqw(30,$conW);
+				&:before{
+					border-radius:getCqw(30,$conW);
+				}
 				.text{
 					font-size: getCqw(19,$conW);
 				}
@@ -1702,6 +1717,9 @@ html.is-loading::after{
 				.link_btn{
 					width: getCqw(460,$conW);
 					border-radius:getCqw(60,$conW);
+					&:before{
+						border-radius:getCqw(60,$conW);
+					}
 					.text{
 						font-size: getCqw(32,$conW);
 					}
@@ -1870,6 +1888,9 @@ html.is-loading::after{
 			.link_btn{
 				width: getCqw(250,$conW);
 				border-radius:getCqw(30,$conW);
+				&:before{
+					border-radius:getCqw(30,$conW);
+				}
 				.text{
 					font-size: getCqw(19,$conW);
 				}
@@ -1958,6 +1979,9 @@ html.is-loading::after{
 				.link_btn{
 					width: getCqw(460,$conW);
 					border-radius:getCqw(60,$conW);
+					&:before{
+						border-radius:getCqw(60,$conW);
+					}
 					.text{
 						font-size: getCqw(32,$conW);
 					}
@@ -2046,35 +2070,40 @@ html.is-loading::after{
 			width: get_calc(384,$areaW);
 			z-index: 10;
 		}
+
 		.partners-loop{
 			position: absolute;
-			display: flex;
-			flex-wrap: nowrap;
 			width: get_calc(940,$areaW);
 			left: 0;
 			bottom: 0;
 			z-index: 10;
 			overflow: hidden;
 		}
-		.partners-loop__inner{
-			position: relative;
+
+		.partners-loop__track{
 			display: flex;
 			align-items: center;
-			// flex: 0 0 auto;
-			gap:40px;
+			width: max-content;
 			will-change: transform;
-			animation: LoopX 60s infinite linear 1s both;
-			&:nth-child(2){
-				ransform: translate3d(100%,0,0);
-				animation-delay: 0s;
-			}
+			animation: LoopX02 50s linear infinite;
 		}
+
+		.partners-loop__unit{
+			display: flex;
+			align-items: center;
+			flex: 0 0 auto;
+			width: max-content;
+			gap: 40px;
+			padding-right: 40px;
+		}
+
 		.partners-loop__img{
 			display: block;
 			width: getCqw(913,$conW);
 			height: auto;
 			flex: 0 0 auto;
 		}
+
 		.light{
 			position: absolute;
 			top: get_calc(117,$areaH);
@@ -2161,6 +2190,9 @@ html.is-loading::after{
 			.link_btn{
 				width: getCqw(250,$conW);
 				border-radius:getCqw(30,$conW);
+				&:before{
+					border-radius:getCqw(30,$conW);
+				}
 				.text{
 					font-size: getCqw(19,$conW);
 				}
@@ -2300,6 +2332,9 @@ html.is-loading::after{
 				.link_btn{
 					width: getCqw(460,$conW);
 					border-radius:getCqw(60,$conW);
+					&:before{
+						border-radius:getCqw(60,$conW);
+					}
 					.text{
 						font-size: getCqw(32,$conW);
 					}
@@ -2428,6 +2463,9 @@ html.is-loading::after{
 		.link_btn{
 			width: getCqw(250,$conW);
 			border-radius:getCqw(30,$conW);
+			&:before{
+				border-radius:getCqw(30,$conW);
+			}
 			.text{
 				font-size: getCqw(19,$conW);
 			}
@@ -2598,6 +2636,9 @@ html.is-loading::after{
 		.link_btn{
 			width: getCqw(340,$conW);
 			border-radius:getCqw(50,$conW);
+			&:before{
+				border-radius:getCqw(50,$conW);
+			}
 			.text{
 				font-size: getCqw(32,$conW);
 			}

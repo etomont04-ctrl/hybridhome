@@ -28,483 +28,174 @@ $uri = "about";
 <div class="of-wrap">
 	<?php include($root_path . 'assets/inc/menu.php'); ?>
 	<main>
-	<section id="kv" class="inview">
+	<section class="fv inview">
 		<div class="inr -m2000">
-			<figure class="kv-img"><img src="<?= $this_img_path; ?>kv.webp" class="fit_img" alt="" decoding="async"></figure>
-
-		</div>
-	</section><!-- /kv -->
-	<section class="sv">
-		<div class="inr -m2000">
-			<figure class="sv-house tab_off"><img src="<?= $this_img_path; ?>sv-house.webp" alt="" decoding="async"></figure>
-			<figure class="sv-cloud"><img src="<?= $this_img_path; ?>sv-cloud.webp" alt="" decoding="async"></figure>
-		</div>
-	</section><!-- /sv -->
-	<section class="intro">
-		<div class="inr -m2000 -rg">
-			<figure class="yane tab_off"><img src="<?= $this_img_path; ?>intro_yane.webp" alt="" decoding="async"></figure>
-			<div class="intro-contents_wrap">
-				<figure class="yane tab_on"><img src="<?= $this_img_path; ?>intro_yane-sp.webp" alt="" decoding="async"></figure>
-				<div class="intro-text_area">
-					<h2><img src="<?= $this_img_path; ?>intro_title.webp" alt="ハイブリッドホームは、家を大切に住みつぎたい人のためのリフォーム&リノベーション会社です。" decoding="async"></h2>
-					<p class="intro-text -mid">家を大切にすることは、<br class="pc_off">そこに住む自分を大切にすること。<br>そこで暮らした時間ごと大切にするために、<br class="pc_off">再び家へ息吹を吹き込みましょう。<br><br class="pc_off">わたしたちハイブリッドホームが全力でお手伝いいたします。
-					</p>
-					<a href="<?= $about_link ?>" class="link_wrap">
-						<p class="link_btn -blue">
-							<span class="text">私たちについて</span>
-							<i class="arrow"><img src="<?= $img_path; ?>common/arrow-w.png" alt="" decoding="async"></i>
-						</p>
-					</a>
-				</div>
-				<figure class="bird tab_on"><img src="<?= $img_path; ?>common/illust/bird02.webp" alt="" decoding="async"></figure>
-				<figure class="tab-kumo kumo01 tab_on">
-					<img src="<?= $this_img_path; ?>intro_tab-kumo01.webp" alt="" decoding="async">
-				</figure>
-				<figure class="tab-kumo kumo02 tab_on">
-					<img src="<?= $this_img_path; ?>intro_tab-kumo02.webp" alt="" decoding="async">
-				</figure>
-				<figure class="tab-kumo kumo03 tab_on">
-					<img src="<?= $this_img_path; ?>intro_tab-kumo03.webp" alt="" decoding="async">
-				</figure>
-				<div class="intro-house_area">
-					<figure class="house_wrap">
-						<picture>
-							<source media="(max-width: 1050px)" srcset="<?= $this_img_path; ?>intro_illust-wrap-sp.webp">
-							<img src="<?= $this_img_path; ?>intro_illust-wrap.webp" alt="">
-						</picture>
-					</figure>
-					<div class="intro-house-illust_area">
-						<figure class="move-illust tori01"><img src="<?= $this_img_path; ?>intro_tori01.webp" alt="" decoding="async"></figure>
-						<figure class="move-illust tori_kage01"><img src="<?= $this_img_path; ?>intro_tori01-kage.webp" alt="" decoding="async"></figure>
-						<figure class="move-illust tori02"><img src="<?= $this_img_path; ?>intro_tori02.webp" alt="" decoding="async"></figure>
-						<figure class="move-illust tori_kage02"><img src="<?= $this_img_path; ?>intro_tori02-kage.webp" alt="" decoding="async"></figure>
-						<div class="move-illust man-area">
-							<figure><img src="<?= $this_img_path; ?>intro_man-area.webp" alt="" decoding="async"></figure>
-							<figure class="move-illust man"><img src="<?= $this_img_path; ?>intro_man.webp" alt="" decoding="async"></figure>
-						</div>
-						<div class="move-illust duck-area">
-							<figure><img src="<?= $this_img_path; ?>intro_duck-base.webp" alt="" decoding="async"></figure>
-							<figure class="move-illust pc"><img src="<?= $this_img_path; ?>intro_duck-pc.webp" alt="" decoding="async"></figure>
-							<figure class="move-illust duck"><img src="<?= $this_img_path; ?>intro_duck.webp" alt="" decoding="async"></figure>
-						</div>
-						<figure class="move-illust hebi"><img src="<?= $this_img_path; ?>intro_hebi.webp" alt="" decoding="async"></figure>
-						<figure class="move-illust girl"><img src="<?= $this_img_path; ?>intro_girl.webp" alt="" decoding="async"></figure>
-						<figure class="move-illust risu01"><img src="<?= $this_img_path; ?>intro_risu01.webp" alt="" decoding="async"></figure>
-						<figure class="move-illust risu02"><img src="<?= $this_img_path; ?>intro_risu02.webp" alt="" decoding="async"></figure>
-						<figure class="move-illust tora"><img src="<?= $this_img_path; ?>intro_tora.webp" alt="" decoding="async"></figure>
-						<figure class="illust_base"><img src="<?= $this_img_path; ?>intro_illust-base.webp"></figure>
-					</div><!-- /intro-house_illust_area -->
-				</div><!-- /intro-house_area -->
-				<figure class="kumo kumonchu sb inview"><img src="<?= $this_img_path; ?>intro_kumonchu.webp" alt="" decoding="async"></figure>
-				<figure class="kumo duck sb inview"><img src="<?= $this_img_path; ?>intro_kumoduck.webp" alt="" decoding="async"></figure>
-
-			</div><!-- /intro-contents_wrap -->
-		</div><!-- /inr -->
-	</section><!-- /intro -->
-	<section class="project">
-		<div class="inr -m2000 -lrg">
-			<div class="title_area">
-				<h2><img src="<?= $this_img_path; ?>project_title.webp" alt="施工事例" decoding="async"></h2>
-				<span class="en">Featured project</span>
-				<a href="<?= $about_link ?>" class="link_wrap tab_off">
-					<p class="link_btn -red">
-						<span class="text">事例一覧へ</span>
-						<i class="arrow"><img src="<?= $img_path; ?>common/arrow-w.png" alt="" decoding="async"></i>
-					</p>
-				</a>
-			</div><!-- /title_area -->
-			<section class="picks">
-				<div class="splide js-picks-splide" aria-label="おすすめ事例">
-					<div class="splide__track">
-						<ul class="splide__list">
-							<li class="splide__slide">
-								<article class="pick-card">
-									<a class="pick-card__link" href="#">
-										<div class="pick-card__photo soto">
-											<img src="<?= $this_img_path; ?>project_img.webp" alt="" decoding="async" class="fit_img">
-										</div>
-										<div class="pick-card__body">
-											<h3 class="pick-card__title">愛車と同居できる家</h3>
-											<div class="pick-card__tags"><span>#ウッドデッキ</span>　<span>#エクステリア</span></div>
-											<span class="pick-card__area">町田市</span>
-										</div>
-									</a>
-								</article>
-							</li><!--/splide__slide -->
-							<li class="splide__slide">
-								<article class="pick-card">
-									<a class="pick-card__link" href="#">
-										<div class="pick-card__photo uchi">
-											<img src="<?= $this_img_path; ?>project_img.webp" alt="" decoding="async" class="fit_img">
-										</div>
-										<div class="pick-card__body">
-											<h3 class="pick-card__title">庭がカフェになる家</h3>
-											<div class="pick-card__tags"><span>#ウッドデッキ</span>　<span>#エクステリア</span></div>
-											<span class="pick-card__area">町田市</span>
-										</div>
-									</a>
-								</article>
-							</li><!--/splide__slide -->
-							<li class="splide__slide">
-								<article class="pick-card">
-									<a class="pick-card__link" href="#">
-										<div class="pick-card__photo soto">
-											<img src="<?= $this_img_path; ?>project_img.webp" alt="" decoding="async" class="fit_img">
-										</div>
-										<div class="pick-card__body">
-											<h3 class="pick-card__title">犬と暮らしやすい家</h3>
-											<div class="pick-card__tags"><span>#ウッドデッキ</span>　<span>#エクステリア</span></div>
-											<span class="pick-card__area">町田市</span>
-										</div>
-									</a>
-								</article>
-							</li><!--/splide__slide -->
-						</ul><!--/splide__likst-->
-					</div><!--/splide-->
-				</div><!--/splide-->
-			</section><!--/picks -->
-			<a href="<?= $about_link ?>" class="link_wrap tab_on">
-				<p class="link_btn -red">
-					<span class="text">私たちについて</span>
-					<i class="arrow"><img src="<?= $img_path; ?>common/arrow-w.png" alt="" decoding="async"></i>
-				</p>
-			</a>
-			<figure class="project_base">
+			<figure class="fv-img">
 				<picture>
-					<source media="(max-width: 1050px)" srcset="<?= $this_img_path; ?>project_base-sp.webp">
-					<img src="<?= $this_img_path; ?>project_base.webp" alt="">
+					<source media="(max-width: 1050px)" srcset="<?= $this_img_path; ?>fv-sp.webp">
+					<img src="<?= $this_img_path; ?>fv.webp" alt="" class="fit_img">
 				</picture>
 			</figure>
-			<figure class="risu inview">
-				<picture>
-					<source media="(max-width: 800px)" srcset="<?= $this_img_path; ?>project-risu-sp.webp">
-					<img src="<?= $this_img_path; ?>project-risu.webp" alt="">
-				</picture>
-			</figure>
-			<figure class="kumo">
-				<img src="<?= $this_img_path; ?>project-kumo.webp" alt="" decoding="async">
-			</figure>
-		</div><!-- /inr -->
-	</section><!-- /project -->
-	<section class="reform">
-		<div class="inr -m2000 -lrg">
-			<div class="reform-bath_area">
-				<figure class="bubble">
-					<picture>
-						<source media="(max-width: 1050px)" srcset="<?= $this_img_path; ?>reform-bubble-sp.webp">
-						<img src="<?= $this_img_path; ?>reform-bubble.webp" alt="">
-					</picture>
-				</figure>
-				<figure class="wani sb inview">
-					<img src="<?= $this_img_path; ?>reform-wani.webp" alt="" decoding="async">
-				</figure>
-				<figure class="pillar tab_on">
-					<img src="<?= $this_img_path; ?>reform_sp-pillar.webp" alt="" decoding="async">
-				</figure>
-				<figure class="illust_base sb inview">
-					<picture>
-						<source media="(max-width: 1050px)" srcset="<?= $this_img_path; ?>reform_illust-base-sp.webp">
-						<img src="<?= $this_img_path; ?>reform_illust-base.webp" alt="">
-					</picture>
-				</figure>
-			</div><!--/reform-bus_area -->
-			<div class="reform-contents_area">
-				<div class="reform-light_area">
-					<figure class="light light01">
-						<img src="<?= $this_img_path; ?>reform-light01.webp" alt="" decoding="async">
-					</figure>
-					<figure class="light light02">
-						<img src="<?= $this_img_path; ?>reform-light02.webp" alt="" decoding="async">
-					</figure>
-					<figure class="light light03">
-						<img src="<?= $this_img_path; ?>reform-light03.webp" alt="" decoding="async">
-					</figure>
-				</div>
-				<figure class="photo_area">
-					<img src="<?= $this_img_path; ?>reform_photo.webp" alt="" decoding="async">
-				</figure>
-				<h2>
-					<picture>
-						<source media="(max-width: 1050px)" srcset="<?= $this_img_path; ?>reform_title-sp.webp">
-						<img src="<?= $this_img_path; ?>reform_title.webp" alt="リフォーム&リノベーション Reform&Renovation">
-					</picture>
-				</h2>
-				<div class="text_area">
-					<p class="n_txt">ハイブリッドホームのリフォーム・リノベーションは単なる改修ではありません。<br>お客様一人ひとりの「暮らしやすい住まい」を、これまでの経験とプロの目線に裏打ちされたプランを作成し、本当にお客様が暮らしやすい住まいを実現します。</p>
-					<a href="<?= $reform_link ?>" class="link_wrap">
-						<p class="link_btn -red">
-							<span class="text">詳細ページへ</span>
-							<i class="arrow"><img src="<?= $img_path; ?>common/arrow-w.png" alt="" decoding="async"></i>
-						</p>
-					</a>
-				</div>
-				<div class="reform-loop">
-					<div class="reform-loop__inner">
-						<img src="<?= $this_img_path; ?>reform_roop-txt.webp" alt="Reform&Renov" decoding="async"  class="reform-loop__img">
-						<img src="<?= $this_img_path; ?>reform_roop-txt.webp" alt="Reform&Renov" decoding="async"  class="reform-loop__img -second">
-					</div>
-				</div>
-				<figrure class="illust_base">
-					<picture>
-						<source media="(max-width: 1050px)" srcset="<?= $this_img_path; ?>reform-contents_base-sp.webp">
-						<img src="<?= $this_img_path; ?>reform-contents_base.webp" alt="">
-					</picture>
-				</figure>
-			</div><!-- /reform-contents_area -->
-		</div><!-- /inr -->
-	</section><!-- /reform -->
-	<section class="staff">
-		<div class="inr -m2000 -lrg">
-			<div class="staff-kitchen_area">
-				<figure class="kuma">
-					<img src="<?= $this_img_path; ?>staff-kuma.webp" alt="" decoding="async">
-				</figure>
-				<figure class="table">
-					<img src="<?= $this_img_path; ?>staff-table.webp" alt="" decoding="async">
-				</figure>
-				<figure class="men">
-					<img src="<?= $this_img_path; ?>staff-men.webp" alt="" decoding="async">
-				</figure>
-				<figure class="kemuri">
-					<img src="<?= $this_img_path; ?>staff-kemuri.webp" alt="" decoding="async">
-				</figure>
-				<figure class="pillar tab_on">
-					<img src="<?= $this_img_path; ?>staff_sp-pillar.webp" alt="" decoding="async">
-				</figure>
-				<figure class="illust_base">
-					<picture>
-						<source media="(max-width: 1050px)" srcset="<?= $this_img_path; ?>staff_illust-base-sp.webp">
-						<img src="<?= $this_img_path; ?>staff_illust-base.webp" alt="">
-					</picture>
-				</figure>
-			</div><!--/staff-bus_area -->
-			<div class="staff-contents_area">
-				<div class="staff-loop">
-					<div class="staff-loop__inner">
-						<img src="<?= $this_img_path; ?>staff_loop-img01.webp" decoding="async"  class="staff-loop__img">
-						<img src="<?= $this_img_path; ?>staff_loop-img02.webp" decoding="async"  class="staff-loop__img">
-						<img src="<?= $this_img_path; ?>staff_loop-img03.webp" decoding="async"  class="staff-loop__img">
-						<img src="<?= $this_img_path; ?>staff_loop-img04.webp" decoding="async"  class="staff-loop__img">
-						<img src="<?= $this_img_path; ?>staff_loop-img05.webp" decoding="async"  class="staff-loop__img">
-						<img src="<?= $this_img_path; ?>staff_loop-img06.webp" decoding="async"  class="staff-loop__img">
-						<img src="<?= $this_img_path; ?>staff_loop-img07.webp" decoding="async"  class="staff-loop__img">
-						<img src="<?= $this_img_path; ?>staff_loop-img08.webp" decoding="async"  class="staff-loop__img">
-						<img src="<?= $this_img_path; ?>staff_loop-img09.webp" decoding="async"  class="staff-loop__img">
-						<img src="<?= $this_img_path; ?>staff_loop-img10.webp" decoding="async"  class="staff-loop__img">
-						<img src="<?= $this_img_path; ?>staff_loop-img11.webp" decoding="async"  class="staff-loop__img">
-						<img src="<?= $this_img_path; ?>staff_loop-img12.webp" decoding="async"  class="staff-loop__img">
-						<img src="<?= $this_img_path; ?>staff_loop-img13.webp" decoding="async"  class="staff-loop__img">
-						<img src="<?= $this_img_path; ?>staff_loop-img14.webp" decoding="async"  class="staff-loop__img">
-					</div>
-					<div class="staff-loop__inner">
-						<img src="<?= $this_img_path; ?>staff_loop-img01.webp" decoding="async"  class="staff-loop__img">
-						<img src="<?= $this_img_path; ?>staff_loop-img02.webp" decoding="async"  class="staff-loop__img">
-						<img src="<?= $this_img_path; ?>staff_loop-img03.webp" decoding="async"  class="staff-loop__img">
-						<img src="<?= $this_img_path; ?>staff_loop-img04.webp" decoding="async"  class="staff-loop__img">
-						<img src="<?= $this_img_path; ?>staff_loop-img05.webp" decoding="async"  class="staff-loop__img">
-						<img src="<?= $this_img_path; ?>staff_loop-img06.webp" decoding="async"  class="staff-loop__img">
-						<img src="<?= $this_img_path; ?>staff_loop-img07.webp" decoding="async"  class="staff-loop__img">
-						<img src="<?= $this_img_path; ?>staff_loop-img08.webp" decoding="async"  class="staff-loop__img">
-						<img src="<?= $this_img_path; ?>staff_loop-img09.webp" decoding="async"  class="staff-loop__img">
-						<img src="<?= $this_img_path; ?>staff_loop-img10.webp" decoding="async"  class="staff-loop__img">
-						<img src="<?= $this_img_path; ?>staff_loop-img11.webp" decoding="async"  class="staff-loop__img">
-						<img src="<?= $this_img_path; ?>staff_loop-img12.webp" decoding="async"  class="staff-loop__img">
-						<img src="<?= $this_img_path; ?>staff_loop-img13.webp" decoding="async"  class="staff-loop__img">
-						<img src="<?= $this_img_path; ?>staff_loop-img14.webp" decoding="async"  class="staff-loop__img">
-					</div>
-				</div>
-				<div class="text_area">
-				<h2><img src="<?= $this_img_path; ?>staff_title.webp" alt="社員紹介 Staff Profiles" decoding="async"></h2>
-					<p class="n_txt">ハイブリッドホームのリフォーム・リノベーションは単なる改修ではありません。<br>お客様一人ひとりの「暮らしやすい住まい」を、これまでの経験とプロの目線に裏打ちされたプランを作成し、本当にお客様が暮らしやすい住まいを実現します。</p>
-					<a href="<?= $staff_link ?>" class="link_wrap">
-						<p class="link_btn -blue">
-							<span class="text">詳細ページへ</span>
-							<i class="arrow"><img src="<?= $img_path; ?>common/arrow-w.png" alt="" decoding="async"></i>
-						</p>
-					</a>
-				</div>
-				<figure class="risu sb inview"><img src="<?= $this_img_path; ?>staff-risu.webp" alt="" decoding="async"></figure>
-				<figure class="kaidan"><img src="<?= $this_img_path; ?>staff-kaidan.webp" alt="" decoding="async"></figure>
-				<figrure class="illust_base">
-					<picture>
-						<source media="(max-width: 1050px)" srcset="<?= $this_img_path; ?>staff-contents_base-sp.webp">
-						<img src="<?= $this_img_path; ?>staff-contents_base.webp" alt="">
-					</picture>
-				</figure>
-			</div><!-- /staff-contents_area -->
-			<figure class="kumo tab_on"><img src="<?= $this_img_path; ?>staff-kumo.webp" alt="" decoding="async"></figure>
-
-		</div><!-- /inr -->
-	</section><!-- /staff -->
-	<section class="partners">
-		<div class="inr -m2000 -lrg">
-			<div class="partners-construction_area">
-				<figure class="duck">
-					<img src="<?= $this_img_path; ?>partners-duck.webp" alt="" decoding="async">
-				</figure>
-				<figure class="risu"><img src="<?= $this_img_path; ?>partners-risu.webp" alt="" decoding="async"></figure>
-				<figure class="risu-kage"><img src="<?= $this_img_path; ?>partners-risu-kage.webp" alt="" decoding="async"></figure>
-				<figure class="pillar tab_on">
-					<img src="<?= $this_img_path; ?>partners_sp-pillar.webp" alt="" decoding="async">
-				</figure>
-				<figure class="illust_base">
-					<picture>
-						<source media="(max-width: 1050px)" srcset="<?= $this_img_path; ?>partners_illust-base-sp.webp">
-						<img src="<?= $this_img_path; ?>partners_illust-base.webp" alt="">
-					</picture>
-				</figure>
-			</div><!--/partners-construction_area -->
-			<div class="partners-contents_area">
-				<h2><img src="<?= $this_img_path; ?>partners_title.webp" alt="ハイブリッドの仲間たち Our Partners" decoding="async"></h2>
-				<div class="text_area">
-					<p class="n_txt">ハイブリッドホームでは一つの工事を仕上げるのに、多くの職人たちと連携しています。<br class="pc_off">
-それぞれの専門の分野で活躍する腕利きの職人たちにハイブリッドホームの家づくりについて話を聞きました。</p>
-					<a href="<?= $partners_link ?>" class="link_wrap">
-						<p class="link_btn -red">
-							<span class="text">詳細ページへ</span>
-							<i class="arrow"><img src="<?= $img_path; ?>common/arrow-w.png" alt="" decoding="async"></i>
-						</p>
-					</a>
-				</div>
-				<figure class="light inview"><img src="<?= $this_img_path; ?>partners-light.webp" alt="" decoding="async"></figure>
-				<div class="photo_area inview bt">
-					<figure class="photo photo01"><img src="<?= $this_img_path; ?>partners-photo01.webp" alt="" decoding="async"></figure>
-					<figure class="photo photo02">
-						<picture>
-							<source media="(max-width: 1050px)" srcset="<?= $this_img_path; ?>partners-photo02-sp.webp">
-							<img src="<?= $this_img_path; ?>partners-photo02.webp" alt="">
-						</picture>
-					</figure>
-					<figure class="photo photo03">
-						<picture>
-							<source media="(max-width: 1050px)" srcset="<?= $this_img_path; ?>partners-photo03-sp.webp">
-							<img src="<?= $this_img_path; ?>partners-photo03.webp" alt="">
-						</picture>
-					</figure>
-				</div>
-				<figrure class="illust_base">
-					<picture>
-						<source media="(max-width: 1050px)" srcset="<?= $this_img_path; ?>partners-contents_base-sp.webp">
-						<img src="<?= $this_img_path; ?>partners-contents_base.webp" alt="">
-					</picture>
-				</figure>
-				<div class="partners-loop">
-					<div class="partners-loop__inner">
-						<img src="<?= $this_img_path; ?>partners_loop-txt.webp" alt="Our Partner" decoding="async"  class="partners-loop__img">
-						<img src="<?= $this_img_path; ?>partners_loop-txt.webp" alt="Our Partner" decoding="async"  class="partners-loop__img -second">
-					</div>
-					<div class="partners-loop__inner">
-						<img src="<?= $this_img_path; ?>partners_loop-txt.webp" alt="Our Partner" decoding="async"  class="partners-loop__img">
-						<img src="<?= $this_img_path; ?>partners_loop-txt.webp" alt="Our Partner" decoding="async"  class="partners-loop__img -second">
-					</div>
-				</div>
-			</div><!-- /partners-contents_area -->
-			<figure class="kumo kumonchu"><img src="<?= $this_img_path; ?>partners-kumonchu.webp" alt="" decoding="async"></figure>
-			<figure class="kumo risu sb inview"><img src="<?= $this_img_path; ?>partners-kumorisu.webp" alt="" decoding="async"></figure>
-		</div><!-- /inr -->
-	</section><!-- /partners -->
-	<section class="news">
-		<div class="inr -m2000 -lrg">
-			<div class="news-balcony_area">
-				<figure class="leaf">
-					<img src="<?= $this_img_path; ?>news-leaf.webp" alt="" decoding="async">
-				</figure>
-				<figure class="chou chou01"><img src="<?= $this_img_path; ?>news-chou01.webp" alt="" decoding="async"></figure>
-				<figure class="chou chou02"><img src="<?= $this_img_path; ?>news-chou02.webp" alt="" decoding="async"></figure>
-				<figure class="girl"><img src="<?= $this_img_path; ?>news-girl.webp" alt="" decoding="async"></figure>
-				<figure class="pillar tab_on">
-					<img src="<?= $this_img_path; ?>news_sp-pillar.webp" alt="" decoding="async">
-				</figure>
-				<figure class="illust_base">
-					<picture>
-						<source media="(max-width: 1050px)" srcset="<?= $this_img_path; ?>news_illust-base-sp.webp">
-						<img src="<?= $this_img_path; ?>news_illust-base.webp" alt="">
-					</picture>
-				</figure>
-			</div><!--/partners-construction_area -->
-			<div class="news-contents_area">
-				<div class="text_area">
-					<h2>
-						<picture>
-							<source media="(max-width: 1050px)" srcset="<?= $this_img_path; ?>news_title-sp.webp">
-							<img src="<?= $this_img_path; ?>news_title.webp" alt="お知らせ NEWS">
-						</picture>
-					</h2>
-					<a href="<?= $partners_link ?>" class="link_wrap">
-						<p class="link_btn -blue">
-							<span class="text">詳細ページへ</span>
-							<i class="arrow"><img src="<?= $img_path; ?>common/arrow-w.png" alt="" decoding="async"></i>
-						</p>
-					</a>
-					<a href="#" class="news-link">
-						<div class="img_area">
-							<figure class="img_inr">
-								<img src="<?= $this_img_path; ?>blog-dummy.png" alt="" decoding="async" class="fit_img">
-							</figure>
-						</div>
-						<div class="link_text">
-							<div>
-								<span class="en">2025 12.30</span>
-								<span class="cate">お知らせ</span>
-								<p>WEBサイトをリニューアルしました</p>
-							</div>
-						</div>
-					</a>
-					<a href="#" class="news-link">
-						<figure class="img_area"><img src="<?= $this_img_path; ?>blog-dummy.png" alt="" decoding="async" class="fit_img"></figure>
-						<div class="link_text">
-							<div>
-								<span class="en">2025 12.30</span>
-								<span class="cate">お知らせ</span>
-								<p>WEBサイトをリニューアルしました</p>
-							</div>
-						</div>
-					</a>
-					<a href="#" class="news-link">
-						<figure class="img_area"><img src="<?= $this_img_path; ?>blog-dummy.png" alt="" decoding="async" class="fit_img"></figure>
-						<div class="link_text">
-							<div>
-								<span class="en">2025 12.30</span>
-								<span class="cate">お知らせ</span>
-								<p>ブログのタイトルが入ります。この文章はデザイン確認用のダミー文章です。</p>
-							</div>
-						</div>
-					</a>
-				</div>
-				<figrure class="illust_base">
-					<picture>
-						<source media="(max-width: 1050px)" srcset="<?= $this_img_path; ?>news_contents-base-sp.webp">
-						<img src="<?= $this_img_path; ?>news_contents-base.webp" alt="">
-					</picture>
-				</figure>
-			</div><!-- /partners-contents_area -->
-		</div><!-- /inr -->
-		<figure class="kumo kumo01"><img src="<?= $this_img_path; ?>news-kumo01.webp" alt="" decoding="async"></figure>
-		<figure class="kumo kumo02"><img src="<?= $this_img_path; ?>news-kumo02.webp" alt="" decoding="async"></figure>
-		<figure class="bird inview bt_one"><img src="<?= $this_img_path; ?>lv-bird.webp" alt="" decoding="async"></figure>
-	</section><!-- /partners -->
-
-	<section class="lv">
-		<div class="inr -m2000 -lrg">
-			<figure class="lv-house">
-				<picture>
-					<source media="(max-width: 1050px)" srcset="<?= $this_img_path; ?>lv-house-sp.webp">
-					<img src="<?= $this_img_path; ?>lv-house.webp" alt="">
-				</picture>
-			</figure>
-			<div class="sc-area">
-				<div class="town-area">
-					<figure class="cloud03"><img src="<?= $this_img_path; ?>lv-town.webp" alt="" decoding="async"></figure>
-				</div>
-				<figure class="lv-cloud cloud01"><img src="<?= $this_img_path; ?>lv-cloud01.webp" alt="" decoding="async"></figure>
-				<figure class="lv-cloud cloud02"><img src="<?= $this_img_path; ?>lv-cloud02.webp" alt="" decoding="async"></figure>
-				<figure class="lv-cloud cloud03"><img src="<?= $this_img_path; ?>lv-cloud03.webp" alt="" decoding="async"></figure>
-				<figure class="lv-cloud cloud04"><img src="<?= $this_img_path; ?>lv-cloud04.webp" alt="" decoding="async"></figure>
-				<figure class="lv-cloud cloud05"><img src="<?= $this_img_path; ?>lv-cloud05.webp" alt="" decoding="async"></figure>
-				<figure class="lv-cloud cloud06"><img src="<?= $this_img_path; ?>lv-cloud06.webp" alt="" decoding="async"></figure>
+			<h1 class="inview"><img src="<?= $this_img_path; ?>title.webp" alt="私たちについて" decoding="async"></h1>
+			<figure class="cloud -left"><img src="<?= $img_path; ?>common/illust/fv-cloud01.webp" alt="" decoding="async"></figure>
+			<figure class="cloud -right"><img src="<?= $img_path; ?>common/illust/fv-cloud02.webp" alt="" decoding="async"></figure>
+			<div class="pan inview bt_one">
+				<a href="<?= $ROOT_DIR; ?>">TOP</a>
+				<p>私たちについて</p>
 			</div>
 		</div>
-	</section><!-- /lv -->
+	</section><!-- /fv -->
+	<section class="intro">
+		<div class="inr -w1300">
+			<div class="title_area">
+				<h2><img src="<?= $this_img_path; ?>intro_title.webp" alt="ハイブリッドホームは、家を大切に住みつぎたい人のためのリフォーム&リノベーション会社です。" decoding="async"></h2>
+			</div>
+			<figure class="bird bird02"><img src="<?= $this_img_path; ?>intro_bird.webp" alt="" decoding="async"></figure>
+			<div class="intro-loopY">
+				<div class="intro-loopY__track">
+					<div class="intro-loopY__unit">
+						<img src="<?= $this_img_path; ?>intro_loop-img01.webp" alt="" class="intro-loop-Y__img" decoding="async">
+						<img src="<?= $this_img_path; ?>intro_loop-img02.webp" alt="" class="intro-loop-Y__img" decoding="async">
+						<img src="<?= $this_img_path; ?>intro_loop-img03.webp" alt="" class="intro-loop-Y__img" decoding="async">
+						<img src="<?= $this_img_path; ?>intro_loop-img04.webp" alt="" class="intro-loop-Y__img" decoding="async">
+						<img src="<?= $this_img_path; ?>intro_loop-img05.webp" alt="" class="intro-loop-Y__img" decoding="async">
+						<img src="<?= $this_img_path; ?>intro_loop-img06.webp" alt="" class="intro-loop-Y__img" decoding="async">
+					</div>
+					<div class="intro-loopY__unit">
+					<img src="<?= $this_img_path; ?>intro_loop-img01.webp" alt="" class="intro-loop-Y__img" decoding="async">
+					<img src="<?= $this_img_path; ?>intro_loop-img02.webp" alt="" class="intro-loop-Y__img" decoding="async">
+					<img src="<?= $this_img_path; ?>intro_loop-img03.webp" alt="" class="intro-loop-Y__img" decoding="async">
+					<img src="<?= $this_img_path; ?>intro_loop-img04.webp" alt="" class="intro-loop-Y__img" decoding="async">
+					<img src="<?= $this_img_path; ?>intro_loop-img05.webp" alt="" class="intro-loop-Y__img" decoding="async">
+					<img src="<?= $this_img_path; ?>intro_loop-img06.webp" alt="" class="intro-loop-Y__img" decoding="async">
+					</div>
+				</div>
+			</div>
+		</div><!--/inr -->
+		<div class="intro-loop">
+			<div class="intro-loop__track">
+				<div class="intro-loop__unit">
+					<img src="<?= $this_img_path; ?>intro_loop-txt.webp" alt="We at Hybrid Home care deeply for your home." decoding="async" class="intro-loop__img">
+				</div>
+				<div class="intro-loop__unit">
+					<img src="<?= $this_img_path; ?>intro_loop-txt.webp" alt="We at Hybrid Home care deeply for your home." decoding="async" class="intro-loop__img">
+				</div>
+			</div>
+		</div><!--/intro-loop -->
+	</section><!--/intro -->
+	<section class="policy">
+		<div class="inr -w1400 round-con">
+			<div class="policy-sec -sec01">
+				<h2>
+					<img src="<?= $this_img_path; ?>policy_tit01.webp" alt="ハイブリットホームが" decoding="async">
+					<img src="<?= $this_img_path; ?>policy_tit02.webp" alt="大切にしている、" decoding="async">
+					<img src="<?= $this_img_path; ?>policy_tit03.webp" alt="3つのこと" decoding="async">
+				</h2>
+				<div class="text_area">
+					<p class="en sub-tit">Hybrid home’s Policy <img src="<?= $this_img_path; ?>policy_num01.png" alt="#01" decoding="async"></p>
+					<h3>
+						<span class="tab_off"><img src="<?= $this_img_path; ?>policy_sec-tit01.webp" alt="家を大切にする＝自分を大切にすること" decoding="async"></span>
+						<span class="tab_on"><img src="<?= $this_img_path; ?>policy_sec-tit01-tab01.webp" alt="家を大切にする＝" decoding="async" class="-sp_tit01"></span>
+						<span class="tab_on"><img src="<?= $this_img_path; ?>policy_sec-tit01-tab02.webp" alt="自分を大切にすること" decoding="async" class="-sp_tit02"></span>
+					</h3>
+					<p class="n_txt">家とは不思議なものです。<br>機能だけを考えれば、雨風を防ぎ、安全に過ごせる場所であれば十分なはず。<br>
+					ところが家はそれだけの存在にとどまりません。<br>
+					いつしか自分の気配がにじみだし、家族の気配と混ざり合って、<br>
+					たんなる木や石でできた箱を越えた、<br>
+					唯一無二の場所になります。<br>
+					<br>
+					家を大切にすることは、そこに住む自分を大切にすること。<br>
+					そこで暮らした時間ごと大切にするために、<br>
+					再び家へ息吹を吹き込みましょう。<br>
+					わたしたちハイブリッドホームが全力でお手伝いいたします。</p>
+					<a href="<?= $reform_link ?>" class="link_wrap">
+						<p class="link_btn -blue">
+							<span class="text">リノベーション・リフォームページへ</span>
+							<i class="arrow"><img src="<?= $img_path; ?>common/arrow-w.png" alt="" decoding="async"></i>
+						</p>
+					</a>
+				</div><!--/text_area -->
+				<figure class="kumo kumonchu sb inview"><img src="<?= $this_img_path; ?>policy01_kumonchu.webp" alt="生涯を共にする家のこと、" decoding="async"></figure>
+				<figure class="kumo risu sb inview">
+					<picture>
+						<source media="(max-width: 1050px)" srcset="<?= $this_img_path; ?>policy01_risu-sp.webp">
+						<img src="<?= $this_img_path; ?>policy01_risu.webp" alt="一緒に考えませんか？">
+					</picture>
+				</figure>
+			</div><!--/policy-sec -->
+			<div class="policy-sec -sec02">
+				<div class="text_area">
+					<p class="en sub-tit">Hybrid home’s Policy <img src="<?= $this_img_path; ?>policy_num02.png" alt="#02" decoding="async"></p>
+					<h3 class="-tit02">
+						<span class="tab_off"><img src="<?= $this_img_path; ?>policy_sec-tit02.webp" alt="家を大切にする＝自分を大切にすること" decoding="async"></span>
+						<span class="tab_on"><img src="<?= $this_img_path; ?>policy_sec-tit02-tab01.webp" alt="家を大切にする＝" decoding="async" class="-sp_tit01"></span>
+						<span class="tab_on"><img src="<?= $this_img_path; ?>policy_sec-tit02-tab02.webp" alt="長く続く関係" decoding="async" class="-sp_tit02"></span>
+					</h3>
+					<p class="n_txt">ハイブリッドホームには、<br>
+						多くのリピーターのお客様がいらっしゃいます。<br>
+						少しずつ住まいに手を入れながら暮らしている方が多いのは、<br>
+						わたしたちを、住まいを一緒に守るパートナーだと考えてくださるから。<br>
+						<br>
+						職人たちとの関係も同じです。<br>
+						ハイブリッドホームには、長く一緒に仕事を続けている職人が多くいます。<br>
+						それは、腕がいいからだけではありません。<br>
+						住む方の気持ちに寄り添うことを大切に考える職人たちもまた<br>
+						お客様の住まいを支える大切なパートナーだからです。</p>
+						<a href="<?= $voice_link ?>" class="link_wrap -slink01">
+							<p class="link_btn -blue">
+								<span class="text">お客様の声</span>
+								<i class="arrow"><img src="<?= $img_path; ?>common/arrow-w.png" alt="" decoding="async"></i>
+							</p>
+						</a>
+						<a href="<?= $member_link ?>" class="link_wrap -slink02">
+							<p class="link_btn -blue">
+								<span class="text">ハイブリッドホームの仲間たち</span>
+								<i class="arrow"><img src="<?= $img_path; ?>common/arrow-w.png" alt="" decoding="async"></i>
+							</p>
+						</a>
+				</div><!--/text_area -->
+				<figure class="kumo kumonchu sb inview"><img src="<?= $this_img_path; ?>policy02_kumonchu.webp" alt="家のこと、未来のこと、" decoding="async"></figure>
+				<figure class="kumo duck sb inview">
+					<picture>
+						<source media="(max-width: 1050px)" srcset="<?= $this_img_path; ?>policy02_duck-sp.webp">
+						<img src="<?= $this_img_path; ?>policy02_duck.webp" alt="僕たちも一緒に考えます。">
+					</picture>
+				</figure>
+			</div><!--/policy-sec -->
+			<div class="policy-sec -sec03">
+				<div class="text_area">
+					<p class="en sub-tit">Hybrid home’s Policy <img src="<?= $this_img_path; ?>policy_num03.png" alt="#03" decoding="async"></p>
+					<h3 class="-tit03">
+						<span class="tab_off"><img src="<?= $this_img_path; ?>policy_sec-tit03.webp" alt="家を大切にする＝自分を大切にすること" decoding="async"></span>
+						<span class="tab_on"><img src="<?= $this_img_path; ?>policy_sec-tit03-tab01.webp" alt="家を住み継ぐことは、" decoding="async" class="-sp_tit01"></span>
+						<span class="tab_on"><img src="<?= $this_img_path; ?>policy_sec-tit03-tab02.webp" alt="まちを大切にすること" decoding="async" class="-sp_tit02"></span>
+					</h3>
+					<p class="n_txt">
+						リノベーションをしながら家を住み継ぐということは、<br class="tab_off">
+						実は1軒の家のことにとどまりません。<br>
+						家を大切に住んでいる方がいる。<br class="tab_off">
+						その輪が広がり、まち全体の風景と空気をつくります。<br>
+						丁寧に住み継がれた家が一軒あると、隣の家も、またその隣も、<br class="tab_off">
+						「このまちを大切にしたい」という気持ちが連鎖していきます。<br>
+						<br>
+						新しいものに建て替えるだけでは残らない、<br class="tab_off">
+						その土地ならではの表情や暮らしのリズム、人と人の温かな距離感。<br class="tab_off">
+						そうしたものが、家とともに形作られていきます。<br>
+						<br>
+						だからこそハイブリッドホームは、<br>
+						住まいを次へ受け渡す時間に寄り添いながら、<br class="pc_off">地域とともに家づくりを続けています。
+					</p>
+				</div><!--/text_area -->
+				<figure class="kumo duck sb inview"><img src="<?= $this_img_path; ?>policy03_duck.webp" alt="家づくりだけじゃなく、" decoding="async"></figure>
+				<figure class="kumo risu sb inview">
+					<picture>
+						<source media="(max-width: 1050px)" srcset="<?= $this_img_path; ?>policy01_risu-sp.webp">
+						<img src="<?= $this_img_path; ?>policy01_risu.webp" alt="一緒に考えませんか？">
+					</picture>
+				</figure>
+			</div><!--/policy-sec -->
+		</div>
+	</section><!--/policy -->
 	</main>
 <?php include($root_path . '/assets/inc/footer.php'); ?>
 
