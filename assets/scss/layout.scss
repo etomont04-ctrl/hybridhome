@@ -15,6 +15,9 @@
 			aspect-ratio:1440/640;
 			overflow: hidden;
 			border-radius:60px;
+			&.-small{
+				aspect-ratio:1440/400;
+			}
 			&:before{
 				content:"";
 				display: block;
@@ -115,6 +118,7 @@
 				display: inline-block;
 				font-size: max(13px,getCqw(13,$conW));
 				font-weight: 500;
+				text-decoration: underline;
 			}
 		}
 	}
@@ -127,6 +131,9 @@
 				aspect-ratio:740/950;
 				max-height:1000px;
 				border-radius:30px;
+				&.-small{
+					aspect-ratio:740/560;
+				}
 				&:before{
 					border:8px solid var(--base-color-white);
 					border-radius:30px;
@@ -271,6 +278,7 @@
 // }
 
 
+
 // ==========================================================================
 //----round-con
 // ==========================================================================
@@ -294,169 +302,63 @@
 			#000 100%);
 		mask-image: linear-gradient(to right,#000 0,#000 85px,transparent 85px,transparent calc(100% - 85px),#000 calc(100% - 85px),#000 100%);
 	}
+	@include max-width(1050){
+		border-radius:30px;
+		&:after{
+			border-radius:30px;
+		}
+	}
 }
-// ==========================================================================
-//----data_grid
-// ==========================================================================
-.data_grid{
-	@include min-width(1101){
+/* ==========================================================================
+	data-list
+========================================================================== */
+.data-list{
+	width: 100%;
+	background:var(--base-bg-color02);
+	border-radius:30px;
+	.data_row{
 		display: grid;
-		grid-template-columns: 1fr 1fr;
-		gap: 64px;
+		grid-template-columns: get_calc(363,1960) 1fr;
+		padding: 1rem 0;
+		+ .data_row{
+			border-top: 1px solid var(--base-bg-color);
+		}
 	}
-}
-.data_dl{
-	margin: 0;
-	border-top: 1px solid var(--base-bg-color);
-}
-.data_row{
-	display: grid;
-	grid-template-columns: 180px 1fr;
-	padding: 19px 20px;
-	border-bottom: 1px solid var(--base-bg-color);
-	box-sizing:border-box;
-	@include max-width(800){
-		grid-template-columns: 100px 1fr;
-		padding: 19px 0;
-	}
-}
-.data_dt{
-	font-size: var(--fz18);
-	font-weight: 700;
-	line-height: 2;
-	color:var(--base-color-blue);
-
-	@include max-width(800){
-		font-size: var(--fz14);
-		line-height: calc(50/28);
-	}
-}
-.data_dd{
-	line-height: calc(72/34);
-
-	@include max-width(800){
-		line-height: calc(50/26);
-	}
-}
-.data_list{
-	position: relative;
-	counter-reset: number;
-	+ *{
-		margin-top: var(--mt);
-	}
-	+ h2{
-		margin-top: var(--mth2);
-	}
-	+ h3{
-		margin-top: var(--mth3);
-	}
-	li {
-		position: relative;
-		font-size: var(--fz17);
-		line-height: calc(72/34);
+	.data_head{
+		color: var(--base-color-green05);
 		font-weight: 500;
-		padding-left: 18px;
-		letter-spacing: 0.1em;
-		@include max-width(800){
-			font-size: var(--fz13);
-			padding-left: 14px;
-		}
-		&:before{
-			content:"";
-			position: absolute;
-			display: block;
-			top: 1.6rem;
-			left: 0;
-			width: 10px;
-			height: 5px;
-			border-radius:4px;
-			background-color:var(--base-color-blue);
-			@include max-width(800){
-				width: 8px;
-				height: 4px;
-				left: 0;
-				top: 1.1rem;
-			}
-		}
-		> *{
-			margin-bottom: 0;
-		}
+		line-height: calc(62/30);
+		letter-spacing: 0.04em;
 	}
-
-
-}
-.data_access{
-	display: grid;
-	gap: 26px;
-
-	@include max-width(800){
-		gap: 20px;
+	.data_body{
+		font-weight: 500;
+		line-height: calc(62/30);
+		letter-spacing: 0.04em;
 	}
-}
-.data_access-block{
-	display: grid;
-	gap: 8px;
-
-	@include max-width(800){
-		gap:0;
+	.n_txt{
+		display:inline-block;
 	}
-	+ div{
-		margin-top: .5rem;
-	}
-}
-.data_access-ttl{
-	display: flex;
-	align-items: center;
-	gap: 10px;
-
-	@include max-width(800){
-		gap:5px;
-	}
-}
-.data_dot{
-	display: block;
-	width: 15px;
-	height: 8px;
-	border-radius: 8px;
-	background: var(--base-color-blue);
-
-	@include max-width(800){
-		width: 8px;
-		height: 4px;
-	}
-}
-.data_access-post,
-.data_access-addr{
-	margin: 0;
-	line-height: 2.0;
-}
-.data_map{
-	position: relative;
-	display: inline-block;
-	margin-left: 3.5rem;
-	font-size: var(--fz14);
-	line-height: 1.7142857143;
-	text-decoration: underline;
-
-	@include max-width(800){
-		display: table;
+	.map_link{
+		line-height: 1;
 		margin-left: 14px;
-		font-size: var(--fz13);
-		line-height: calc(50/26);
 	}
-	.icon{
-		display: block;
-		position: absolute;
-		left: -1.5rem;
-		top: -5px;
-		width: 10px;
-
-		@include max-width(800){
-			left: -16px;
-
+	li{
+		position: relative;
+		margin: 0;
+		padding-left: 1.1em;
+		&:before{
+			content: "";
+			position: absolute;
+			left: .2em;
+			top: .95em;
+			width: .38em;
+			height: .12em;
+			background: #4aa8ad;
 		}
 	}
 }
+
+
 
 // ==========================================================================
 //----interview
@@ -734,9 +636,138 @@
 		}
 	}
 }
+
+
+
+// ==========================================================================
+//----archive-pager
+// ==========================================================================
+.archive-pager_wrap{
+	position: relative;
+	width: get_calc(640,760);
+	max-width: 610px;
+	margin:0 auto;
+	.archive-pager_num{
+		display: flex;
+		align-items: center;
+		justify-content:center;
+		gap: 15px;
+		padding: 0;
+		margin: 0;
+		list-style: none;
+		li{
+			margin: 0;
+			padding: 0;
+		}
+	}
+	.archive-pager__page{
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: 60px;
+		height: 60px;
+		border-radius: 999px;
+		font-family:var(--line-seed);
+		font-size: 18px;
+		line-height: 1;
+		font-weight: 700;
+		text-decoration: none;
+		color: #309c9d;
+		background:var(--base-color-white);
+		&.is-current{
+			pointer-events:none;
+			background: var(--base-btn-color01);
+			color: var(--base-color-white);
+		}
+		&:hover{
+			background: var(--base-btn-color01);
+			color: var(--base-color-white);
+		}
+	}
+	.archive-pager_nav{
+		@include fl;
+		position: absolute;
+		right: 0;
+		top: 0;
+		width: 100%;
+		z-index: 20;
+	}
+	.nav-btn {
+		position: relative;
+		@include fc;
+		width: 120px;
+		height: 60px;
+		border-radius:60px;
+		background:var(--base-btn-color01);
+		overflow: hidden;
+		&:before{
+			content:"";
+			display: block;
+			width: get_calc(220,240);
+			height: get_calc(100,120);
+			position: absolute;
+			left: 0;
+			top: 0;
+			bottom: 0;
+			right: 0;
+			margin:auto;
+			z-index:2;
+			border:1px solid var(--base-color-white);
+			border-radius:30px;
+			background-size:cover;
+			mask-image: linear-gradient(to right,#000 0,#000 25px,transparent 25px,transparent calc(100% - 25px),#000 calc(100% - 25px),#000 100%);
+			@include transition(opacity);
+		}
+		.arrow{
+			width: 16px;
+			z-index: 50;
+		}
+	}
+	.prev{
+		.arrow{
+			transform:var(--hanten);
+		}
+		@include min-width(801){
+			&:hover .arrow{
+				transform:var(--hanten) translateX(3px);
+			}
+		}
+	}
+	.is-disabled{
+		pointer-events:none;
+	}
+	@include max-width(700){
+
+		container-type: inline-size;
+		$conW:640;
+		.archive-pager_num{
+			gap: 8px;
+		}
+		.archive-pager__page{
+			width: getCqw(70,$conW);
+			height: getCqw(70,$conW);
+			font-size: getCqw(24,$conW);
+		}
+		.nav-btn {
+			width: getCqw(140,$conW);
+			height: getCqw(70,$conW);
+			border-radius:getCqw(34,$conW);
+			&:before{
+				border-radius:getCqw(34,$conW);
+				mask-image: linear-gradient(to right,#000 0,#000 16px,transparent 16px,transparent calc(100% - 16px),#000 calc(100% - 16px),#000 100%);
+				@include transition(opacity);
+			}
+			.arrow{
+				border-radius:getCqw(18,$conW);
+			}
+		}
+	}
+}
+
 /* ==========================================================================
 	parts
 ========================================================================== */
+
 
 // --------------------------------------------------------------------------
 //	リンクボタン
@@ -901,6 +932,22 @@
 }
 
 
+/* --------------------------------------------------------------------------
+	テクスチャ
+-------------------------------------------------------------------------- */
+.-texure{
+	&::after{
+		content:"";
+		position: absolute;
+		inset: 0;
+		z-index: 1;
+		pointer-events: none;
+		background: url(../img/common/texture.webp);
+		background-size:cover;
+		opacity:.2;
+		mix-blend-mode: overlay;
+	}
+}
 
 /* --------------------------------------------------------------------------
 	矢印
@@ -1491,6 +1538,7 @@
 	border-radius:15px;
 	padding:5px 20px 7px 35px;
 	text-transform:uppercase;
+	background:var(--base-color-white);
 	.map_icon{
 		display: block;
 		position: absolute;

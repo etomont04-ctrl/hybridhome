@@ -28,12 +28,18 @@
   --base-text-color:#29221f;
   --base-text-color02:#1e525a;
   --base-bg-color:#e8ebed;
-  --base-bg-color02:#eeeeee;
+  --base-bg-color02:#fafcfd;
   --base-bg-color03:#c3ced5;
   --base-bg-color04:#f5f5f5;
   --base-bg-color05:#c5fcfd;
+  --base-bg-color06:#e6f0f2;
+  --base-bg-color07:#f1f1f1;
+  --base-bg-color08:#f6f6f6;
   --base-color-green:#32929e;
   --base-color-green02:#9dd1d0;
+  --base-color-green03:#2c6c76;
+  --base-color-green04:#2c6c76;
+  --base-color-green05:#309c9d;
   --base-color-wood:#6d240e;
   --base-color-blue:#14a5b6;
   --base-color-blue02:#32a4ab;
@@ -56,6 +62,7 @@
   --base-color-bronze:#664e1a;
   --base-border-color:#000;
   --base-border-color02:#d2d2d2;
+  --base-border-color03:#a8a9a8;
   --base-shadow-color:#ade2e3;
   --base-btn-color01:#1f858b;
   --base-btn-color01-hv:#137a80;
@@ -68,6 +75,7 @@
   --hantenY:scaleY(-1);
   --transition-scale:transform 0.8s var(--easeOutCubic);
   --gothic: "Zen Kaku Gothic New","Zen Kaku Gothic Antique",sans-serif;
+  --line-seed:"LINE Seed JP", sans-serif;
   --delay: 0s;
 }
 

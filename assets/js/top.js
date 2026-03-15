@@ -5,6 +5,7 @@
 	- autoplayあり
 	- next-upはindex計算で安定付与
 ========================================================================== */
+
 (() => {
 	const init = () => {
 		const roots = document.querySelectorAll('.js-picks-splide');
