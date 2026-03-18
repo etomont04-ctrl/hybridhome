@@ -15,10 +15,12 @@ if ($host === 'localhost' || $host === '127.0.0.1') {
 	// 本番環境
 	include($_SERVER['DOCUMENT_ROOT'] . '/assets/inc/root.php');
 }
-$UNIQUE_CSS = '<link rel="stylesheet" href="../assets/css/splide.min.css?'.$Ymd.'">';
-$UNIQUE_CSS .= '<link rel="stylesheet" href="../assets/css/works.css?'.$Ymd.'">';
-$UNIQUE_SCRIPT = '<script src="../assets/js/splide.min.js?'.$Ymd.'"></script>';
-$UNIQUE_SCRIPT .= '<script src="../assets/js/works.js?'.$Ymd.'"></script>';
+$UNIQUE_CSS = '<link rel="stylesheet" href="'.$ROOT_DIR.'assets/css/splide.min.css?'.$Ymd.'">';
+$UNIQUE_CSS .= '<link rel="stylesheet" href="'.$ROOT_DIR.'assets/css/BeerSlider.css">';
+$UNIQUE_CSS .= '<link rel="stylesheet" href="'.$ROOT_DIR.'assets/css/works.css?'.$Ymd.'">';
+$UNIQUE_SCRIPT = '<script src="'.$ROOT_DIR.'assets/js/splide.min.js?'.$Ymd.'"></script>';
+$UNIQUE_SCRIPT .= '<script src="'.$ROOT_DIR.'assets/js/BeerSlider.min.js"></script>';
+$UNIQUE_SCRIPT .= '<script src="'.$ROOT_DIR.'assets/js/works.js?'.$Ymd.'"></script>';
 $uri = "works";
 $this_img_path = $img_path .  "works/";
 ?>
@@ -39,15 +41,22 @@ $this_img_path = $img_path .  "works/";
 					<img src="<?= $this_img_path; ?>fv.webp" alt="" class="fit_img">
 				</picture>
 			</figure>
-			<figure class="cloud -risu -sb"><img src="<?= $this_img_path; ?>works_d-fv-risu.webp" alt="" decoding="async"></figure>
-			<figure class="cloud -duck"><img src="<?= $this_img_path; ?>works_d-fv-duck.webp" alt="" decoding="async"></figure>
+			<figure class="cloud -risu inview sb"><img src="<?= $this_img_path; ?>works_d-fv-risu.webp" alt="" decoding="async"></figure>
+			<figure class="cloud -duck inview"><img src="<?= $this_img_path; ?>works_d-fv-duck.webp" alt="" decoding="async"></figure>
 			<div class="d-info_area">
-				<h1 class="inview" data-text="愛車と同居できる家">
-					愛車と同居できる家
+				<h1 class="inview">
+					<span class="scaleX-wrap">
+						<span class="scaleX" data-scale="0.75" data-text="愛車と同居できる家">愛車と同居できる家</span>
+					</span>
 				</h1>
 				<div class="cates">
 					<div class="area-links">
-						<a href="#" class="area-links_item -reno -uchi"><img src="<?= $this_img_path; ?>works_d-uchi.png" alt="" decoding="async"></a>
+						<a href="#" class="area-links_item -reno -uchi">
+							<picture>
+								<source media="(max-width: 800px)" srcset="<?= $this_img_path; ?>works_d-uchi-sp.png">
+								<img src="<?= $this_img_path; ?>works_d-uchi.png" alt="うちリノ">
+							</picture>
+						</a>
 						<a href="#" class="area-links_item -town">町田市</a>
 					</div>
 					<div class="tags">
@@ -61,304 +70,345 @@ $this_img_path = $img_path .  "works/";
 						<a href="#">#エクステリア</a>
 					</div>
 				</div>
-<!-- 				<div class="read">
-					<p>築40年を迎え、より快適に安心して暮らせるように耐震補強を計画。<br>補強工事に伴い外壁の解体が必要となる為、モルタルから耐久性の良いサイディングに張替え、屋根も重い瓦から軽いスレートに葺き替えました。併せて、サッシも交換し、屋根や壁には断熱材を入れて、家全体の断熱性能も向上させました。</p>
+				<div class="read">
 					<div class="img_area">
-						<figure class="img"><img src="<?= $this_img_path; ?>fv.webp" alt="" decoding="async" class="fit_img"></figure>
+						<div class="img_wrap">
+							<figure class="img"><img src="<?= $this_img_path; ?>fv.webp" alt="" decoding="async" class="fit_img"></figure>
+						</div>
 					</div>
-				</div> -->
-			</div>
-			<figure class="cloud -left"><img src="<?= $img_path; ?>common/illust/fv-cloud01.webp" alt="" decoding="async"></figure>
-			<figure class="cloud -right"><img src="<?= $img_path; ?>common/illust/fv-cloud02.webp" alt="" decoding="async"></figure>
-			<figure class="illust"><img src="<?= $this_img_path; ?>fv-illust.webp" alt="" decoding="async"></figure>
-			<div class="pan inview bt_one">
-				<a href="<?= $ROOT_DIR; ?>">TOP</a>
-				<p>施工実績</p>
+					<p>築40年を迎え、より快適に安心して暮らせるように耐震補強を計画。<br>補強工事に伴い外壁の解体が必要となる為、モルタルから耐久性の良いサイディングに張替え、屋根も重い瓦から軽いスレートに葺き替えました。併せて、サッシも交換し、屋根や壁には断熱材を入れて、家全体の断熱性能も向上させました。</p>
+				</div>
+				<div class="data">
+					<div class="tit_area">
+						<h3><span class="scaleX-only">物件情報</span></h3>
+						<span class="en">Data</span>
+					</div>
+					<dl class="data-list">
+						<div class="data_row">
+							<dt class="data_head">所在地</dt>
+							<dd class="data_body">町田市　Ｎ様邸</dd>
+						</div>
+						<div class="data_row">
+							<dt class="data_head">築年数</dt>
+							<dd class="data_body">約40年</dd>
+						</div>
+						<div class="data_row">
+							<dt class="data_head">建坪</dt>
+							<dd class="data_body">8坪</dd>
+						</div>
+						<div class="data_row">
+							<dt class="data_head">工事内容</dt>
+							<dd class="data_body">耐震・断熱・外装・サッシ交換</dd>
+						</div>
+					</dl>
+					<dl class="data-list">
+						<div class="data_row">
+							<dt class="data_head">工事期間</dt>
+							<dd class="data_body">約60日</dd>
+						</div>
+						<div class="data_row">
+							<dt class="data_head">工事費</dt>
+							<dd class="data_body">約800万円</dd>
+						</div>
+						<div class="data_row">
+							<dt class="data_head">担当者</dt>
+							<dd class="data_body">Tハイブリッドホーム町田店　藤井 健</dd>
+						</div>
+					</dl><!-- /data-list -->
+				</div>
 			</div>
 		</div>
-	</section><!-- /fv -->
-	<section class="pickup">
-		<div class="inr -w1300">
-			<div class="splide pickup-slider">
-				<div class="splide__track">
-					<ul class="splide__list">
-						<li class="splide__slide">
-							<article class="pick-card">
-								<a class="pick-card__link" href="#">
-									<div class="pick-card__photo soto">
-										<img src="<?= $img_path; ?>top/project_img.webp" alt="" decoding="async" class="fit_img">
-									</div>
-									<div class="pick-card__body">
-										<h3 class="pick-card__title">愛車と同居できる家</h3>
-										<div class="pick-card__tags"><span>#ウッドデッキ</span>　<span>#エクステリア</span></div>
-										<span class="pick-card__area">町田市</span>
-									</div>
-								</a>
-							</article>
-						</li><!--/splide__slide -->
-						<li class="splide__slide">
-							<article class="pick-card">
-								<a class="pick-card__link" href="#">
-									<div class="pick-card__photo uchi">
-										<img src="<?= $img_path; ?>top/project_img.webp" alt="" decoding="async" class="fit_img">
-									</div>
-									<div class="pick-card__body">
-										<h3 class="pick-card__title">庭がカフェになる家</h3>
-										<div class="pick-card__tags"><span>#ウッドデッキ</span>　<span>#エクステリア</span></div>
-										<span class="pick-card__area">町田市</span>
-									</div>
-								</a>
-							</article>
-						</li><!--/splide__slide -->
-						<li class="splide__slide">
-							<article class="pick-card">
-								<a class="pick-card__link" href="#">
-									<div class="pick-card__photo soto">
-										<img src="<?= $img_path; ?>top/project_img.webp" alt="" decoding="async" class="fit_img">
-									</div>
-									<div class="pick-card__body">
-										<h3 class="pick-card__title">犬と暮らしやすい家</h3>
-										<div class="pick-card__tags"><span>#ウッドデッキ</span>　<span>#エクステリア</span></div>
-										<span class="pick-card__area">町田市</span>
-									</div>
-								</a>
-							</article>
-						</li><!--/splide__slide -->
-					</ul><!-- /splide__list -->
-				</div><!-- /splide__track -->
-			</div><!-- /splide -->
-		</div><!-- /inr -->
-		<div class="pickup-loop">
-			<div class="pickup-loop__track">
-				<div class="pickup-loop__unit">
-					<img src="<?= $this_img_path; ?>pickup-loop_txt.webp" alt="We at Hybrid Home care deeply for your home." decoding="async" class="pickup-loop__img">
-				</div>
-				<div class="pickup-loop__unit">
-					<img src="<?= $this_img_path; ?>pickup-loop_txt.webp" alt="We at Hybrid Home care deeply for your home." decoding="async" class="pickup-loop__img">
-				</div>
+	</section><!-- /works-d_fv -->
+
+	<section class="bf_area kiji inr -w1400">
+		<div class="beer-slider">
+			<img src="<?php echo $this_img_path; ?>after-img.webp" alt="" decoding="async">
+			<div class="beer-reveal">
+				<img src="<?php echo $this_img_path; ?>before-img.webp" alt="" decoding="async">
 			</div>
-		</div><!--/intro-loop -->
+		</div>
+		<!-- /beer-slider -->
+		<p>築40年を迎え、より快適に安心して暮らせるように耐震補強を計画。補強工事に伴い外壁の解体が必要となる為、モルタルから耐久性の良いサイディングに張替え、屋根も重い瓦から軽いスレートに葺き替えました。併せて、サッシも交換し、屋根や壁には断熱材を入れて、家全体の断熱性能も向上させました。</p>
 	</section>
-	<section class="works">
+
+	<section class="bf_area kiji inr -w1400">
+		<div class="beer-slider">
+			<img src="<?php echo $this_img_path; ?>after-img.webp" alt="" decoding="async">
+			<div class="beer-reveal">
+				<img src="<?php echo $this_img_path; ?>before-img.webp" alt="" decoding="async">
+			</div>
+		</div>
+		<!-- /beer-slider -->
+		<p>築40年を迎え、より快適に安心して暮らせるように耐震補強を計画。補強工事に伴い外壁の解体が必要となる為、モルタルから耐久性の良いサイディングに張替え、屋根も重い瓦から軽いスレートに葺き替えました。併せて、サッシも交換し、屋根や壁には断熱材を入れて、家全体の断熱性能も向上させました。</p>
+	</section>
+
+
+	<div class="works-detail">
 		<div class="inr -w1400 round-con">
-			<div class="conditions_wrap">
-				<div class="conditions_btn">
-					<h2><img src="<?= $this_img_path; ?>fillter_title.webp" alt="条件で絞り込み" decoding="async"></h2>
-					<spna class="en">Filter / Category</spna>
-					<span class="btn"></span>
+			<section class="works-detail_sec">
+				<div class="tit_area">
+					<h2 class="scaleX-wrap">
+						<span class="scaleX" data-scale="0.75" data-text="リフォームプランリフォームプランリフォームプラン">リフォームプランリフォームプランリフォームプラン</span>
+					</h2>
+					<span class="en">Plan</span>
 				</div>
-				<div class="conditions_list">
-					<!-- <ul>
+				<p class="n_txt">プランの説明が入ります。プランの説明が入ります。プランの説明が入ります。プランの説明が入ります。プランの説明が入ります。プランの説明が入ります。プランの説明が入ります。プランの説明が入ります。プランの説明が入ります。プランの説明が入ります。</p>
+				<div class="column-image -full">
+					<div>
+						<div class="img"><img src="<?= $this_img_path; ?>after-img.webp" alt="" decoding="async"></div>
+					</div>
+				</div>
+			</section><!-- /works-detail_sec -->
+			<section class="works-detail_sec">
+				<div class="tit_area">
+					<h2 class="scaleX-wrap">
+						<span class="scaleX" data-scale="0.75" data-text="着工から完成まで">着工から完成まで</span>
+					</h2>
+					<span class="en">Story</span>
+				</div>
+				<div class="story_sec">
+					<h3>
+						<span class="scaleX-wrap">
+							<span class="scaleX" data-scale="0.75" data-text="解体工事">解体工事</span>
+						</span>
+					</h3>
+					<p>長年お世話になった建物を解体し、構造体だけの姿にしていきます。今回は思い出の残る和室の欄間をきれいに解体し保存し改装時に使用しました。</p>
+					<div class="column-image -third">
+						<div>
+							<div class="img">
+								<img src="<?= $this_img_path; ?>after-img.webp" alt="" decoding="async">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="story_sec">
+					<h3>
+						<span class="scaleX-wrap">
+							<span class="scaleX" data-scale="0.75" data-text="補強工事／基礎補強">補強工事／基礎補強</span>
+						</span>
+					</h3>
+					<p>鉄の５倍の引張り強さをもつアラミド繊維を高い接着力をもつ樹脂で基礎の上から固める補強工事。</p>
+					<div class="column-image -third">
+						<div>
+							<div class="img"><img src="<?= $this_img_path; ?>after-img.webp" alt="" decoding="async"></div>
+						</div>
+						<div>
+							<div class="img"><img src="<?= $this_img_path; ?>after-img.webp" alt="" decoding="async"></div>
+						</div>
+					</div>
+				</div>
+				<div class="story_sec">
+					<h3>
+						<span class="scaleX-wrap">
+							<span class="scaleX" data-scale="0.75" data-text="補強工事／基礎補強">補強工事／基礎補強</span>
+						</span>
+					</h3>
+					<p>鉄の５倍の引張り強さをもつアラミド繊維を高い接着力をもつ樹脂で基礎の上から固める補強工事。</p>
+					<div class="column-image -third">
+						<div>
+							<div class="img"><img src="<?= $this_img_path; ?>after-img.webp" alt="" decoding="async"></div>
+						</div>
+						<div>
+							<div class="img"><img src="<?= $this_img_path; ?>after-img.webp" alt="" decoding="async"></div>
+						</div>
+						<div>
+							<div class="img"><img src="<?= $this_img_path; ?>after-img.webp" alt="" decoding="async"></div>
+						</div>
+					</div>
+				</div>
+			</section><!-- /works-detail_sec -->
+			<section class="works-detail_sec">
+				<div class="tit_area">
+					<h2 class="scaleX-wrap">
+						<span class="scaleX" data-scale="0.75" data-text="こだわりのリフォーム">こだわりのリフォーム</span>
+					</h2>
+					<span class="en">My Reform Style</span>
+				</div>
+				<p>リフォームの説明がはいります。リフォームの説明がはいります。リフォームの説明がはいります。リフォームの説明がはいります。リフォームの説明がはいります。リフォームの説明がはいります。リフォームの説明がはいります。リフォームの説明がはいります。リフォームの説明がはいります。リフォームの説明がはいります。リフォームの説明がはいります。リフォームの説明がはいります。リフォームの説明がはいります。</p>
+				<div class="story_sec">
+					<h3>
+						<span class="scaleX-wrap">
+							<span class="scaleX" data-scale="0.75" data-text="木の香りが漂う和モダンなリビングダイニング。">木の香りが漂う和モダンなリビングダイニング。</span>
+						</span>
+					</h3>
+					<div class="column-image -third">
+						<div>
+							<div class="img"><img src="<?= $this_img_path; ?>after-img.webp" alt="" decoding="async"></div>
+							<p>長年お世話になった建物を解体し、構造体だけの姿にしていきます。今回は思い出の残る和室の欄間をきれいに解体し保存し改装時に使用しました。</p>
+						</div>
+					</div>
+				</div>
+				<div class="story_sec">
+					<h3>
+						<span class="scaleX-wrap">
+							<span class="scaleX" data-scale="0.75" data-text="補強工事／基礎補強">補強工事／基礎補強</span>
+						</span>
+					</h3>
+					<p>鉄の５倍の引張り強さをもつアラミド繊維を高い接着力をもつ樹脂で基礎の上から固める補強工事。</p>
+					<div class="column-image -half">
+						<div>
+							<div class="img -vertical"><img src="<?= $this_img_path; ?>after-img.webp" alt="" decoding="async"></div>
+						</div>
+						<div>
+							<div class="img -vertical"><img src="<?= $this_img_path; ?>after-img.webp" alt="" decoding="async"></div>
+						</div>
+					</div>
+				</div>
+				<div class="story_sec">
+					<h3>
+						<span class="scaleX-wrap">
+							<span class="scaleX" data-scale="0.75" data-text="補強工事／基礎補強">補強工事／基礎補強</span>
+						</span>
+					</h3>
+					<p>鉄の５倍の引張り強さをもつアラミド繊維を高い接着力をもつ樹脂で基礎の上から固める補強工事。</p>
+					<div class="column-image -third">
+						<div>
+							<div class="img"><img src="<?= $this_img_path; ?>after-img.webp" alt="" decoding="async"></div>
+						</div>
+
+						<div>
+							<div class="img"><img src="<?= $this_img_path; ?>after-img.webp" alt="" decoding="async"></div>
+						</div>
+						<div>
+							<div class="img"><img src="<?= $this_img_path; ?>after-img.webp" alt="" decoding="async"></div>
+						</div>
+					</div>
+				</div>
+			</section><!-- /works-detail_sec -->
+			<section class="works-detail_sec">
+				<div class="tit_area">
+					<h2 class="scaleX-wrap">
+						<span class="scaleX" data-scale="0.75" data-text="お客様の声">お客様の声</span>
+					</h2>
+					<span class="en">Voice</span>
+				</div>
+
+				<div class="voice-sec">
+					<h3>
+						<span class="scaleX-wrap">
+							<span class="scaleX" data-scale="0.75" data-text="住んで18年目の悩みに寄り添う">住んで18年目の悩みに寄り添う</span>
+						</span>
+						<span class="balloon_tail"></span>
+					</h3>
+					<ul class="voice-qa">
 						<li>
-							<h3>エリア</h3>
+							<div class="img_area">
+								<div class="img_wrap">
+									<figure class="img"><img src="<?= $this_img_path; ?>voice_img-hybrid.webp" alt="" decoding="async" class="fit_img"></figure>
+									<span class="name">ハイブリットホーム</span>
+								</div>
+							</div>
 							<div class="text_area">
-								<div class="item"><input name="area[]" id="area1" type="checkbox" value="岡山市北区" class="checkbox"><label for="area1">岡山市北区</label></div>
-								<div class="item odd"><input name="area[]" id="area2" type="checkbox" value="岡山市中区" class="checkbox"><label for="area2">岡山市中区</label></div>
-								<div class="item"><input name="area[]" id="area3" type="checkbox" value="岡山市南区" class="checkbox"><label for="area3">岡山市南区</label></div>
-								<div class="item odd"><input name="area[]" id="area4" type="checkbox" value="岡山市東区" class="checkbox"><label for="area4">岡山市東区</label></div>
-								<div class="item"><input name="area[]" id="area5" type="checkbox" value="倉敷市" class="checkbox"><label for="area5">倉敷市</label></div>
-								<div class="item odd"><input name="area[]" id="area6" type="checkbox" value="玉野市" class="checkbox"><label for="area6">玉野市</label></div>
-								<div class="item"><input name="area[]" id="area7" type="checkbox" value="赤磐市" class="checkbox"><label for="area7">赤磐市</label></div>
-								<div class="item odd"><input name="area[]" id="area8" type="checkbox" value="瀬戸内市" class="checkbox"><label for="area8">瀬戸内市</label></div>
-								<div class="item"><input name="area[]" id="area9" type="checkbox" value="浅口市" class="checkbox"><label for="area9">浅口市</label></div>
-								<div class="item odd"><input name="area[]" id="area10" type="checkbox" value="津山市" class="checkbox"><label for="area10">津山市</label></div>
-								<div class="item"><input name="area[]" id="area11" type="checkbox" value="総社市" class="checkbox"><label for="area11">総社市</label></div>
-								<div class="item odd"><input name="area[]" id="area12" type="checkbox" value="早島町" class="checkbox"><label for="area12">早島町</label></div>
-								<div class="item"><input name="area[]" id="area13" type="checkbox" value="備前市" class="checkbox"><label for="area13">備前市</label></div>
+								<p>最初にご相談いただいたのは、リビングの窓でした。西日が強く、結露もしやすいので断熱性能の高い窓へ替えたい、という内容でしたね。</p>
 							</div>
 						</li>
-					</ul> -->
-				</div><!-- conditions_list" -->
-				<figure class="duck sb inview"><img src="<?= $this_img_path; ?>conditions_duck.webp" alt="" decoding="async"></figure>
-			</div><!-- /conditions_wrap -->
-			<ul class="works_list">
-				<li>
-					<article class="card">
-						<a class="card__link" href="#">
-							<div class="card__photo uchi">
-								<img src="<?= $img_path; ?>top/project_img.webp" alt="" decoding="async" class="fit_img">
+						<li>
+							<div class="img_area">
+								<div class="img_wrap">
+									<figure class="img"><img src="<?= $this_img_path; ?>voice_img-client.webp" alt="" decoding="async" class="fit_img"></figure>
+									<span class="name">ハイブリットホーム</span>
+								</div>
 							</div>
-							<div class="card__body">
-								<h3 class="card__title">愛車と同居できる家</h3>
-								<div class="card__tags"><span>#ウッドデッキ</span>　<span>#エクステリア</span></div>
-								<span class="card__area">町田市</span>
+							<div class="text_area">
+								<p>最初にご相談いただいたのは、リビングの窓でした。西日が強く、結露もしやすいので断熱性能の高い窓へ替えたい、という内容でしたね。した。西日が強く、結露もしやすいので断熱性能の高い窓へ替えたい、という内容でしたね。した。西日が強く、結露もしやすいので断熱性能の高い窓へ替えたい、という内容でしたね。</p>
 							</div>
-						</a>
-					</article>
-				</li>
-				<li>
-					<article class="card">
-						<a class="card__link" href="#">
-							<div class="card__photo soto">
-								<img src="<?= $img_path; ?>top/project_img.webp" alt="" decoding="async" class="fit_img">
+						</li>
+					</ul>
+				</div><!-- / voice-sec -->
+
+				<div class="voice-sec">
+					<h3>
+						<span class="scaleX-wrap">
+							<span class="scaleX" data-scale="0.75" data-text="住んで18年目の悩みに寄り添う">住んで18年目の悩みに寄り添う</span>
+						</span>
+						<span class="balloon_tail"></span>
+					</h3>
+					<ul class="voice-qa">
+						<li>
+							<div class="img_area">
+								<div class="img_wrap">
+									<figure class="img"><img src="<?= $this_img_path; ?>voice_img-hybrid.webp" alt="" decoding="async" class="fit_img"></figure>
+									<span class="name">ハイブリットホーム</span>
+								</div>
 							</div>
-							<div class="card__body">
-								<h3 class="card__title">愛車と同居できる家</h3>
-								<div class="card__tags"><span>#ウッドデッキ</span>　<span>#エクステリア</span></div>
-								<span class="card__area">町田市</span>
+							<div class="text_area">
+								<p>最初にご相談いただいたのは、リビングの窓でした。西日が強く、結露もしやすいので断熱性能の高い窓へ替えたい、という内容でしたね。</p>
 							</div>
-						</a>
-					</article>
-				</li>
-				<li>
-					<article class="card">
-						<a class="card__link" href="#">
-							<div class="card__photo uchi">
-								<img src="<?= $img_path; ?>top/project_img.webp" alt="" decoding="async" class="fit_img">
+						</li>
+						<li>
+							<div class="img_area">
+								<div class="img_wrap">
+									<figure class="img"><img src="<?= $this_img_path; ?>voice_img-client.webp" alt="" decoding="async" class="fit_img"></figure>
+									<span class="name">ハイブリットホーム</span>
+								</div>
 							</div>
-							<div class="card__body">
-								<h3 class="card__title">愛車と同居できる家</h3>
-								<div class="card__tags"><span>#ウッドデッキ</span>　<span>#エクステリア</span></div>
-								<span class="card__area">町田市</span>
+							<div class="text_area">
+								<p>最初にご相談いただいたのは、リビングの窓でした。西日が強く、結露もしやすいので断熱性能の高い窓へ替えたい、という内容でしたね。した。西日が強く、結露もしやすいので断熱性能の高い窓へ替えたい、という内容でしたね。した。西日が強く、結露もしやすいので断熱性能の高い窓へ替えたい、という内容でしたね。</p>
 							</div>
-						</a>
-					</article>
-				</li>
-				<li>
-					<article class="card">
-						<a class="card__link" href="#">
-							<div class="card__photo uchi">
-								<img src="<?= $img_path; ?>top/project_img.webp" alt="" decoding="async" class="fit_img">
+						</li>
+					</ul>
+				</div><!-- / voice-sec -->
+				<div class="voice-sec -hitokoto">
+					<h3>
+						<span class="scaleX-wrap">
+							<span class="scaleX" data-scale="0.75" data-text="担当者からひとこと">担当者からひとこと</span>
+						</span>
+						<span class="balloon_tail"></span>
+					</h3>
+					<ul class="voice-qa -photo">
+						<li>
+							<div class="img_area">
+								<div class="img_wrap">
+									<figure class="img"><img src="<?= $this_img_path; ?>voice_img-hybrid.webp" alt="" decoding="async" class="fit_img"></figure>
+									<span class="name">ハイブリットホーム</span>
+								</div>
 							</div>
-							<div class="card__body">
-								<h3 class="card__title">愛車と同居できる家</h3>
-								<div class="card__tags"><span>#ウッドデッキ</span>　<span>#エクステリア</span></div>
-								<span class="card__area">町田市</span>
+							<div class="text_area">
+								<p>最防火・耐震性を確保すると、以前より窓の数やサイズに制約がでてしまうので、できるだけ陽の光が差し込むように工夫をしました。リフォームを通して、H様の暮らしが安心・安全で楽しくなるお手伝いができてうれしく思います。</p>
 							</div>
-						</a>
-					</article>
-				</li>
-				<li>
-					<article class="card">
-						<a class="card__link" href="#">
-							<div class="card__photo soto">
-								<img src="<?= $img_path; ?>top/project_img.webp" alt="" decoding="async" class="fit_img">
+						</li>
+						<li>
+							<div class="photo_area">
+								<figure class="img"><img src="<?= $this_img_path; ?>after-img.webp" alt="" decoding="async" class="fit_img"></figure>
 							</div>
-							<div class="card__body">
-								<h3 class="card__title">愛車と同居できる家</h3>
-								<div class="card__tags"><span>#ウッドデッキ</span>　<span>#エクステリア</span></div>
-								<span class="card__area">町田市</span>
-							</div>
-						</a>
-					</article>
-				</li>
-				<li>
-					<article class="card">
-						<a class="card__link" href="#">
-							<div class="card__photo uchi">
-								<img src="<?= $img_path; ?>top/project_img.webp" alt="" decoding="async" class="fit_img">
-							</div>
-							<div class="card__body">
-								<h3 class="card__title">愛車と同居できる家</h3>
-								<div class="card__tags"><span>#ウッドデッキ</span>　<span>#エクステリア</span></div>
-								<span class="card__area">町田市</span>
-							</div>
-						</a>
-					</article>
-				</li>
-				<li>
-					<article class="card">
-						<a class="card__link" href="#">
-							<div class="card__photo uchi">
-								<img src="<?= $img_path; ?>top/project_img.webp" alt="" decoding="async" class="fit_img">
-							</div>
-							<div class="card__body">
-								<h3 class="card__title">愛車と同居できる家</h3>
-								<div class="card__tags"><span>#ウッドデッキ</span>　<span>#エクステリア</span></div>
-								<span class="card__area">町田市</span>
-							</div>
-						</a>
-					</article>
-				</li>
-				<li>
-					<article class="card">
-						<a class="card__link" href="#">
-							<div class="card__photo soto">
-								<img src="<?= $img_path; ?>top/project_img.webp" alt="" decoding="async" class="fit_img">
-							</div>
-							<div class="card__body">
-								<h3 class="card__title">愛車と同居できる家</h3>
-								<div class="card__tags"><span>#ウッドデッキ</span>　<span>#エクステリア</span></div>
-								<span class="card__area">町田市</span>
-							</div>
-						</a>
-					</article>
-				</li>
-				<li>
-					<article class="card">
-						<a class="card__link" href="#">
-							<div class="card__photo uchi">
-								<img src="<?= $img_path; ?>top/project_img.webp" alt="" decoding="async" class="fit_img">
-							</div>
-							<div class="card__body">
-								<h3 class="card__title">愛車と同居できる家</h3>
-								<div class="card__tags"><span>#ウッドデッキ</span>　<span>#エクステリア</span></div>
-								<span class="card__area">町田市</span>
-							</div>
-						</a>
-					</article>
-				</li>
-				<li>
-					<article class="card">
-						<a class="card__link" href="#">
-							<div class="card__photo uchi">
-								<img src="<?= $img_path; ?>top/project_img.webp" alt="" decoding="async" class="fit_img">
-							</div>
-							<div class="card__body">
-								<h3 class="card__title">愛車と同居できる家</h3>
-								<div class="card__tags"><span>#ウッドデッキ</span>　<span>#エクステリア</span></div>
-								<span class="card__area">町田市</span>
-							</div>
-						</a>
-					</article>
-				</li>
-				<li>
-					<article class="card">
-						<a class="card__link" href="#">
-							<div class="card__photo soto">
-								<img src="<?= $img_path; ?>top/project_img.webp" alt="" decoding="async" class="fit_img">
-							</div>
-							<div class="card__body">
-								<h3 class="card__title">愛車と同居できる家</h3>
-								<div class="card__tags"><span>#ウッドデッキ</span>　<span>#エクステリア</span></div>
-								<span class="card__area">町田市</span>
-							</div>
-						</a>
-					</article>
-				</li>
-				<li>
-					<article class="card">
-						<a class="card__link" href="#">
-							<div class="card__photo uchi">
-								<img src="<?= $img_path; ?>top/project_img.webp" alt="" decoding="async" class="fit_img">
-							</div>
-							<div class="card__body">
-								<h3 class="card__title">愛車と同居できる家</h3>
-								<div class="card__tags"><span>#ウッドデッキ</span>　<span>#エクステリア</span></div>
-								<span class="card__area">町田市</span>
-							</div>
-						</a>
-					</article>
-				</li>
-			</ul>
-			<div class="archive-pager_wrap">
-				<ol class="archive-pager_num">
-					<li><a class="archive-pager__page is-current" href="#">1</a></li>
-					<li><a class="archive-pager__page" href="#">2</a></li>
-					<li><a class="archive-pager__page" href="#">…</a></li>
-					<li><a class="archive-pager__page" href="#">3</a></li>
-				</ol><!-- /archive-pager -->
-				<div class="archive-pager_nav">
-					<a href="#" class="nav-btn prev is-disabled -texure">
+						</li>
+					</ul>
+				</div><!-- / voice-sec -->
+			</section>
+			<div class="d-pager_wrap">
+				<a href="#" class="pager_link -prev">
+					<figure class="img"><img src="<?= $this_img_path; ?>after-img.webp" alt="" decoding="async" class="fit_img"></figure>
+					<div class="text_area">
+						<div>
+							<span class="en">
+								<i class="arrow"><img src="<?= $img_path; ?>common/arrow-g.png" alt="" decoding="async"></i>
+								Prev
+							</span>
+							<p>豊かな風景を取り込む、自然素材の…</p>
+						</div>
+					</div>
+				</a>
+				<a href="#" class="pager_link -next">
+					<figure class="img"><img src="<?= $this_img_path; ?>after-img.webp" alt="" decoding="async" class="fit_img"></figure>
+					<div class="text_area">
+						<div>
+							<span class="en">
+								Next
+								<i class="arrow"><img src="<?= $img_path; ?>common/arrow-g.png" alt="" decoding="async"></i>
+							</span>
+							<p>豊かな風景を取り込む、自然素材の…</p>
+						</div>
+					</div>
+				</a>
+				<a href="<?= $works_link ?>" class="link_wrap">
+					<p class="link_btn -blue">
+						<span class="text">施工事例一覧</span>
 						<i class="arrow"><img src="<?= $img_path; ?>common/arrow-w.png" alt="" decoding="async"></i>
-					</a>
-					<a href="#" class="nav-btn next -texure">
-						<i class="arrow"><img src="<?= $img_path; ?>common/arrow-w.png" alt="" decoding="async"></i>
-					</a>
-				</div><!-- /archive-pager_nav -->
-			</div><!-- /archive-pager -->
+					</p>
+				</a>
+			</div><!-- d-pager_area -->
 		</div><!-- /inr -->
-	</section><!-- / works -->
+	</ddiv><!-- / works-detail -->
 
 	</main>
 <?php include($root_path . '/assets/inc/footer.php'); ?>

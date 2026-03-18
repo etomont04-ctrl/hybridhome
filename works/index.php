@@ -120,26 +120,63 @@ $this_img_path = $img_path .  "works/";
 					<span class="btn"></span>
 				</div>
 				<div class="conditions_list">
-					<!-- <ul>
-						<li>
-							<h3>エリア</h3>
-							<div class="text_area">
-								<div class="item"><input name="area[]" id="area1" type="checkbox" value="岡山市北区" class="checkbox"><label for="area1">岡山市北区</label></div>
-								<div class="item odd"><input name="area[]" id="area2" type="checkbox" value="岡山市中区" class="checkbox"><label for="area2">岡山市中区</label></div>
-								<div class="item"><input name="area[]" id="area3" type="checkbox" value="岡山市南区" class="checkbox"><label for="area3">岡山市南区</label></div>
-								<div class="item odd"><input name="area[]" id="area4" type="checkbox" value="岡山市東区" class="checkbox"><label for="area4">岡山市東区</label></div>
-								<div class="item"><input name="area[]" id="area5" type="checkbox" value="倉敷市" class="checkbox"><label for="area5">倉敷市</label></div>
-								<div class="item odd"><input name="area[]" id="area6" type="checkbox" value="玉野市" class="checkbox"><label for="area6">玉野市</label></div>
-								<div class="item"><input name="area[]" id="area7" type="checkbox" value="赤磐市" class="checkbox"><label for="area7">赤磐市</label></div>
-								<div class="item odd"><input name="area[]" id="area8" type="checkbox" value="瀬戸内市" class="checkbox"><label for="area8">瀬戸内市</label></div>
-								<div class="item"><input name="area[]" id="area9" type="checkbox" value="浅口市" class="checkbox"><label for="area9">浅口市</label></div>
-								<div class="item odd"><input name="area[]" id="area10" type="checkbox" value="津山市" class="checkbox"><label for="area10">津山市</label></div>
-								<div class="item"><input name="area[]" id="area11" type="checkbox" value="総社市" class="checkbox"><label for="area11">総社市</label></div>
-								<div class="item odd"><input name="area[]" id="area12" type="checkbox" value="早島町" class="checkbox"><label for="area12">早島町</label></div>
-								<div class="item"><input name="area[]" id="area13" type="checkbox" value="備前市" class="checkbox"><label for="area13">備前市</label></div>
-							</div>
-						</li>
-					</ul> -->
+					<div class="conditions_link">
+						<div class="conditions_head">
+							種別
+						</div>
+						<div class="conditions_links -rino">
+							<a href="#">
+								<p class="rino-tit"><img src="<?= $this_img_path; ?>works_sort-uchi.png" alt="" decoding="async"></p>
+								<p class="n_txt">間取りや内装などをライフスタイルに合わせてより使いやすくする住宅に関するサービス
+								</p>
+							</a>
+							<a href="#">
+								<p class="rino-tit"><img src="<?= $this_img_path; ?>works_sort-soto.png" alt="" decoding="async"></p>
+								<p class="n_txt">外構のお手入れやウッドデッキ施工など屋外に関するサービス
+								</p>
+							</a>
+						</div>
+					</div>
+					<div class="conditions_link">
+						<div class="conditions_head">
+							種別
+						</div>
+						<div class="conditions_links -commit">
+							<a href="#"><span>#すべて</span></a>
+							<a href="#"><span>#ウッドデッキ</span></a>
+							<a href="#"><span>#エクステリア</span></a>
+							<a href="#"><span>#キッチン</span></a>
+							<a href="#"><span>#サニタリー</span></a>
+							<a href="#"><span>#すべて</span></a>
+							<a href="#"><span>#ウッドデッキ</span></a>
+							<a href="#"><span>#エクステリア</span></a>
+							<a href="#"><span>#キッチン</span></a>
+							<a href="#"><span>#サニタリー</span></a>
+						</div>
+					</div>
+					<div class="conditions_link">
+						<div class="conditions_head">
+							種別
+						</div>
+						<div class="conditions_links -area">
+							<a href="#">すべて</a>
+							<a href="#">東京都</a>
+							<a href="#">東京23区</a>
+							<a href="#">町田市</a>
+							<a href="#">東京都</a>
+							<a href="#">東京23区</a>
+							<a href="#">町田市</a>
+							<a href="#">東京都</a>
+							<a href="#">東京23区</a>
+							<a href="#">町田市</a>
+							<a href="#">東京都</a>
+							<a href="#">東京23区</a>
+							<a href="#">町田市</a>
+							<a href="#">東京都</a>
+							<a href="#">東京23区</a>
+							<a href="#">町田市</a>
+						</div>
+					</div>
 				</div><!-- conditions_list" -->
 				<figure class="duck sb inview"><img src="<?= $this_img_path; ?>conditions_duck.webp" alt="" decoding="async"></figure>
 			</div><!-- /conditions_wrap -->

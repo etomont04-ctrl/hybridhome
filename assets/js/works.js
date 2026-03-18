@@ -90,3 +90,81 @@ $(function(){
     });
 
 });
+
+/* ==========================================================================
+	scaleX text width adjust
+   ========================================================================== */
+// (() => {
+// 	const updateScaleText = () => {
+// 		const targets = document.querySelectorAll('.scaleX');
+// 		if (!targets.length) return;
+
+// 		targets.forEach((target) => {
+// 			if (!target) return;
+
+// 			const wrap = target.parentElement;
+// 			if (!wrap) return;
+
+// 			const scale = parseFloat(target.dataset.scale || '0.75');
+// 			if (!scale || scale <= 0) return;
+
+// 			target.style.transform = '';
+// 			wrap.style.width = '';
+
+// 			const originalWidth = target.scrollWidth;
+// 			if (!originalWidth) return;
+
+// 			target.style.transform = `scaleX(${scale})`;
+// 			wrap.style.width = `${originalWidth * scale}px`;
+// 		});
+// 	};
+
+// 	const init = () => {
+// 		updateScaleText();
+
+// 		if (document.fonts && document.fonts.ready) {
+// 			document.fonts.ready.then(() => {
+// 				updateScaleText();
+// 			});
+// 		}
+
+// 		window.addEventListener('resize', updateScaleText);
+// 	};
+
+// 	if (document.readyState === 'loading') {
+// 		document.addEventListener('DOMContentLoaded', init);
+// 	} else {
+// 		init();
+// 	}
+// })();
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+document.querySelectorAll(".beer-slider").forEach(function (el) {
+  new BeerSlider(el);
+});
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelectorAll('.beer-slider').forEach(function (slider) {
+    if (slider.querySelector('.ba-hint')) return;
+
+    const hint = document.createElement('div');
+    hint.className = 'ba-hint';
+    hint.setAttribute('aria-hidden', 'true');
+    hint.textContent = 'カーソルで左右に動かすことができます';
+    slider.appendChild(hint);
+
+    const hide = function () {
+      hint.classList.add('is-hidden');
+      hint.addEventListener('transitionend', function () {
+        hint.remove();
+      }, { once: true });
+    };
+
+    slider.addEventListener('mouseenter', hide, { once: true });
+    slider.addEventListener('pointerenter', hide, { once: true });
+    slider.addEventListener('touchstart', hide, { once: true, passive: true });
+  });
+});

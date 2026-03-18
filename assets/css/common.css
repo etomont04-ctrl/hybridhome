@@ -35,11 +35,13 @@
   --base-bg-color06:#e6f0f2;
   --base-bg-color07:#f1f1f1;
   --base-bg-color08:#f6f6f6;
+  --base-bg-color09:#eee;
   --base-color-green:#32929e;
   --base-color-green02:#9dd1d0;
   --base-color-green03:#2c6c76;
   --base-color-green04:#2c6c76;
   --base-color-green05:#309c9d;
+  --base-color-green06:#207372;
   --base-color-wood:#6d240e;
   --base-color-blue:#14a5b6;
   --base-color-blue02:#32a4ab;
@@ -63,13 +65,19 @@
   --base-border-color:#000;
   --base-border-color02:#d2d2d2;
   --base-border-color03:#a8a9a8;
+  --base-border-color04:#d3d9dd;
+  --base-border-color05:#eaeaea;
   --base-shadow-color:#ade2e3;
+  --base-color-uchi:#c13e02;
+  --base-color-soto:#32a4ab;
   --base-btn-color01:#1f858b;
   --base-btn-color01-hv:#137a80;
   --base-btn-color02:#c93c02;
   --base-btn-color02-hv:#ba3600;
   --base-btn-color03:#3da4a3;
   --base-btn-color01-hv:#137a80;
+  --base-bubble-bg:#dbe2e2;
+  --base-bubble-bg02:#cff0f1;
   --hanten:scale(-1, -1);
   --hantenX:scale(-1, 1);
   --hantenY:scaleY(-1);
@@ -673,11 +681,13 @@ img.preload {
   --base-bg-color06:#e6f0f2;
   --base-bg-color07:#f1f1f1;
   --base-bg-color08:#f6f6f6;
+  --base-bg-color09:#eee;
   --base-color-green:#32929e;
   --base-color-green02:#9dd1d0;
   --base-color-green03:#2c6c76;
   --base-color-green04:#2c6c76;
   --base-color-green05:#309c9d;
+  --base-color-green06:#207372;
   --base-color-wood:#6d240e;
   --base-color-blue:#14a5b6;
   --base-color-blue02:#32a4ab;
@@ -701,13 +711,19 @@ img.preload {
   --base-border-color:#000;
   --base-border-color02:#d2d2d2;
   --base-border-color03:#a8a9a8;
+  --base-border-color04:#d3d9dd;
+  --base-border-color05:#eaeaea;
   --base-shadow-color:#ade2e3;
+  --base-color-uchi:#c13e02;
+  --base-color-soto:#32a4ab;
   --base-btn-color01:#1f858b;
   --base-btn-color01-hv:#137a80;
   --base-btn-color02:#c93c02;
   --base-btn-color02-hv:#ba3600;
   --base-btn-color03:#3da4a3;
   --base-btn-color01-hv:#137a80;
+  --base-bubble-bg:#dbe2e2;
+  --base-bubble-bg02:#cff0f1;
   --hanten:scale(-1, -1);
   --hantenX:scale(-1, 1);
   --hantenY:scaleY(-1);
@@ -2155,11 +2171,13 @@ img.preload {
   --base-bg-color06:#e6f0f2;
   --base-bg-color07:#f1f1f1;
   --base-bg-color08:#f6f6f6;
+  --base-bg-color09:#eee;
   --base-color-green:#32929e;
   --base-color-green02:#9dd1d0;
   --base-color-green03:#2c6c76;
   --base-color-green04:#2c6c76;
   --base-color-green05:#309c9d;
+  --base-color-green06:#207372;
   --base-color-wood:#6d240e;
   --base-color-blue:#14a5b6;
   --base-color-blue02:#32a4ab;
@@ -2183,13 +2201,19 @@ img.preload {
   --base-border-color:#000;
   --base-border-color02:#d2d2d2;
   --base-border-color03:#a8a9a8;
+  --base-border-color04:#d3d9dd;
+  --base-border-color05:#eaeaea;
   --base-shadow-color:#ade2e3;
+  --base-color-uchi:#c13e02;
+  --base-color-soto:#32a4ab;
   --base-btn-color01:#1f858b;
   --base-btn-color01-hv:#137a80;
   --base-btn-color02:#c93c02;
   --base-btn-color02-hv:#ba3600;
   --base-btn-color03:#3da4a3;
   --base-btn-color01-hv:#137a80;
+  --base-bubble-bg:#dbe2e2;
+  --base-bubble-bg02:#cff0f1;
   --hanten:scale(-1, -1);
   --hantenX:scale(-1, 1);
   --hantenY:scaleY(-1);
@@ -3221,11 +3245,13 @@ img.preload {
   --base-bg-color06:#e6f0f2;
   --base-bg-color07:#f1f1f1;
   --base-bg-color08:#f6f6f6;
+  --base-bg-color09:#eee;
   --base-color-green:#32929e;
   --base-color-green02:#9dd1d0;
   --base-color-green03:#2c6c76;
   --base-color-green04:#2c6c76;
   --base-color-green05:#309c9d;
+  --base-color-green06:#207372;
   --base-color-wood:#6d240e;
   --base-color-blue:#14a5b6;
   --base-color-blue02:#32a4ab;
@@ -3249,13 +3275,19 @@ img.preload {
   --base-border-color:#000;
   --base-border-color02:#d2d2d2;
   --base-border-color03:#a8a9a8;
+  --base-border-color04:#d3d9dd;
+  --base-border-color05:#eaeaea;
   --base-shadow-color:#ade2e3;
+  --base-color-uchi:#c13e02;
+  --base-color-soto:#32a4ab;
   --base-btn-color01:#1f858b;
   --base-btn-color01-hv:#137a80;
   --base-btn-color02:#c93c02;
   --base-btn-color02-hv:#ba3600;
   --base-btn-color03:#3da4a3;
   --base-btn-color01-hv:#137a80;
+  --base-bubble-bg:#dbe2e2;
+  --base-bubble-bg02:#cff0f1;
   --hanten:scale(-1, -1);
   --hantenX:scale(-1, 1);
   --hantenY:scaleY(-1);
@@ -4176,6 +4208,172 @@ img.preload {
   }
 }
 
+.d-pager_wrap {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 88.5714285714%;
+  margin-inline: auto;
+  container-type: inline-size;
+  margin-top: 160px;
+}
+.d-pager_wrap .pager_link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 35.4838709677%;
+  padding: 2.4193548387cqw 3.2258064516cqw;
+  background: var(--base-color-white);
+  border-radius: 4.8387096774cqw;
+  box-siizn: border-box;
+}
+.d-pager_wrap .pager_link.-prev .arrow {
+  margin-right: 8px;
+}
+.d-pager_wrap .pager_link.-prev .arrow img {
+  -webkit-transform: var(--hantenX);
+          transform: var(--hantenX);
+}
+.d-pager_wrap .pager_link.-next .arrow {
+  margin-left: 10px;
+}
+.d-pager_wrap .img {
+  position: relative;
+  width: 50%;
+  aspect-ratio: 350/230;
+}
+.d-pager_wrap .img img {
+  position: relative;
+  z-index: 5;
+}
+.d-pager_wrap .img:before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  width: 100%;
+  height: 100%;
+  background: #d5dee1;
+  z-index: 1;
+}
+.d-pager_wrap .img:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  border: 2px solid var(--base-color-white);
+  z-index: 30;
+}
+.d-pager_wrap .text_area {
+  width: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.d-pager_wrap .text_area .en {
+  position: relative;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--base-color-blue02);
+}
+.d-pager_wrap .text_area .en .arrow {
+  display: inline-block;
+  width: 16px;
+}
+.d-pager_wrap .text_area p {
+  margin-top: 1.4516129032cqw;
+  line-height: 1.8;
+}
+.d-pager_wrap .link_wrap {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+@media screen and (max-width: 1050px) {
+  .d-pager_wrap {
+    display: block;
+    width: 89.4736842105%;
+    margin-top: 65px;
+  }
+  .d-pager_wrap .pager_link {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 100%;
+    padding: 7.3529411765cqw 8.8235294118cqw;
+  }
+  .d-pager_wrap .pager_link.-next {
+    margin-top: 2.9411764706cqw;
+  }
+  .d-pager_wrap .img {
+    width: 46.4285714286%;
+  }
+  .d-pager_wrap .img:before {
+    left: 3px;
+    top: 4px;
+  }
+  .d-pager_wrap .img:after {
+    border: 1px solid var(--base-color-white);
+  }
+  .d-pager_wrap .text_area {
+    width: 46.4285714286%;
+  }
+  .d-pager_wrap .text_area .en {
+    font-size: 4.1176470588cqw;
+  }
+  .d-pager_wrap .text_area .en .arrow {
+    display: inline-block;
+    width: min(20px, 4.4117647059cqw);
+  }
+  .d-pager_wrap .text_area p {
+    margin-top: 0 !important;
+    font-size: max(18px, 3.8235294118cqw);
+  }
+  .d-pager_wrap .link_wrap {
+    position: relative;
+    left: auto;
+    right: auto;
+    top: auto;
+    bottom: auto;
+    margin: 17.6470588235cqw auto 0;
+    width: 69.1176470588%;
+  }
+  .d-pager_wrap .link_btn {
+    width: 100%;
+    border-radius: 7.0588235294cqw;
+  }
+}
+
+.arrow img {
+  display: block;
+}
+
 /* ==========================================================================
 	parts
 ========================================================================== */
@@ -4252,6 +4450,9 @@ img.preload {
   -webkit-animation: arrow-move 1.1s ease-in-out infinite;
           animation: arrow-move 1.1s ease-in-out infinite;
   will-change: transform;
+}
+.link_btn .arrow img {
+  display: block;
 }
 .link_btn.-border {
   background: var(--base-bg-color02);
@@ -4356,32 +4557,24 @@ img.preload {
 }
 
 /* --------------------------------------------------------------------------
-	矢印
+	縦に潰したテキスト
 -------------------------------------------------------------------------- */
-.-sY95 {
-  --scaleY:0.95;
-  -webkit-transform: scaleY(0.95);
-          transform: scaleY(0.95);
+.scaleX-wrap {
+  display: inline-block;
+  vertical-align: top;
 }
 
-.-sY90 {
-  --scaleY:0.9;
-  -webkit-transform: scaleY(0.9);
-          transform: scaleY(0.9);
+.scaleX {
+  display: inline-block;
+  -webkit-transform-origin: left center;
+          transform-origin: left center;
 }
 
-/* 非表示だが読み込まれるテキスト 主にsvgテキストと同じ場所で使う */
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  border: 0;
-  white-space: nowrap;
+.scaleX-only {
+  position: relative;
+  display: inline-block;
+  -webkit-transform-origin: left center;
+          transform-origin: left center;
 }
 
 /* --------------------------------------------------------------------------
@@ -5150,11 +5343,13 @@ img.preload {
   --base-bg-color06:#e6f0f2;
   --base-bg-color07:#f1f1f1;
   --base-bg-color08:#f6f6f6;
+  --base-bg-color09:#eee;
   --base-color-green:#32929e;
   --base-color-green02:#9dd1d0;
   --base-color-green03:#2c6c76;
   --base-color-green04:#2c6c76;
   --base-color-green05:#309c9d;
+  --base-color-green06:#207372;
   --base-color-wood:#6d240e;
   --base-color-blue:#14a5b6;
   --base-color-blue02:#32a4ab;
@@ -5178,13 +5373,19 @@ img.preload {
   --base-border-color:#000;
   --base-border-color02:#d2d2d2;
   --base-border-color03:#a8a9a8;
+  --base-border-color04:#d3d9dd;
+  --base-border-color05:#eaeaea;
   --base-shadow-color:#ade2e3;
+  --base-color-uchi:#c13e02;
+  --base-color-soto:#32a4ab;
   --base-btn-color01:#1f858b;
   --base-btn-color01-hv:#137a80;
   --base-btn-color02:#c93c02;
   --base-btn-color02-hv:#ba3600;
   --base-btn-color03:#3da4a3;
   --base-btn-color01-hv:#137a80;
+  --base-bubble-bg:#dbe2e2;
+  --base-bubble-bg02:#cff0f1;
   --hanten:scale(-1, -1);
   --hantenX:scale(-1, 1);
   --hantenY:scaleY(-1);
