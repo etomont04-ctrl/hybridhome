@@ -1,5 +1,4 @@
-﻿<?php
-//////////--root--//////////
+<?php
 $host = $_SERVER['HTTP_HOST'];
 if ($host === 'localhost' || $host === '127.0.0.1') {
 	$ROOT_DIR = 'http://localhost/hybridhome/';

@@ -9,9 +9,25 @@
 	padding-top: var(--head-mt);
 	.inr{
 		$conW:1440;
+		container-type: inline-size;
 		h1{
 			width: get_calc(182,$conW);
 			min-width:182px;
+		}
+		.title-text{
+			@include fch;
+			width: 100%;
+		}
+		.en{
+			font-size: getCqw(20,$conW);
+			color:var(--base-text-color02);
+			margin-right: 2.5rem;
+			letter-spacing: 0.08em;
+		}
+		.ja{
+			font-size: getCqw(60,$conW);
+			font-weight: 500;
+			color:var(--base-btn-color03);
 		}
 		.illust{
 			position: absolute;
@@ -27,6 +43,13 @@
 			h1{
 				width: get_calc(223,$conW);
 				min-width:185px;
+			}
+			.en{
+				font-size: getCqw(22,$conW);
+				margin-right: 1.2rem;
+			}
+			.ja{
+				font-size: getCqw(74,$conW);
 			}
 		}
 	}
@@ -750,16 +773,21 @@
 		padding:50px 70px;
 		box-sizing: border-box;
 		margin:0 auto;
+		border-top:1px solid var(--base-border-color07);
 		z-index: 10;
 		.conditions_link{
 			@include fl;
-			padding:50px 70px;
+			// padding:50px 70px;
 			box-sizing:border-box;
+			+ .conditions_link{
+				margin-top: 50px;
+			}
 		}
 		.conditions_head{
+			@include fch;
 			width: get_calc(230,2010);
-			padding-top: 20px;
-			font-size: getCqw(15,$conW);
+			// padding-top: 20px;
+			font-size: max(13px,getCqw(15,$conW));
 			font-weight: 500;
 			color:var(--base-color-green05);
 		}
@@ -767,16 +795,40 @@
 			flex:1;
 		}
 		.-rino{
+			@include fl;
 			a{
-
+				@include fch;
+				width: get_calc(880,1780);
+				padding:23px 33px;
+				box-sizing:border-box;
+				background:var(--base-color-white);
+				border:1px solid var(--base-border-color06);
+				border-radius:80px;
+			}
+			.rino-tit{
+				width: 47px;
+				height: 19px;
+				&.-soto{
+					width: 48px;
+				}
+			}
+			.n_txt{
+				flex:1;
+				font-size: max(12px,getCqw(13,$conW));
+				font-weight: 500;
+				line-height: calc(36/26);
+				margin-left: 25px;
 			}
 		}
 		.-commit{
+			display:flex;
+			flex-wrap:wrap;
+			gap:15px 16px;
 			a{
 				span{
 					position: relative;
 					display: inline-block;
-					font-size: getCqw(13,$conW);
+					font-size: max(12px,getCqw(13,$conW));
 					font-weight: 500;
 					margin-right:11px;
 					&:after{
@@ -807,14 +859,13 @@
 				background: #111;
 				border: 1px solid #111;
 				color: #fff;
-				font-size: getCqw(13,$conW);
+				font-size: max(12px,getCqw(13,$conW));
 				font-weight: 700;
 				line-height: 1;
 				text-decoration: none;
 				white-space: nowrap;
 				box-sizing: border-box;
 				transition: background .3s ease, color .3s ease, border-color .3s ease, opacity .3s ease;
-
 				&:hover {
 					opacity: .8;
 				}
@@ -925,6 +976,7 @@
 
 	.archive-pager_wrap{
 		margin-top: getCqw(120,$conW);
+		padding-bottom: getCqw(145,$conW);
 	}
 	@include max-width(1050){
 		$conW:800;
@@ -944,8 +996,9 @@
 			}
 		}
 		.conditions_btn {
-			height: 80px;
-			padding: 0 6.25vw;
+			min-height: 80px;
+			padding: 20px 6.25vw;
+			height: auto;
 			h2{
 				width: max(110px,get_calc(217,580));
 				margin-right: getCqw(22,$conW);
@@ -963,6 +1016,61 @@
 			&.is-active{
 				.btn {
 					background-image:url(../img/works/conditions_btn-bg02-sp.jpg);
+				}
+			}
+		}
+		.conditions_list {
+			padding:30px 6.25vw;
+			.conditions_link{
+				display: block;
+				+ .conditions_link{
+					margin-top:  getCqw(65,$conW);
+				}
+			}
+			.conditions_head{
+				width: 100%;
+				font-size: min(16px,getCqw(28,$conW));
+				margin-bottom:min(20px,getCqw(36,$conW));
+			}
+			.-rino{
+				display: block;
+				a{
+					@include fch;
+					width: 100%;
+					padding:20px 15px;
+					border-radius:80px;
+					+ a{
+						margin-top: getCqw(20,$conW);
+					}
+				}
+				.rino-tit{
+					width: 35px;
+					height: 15px;
+					&.-soto{
+						width: 36px;
+					}
+				}
+				.n_txt{
+					font-size: min(14px,getCqw(22,$conW));
+					line-height: calc(32/22);
+					margin-left: 13px;
+				}
+			}
+			.-commit{
+				display:flex;
+				flex-wrap:wrap;
+				gap:15px 11px;
+				a{
+					span{
+						font-size: min(15px,getCqw(24,$conW));
+					}
+				}
+			}
+			.-area{
+				gap: 10px 5px;
+				a {
+					padding: 0 14px;
+					font-size: min(14px,getCqw(22,$conW));
 				}
 			}
 		}

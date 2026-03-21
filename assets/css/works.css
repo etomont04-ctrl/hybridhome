@@ -68,6 +68,8 @@
   --base-border-color03:#a8a9a8;
   --base-border-color04:#d3d9dd;
   --base-border-color05:#eaeaea;
+  --base-border-color06:#ddd;
+  --base-border-color07:#e6e6e6;
   --base-shadow-color:#ade2e3;
   --base-color-uchi:#c13e02;
   --base-color-soto:#32a4ab;
@@ -206,9 +208,32 @@
   position: relative;
   padding-top: var(--head-mt);
 }
+.fv .inr {
+  container-type: inline-size;
+}
 .fv .inr h1 {
   width: 12.6388888889%;
   min-width: 182px;
+}
+.fv .inr .title-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+.fv .inr .en {
+  font-size: 1.3888888889cqw;
+  color: var(--base-text-color02);
+  margin-right: 2.5rem;
+  letter-spacing: 0.08em;
+}
+.fv .inr .ja {
+  font-size: 4.1666666667cqw;
+  font-weight: 500;
+  color: var(--base-btn-color03);
 }
 .fv .inr .illust {
   position: absolute;
@@ -221,6 +246,13 @@
   .fv .inr h1 {
     width: 30.1351351351%;
     min-width: 185px;
+  }
+  .fv .inr .en {
+    font-size: 2.972972973cqw;
+    margin-right: 1.2rem;
+  }
+  .fv .inr .ja {
+    font-size: 10cqw;
   }
 }
 
@@ -1028,6 +1060,7 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   margin: 0 auto;
+  border-top: 1px solid var(--base-border-color07);
   z-index: 10;
 }
 .works .inr .conditions_list .conditions_link {
@@ -1039,14 +1072,21 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 50px 70px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
+.works .inr .conditions_list .conditions_link + .conditions_link {
+  margin-top: 50px;
+}
 .works .inr .conditions_list .conditions_head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 11.4427860697%;
-  padding-top: 20px;
-  font-size: 1.0714285714cqw;
+  font-size: max(13px, 1.0714285714cqw);
   font-weight: 500;
   color: var(--base-color-green05);
 }
@@ -1055,10 +1095,59 @@
       -ms-flex: 1;
           flex: 1;
 }
+.works .inr .conditions_list .-rino {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.works .inr .conditions_list .-rino a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 49.4382022472%;
+  padding: 23px 33px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: var(--base-color-white);
+  border: 1px solid var(--base-border-color06);
+  border-radius: 80px;
+}
+.works .inr .conditions_list .-rino .rino-tit {
+  width: 47px;
+  height: 19px;
+}
+.works .inr .conditions_list .-rino .rino-tit.-soto {
+  width: 48px;
+}
+.works .inr .conditions_list .-rino .n_txt {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  font-size: max(12px, 0.9285714286cqw);
+  font-weight: 500;
+  line-height: 1.3846153846;
+  margin-left: 25px;
+}
+.works .inr .conditions_list .-commit {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 15px 16px;
+}
 .works .inr .conditions_list .-commit a span {
   position: relative;
   display: inline-block;
-  font-size: 0.9285714286cqw;
+  font-size: max(12px, 0.9285714286cqw);
   font-weight: 500;
   margin-right: 11px;
 }
@@ -1099,7 +1188,7 @@
   background: #111;
   border: 1px solid #111;
   color: #fff;
-  font-size: 0.9285714286cqw;
+  font-size: max(12px, 0.9285714286cqw);
   font-weight: 700;
   line-height: 1;
   text-decoration: none;
@@ -1230,6 +1319,7 @@
 }
 .works .inr .archive-pager_wrap {
   margin-top: 8.5714285714cqw;
+  padding-bottom: 10.3571428571cqw;
 }
 @media screen and (max-width: 1050px) {
   .works .inr .inr:before {
@@ -1247,8 +1337,9 @@
     border-radius: 30px;
   }
   .works .inr .conditions_btn {
-    height: 80px;
-    padding: 0 6.25vw;
+    min-height: 80px;
+    padding: 20px 6.25vw;
+    height: auto;
   }
   .works .inr .conditions_btn h2 {
     width: max(110px, 37.4137931034%);
@@ -1265,6 +1356,67 @@
   }
   .works .inr .conditions_btn.is-active .btn {
     background-image: url(../img/works/conditions_btn-bg02-sp.jpg);
+  }
+  .works .inr .conditions_list {
+    padding: 30px 6.25vw;
+  }
+  .works .inr .conditions_list .conditions_link {
+    display: block;
+  }
+  .works .inr .conditions_list .conditions_link + .conditions_link {
+    margin-top: 8.125cqw;
+  }
+  .works .inr .conditions_list .conditions_head {
+    width: 100%;
+    font-size: min(16px, 3.5cqw);
+    margin-bottom: min(20px, 4.5cqw);
+  }
+  .works .inr .conditions_list .-rino {
+    display: block;
+  }
+  .works .inr .conditions_list .-rino a {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+    padding: 20px 15px;
+    border-radius: 80px;
+  }
+  .works .inr .conditions_list .-rino a + a {
+    margin-top: 2.5cqw;
+  }
+  .works .inr .conditions_list .-rino .rino-tit {
+    width: 35px;
+    height: 15px;
+  }
+  .works .inr .conditions_list .-rino .rino-tit.-soto {
+    width: 36px;
+  }
+  .works .inr .conditions_list .-rino .n_txt {
+    font-size: min(14px, 2.75cqw);
+    line-height: 1.4545454545;
+    margin-left: 13px;
+  }
+  .works .inr .conditions_list .-commit {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 15px 11px;
+  }
+  .works .inr .conditions_list .-commit a span {
+    font-size: min(15px, 3cqw);
+  }
+  .works .inr .conditions_list .-area {
+    gap: 10px 5px;
+  }
+  .works .inr .conditions_list .-area a {
+    padding: 0 14px;
+    font-size: min(14px, 2.75cqw);
   }
   .works .inr .duck {
     width: max(80px, 16.625%);
