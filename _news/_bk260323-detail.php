@@ -43,7 +43,7 @@ $this_img_path = $img_path .  "news/";
 		</div>
 	</section><!-- /fv -->
 	<section class="news_wrap">
-		<div class="inr -w1400 base-wrap">
+		<div class="inr -w1400 round-con -detail">
 			<div class="bird-area">
 				<figure class="bird bird01"><img src="<?= $this_img_path; ?>fv-bird01.webp" alt="" decoding="async"></figure>
 				<figure class="bird bird02 inview sb"><img src="<?= $this_img_path; ?>fv-bird02.webp" alt="" decoding="async"></figure>
@@ -61,13 +61,10 @@ $this_img_path = $img_path .  "news/";
 					<li><a href="#">お客様アンケート<span class="en">（ 10 ）</span></a></li>
 				</ul>
 			</nav>
-			<div class="detail_wrap round-con">
+			<div class="detail_wrap">
 				<figure class="main-image">
 					<img src="<?= $this_img_path; ?>detail-dummy.png" alt="" decoding="async" class="fit_img">
 				</figure>
-				<div class="kiji_area">
-
-				</div>
 
 			</div>
 		</div><!-- /inr -->

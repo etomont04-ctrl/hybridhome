@@ -43,7 +43,7 @@ $this_img_path = $img_path .  "news/";
 		</div>
 	</section><!-- /fv -->
 	<section class="news_wrap">
-		<div class="inr -w1400 round-con base-wrap -archive">
+		<div class="inr -w1400 round-con">
 			<div class="bird-area">
 				<figure class="bird bird01"><img src="<?= $this_img_path; ?>fv-bird01.webp" alt="" decoding="async"></figure>
 				<figure class="bird bird02 inview sb"><img src="<?= $this_img_path; ?>fv-bird02.webp" alt="" decoding="async"></figure>

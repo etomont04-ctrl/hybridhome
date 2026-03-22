@@ -69,6 +69,7 @@
   --base-border-color05:#eaeaea;
   --base-border-color06:#ddd;
   --base-border-color07:#e6e6e6;
+  --base-border-color08:#188383;
   --base-shadow-color:#ade2e3;
   --base-color-uchi:#c13e02;
   --base-color-soto:#32a4ab;
@@ -717,6 +718,7 @@ img.preload {
   --base-border-color05:#eaeaea;
   --base-border-color06:#ddd;
   --base-border-color07:#e6e6e6;
+  --base-border-color08:#188383;
   --base-shadow-color:#ade2e3;
   --base-color-uchi:#c13e02;
   --base-color-soto:#32a4ab;
@@ -2209,6 +2211,7 @@ img.preload {
   --base-border-color05:#eaeaea;
   --base-border-color06:#ddd;
   --base-border-color07:#e6e6e6;
+  --base-border-color08:#188383;
   --base-shadow-color:#ade2e3;
   --base-color-uchi:#c13e02;
   --base-color-soto:#32a4ab;
@@ -3285,6 +3288,7 @@ img.preload {
   --base-border-color05:#eaeaea;
   --base-border-color06:#ddd;
   --base-border-color07:#e6e6e6;
+  --base-border-color08:#188383;
   --base-shadow-color:#ade2e3;
   --base-color-uchi:#c13e02;
   --base-color-soto:#32a4ab;
@@ -3668,6 +3672,26 @@ img.preload {
   }
 }
 
+.kiji_area h2:not([class]) {
+  position: relative;
+  display: block;
+  -webkit-transform: scaleX(0.75);
+          transform: scaleX(0.75);
+  -webkit-transform-origin: left center;
+          transform-origin: left center;
+}
+.kiji_area h3:not([class]) {
+  display: inline-block;
+  position: relative;
+  line-height: 1.725;
+  color: var(--base-btn-color03);
+  background: var(--base-color-white);
+  -webkit-box-shadow: 10px 10px 0 #cfe9ed;
+  box-shadow: 10px 10px 0 #cfe9ed;
+  padding: 0 10px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
 /* ==========================================================================
 	data-list
 ========================================================================== */
@@ -5401,6 +5425,7 @@ img.preload {
   --base-border-color05:#eaeaea;
   --base-border-color06:#ddd;
   --base-border-color07:#e6e6e6;
+  --base-border-color08:#188383;
   --base-shadow-color:#ade2e3;
   --base-color-uchi:#c13e02;
   --base-color-soto:#32a4ab;

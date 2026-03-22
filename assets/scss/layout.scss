@@ -309,6 +309,108 @@
 		}
 	}
 }
+
+// ==========================================================================
+//----kiji_area
+// ==========================================================================
+.kiji_area{
+	h2:not([class]){
+		position: relative;
+		display: block;
+		transform: scaleX(.75);
+		transform-origin: left center;
+	}
+	h3:not([class]){
+		display: inline-block;
+		position: relative;
+		line-height: 1.725;
+		color:var(--base-btn-color03);
+		background: var(--base-color-white);
+		-webkit-box-shadow: 10px 10px 0 #cfe9ed;
+		box-shadow: 10px 10px 0 #cfe9ed;
+		padding: 0 10px;
+		-webkit-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+	p:not([class]){
+
+	}
+
+	.column-image{
+		display: flex;
+		flex-wrap: wrap;
+		gap:get_calc(60,2280);
+		margin-top:getCqw(30,$conW);
+		&.-full > div{
+			width: 100%;
+			.img{
+				position: relative;
+				width: 100%;
+				aspect-ratio:2280/1280;
+				border:2px solid var(--base-color-white);
+				box-sizing:border-box;
+				}
+		}
+		 &.-half > div{
+			width:get_calc(1110,2280);
+			.img{
+				position: relative;
+				width: 100%;
+				aspect-ratio:720/480;
+				border:2px solid var(--base-color-white);
+				box-sizing:border-box;
+			}
+		}
+		&.-third{
+			> div{
+				width: get_calc(720,2280);
+				.img{
+					position: relative;
+					width: 100%;
+					aspect-ratio:720/480;
+					border:2px solid var(--base-color-white);
+					box-sizing:border-box;
+				}
+			}
+		}
+		.img.-vertical{
+			aspect-ratio:1110/1480 !IMportant;
+		}
+		// &.-multi{
+		// 	display:grid;
+		// 	grid-template-columns: repeat(2, 1fr);
+		// 	gap: 2rem;
+		// }
+		+ .column-image{
+			margin-top: 2rem;
+		}
+		.wp-image{
+			margin-top: 0;
+		}
+		img{
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			margin:auto;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			background-position:center center;
+			background-size:cover;
+			z-index:1;
+		}
+		p{
+			font-size:max(13px,getCqw(14,$conW));
+			line-height: 2;
+			margin-top:getCqw(20,$conW);
+			letter-spacing: 0;
+		}
+	}
+}
+
+
 /* ==========================================================================
 	data-list
 ========================================================================== */
