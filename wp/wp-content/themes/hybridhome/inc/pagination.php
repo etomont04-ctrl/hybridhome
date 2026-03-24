@@ -7,10 +7,6 @@ if ($host === 'localhost' || $host === '127.0.0.1') {
 } else {
 	include($_SERVER['DOCUMENT_ROOT'] . '/assets/inc/root.php');
 }
-
-$uri = "works";
-$this_img_path = $img_path . "works/";
-
 global $wp_query;
 if (!isset($wp_query) || (int) $wp_query->max_num_pages <= 1) {
 	return;

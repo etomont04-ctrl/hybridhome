@@ -44,10 +44,82 @@ add_action('admin_menu', 'customize_admin_menu_and_meta_boxes', 99); // 優先�
 
 //管理画面の「見出し１」等を削除する
 function custom_editor_settings( $initArray ){
-		$initArray['block_formats'] = "段落=p;大見出し=h2;アイコン有り中見出し=h3;アイコン無し中見出し=h4;";
+		$initArray['block_formats'] = "段落=p;大見出し=h2;小見出し=h3;";
 		return $initArray;
 }
 add_filter( 'tiny_mce_before_init', 'custom_editor_settings' );
+
+/* ==========================================================================
+	SCF の TinyMCE 書式プルダウンを 段落 / 見出し2 / 見出し3 のみに見せる
+	※ 通常投稿本文のエディタには干渉しない
+========================================================================== */
+function my_limit_scf_tinymce_format_menu() {
+	if ( ! is_admin() ) return;
+	?>
+	<script>
+	document.addEventListener('DOMContentLoaded', function () {
+		const allowLabels = ['段落', '見出し2', '見出し3'];
+
+		const normalizeText = (text) => {
+			return (text || '').replace(/\s+/g, '').trim();
+		};
+
+		const hasScfEditor = () => {
+			return !!document.querySelector(
+				'.smart-cf-meta-box .wp-editor-wrap textarea.wp-editor-area:not(#content), ' +
+				'.smart-custom-fields-meta-box .wp-editor-wrap textarea.wp-editor-area:not(#content), ' +
+				'.scf-meta-box .wp-editor-wrap textarea.wp-editor-area:not(#content)'
+			);
+		};
+
+		const isScfFormatMenuOpen = () => {
+			const activeWrap = document.querySelector('.wp-editor-wrap.tmce-active');
+			if (!activeWrap) return false;
+
+			const textarea = activeWrap.querySelector('textarea.wp-editor-area');
+			if (!textarea) return false;
+
+			if (textarea.id === 'content') return false;
+
+			return true;
+		};
+
+		const hideMenuItems = () => {
+			if (!hasScfEditor()) return;
+			if (!isScfFormatMenuOpen()) return;
+
+			document.querySelectorAll('.mce-menu-item').forEach((item) => {
+				const textEl = item.querySelector('.mce-text');
+				if (!textEl) return;
+
+				const label = normalizeText(textEl.textContent);
+
+				if (!allowLabels.includes(label)) {
+					item.style.display = 'none';
+				} else {
+					item.style.display = '';
+				}
+			});
+		};
+
+		document.addEventListener('click', function () {
+			setTimeout(hideMenuItems, 0);
+			setTimeout(hideMenuItems, 100);
+		}, true);
+
+		const observer = new MutationObserver(function () {
+			hideMenuItems();
+		});
+
+		observer.observe(document.body, {
+			childList: true,
+			subtree: true
+		});
+	});
+	</script>
+	<?php
+}
+add_action( 'admin_footer', 'my_limit_scf_tinymce_format_menu', 100 );
 
 
 // --------------------------------------------------------------------------------
@@ -119,168 +191,6 @@ add_filter( 'manage_posts_columns', 'customize_admin_manage_posts_columns' );
 // add_action('login_head', 'login_logo');
 
 
-/* ==========================================================================
-	<h2> / <h3> へアイコンを自動挿入（クラシックエディターでもOK）
-========================================================================== */
-
-// add_filter('the_content', 'dq_add_icon_to_headings', 20);
-
-// function dq_add_icon_to_headings($content) {
-
-// 	// 管理画面では加工しない（エディター表示など）
-// 	if (is_admin()) {
-// 		return $content;
-// 	}
-
-// 	// アイコンURL（指定どおり）
-// 	$icon_url = trailingslashit(get_stylesheet_directory_uri()) . 'img/dq-icon.svg';
-
-// 	// h2用（-midium）
-// 	$icon_h2 = '<i class="dq-icon -midium"><img src="' . esc_url($icon_url) . '" class="svg" alt="" decoding="async"></i>';
-
-// 	// h3用（-small）
-// 	$icon_h3 = '<i class="dq-icon -small"><img src="' . esc_url($icon_url) . '" class="svg" alt="" decoding="async"></i>';
-
-// 	// h2
-// 	$pattern_h2 = '#<h2(?![^>]*\bdq-noicon\b)([^>]*)>(?!\s*<i[^>]*\bdq-icon\b)(.*?)</h2>#is';
-// 	$content = preg_replace($pattern_h2, '<h2$1>' . $icon_h2 . '$2</h2>', $content);
-
-// 	// h3
-// 	$pattern_h3 = '#<h3(?![^>]*\bdq-noicon\b)([^>]*)>(?!\s*<i[^>]*\bdq-icon\b)(.*?)</h3>#is';
-// 	$content = preg_replace($pattern_h3, '<h3$1>' . $icon_h3 . '$2</h3>', $content);
-
-// 	return $content;
-// }
-
-/* ==========================================================================
-	ページネーション（一覧/アーカイブ共通） - 既存マークアップ版
-	- 数字（PC想定）
-	- select（SP想定）
-	- prev/next（無い場合も出力＋無効化）
-========================================================================== */
-
-function dq_render_archive_pager($query = null, $args = []) {
-
-	// クエリ（未指定ならメインクエリ）
-	if ($query === null) {
-		global $wp_query;
-		$query = $wp_query;
-	}
-
-	if (empty($query) || !($query instanceof WP_Query)) {
-		return;
-	}
-
-	$total = (int) $query->max_num_pages;
-	if ($total <= 1) {
-		return;
-	}
-
-	$defaults = [
-		'mid_size'	=> 1,
-		'end_size'	=> 1,
-	];
-	$args = array_merge($defaults, (array) $args);
-
-	$paged = max(1, (int) get_query_var('paged'));
-
-	// paginate_links 用
-	$big = 999999999;
-	$base = str_replace($big, '%#%', esc_url(get_pagenum_link($big)));
-	$links = paginate_links([
-		'base'		=> $base,
-		'format'	=> '?paged=%#%',
-		'current'	=> $paged,
-		'total'		=> $total,
-		'mid_size'	=> (int) $args['mid_size'],
-		'end_size'	=> (int) $args['end_size'],
-		'prev_next'	=> false, // ★これを追加（数字だけにする）
-		'type'		=> 'array',
-	]);
-	if (empty($links) || !is_array($links)) {
-		return;
-	}
-
-	// 矢印アイコン（$img_path が無い場合はテーマURLにフォールバック）
-	$arrow_url = '';
-	if (isset($GLOBALS['img_path']) && !empty($GLOBALS['img_path'])) {
-		$arrow_url = $GLOBALS['img_path'] . 'common/arrow.svg';
-	} else {
-		$arrow_url = trailingslashit(get_stylesheet_directory_uri()) . 'img/common/arrow.svg';
-	}
-
-	$arrow_html = '<i class="arrow -white -w17" aria-hidden="true"><img src="' . esc_url($arrow_url) . '" alt="" decoding="async" class="svg"></i>';
-
-	// prev/next URL
-	$prev_url = ($paged > 1) ? get_pagenum_link($paged - 1) : '';
-	$next_url = ($paged < $total) ? get_pagenum_link($paged + 1) : '';
-
-	$prev_class = 'prev only-arrow' . ($prev_url ? '' : ' is-disabled');
-	$next_class = 'next only-arrow' . ($next_url ? '' : ' is-disabled');
-
-	?>
-	<ol class="archive-pager_num">
-		<?php
-		foreach ($links as $link_html) {
-
-			// dots（…）は li を出すならここで（不要なら continue で飛ばしてOK）
-			if (strpos($link_html, 'dots') !== false) {
-				echo '<li><span class="archive-pager__page is-dots">…</span></li>';
-				continue;
-			}
-
-			// current
-			if (strpos($link_html, 'current') !== false) {
-				$label = wp_strip_all_tags($link_html);
-				echo '<li><span class="archive-pager__page is-current" aria-current="page">' . esc_html($label) . '</span></li>';
-				continue;
-			}
-
-			// 通常リンク（class差し替え）
-			$link_html = str_replace('page-numbers', 'archive-pager__page', $link_html);
-			echo '<li>' . $link_html . '</li>';
-		}
-		?>
-	</ol>
-
-	<div class="archive-pager_select">
-		<div><p><?php echo esc_html($paged); ?></p><span>/</span><p><?php echo esc_html($total); ?></p></div>
-		<select onchange="if(this.value){window.location.href=this.value;}">
-			<?php
-			for ($i = 1; $i <= $total; $i++) {
-				$url = get_pagenum_link($i);
-				echo '<option value="' . esc_url($url) . '"' . selected($i, $paged, false) . '>' . esc_html($i) . '</option>';
-			}
-			?>
-		</select>
-	</div>
-
-	<div class="archive-pager_nav">
-		<a
-			<?php if ($prev_url) : ?>
-				href="<?php echo esc_url($prev_url); ?>"
-			<?php else : ?>
-				aria-disabled="true" tabindex="-1" role="link"
-			<?php endif; ?>
-			class="<?php echo esc_attr($prev_class); ?>"
-		>
-			<?php echo $arrow_html; ?>
-		</a>
-
-		<a
-			<?php if ($next_url) : ?>
-				href="<?php echo esc_url($next_url); ?>"
-			<?php else : ?>
-				aria-disabled="true" tabindex="-1" role="link"
-			<?php endif; ?>
-			class="<?php echo esc_attr($next_class); ?>"
-		>
-			<?php echo $arrow_html; ?>
-		</a>
-	</div>
-	<?php
-}
-
 
 // --------------------------------------------------------------------------------
 // タグを非表示
@@ -350,84 +260,79 @@ return preg_replace('/<p>(\s*)(<img .* \/>)(\s*)<\/p>/iU', '\2', $content);
 }
 add_filter('the_content', 'remove_p_on_images');
 
-// --------------------------------------------------------------------------------
-// 設置したeditor-style.cssをビジュアルエディターに適用
-// --------------------------------------------------------------------------------
-add_action('after_setup_theme', function () {
-  add_theme_support('editor-styles');           // 念のため
-  add_editor_style('editor-style.css');         // ビジュアルエディタ本体
-});
 /* ==========================================================================
-	TinyMCE（全インスタンス）に editor-style.css を適用
+	SCF / Classic Editor の TinyMCE に editor-style.css を追加
 ========================================================================== */
+function my_add_editor_style_to_mce_css( $mce_css ) {
+	$path = get_stylesheet_directory() . '/editor-style.css';
+	$url = get_stylesheet_directory_uri() . '/editor-style.css';
 
-add_filter('mce_css', function ($mce_css) {
+	if ( ! file_exists( $path ) ) return $mce_css;
 
-	// editor-style.css のURL（配置場所に合わせて調整）
-	// 例1：テーマ直下に editor-style.css がある場合
-	$css_url = get_stylesheet_directory_uri() . '/editor-style.css';
+	$css_url = $url . '?ver=' . filemtime( $path );
 
-	// 例2：/css/editor-style.css の場合はこっち
-	// $css_url = get_stylesheet_directory_uri() . '/css/editor-style.css';
+	$list = array_filter( array_map( 'trim', explode( ',', (string) $mce_css ) ) );
 
-	$mce_css .= ($mce_css ? ',' : '') . $css_url;
+	if ( ! in_array( $css_url, $list, true ) ) {
+		$list[] = $css_url;
+	}
 
-	return $mce_css;
-});
-
-// --------------------------------------------------------------------------------
-//editor-style.cssのキャッシュ除け
-// --------------------------------------------------------------------------------
-
-function extend_tiny_mce_before_init( $mce_init ) {
- $mce_init['cache_suffix']= 'v='.time();
- return $mce_init;
+	return implode( ',', $list );
 }
-add_filter( 'tiny_mce_before_init', 'extend_tiny_mce_before_init' );
+add_filter( 'mce_css', 'my_add_editor_style_to_mce_css', 999 );
+/* ==========================================================================
+	SCF WYSIWYG iframe に editor-style.css を直接追加
+========================================================================== */
+function my_add_editor_style_to_scf_iframe() {
+	$path = get_stylesheet_directory() . '/editor-style.css';
+	$url = get_stylesheet_directory_uri() . '/editor-style.css';
 
+	if ( ! file_exists( $path ) ) return;
 
-// 2) TinyMCE（テンプレのプレビュー含む）にも同じCSSを重複なく追加
-add_filter('tiny_mce_before_init', function ($init) {
-  $path = get_stylesheet_directory() . '/editor-style.css';
-  $url  = get_stylesheet_directory_uri() . '/editor-style.css';
-  if (file_exists($path)) {
-    $ver = filemtime($path);
-    $css_url = $url . '?ver=' . $ver;
+	$css_url = esc_url( $url . '?ver=' . filemtime( $path ) );
+	?>
+	<script>
+	document.addEventListener('DOMContentLoaded', function () {
+		const cssUrl = '<?= $css_url; ?>';
 
-    // 既に content_css がある場合は末尾に追加、重複チェック
-    if (!empty($init['content_css'])) {
-      $list = array_map('trim', explode(',', $init['content_css']));
-      if (!in_array($css_url, $list, true)) {
-        $list[] = $css_url;
-      }
-      $init['content_css'] = implode(',', $list);
-    } else {
-      $init['content_css'] = $css_url;
-    }
-  }
+		const appendCssToIframe = (iframe) => {
+			if (!iframe) return;
 
-  // 不要なら cache_suffix は使わない（毎回変わると重い）
-  // 使う場合は固定値にするなど（例：テーマ版数）
-  // $init['cache_suffix'] = 'v=' . wp_get_theme()->get('Version');
+			const doc = iframe.contentDocument || iframe.contentWindow.document;
+			if (!doc || !doc.head) return;
 
-  return $init;
-});
+			if (doc.querySelector('link[data-scf-editor-style="true"]')) return;
 
-// 3) 環境によっては mce_css が効くケースにも対応（重複なしで追記）
-add_filter('mce_css', function ($mce_css) {
-  $path = get_stylesheet_directory() . '/editor-style.css';
-  $url  = get_stylesheet_directory_uri() . '/editor-style.css';
-  if (!file_exists($path)) return $mce_css;
+			const link = doc.createElement('link');
+			link.rel = 'stylesheet';
+			link.href = cssUrl;
+			link.setAttribute('data-scf-editor-style', 'true');
+			doc.head.appendChild(link);
+		};
 
-  $ver = filemtime($path);
-  $css_url = $url . '?ver=' . $ver;
+		const scanIframes = () => {
+			document.querySelectorAll('iframe').forEach((iframe) => {
+				try {
+					appendCssToIframe(iframe);
+				} catch (e) {}
+			});
+		};
 
-  $list = array_filter(array_map('trim', explode(',', (string)$mce_css)));
-  if (!in_array($css_url, $list, true)) {
-    $list[] = $css_url;
-  }
-  return implode(',', $list);
-});
+		scanIframes();
+
+		const observer = new MutationObserver(() => {
+			scanIframes();
+		});
+
+		observer.observe(document.body, {
+			childList: true,
+			subtree: true
+		});
+	});
+	</script>
+	<?php
+}
+add_action( 'admin_footer', 'my_add_editor_style_to_scf_iframe', 100 );
 
 // --------------------------------------------------------------------------------
 //サムネイル設定
@@ -530,13 +435,16 @@ function custom_works_rewrite_rule() {
 }
 add_action('init', 'custom_works_rewrite_rule');
 
-
 /* ==========================================================================
 	Classic Editor / SCF の WYSIWYG で Quicktags を有効化
 ========================================================================== */
 function my_enable_quicktags_for_all_editors( $settings, $editor_id ) {
+	if ( ! is_admin() ) return $settings;
+
 	$settings['quicktags'] = true;
 	$settings['tinymce'] = true;
+	$settings['media_buttons'] = true;
+
 	return $settings;
 }
-add_filter( 'wp_editor_settings', 'my_enable_quicktags_for_all_editors', 10, 2 );
+add_filter( 'wp_editor_settings', 'my_enable_quicktags_for_all_editors', 99, 2 );

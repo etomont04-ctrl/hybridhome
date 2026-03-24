@@ -199,46 +199,28 @@ $this_img_path = $img_path .  "works/";
 			</div>
 		</div>
 	</section><!-- /works-d_fv -->
-<?php
-$works_free_group = SCF::get( 'works-free' );
-?>
 
-<?php if ( ! empty( $works_free_group ) && is_array( $works_free_group ) ) : ?>
-	<?php foreach ( $works_free_group as $item ) : ?>
-		<?php
-		$before_img_id = ! empty( $item['before-img'] ) ? (int) $item['before-img'] : 0;
-		$after_img_id = ! empty( $item['after-img'] ) ? (int) $item['after-img'] : 0;
-		$works_free_text = ! empty( $item['works-free-texts'] ) ? $item['works-free-texts'] : '';
-
-		$before_img_url = $before_img_id ? wp_get_attachment_image_url( $before_img_id, 'full' ) : '';
-		$after_img_url = $after_img_id ? wp_get_attachment_image_url( $after_img_id, 'full' ) : '';
-
-		$before_img_alt = $before_img_id ? get_post_meta( $before_img_id, '_wp_attachment_image_alt', true ) : '';
-		$after_img_alt = $after_img_id ? get_post_meta( $after_img_id, '_wp_attachment_image_alt', true ) : '';
-		?>
-		<section class="bf_area kiji inr -w1400">
-			<?php if ( $after_img_url && $before_img_url ) : ?>
-				<div class="beer-slider">
-					<img src="<?php echo esc_url( $after_img_url ); ?>" alt="<?php echo esc_attr( $after_img_alt ); ?>" decoding="async">
-
-					<div class="beer-reveal">
-						<img src="<?php echo esc_url( $before_img_url ); ?>" alt="<?php echo esc_attr( $before_img_alt ); ?>" decoding="async">
-					</div>
-				</div>
-				<!-- /beer-slider -->
-			<?php endif; ?>
-
-			<div class="kiji_area">
-				<?php
-				if ( ! empty( $works_free_text ) ) {
-					echo apply_filters( 'the_content', $works_free_text );
-				}
-				?>
+	<section class="bf_area kiji inr -w1400">
+		<div class="beer-slider">
+			<img src="<?php echo $this_img_path; ?>after-img.webp" alt="" decoding="async">
+			<div class="beer-reveal">
+				<img src="<?php echo $this_img_path; ?>before-img.webp" alt="" decoding="async">
 			</div>
-		</section>
-	<?php endforeach; ?>
-<?php endif; ?>
+		</div>
+		<!-- /beer-slider -->
+		<p>築40年を迎え、より快適に安心して暮らせるように耐震補強を計画。補強工事に伴い外壁の解体が必要となる為、モルタルから耐久性の良いサイディングに張替え、屋根も重い瓦から軽いスレートに葺き替えました。併せて、サッシも交換し、屋根や壁には断熱材を入れて、家全体の断熱性能も向上させました。</p>
+	</section>
 
+	<section class="bf_area kiji inr -w1400">
+		<div class="beer-slider">
+			<img src="<?php echo $this_img_path; ?>after-img.webp" alt="" decoding="async">
+			<div class="beer-reveal">
+				<img src="<?php echo $this_img_path; ?>before-img.webp" alt="" decoding="async">
+			</div>
+		</div>
+		<!-- /beer-slider -->
+		<p>築40年を迎え、より快適に安心して暮らせるように耐震補強を計画。補強工事に伴い外壁の解体が必要となる為、モルタルから耐久性の良いサイディングに張替え、屋根も重い瓦から軽いスレートに葺き替えました。併せて、サッシも交換し、屋根や壁には断熱材を入れて、家全体の断熱性能も向上させました。</p>
+	</section>
 
 
 	<div class="works-detail">
@@ -257,45 +239,122 @@ $works_free_group = SCF::get( 'works-free' );
 					</div>
 				</div>
 			</section><!-- /works-detail_sec -->
-<?php
-$works_plans_group = SCF::get( 'works-plans' );
-?>
-<?php if ( ! empty( $works_plans_group ) && is_array( $works_plans_group ) ) : ?>
-	<?php foreach ( $works_plans_group as $item ) : ?>
-		<?php
-		$works_plans_title = ! empty( $item['works-plans_title'] ) ? $item['works-plans_title'] : '';
-		$works_plans_en = ! empty( $item['works-plans_en'] ) ? $item['works-plans_en'] : '';
-		$works_plans_texts = ! empty( $item['works-plans_texts'] ) ? $item['works-plans_texts'] : '';
+			<section class="works-detail_sec">
+				<div class="tit_area">
+					<h2 class="scaleX-wrap">
+						<span class="scaleX" data-scale="0.75" data-text="着工から完成まで">着工から完成まで</span>
+					</h2>
+					<span class="en">Story</span>
+				</div>
+				<div class="story_sec">
+					<h3>
+						<span class="scaleX-wrap">
+							<span class="scaleX" data-scale="0.75" data-text="解体工事">解体工事</span>
+						</span>
+					</h3>
+					<p>長年お世話になった建物を解体し、構造体だけの姿にしていきます。今回は思い出の残る和室の欄間をきれいに解体し保存し改装時に使用しました。</p>
+					<div class="column-image -third">
+						<div>
+							<div class="img">
+								<img src="<?= $this_img_path; ?>after-img.webp" alt="" decoding="async">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="story_sec">
+					<h3>
+						<span class="scaleX-wrap">
+							<span class="scaleX" data-scale="0.75" data-text="補強工事／基礎補強">補強工事／基礎補強</span>
+						</span>
+					</h3>
+					<p>鉄の５倍の引張り強さをもつアラミド繊維を高い接着力をもつ樹脂で基礎の上から固める補強工事。</p>
+					<div class="column-image -third">
+						<div>
+							<div class="img"><img src="<?= $this_img_path; ?>after-img.webp" alt="" decoding="async"></div>
+						</div>
+						<div>
+							<div class="img"><img src="<?= $this_img_path; ?>after-img.webp" alt="" decoding="async"></div>
+						</div>
+					</div>
+				</div>
+				<div class="story_sec">
+					<h3>
+						<span class="scaleX-wrap">
+							<span class="scaleX" data-scale="0.75" data-text="補強工事／基礎補強">補強工事／基礎補強</span>
+						</span>
+					</h3>
+					<p>鉄の５倍の引張り強さをもつアラミド繊維を高い接着力をもつ樹脂で基礎の上から固める補強工事。</p>
+					<div class="column-image -third">
+						<div>
+							<div class="img"><img src="<?= $this_img_path; ?>after-img.webp" alt="" decoding="async"></div>
+						</div>
+						<div>
+							<div class="img"><img src="<?= $this_img_path; ?>after-img.webp" alt="" decoding="async"></div>
+						</div>
+						<div>
+							<div class="img"><img src="<?= $this_img_path; ?>after-img.webp" alt="" decoding="async"></div>
+						</div>
+					</div>
+				</div>
+			</section><!-- /works-detail_sec -->
+			<section class="works-detail_sec">
+				<div class="tit_area">
+					<h2 class="scaleX-wrap">
+						<span class="scaleX" data-scale="0.75" data-text="こだわりのリフォーム">こだわりのリフォーム</span>
+					</h2>
+					<span class="en">My Reform Style</span>
+				</div>
+				<p>リフォームの説明がはいります。リフォームの説明がはいります。リフォームの説明がはいります。リフォームの説明がはいります。リフォームの説明がはいります。リフォームの説明がはいります。リフォームの説明がはいります。リフォームの説明がはいります。リフォームの説明がはいります。リフォームの説明がはいります。リフォームの説明がはいります。リフォームの説明がはいります。リフォームの説明がはいります。</p>
+				<div class="story_sec">
+					<h3>
+						<span class="scaleX-wrap">
+							<span class="scaleX" data-scale="0.75" data-text="木の香りが漂う和モダンなリビングダイニング。">木の香りが漂う和モダンなリビングダイニング。</span>
+						</span>
+					</h3>
+					<div class="column-image -third">
+						<div>
+							<div class="img"><img src="<?= $this_img_path; ?>after-img.webp" alt="" decoding="async"></div>
+							<p>長年お世話になった建物を解体し、構造体だけの姿にしていきます。今回は思い出の残る和室の欄間をきれいに解体し保存し改装時に使用しました。</p>
+						</div>
+					</div>
+				</div>
+				<div class="story_sec">
+					<h3>
+						<span class="scaleX-wrap">
+							<span class="scaleX" data-scale="0.75" data-text="補強工事／基礎補強">補強工事／基礎補強</span>
+						</span>
+					</h3>
+					<p>鉄の５倍の引張り強さをもつアラミド繊維を高い接着力をもつ樹脂で基礎の上から固める補強工事。</p>
+					<div class="column-image -half">
+						<div>
+							<div class="img"><img src="https://placehold.jp/720x480.png" alt="" decoding="async"></div>
+						</div>
+						<div>
+							<div class="img"><img src="https://placehold.jp/720x480.png" alt="" decoding="async"></div>
+						</div>
+					</div>
+				</div>
+				<div class="story_sec">
+					<h3>
+						<span class="scaleX-wrap">
+							<span class="scaleX" data-scale="0.75" data-text="補強工事／基礎補強">補強工事／基礎補強</span>
+						</span>
+					</h3>
+					<p>鉄の５倍の引張り強さをもつアラミド繊維を高い接着力をもつ樹脂で基礎の上から固める補強工事。</p>
+					<div class="column-image -third">
+						<div>
+							<div class="img"><img src="https://placehold.jp/720x480.png" alt="" decoding="async"></div>
+						</div>
 
-		if ( is_array( $works_plans_texts ) ) {
-			$works_plans_texts = ! empty( $works_plans_texts[0] ) ? $works_plans_texts[0] : '';
-		}
-		?>
-		<section class="works-detail_sec">
-			<div class="tit_area">
-				<h2 class="scaleX-wrap">
-					<span
-						class="scaleX"
-						data-scale="0.75"
-						data-text="<?php echo esc_attr( $works_plans_title ); ?>"
-					><?php echo esc_html( $works_plans_title ); ?></span>
-				</h2>
-				<?php if ( $works_plans_en ) : ?>
-					<span class="en"><?php echo esc_html( $works_plans_en ); ?></span>
-				<?php endif; ?>
-			</div>
-
-			<div class="story_sec kiji_area">
-				<?php
-				if ( ! empty( $works_plans_texts ) ) {
-					echo apply_filters( 'the_content', $works_plans_texts );
-				}
-				?>
-			</div>
-		</section><!-- /works-detail_sec -->
-	<?php endforeach; ?>
-<?php endif; ?>
-
+						<div>
+							<div class="img"><img src="https://placehold.jp/720x480.png" alt="" decoding="async"></div>
+						</div>
+						<div>
+							<div class="img"><img src="https://placehold.jp/720x480.png" alt="" decoding="async"></div>
+						</div>
+					</div>
+				</div>
+			</section><!-- /works-detail_sec -->
 		<?php
 		$works_voice_tit01 = SCF::get('works-voice_tit01');
 		$works_voice_list01 = SCF::get('works-voice_list01');
@@ -306,6 +365,7 @@ $works_plans_group = SCF::get( 'works-plans' );
 		$works_voice_tit03 = SCF::get('works-voice_tit03');
 		$works_voice_list03 = SCF::get('works-voice_list03');
 		?>
+
 		<?php if (!empty($works_voice_tit01)) : ?>
 			<section class="works-detail_sec">
 				<div class="tit_area">
@@ -569,7 +629,7 @@ if (!$works_link) {
 				<?php if (!empty($prev_thumb)) : ?>
 					<img src="<?= esc_url($prev_thumb); ?>" alt="<?= esc_attr($prev_title); ?>" decoding="async" class="fit_img">
 				<?php else : ?>
-					<img src="<?= $img_path; ?>common/news-dummy.jpg" alt="" decoding="async" class="fit_img">
+					<img src="<?= $this_img_path; ?>after-img.webp" alt="" decoding="async" class="fit_img">
 				<?php endif; ?>
 			</figure>
 			<div class="text_area">
@@ -602,7 +662,7 @@ if (!$works_link) {
 				<?php if (!empty($next_thumb)) : ?>
 					<img src="<?= esc_url($next_thumb); ?>" alt="<?= esc_attr($next_title); ?>" decoding="async" class="fit_img">
 				<?php else : ?>
-					<img src="<?= $img_path; ?>common/news-dummy.jpg" alt="" decoding="async" class="fit_img">
+					<img src="<?= $this_img_path; ?>after-img.webp" alt="" decoding="async" class="fit_img">
 				<?php endif; ?>
 			</figure>
 			<div class="text_area">
@@ -616,6 +676,7 @@ if (!$works_link) {
 			</div>
 		</a>
 	<?php endif; ?>
+
 			</div><!-- d-pager_area -->
 		</div><!-- /inr -->
 	</ddiv><!-- / works-detail -->

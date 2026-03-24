@@ -66,24 +66,21 @@ $(function () {
 				position: 'absolute',
 				top: absoluteTop,
 				bottom: 'auto',
-				left: '',
-				width: ''
+				left: ''
 			});
 		} else if (scrollTop >= startFix && scrollTop < endFix) {
 			$category.addClass('is-fixed').css({
 				position: 'fixed',
 				top: fixedTop,
 				left: containerLeft + fixedLeftOffset,
-				bottom: 'auto',
-				width: categoryWidth
+				bottom: 'auto'
 			});
 		} else {
 			$category.addClass('is-bottom').css({
 				position: 'absolute',
 				top: 'auto',
 				bottom: bottomOffset,
-				left: '',
-				width: ''
+				left: ''
 			});
 		}
 	};

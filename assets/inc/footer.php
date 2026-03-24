@@ -6,8 +6,8 @@
 				<div class="footer_logo-area">
 					<h2><a href="<?= $ROOT_DIR; ?>">
 						<picture>
-							<source media="(max-width: 1050px)" srcset="<?= $img_path; ?>common/foot-logo_sp.png">
-							<img src="<?= $img_path; ?>common/logo-y.png" alt="ハイブリットホーム HYBRID HOME">
+							<source media="(max-width: 1050px)" srcset="<?= $img_path; ?>common/logo-y.png">
+							<img src="<?= $img_path; ?>common/logo.png" alt="ハイブリットホーム HYBRID HOME">
 						</picture>
 					</a></h2>
 					<div class="footer_logo-area_text">
