@@ -333,44 +333,6 @@
 	}
 }
 
-// @mixin triangle($w, $h,$tip: tl) {
-// 	width: 100%;
-// 	aspect-ratio: $w / $h;
-// 	// 頂点の位置で4パターン切り替え
-// 	@if $tip == tl {
-// 		// 頂点：左上
-// 		clip-path: polygon(0 0, 100% 0, 100% 100%);
-// 	} @else if $tip == tr {
-// 		// 頂点：右上
-// 		clip-path: polygon(100% 0, 100% 100%, 0 100%);
-// 	} @else if $tip == br {
-// 		// 頂点：右下
-// 		clip-path: polygon(100% 100%, 0 100%, 0 0);
-// 	} @else if $tip == bl {
-// 		// 頂点：左下
-// 		clip-path: polygon(0 100%, 0 0, 100% 0);
-// 	}
-// }
-// --------------------------------------------------------------------------
-// 	平行四辺形
-// --------------------------------------------------------------------------
-// 平行四辺形
-@mixin parallelogram($height: 100%, $offset: 180px, $tip: left) {
-	display: block;
-	position: absolute;
-	width: 100%;
-	height: $height;
-	z-index: 1;
-	@if $tip == left or $tip == 'left' {
-		// 左 → 0, 右 → $offset 下げる
-		clip-path: polygon(0 0, 100% $offset, 100% 100%, 0 100%);
-	} @else if $tip == right or $tip == 'right' {
-		// 左 → $offset 下げる, 右 → 0
-		clip-path: polygon(0 $offset, 100% 0, 100% 100%, 0 100%);
-	}
-}
-
-
 // --------------------------------------------------------------------------
 // 	グラデーション背景
 // --------------------------------------------------------------------------
@@ -525,6 +487,7 @@
 	--base-color-green04:#2c6c76;
 	--base-color-green05:#309c9d;
 	--base-color-green06:#207372;
+	--base-color-green07:#27989b;
 	--base-color-wood:#6d240e;
 	--base-color-blue:#14a5b6;
 	--base-color-blue02:#32a4ab;
@@ -553,6 +516,7 @@
 	--base-border-color06:#ddd;
 	--base-border-color07:#e6e6e6;
 	--base-border-color08:#188383;
+	--base-border-color09:#1c0604;
 	--base-shadow-color:#ade2e3;
 
 	--base-color-uchi:#c13e02;
@@ -580,9 +544,7 @@
 	--line-seed:"LINE Seed JP", sans-serif;
 	//フォールバック
 	--delay: 0s;
-
 }
-
 
 
 // ==========================================================================
@@ -664,8 +626,7 @@
 
 @media screen and (max-width : 800px ){
 	:root {
-		--vwSP: calc(100vw / 375);
-
+		--vwSP: calc(100vw / 400);
 		--fz6: clamp(.6rem, calc(6 * var(--vwSP)), .8rem);
 		--fz7: clamp(.7rem, calc(7 * var(--vwSP)), .9rem);
 		--fz8: clamp(.8rem, calc(8 * var(--vwSP)), 1rem);
@@ -708,48 +669,5 @@
 		--fz51: clamp(5.1rem, calc(51 * var(--vwSP)), 5.6rem);
 		--fz56: clamp(5.6rem, calc(56 * var(--vwSP)), 6rem);
 		--fz64: clamp(6.4rem, calc(64 * var(--vwSP)), 6.8rem);
-
-
-		// --fz7: clamp(7px, calc(7 * var(--vwSP)), 9px);
-		// --fz8: clamp(8px, calc(8 * var(--vwSP)), 10px);
-		// --fz9: clamp(9px, calc(9 * var(--vwSP)), 11px);
-		// --fz10: clamp(10px, calc(10 * var(--vwSP)), 12px);
-		// --fz11: clamp(11px, calc(11 * var(--vwSP)), 13px);
-		// --fz12: clamp(12px, calc(12 * var(--vwSP)), 14px);
-		// --fz13: clamp(13px, calc(13 * var(--vwSP)), 14px);
-		// --fz14: clamp(14px, calc(14 * var(--vwSP)), 16px);
-		// --fz15: clamp(15px, calc(15 * var(--vwSP)), 17px);
-		// --fz16: clamp(16px, calc(16 * var(--vwSP)), 18px);
-		// --fz17: clamp(17px, calc(17 * var(--vwSP)), 19px);
-		// --fz18: clamp(18px, calc(18 * var(--vwSP)), 20px);
-		// --fz19: clamp(19px, calc(19 * var(--vwSP)), 21px);
-		// --fz20: clamp(20px, calc(20 * var(--vwSP)), 22px);
-		// --fz21: clamp(21px, calc(21 * var(--vwSP)), 23px);
-		// --fz22: clamp(22px, calc(22 * var(--vwSP)), 24px);
-		// --fz23: clamp(23px, calc(23 * var(--vwSP)), 25px);
-		// --fz24: clamp(24px, calc(24 * var(--vwSP)), 26px);
-		// --fz25: clamp(25px, calc(25 * var(--vwSP)), 27px);
-		// --fz26: clamp(26px, calc(26 * var(--vwSP)), 28px);
-		// --fz27: clamp(27px, calc(27 * var(--vwSP)), 29px);
-		// --fz28: clamp(28px, calc(28 * var(--vwSP)), 30px);
-		// --fz30: clamp(30px, calc(30 * var(--vwSP)), 32px);
-		// --fz31: clamp(31px, calc(31 * var(--vwSP)), 33px);
-		// --fz32: clamp(32px, calc(32 * var(--vwSP)), 35px);
-		// --fz33: clamp(33px, calc(33 * var(--vwSP)), 35px);
-		// --fz34: clamp(34px, calc(34 * var(--vwSP)), 37px);
-		// --fz35: clamp(35px, calc(35 * var(--vwSP)), 39px);
-		// --fz37: clamp(37px, calc(37 * var(--vwSP)), 41px);
-		// --fz36: clamp(36px, calc(36 * var(--vwSP)), 40px);
-		// --fz38: clamp(38px, calc(38 * var(--vwSP)), 42px);
-		// --fz40: clamp(40px, calc(40 * var(--vwSP)), 44px);
-		// --fz42: clamp(42px, calc(42 * var(--vwSP)), 46px);
-		// --fz44: clamp(44px, calc(44 * var(--vwSP)), 48px);
-		// --fz45: clamp(45px, calc(45 * var(--vwSP)), 49px);
-		// --fz47: clamp(47px, calc(47 * var(--vwSP)), 51px);
-		// --fz48: clamp(48px, calc(48 * var(--vwSP)), 52px);
-		// --fz49: clamp(49px, calc(49 * var(--vwSP)), 53px);
-		// --fz51: clamp(51px, calc(51 * var(--vwSP)), 56px);
-		// --fz56: clamp(56px, calc(56 * var(--vwSP)), 60px);
-		// --fz64: clamp(64px, calc(64 * var(--vwSP)), 68px);
 	}
 }

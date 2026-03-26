@@ -73,7 +73,7 @@
 	<link rel="stylesheet" href="<?php echo $ROOT_DIR; ?>assets/css/common.css?<?php echo date("Ymd-Hi"); ?>">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Zen+Kaku+Gothic+New:wght@300;400;500;700&display=swap" rel="stylesheet">
 	<link rel="preload" as="image" href="<?php echo $ROOT_DIR; ?>assets/img/common/texture.webp" type="image/webp">
 	<?php if (isset($UNIQUE_CSS)) {echo $UNIQUE_CSS;} ?>
 

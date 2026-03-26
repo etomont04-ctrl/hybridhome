@@ -7,7 +7,7 @@
 
 			$card_thumb_url = get_the_post_thumbnail_url(get_the_ID(), 'medium_large');
 			if (empty($card_thumb_url)) {
-				$card_thumb_url = $img_path . 'common/works-dummy.webp';
+				$card_thumb_url = '/assets/img/common/news-dummy.jpg';
 			}
 
 			$renovation_terms = get_the_terms(get_the_ID(), 'renovation');
@@ -52,10 +52,9 @@
 		<?php endwhile; ?>
 	</ul>
 
-	<div class="archive-pager_wrap">
-		<?php get_template_part('inc/pagination'); ?>
-	</div><!-- /archive-pager -->
+	<?php get_template_part('inc/pagination'); ?>
+	<!-- /archive-pager -->
 
 <?php else : ?>
-	<p class="no-post">記事がありません。</p>
+	<p class="non-text">記事がありません。</p>
 <?php endif; ?>

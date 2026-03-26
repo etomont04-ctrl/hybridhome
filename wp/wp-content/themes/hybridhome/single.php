@@ -61,9 +61,31 @@ $this_img_path = $img_path .  "news/";
 			<?php get_template_part('inc/category'); ?>
 			<div class="detail_wrap round-con">
 				<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+					<?php
+				$news_main_image = SCF::get('news_main-image');
+				$news_main_image_url = '';
+				$news_main_image_alt = '';
+
+				if (!empty($news_main_image)) {
+					if (is_array($news_main_image)) {
+						$news_main_image_url = !empty($news_main_image['url']) ? $news_main_image['url'] : '';
+						$news_main_image_alt = !empty($news_main_image['alt']) ? $news_main_image['alt'] : '';
+					} else {
+						$news_main_image_url = wp_get_attachment_image_url($news_main_image, 'full');
+						$news_main_image_alt = get_post_meta($news_main_image, '_wp_attachment_image_alt', true);
+					}
+				}
+				?>
+
 				<figure class="main-image">
-					<img src="<?= $this_img_path; ?>detail-dummy.jpg" alt="" decoding="async" class="fit_img">
+					<?php if (!empty($news_main_image_url)) : ?>
+						<img src="<?= esc_url($news_main_image_url); ?>" alt="<?= esc_attr($news_main_image_alt); ?>" decoding="async" class="fit_img">
+					<?php else : ?>
+						<img src="<?= $this_img_path; ?>detail-dummy.jpg" alt="" decoding="async" class="fit_img">
+					<?php endif; ?>
 				</figure>
+
+
 				<div class="kiji_area">
 						<?php the_content(); ?>
 				</div>
@@ -93,14 +115,6 @@ $this_img_path = $img_path .  "news/";
 							</div>
 						</a>
 					<?php endif; ?>
-
-					<a href="<?= esc_url( $news_link ); ?>" class="link_wrap">
-						<p class="link_btn -blue">
-							<span class="text">ブログ一覧</span>
-							<i class="arrow"><img src="<?= $img_path; ?>common/arrow-w.png" alt="" decoding="async"></i>
-						</p>
-					</a>
-
 					<?php if ( $next_post ) : ?>
 						<a href="<?= esc_url( get_permalink( $next_post->ID ) ); ?>" class="pager_link -next">
 							<figure class="img">
@@ -121,6 +135,12 @@ $this_img_path = $img_path .  "news/";
 							</div>
 						</a>
 					<?php endif; ?>
+					<a href="<?= esc_url( $news_link ); ?>" class="link_wrap">
+						<p class="link_btn -blue">
+							<span class="text">ブログ一覧</span>
+							<i class="arrow"><img src="<?= $img_path; ?>common/arrow-w.png" alt="" decoding="async"></i>
+						</p>
+					</a>
 				</div><!-- d-pager_area -->
 
 				<?php endwhile; endif; ?>

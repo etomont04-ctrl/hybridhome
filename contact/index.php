@@ -1,10 +1,5 @@
 <?php
-ob_start();//出力バッファリングを有効にする
-wp_head();// echo
-$wp_head = ob_get_contents();   // 変数に代入
-ob_end_clean();
-$URL = get_the_permalink();
-$TITLE         = '施工実績';
+$TITLE         = '';
 $DESCRIPTION   = '';
 $KEYWORDS      = '';
 $swiper = "false";
@@ -20,14 +15,9 @@ if ($host === 'localhost' || $host === '127.0.0.1') {
 	// 本番環境
 	include($_SERVER['DOCUMENT_ROOT'] . '/assets/inc/root.php');
 }
-$UNIQUE_CSS = '<link rel="stylesheet" href="'.$ROOT_DIR.'assets/css/splide.min.css?'.$Ymd.'">';
-$UNIQUE_CSS .= '<link rel="stylesheet" href="'.$ROOT_DIR.'assets/css/works.css?'.$Ymd.'">';
-$UNIQUE_SCRIPT = '<script src="'.$ROOT_DIR.'assets/js/splide.min.js?'.$Ymd.'"></script>';
-$UNIQUE_SCRIPT .= '<script src="'.$ROOT_DIR.'assets/js/works.js?'.$Ymd.'"></script>';
-$uri = "works";
-$this_img_path = $img_path .  "works/";
-
-$current_term = get_queried_object();
+$UNIQUE_CSS = '<link rel="stylesheet" href="../assets/css/contact.css?'.$Ymd.'">';
+$UNIQUE_SCRIPT = '';
+$uri = "contact";
 ?>
 <!DOCTYPE html>
 <html lang="ja">
@@ -46,27 +36,34 @@ $current_term = get_queried_object();
 					<img src="<?= $this_img_path; ?>fv.webp" alt="" class="fit_img">
 				</picture>
 			</figure>
-			<h1 class="title-text inview">
-				<span class="en">Category</span>
-				<span class="ja scaleX-text"><?= esc_html($current_term->name); ?></span>
-			</h1>
+			<h1 class="inview"><img src="<?= $this_img_path; ?>title.webp" alt="お問い合わせ" decoding="async"></h1>
 			<figure class="cloud -left"><img src="<?= $img_path; ?>common/illust/fv-cloud01.webp" alt="" decoding="async"></figure>
 			<figure class="cloud -right"><img src="<?= $img_path; ?>common/illust/fv-cloud02.webp" alt="" decoding="async"></figure>
-			<figure class="illust"><img src="<?= $this_img_path; ?>fv-illust.webp" alt="" decoding="async"></figure>
 			<div class="pan inview bt_one">
 				<a href="<?= $ROOT_DIR; ?>">TOP</a>
-				<a href="<?= $works_link; ?>">施工実績</a>
-				<p><?= esc_html($current_term->name); ?></p>
+				<p>お問い合わせ</p>
 			</div>
 		</div>
 	</section><!-- /fv -->
-	<section class="works">
-	<div class="inr -w1400 round-con">
-		<?php get_template_part('inc/sort'); ?>
-		<?php get_template_part('inc/works-loop'); ?>
-	</div><!-- /inr -->
-</section><!-- / works -->
-
+	<div class="contact_wrap">
+		<figure class="kumonchu sb"><img src="<?= $this_img_path; ?>kumonchu.webp" alt="" decoding="async"></figure>
+		<div class="inr -w1400">
+			<p class="intro_txt">
+				ハイブリッドホームのホームページへのご訪問、誠にありがとうございます。ご相談・お見積りは無料です。お気軽にお問い合わせください。
+			</p>
+			<section class="round-con -tell">
+				<div class="tit_area">
+					<h2><img src="<?= $this_img_path; ?>telephone_title.png" alt="お電話でのお問い合わせ" decoding="async"></h2>
+					<p class="en">Telephone</p>
+				</div>
+				<div class="tel_area">
+					<a href="tel:08001118146"><p class="line">Tel.</p><span>0800-111-8146</span></a>
+					<p class="btm_txt"><span>営業時間</span>：9:00～18:00</p>
+					<p class="btm_txt"><span>定休日</span>：日曜・月曜・祝祭日</p>
+				</div>
+			</section>
+		</div><!-- /inr -->
+	</div><!--/contact_wrap -->
 	</main>
 <?php include($root_path . '/assets/inc/footer.php'); ?>
 

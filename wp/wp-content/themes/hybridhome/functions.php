@@ -154,6 +154,21 @@ function update_nag_admin_only() {
 	}
 }
 add_action( 'admin_init', 'update_nag_admin_only' );
+/* ==========================================================================
+	管理者以外に works の特定タクソノミーメニューを非表示
+========================================================================== */
+add_action('admin_head', function () {
+
+	if (current_user_can('activate_plugins')) return;
+
+	echo '<style>
+		#menu-posts-works a[href="edit-tags.php?taxonomy=pickup&post_type=works"],
+		#menu-posts-works a[href="edit-tags.php?taxonomy=renovation&post_type=works"] {
+			display: none !important;
+		}
+	</style>';
+
+});
 
 // --------------------------------------------------------------------------------
 // 管理画面 / 投稿一覧 / 表示カスタマイズ
@@ -175,7 +190,21 @@ if ( !function_exists( 'customize_admin_manage_posts_columns' ) ){
 }
 add_filter( 'manage_posts_columns', 'customize_admin_manage_posts_columns' );
 
+/* ==========================================================================
+	不要な画像サイズの自動生成を停止
+========================================================================== */
+add_filter('intermediate_image_sizes_advanced', function ($sizes) {
 
+	unset($sizes['thumbnail']);
+	unset($sizes['medium']);
+	unset($sizes['medium_large']);
+	unset($sizes['large']);
+	unset($sizes['1536x1536']);
+	unset($sizes['2048x2048']);
+
+	return $sizes;
+
+});
 // --------------------------------------------------------------------------------
 // ログイン画面のロゴ変更
 // --------------------------------------------------------------------------------
@@ -436,6 +465,89 @@ function custom_works_rewrite_rule() {
 add_action('init', 'custom_works_rewrite_rule');
 
 /* ==========================================================================
+	works 管理画面の一覧を新しい日付順にする
+========================================================================== */
+add_action('pre_get_posts', function ($query) {
+	if (!is_admin()) return;
+	if (!$query instanceof WP_Query) return;
+	if (!$query->is_main_query()) return;
+
+	global $pagenow;
+	if ($pagenow !== 'edit.php') return;
+
+	$post_type = $query->get('post_type');
+	if ($post_type !== 'works') return;
+
+	$query->set('orderby', 'date');
+	$query->set('order', 'DESC');
+});
+
+/* ==========================================================================
+	アイキャッチ画像欄に推奨サイズを表示
+========================================================================== */
+add_action('admin_footer', function () {
+	$screen = get_current_screen();
+	if (!$screen) return;
+	if ($screen->base !== 'post') return;
+
+	$size_map = [
+		'post'	=> '推奨サイズ：700×480',
+		'works'	=> '推奨サイズ：720×520',
+	];
+
+	if (empty($size_map[$screen->post_type])) return;
+
+	$size_text = $size_map[$screen->post_type];
+	?>
+	<script>
+		document.addEventListener('DOMContentLoaded', function () {
+			const target = document.querySelector('#postimagediv .inside p');
+			if (!target) return;
+			if (document.querySelector('.featured-image-size-note')) return;
+
+			const note = document.createElement('p');
+			note.className = 'featured-image-size-note';
+			note.textContent = <?= wp_json_encode($size_text); ?>;
+			note.style.margin = '8px 0 0';
+			note.style.fontSize = '12px';
+			note.style.color = '#666';
+
+			target.insertAdjacentElement('afterend', note);
+		});
+	</script>
+	<?php
+});
+/* ==========================================================================
+	アーカイブ件数を投稿タイプごとに調整
+========================================================================== */
+add_action('pre_get_posts', function ($query) {
+
+	if (is_admin()) return;
+	if (!$query->is_main_query()) return;
+
+	/* --------------------------------------------------------------------------
+		works 投稿タイプ
+	-------------------------------------------------------------------------- */
+	if (is_post_type_archive('works')) {
+		$query->set('posts_per_page', 1);
+	}
+
+	/* --------------------------------------------------------------------------
+		works のタクソノミー（pickup / renovation / area / commitment など）
+	-------------------------------------------------------------------------- */
+	if (is_tax(array('renovation', 'area', 'commitment'))) {
+		$query->set('posts_per_page', 1);
+	}
+
+	/* --------------------------------------------------------------------------
+		通常投稿（news）
+	-------------------------------------------------------------------------- */
+	if (is_home() || is_post_type_archive('post')) {
+		$query->set('posts_per_page', 1);
+	}
+
+});
+/* ==========================================================================
 	Classic Editor / SCF の WYSIWYG で Quicktags を有効化
 ========================================================================== */
 function my_enable_quicktags_for_all_editors( $settings, $editor_id ) {
@@ -448,3 +560,4 @@ function my_enable_quicktags_for_all_editors( $settings, $editor_id ) {
 	return $settings;
 }
 add_filter( 'wp_editor_settings', 'my_enable_quicktags_for_all_editors', 99, 2 );
+

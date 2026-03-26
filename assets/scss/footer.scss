@@ -70,8 +70,9 @@
 					border-radius:getCqw(30,$conW);
 					aspect-ratio: 280 / 60;
 					&:before{
-						background-image:url(../img/common/link-btn_border02.png);
-						aspect-ratio: 270 / 50;
+						// background-image:url(../img/common/link-btn_border02.png);
+						// aspect-ratio: 270 / 50;
+						border-radius:getCqw(30,$conW);
 					}
 					.text{
 						font-size: getCqw(18,$conW);
@@ -270,8 +271,10 @@
 						border-radius:getCqw(50,$conW);
 						aspect-ratio: 460 / 100;
 						&:before{
-							background-image:url(../img/common/link-btn_border02.png);
-							aspect-ratio: 270 / 50;
+							border-radius:getCqw(50,$conW);
+							background:none;
+							// background-image:url(../img/common/link-btn_border02.png);
+							// aspect-ratio: 270 / 50;
 						}
 						.text{
 							font-size: getCqw(32,$conW);

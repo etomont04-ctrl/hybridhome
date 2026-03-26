@@ -5,7 +5,7 @@ if ($host === 'localhost' || $host === '127.0.0.1') {
 } else if ($host === 'as-check.jp') {
 	$ROOT_DIR = 'https://as-check.jp/hybridhome/';
 } else {
-	$ROOT_DIR = 'https://shishi-w.com/';
+	$ROOT_DIR = '/';
 }
 $root_path = $_SERVER['DOCUMENT_ROOT'] . parse_url($ROOT_DIR, PHP_URL_PATH);
 
@@ -65,31 +65,24 @@ $tels = array(
 );
 $mail = "#";
 
+$business_hours = "9:00～18:00（日・月曜・祝祭日定休）";
+
 //外部リンク
 $map_link = "https://maps.app.goo.gl/LQ2RPs2KQAe8apW97";
 $map_link_omiya = "https://maps.app.goo.gl/Npsx5kPraqatgR929";
-$miss_paris_link = "https://www.miss-paris-group.co.jp/";
 
 //内部リンク
 $about_link = $ROOT_DIR . 'about/';
-$service_link = $ROOT_DIR . 'service/';
-$marketing_link = $ROOT_DIR . 'service/marketing/';
-$brand_link = $ROOT_DIR . 'service/brand/';
-$labo_link = $ROOT_DIR . 'service/labo/';
-$contact_link = $ROOT_DIR . 'contact/';
-$data_link = $ROOT_DIR . 'data/';
+$reform_link = $ROOT_DIR . 'reform/';
+$works_link = $ROOT_DIR . 'works/';
+$voice_link = $ROOT_DIR . 'voice/';
+$staff_link = $ROOT_DIR . 'staff/';
+$member_link = $ROOT_DIR . 'member/';
 $news_link = $ROOT_DIR . 'news/';
-$visit_journal_link = $ROOT_DIR . 'visit-journal/';
-$interview_link = $ROOT_DIR . 'interview/';
 $company_link = $ROOT_DIR . 'company/';
 $recruit_link = $ROOT_DIR . 'recruit/';
-$service_link = $ROOT_DIR . 'service/';
-$service01_link = $ROOT_DIR . 'service/marketing/';
-$service02_link = $ROOT_DIR . 'service/branding/';
-$service03_link = $ROOT_DIR . 'service/market/';
-$recruit_link = $ROOT_DIR . 'recruit/';
-$ad_link = $ROOT_DIR . '/';
+$contact_link = $ROOT_DIR . 'contact/';
 
-//ブログリンク
+//
 
 ?>

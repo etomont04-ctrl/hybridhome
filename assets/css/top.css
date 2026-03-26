@@ -42,6 +42,7 @@
   --base-color-green04:#2c6c76;
   --base-color-green05:#309c9d;
   --base-color-green06:#207372;
+  --base-color-green07:#27989b;
   --base-color-wood:#6d240e;
   --base-color-blue:#14a5b6;
   --base-color-blue02:#32a4ab;
@@ -70,6 +71,7 @@
   --base-border-color06:#ddd;
   --base-border-color07:#e6e6e6;
   --base-border-color08:#188383;
+  --base-border-color09:#1c0604;
   --base-shadow-color:#ade2e3;
   --base-color-uchi:#c13e02;
   --base-color-soto:#32a4ab;
@@ -157,7 +159,7 @@
 }
 @media screen and (max-width: 800px) {
   :root {
-    --vwSP: calc(100vw / 375);
+    --vwSP: calc(100vw / 400);
     --fz6: clamp(.6rem, calc(6 * var(--vwSP)), .8rem);
     --fz7: clamp(.7rem, calc(7 * var(--vwSP)), .9rem);
     --fz8: clamp(.8rem, calc(8 * var(--vwSP)), 1rem);
@@ -1537,6 +1539,7 @@ html.is-loading::after {
   padding-left: 30px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  z-index: 10;
 }
 .project .splide__track {
   overflow: visible;

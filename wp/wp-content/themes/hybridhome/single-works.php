@@ -51,7 +51,7 @@ $this_img_path = $img_path .  "works/";
 				<?php if (!empty($works_main_image_url)) : ?>
 					<img src="<?= esc_url($works_main_image_url); ?>" alt="" class="fit_img">
 				<?php else : ?>
-					<img src="<?= $this_img_path; ?>fv-dummy.webp" alt="" class="fit_img">
+					<img src="<?= $img_path; ?>news/detail-dummy.jpg" alt="" class="fit_img">
 				<?php endif; ?>
 			</figure>
 			<figure class="cloud -risu inview sb"><img src="<?= $this_img_path; ?>works_d-fv-risu.webp" alt="" decoding="async"></figure>
@@ -239,24 +239,8 @@ $works_free_group = SCF::get( 'works-free' );
 	<?php endforeach; ?>
 <?php endif; ?>
 
-
-
 	<div class="works-detail">
 		<div class="inr -w1400 round-con">
-			<section class="works-detail_sec">
-				<div class="tit_area">
-					<h2 class="scaleX-wrap">
-						<span class="scaleX" data-scale="0.75" data-text="リフォームプランリフォームプランリフォームプラン">リフォームプランリフォームプランリフォームプラン</span>
-					</h2>
-					<span class="en">Plan</span>
-				</div>
-				<p class="n_txt">プランの説明が入ります。プランの説明が入ります。プランの説明が入ります。プランの説明が入ります。プランの説明が入ります。プランの説明が入ります。プランの説明が入ります。プランの説明が入ります。プランの説明が入ります。プランの説明が入ります。</p>
-				<div class="column-image -full">
-					<div>
-						<div class="img"><img src="<?= $this_img_path; ?>after-img.webp" alt="" decoding="async"></div>
-					</div>
-				</div>
-			</section><!-- /works-detail_sec -->
 <?php
 $works_plans_group = SCF::get( 'works-plans' );
 ?>
@@ -506,18 +490,15 @@ if (!empty($hitokoto_img)) {
 						<p><?= nl2br(esc_html($hitokoto_text)); ?></p>
 					</div>
 				</li>
-
+				<?php if (!empty($hitokoto_img_url)) : ?>
 				<li>
 					<div class="photo_area">
 						<figure class="img">
-							<?php if (!empty($hitokoto_img_url)) : ?>
-								<img src="<?= esc_url($hitokoto_img_url); ?>" alt="<?= esc_attr($hitokoto_img_alt); ?>" decoding="async" class="fit_img">
-							<?php else : ?>
-								<img src="<?= $this_img_path; ?>after-img.webp" alt="" decoding="async" class="fit_img">
-							<?php endif; ?>
+							<img src="<?= esc_url($hitokoto_img_url); ?>" alt="<?= esc_attr($hitokoto_img_alt); ?>" decoding="async" class="fit_img">
 						</figure>
 					</div>
 				</li>
+				<?php endif; ?>
 			</ul>
 		</div><!-- / voice-sec -->
 	</section>
@@ -583,14 +564,6 @@ if (!$works_link) {
 			</div>
 		</a>
 	<?php endif; ?>
-
-	<a href="<?= esc_url($works_link); ?>" class="link_wrap">
-		<p class="link_btn -blue">
-			<span class="text">施工事例一覧</span>
-			<i class="arrow"><img src="<?= $img_path; ?>common/arrow-w.png" alt="" decoding="async"></i>
-		</p>
-	</a>
-
 	<?php if (!empty($next_post)) : ?>
 		<?php
 		$next_link = get_permalink($next_post->ID);
@@ -616,9 +589,15 @@ if (!$works_link) {
 			</div>
 		</a>
 	<?php endif; ?>
-			</div><!-- d-pager_area -->
-		</div><!-- /inr -->
-	</ddiv><!-- / works-detail -->
+		<a href="<?= esc_url($works_link); ?>" class="link_wrap">
+		<p class="link_btn -blue">
+			<span class="text">施工事例一覧</span>
+			<i class="arrow"><img src="<?= $img_path; ?>common/arrow-w.png" alt="" decoding="async"></i>
+		</p>
+	</a>
+		</div><!-- d-pager_area -->
+	</div><!-- /inr -->
+</div><!-- / works-detail -->
 
 	</main>
 <?php include($root_path . '/assets/inc/footer.php'); ?>

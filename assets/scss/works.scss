@@ -41,8 +41,8 @@
 		.inr{
 			$conW:740;
 			h1{
-				width: get_calc(223,$conW);
-				min-width:185px;
+				width: get_calc(230,$conW);
+				min-width:10px;
 			}
 			.en{
 				font-size: getCqw(22,$conW);
@@ -50,6 +50,13 @@
 			}
 			.ja{
 				font-size: getCqw(74,$conW);
+			}
+			.illust{
+				position: absolute;
+				width: get_calc(276,$conW);
+				left: get_calc(494,$conW);
+				bottom: min(140px,get_calc(178,783));
+				z-index: 20;
 			}
 		}
 	}
@@ -317,6 +324,7 @@
 				background:none;
 			}
 			.data_row{
+		grid-template-columns: get_calc(140,480) 1fr;
 				border-bottom:1px solid var(--base-border-color04);
 				+ .data_row{
 					border-top:none;
@@ -339,7 +347,7 @@
 				aspect-ratio:740/950;
 				max-height:1000px;
 				border-radius:30px;
-				margin-bottom: 8rem;
+				margin-bottom:4.5rem;
 				&:before{
 					border:8px solid var(--base-color-white);
 					border-radius:30px;
@@ -361,12 +369,12 @@
 					width: get_calc(191,$conW);
 					right: get_calc(232,$conW);
 					top: min(833px,getCqw(782,$conW));
-					--W:382;
-					--H:334;
+					--W:191;
+					--H:168;
 					&:after{
-						--bW:318;
-						--bT:-66;
-						--bL:-184;
+						--bW:227;
+						--bT:-61;
+						--bL:-164;
 						--imgURL: url("../img/works/works_d-fv-risu-sb.webp");
 						aspect-ratio:318/130;
 						transition-delay:.4s;
@@ -488,14 +496,21 @@
 .pickup{
 	position: relative;
 	$conW:1300;
-	margin-bottom: max(200px,getCqw(200,$conW));
 	.inr{
 		container-type: inline-size;
 		padding-top: getCqw(170,$conW);
 		z-index: 10;
 	}
 	.splide.is-initialized:not(.is-active) .splide__list{
-		@include fl;
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-ms-flex-wrap: wrap;
+		flex-wrap: wrap;
+		-webkit-box-pack: start;
+		-ms-flex-pack: start;
+		justify-content: flex-start;
+		gap: 3.8461538462%;
 	}
 	.splide__track{
 		@include min-width(1051){
@@ -561,7 +576,6 @@
 	.pick-card__title{
 		font-size: getCqw(22,$conW);
 		font-weight: 500;
-		margin-bottom: getCqw(15,$conW);
 	}
 	.pick-card__tags{
 		margin-bottom: getCqw(20,$conW);
@@ -569,6 +583,7 @@
 			position: relative;
 			display: inline-block;
 			font-size: getCqw(14,$conW);
+			margin-top: getCqw(10,$conW);
 			font-weight: 500;
 			margin-right:11px;
 			&:after{
@@ -626,7 +641,6 @@
 	}
 	@include max-width(1050){
 		$conW:800;
-		margin-bottom: getCqw(270,$conW);
 		.inr{
 			width: 100%;
 			padding-top: getCqw(188,$conW);
@@ -656,12 +670,13 @@
 		}
 		.pick-card__title{
 			font-size: getCqw(32,$conW);
-			margin-bottom: getCqw(26,$conW);
+			margin-bottom: getCqw(11,$conW);
 		}
 		.pick-card__tags{
 			margin-bottom: getCqw(30,$conW);
 			span{
 				font-size: getCqw(24,$conW);
+				margin-top: getCqw(15,$conW);
 			}
 		}
 		.pick-card__area{
@@ -695,11 +710,13 @@
 	position: relative;
 	z-index: 30;
 	$conW:1400;
+	margin-top: max(200px,getCqw(200,$conW));
 	@include gradient-bg(to bottom, transparent,var(--base-bg-color05));
 	.inr{
 		position: relative;
 		container-type: inline-size;
 		background:var(--base-bg-color06);
+		padding-bottom: getCqw(145,$conW);
 		&:before{
 			content: "";
 			position: absolute;
@@ -923,9 +940,11 @@
 		}
 	}
 	.works_list{
+		position: relative;
 		@include grid(3,getCqw(45,$conW));
 		width: get_calc(1140,1400);
 		margin:0 auto;
+		z-index: 10;
 	}
 	.card{
 		transition: transform .35s ease;
@@ -980,7 +999,7 @@
 	.card__title{
 		font-size: getCqw(20,$conW);
 		font-weight: 500;
-		margin-bottom: getCqw(15,$conW);
+		margin-bottom: getCqw(5,$conW);
 	}
 	.card__tags{
 		margin-bottom: getCqw(20,$conW);
@@ -988,6 +1007,7 @@
 			position: relative;
 			display: inline-block;
 			font-size: getCqw(13,$conW);
+			margin-top: getCqw(10,$conW);
 			font-weight: 500;
 			margin-right:11px;
 			&:after{
@@ -1017,11 +1037,20 @@
 
 	.archive-pager_wrap{
 		margin-top: getCqw(120,$conW);
-		padding-bottom: getCqw(145,$conW);
+	}
+	.non-text{
+		width: get_calc(1140,1400);
+		font-size: getCqw(18,$conW);
+		line-height: 2;
+		font-weight: 500;
+		margin:0 auto;
 	}
 	@include max-width(1050){
-		$conW:800;
+		$conW:760;
+		margin-top: getCqw(270,$conW);
+		padding-bottom:min(85px,22.5vw);
 		.inr{
+			padding-bottom:min(85px,22.5vw);
 			&:before{
 				border-radius:30px;
 			}
@@ -1135,13 +1164,14 @@
 		}
 		.card__title{
 			font-size: min(20px,getCqw(32,$conW));
-			margin-bottom: getCqw(20,$conW);
+			margin-bottom: getCqw(12,$conW);
 		}
 		.card__tags{
-			margin-bottom: getCqw(30,$conW);
+			margin-bottom: getCqw(20,$conW);
 			span{
 				font-size: min(14px,getCqw(24,$conW));
 				margin-right:8px;
+				margin-top: getCqw(8,$conW);
 			}
 		}
 		.card__area{
@@ -1151,7 +1181,11 @@
 		}
 
 		.archive-pager_wrap{
-			margin-top: getCqw(160,$conW);
+			margin-top: getCqw(150,$conW);
+		}
+		.non-text{
+			width: get_calc(680,760);
+			font-size: getCqw(18,$conW);
 		}
 	}
 	@include max-width(600){
@@ -1185,7 +1219,7 @@
 			height: 100%;
 			z-index: 50;
 			pointer-events:none;
-		border:20px solid var(--base-bg-color07);
+			border:20px solid var(--base-bg-color07);
 		}
 	}
 	.ba-hint{
@@ -1241,13 +1275,13 @@
 			}
 		}
 		h2:not([class]){
-			font-size: getCqw(48,$conW);
+			font-size: getCqw(50,$conW);
 		}
 		h3:not([class]){
-			font-size: getCqw(30,$conW);
+			font-size: getCqw(32,$conW);
 		}
 		p:not([class]),a:not([class]){
-			font-size: getCqw(16,$conW);
+			font-size: getCqw(18,$conW);
 		}
 		ol {
 			li {
@@ -1271,6 +1305,9 @@
 			width: auto;
 			aspect-ratio:auto;
 			padding:getCqw(17,$conW) getCqw(75,$conW) getCqw(18,$conW) getCqw(40,$conW);
+			font-size: getCqw(20,$conW);
+			color:#fff;
+			font-weight: 500;
 			.arrow{
 				right: getCqw(30,$conW);
 			}
@@ -1312,6 +1349,9 @@
 			}
 			h3:not([class]){
 				font-size:min(30px,getCqw(42,$conW));
+				-webkit-box-shadow: 5px 5px 0 #cfe9ed;
+				box-shadow: 5px 5px 0 #cfe9ed;
+				padding: 8px;
 			}
 			p:not([class]),a:not([class]){
 				font-size:min(17px,getCqw(28,$conW));
@@ -1340,6 +1380,7 @@
 			.link_btn{
 				width: 100%;
 				padding:getCqw(30,$conW) getCqw(100,$conW) getCqw(30,$conW) getCqw(65,$conW);
+				font-size:min(17px,getCqw(28,$conW));
 				.arrow{
 					right: getCqw(40,$conW);
 				}
@@ -1611,7 +1652,7 @@
 		h3{
 			position: relative;
 			display: inline-block;
-			padding: 10px 16px 15px 28px;
+			padding: 10px 25px 15px 28px;
 			font-size: getCqw(36,$conW);
 			font-weight: 500;
 			border-radius:getCqw(20,$conW);
@@ -1695,7 +1736,7 @@
 					padding-top: 2rem;
 					width: get_calc(1280,2040);
 				}
-				li:last-child{
+				li:nth-child(2){
 					width: get_calc(640,2050);
 				}
 				li + li{
@@ -1794,6 +1835,7 @@
 				margin-top: min(9.3vw,180px);
 				margin-inline:auto;
 				&:first-child{
+					margin-top: min(17.5vw,140px);
 					// padding-top: getCqw(140,$conW);
 					// padding-top: min(9.3vw,180px);
 				}
@@ -1953,7 +1995,7 @@
 							padding-top: 0;
 							width: 100%;
 						}
-						li:last-child{
+						li:nth-child(2){
 							width: 100%;
 							margin-top: getCqw(60,$conW);
 						}
@@ -1970,7 +2012,7 @@
 						}
 					}
 					.img_area{
-						padding-top: 2rem;
+						padding-top:0;
 						width: get_calc(80,600);
 						.img{
 							border-radius:getCqw(30,$conW);

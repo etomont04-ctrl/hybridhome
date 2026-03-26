@@ -1211,6 +1211,7 @@ html.is-loading::after{
 		overflow: hidden;
 		padding-left: 30px;
 		box-sizing:border-box;
+		z-index: 10;
 	}
 	.splide__track{
 		overflow: visible;

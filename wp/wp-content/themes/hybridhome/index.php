@@ -36,21 +36,32 @@ $this_img_path = $img_path .  "news/";
 	<main>
 	<section class="news-fv inview">
 		<div class="inr -m2000">
-			<h1 class="inview"><img src="<?= $this_img_path; ?>title.webp" alt="お知らせ" decoding="async"></h1>
+			<?php if (is_home()) : ?>
+			<h1 class="inview">
+				<img src="<?= $this_img_path; ?>title.webp" alt="お知らせ" decoding="async">
+			</h1>
+			<?php elseif (is_category()) : ?>
+			<?php $current_term = get_queried_object(); ?>
+			<h1 class="title-text inview">
+				<span class="en">Category</span>
+				<span class="ja scaleX-text"><?= esc_html($current_term->name); ?></span>
+			</h1>
+			<?php endif; ?>
 			<div class="pan inview bt_one">
 				<a href="<?= $ROOT_DIR; ?>">TOP</a>
 				<p>お知らせ</p>
 			</div>
 			<figure class="cloud -left"><img src="<?= $img_path; ?>news/fv-cloud01.webp" alt="" decoding="async"></figure>
 			<figure class="cloud -right"><img src="<?= $img_path; ?>news/fv-cloud02.webp" alt="" decoding="async"></figure>
-			<figure class="illust"><img src="<?= $this_img_path; ?>fv-illust.webp" alt="" decoding="async"></figure>
 			<div class="town_bg"></div>
 		</div>
 	</section><!-- /fv -->
 	<section class="news_wrap">
 		<div class="inr -w1400 round-con base-wrap -archive">
 			<div class="bird-area">
-				<figure class="bird bird01"><img src="<?= $this_img_path; ?>fv-bird01.webp" alt="" decoding="async"></figure>
+
+				<figure class="bird bird01 <?php if  (is_category()) : ?> tab_off<?php endif; ?>"><img src="<?= $this_img_path; ?>fv-bird01.webp" alt="" decoding="async"></figure>
+
 				<figure class="bird bird02 inview sb"><img src="<?= $this_img_path; ?>fv-bird02.webp" alt="" decoding="async"></figure>
 			</div>
 			<?php get_template_part('inc/category'); ?>
@@ -83,12 +94,13 @@ $this_img_path = $img_path .  "news/";
 				</a>
 			<?php endwhile; ?>
 			</div>
-			<div class="archive-pager_wrap">
 			<?php get_template_part( 'inc/pagination' ); ?>
-			</div><!-- /archive-pager -->
+			<!-- /archive-pager -->
 
 			<?php else : ?>
-				<p>記事がありません。</p>
+				<div class="archive_wrap">
+					<p class="non-text">記事がありません。</p>
+				</div>
 			<?php endif; ?>
 		</div><!-- /inr -->
 	</section><!-- / works -->

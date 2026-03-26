@@ -34,6 +34,8 @@ $is_next_disabled = ($current >= $total);
 ?>
 
 <?php if (!empty($page_links) && is_array($page_links)) : ?>
+
+<div class="archive-pager_wrap">
 	<div class="archive-pager">
 		<ol class="archive-pager_num">
 			<?php foreach ($page_links as $page_link) : ?>
@@ -73,4 +75,5 @@ $is_next_disabled = ($current >= $total);
 			<?php endif; ?>
 		</div><!-- /archive-pager_nav -->
 	</div>
+</div>
 <?php endif; ?>

@@ -34,7 +34,7 @@ $(function () {
 	if (!$category.length || !$container.length) return;
 
 	const mq = window.matchMedia('(max-width: 1050px)');
-	const fixedTop = 30;
+	const fixedTop = 80;
 	const absoluteTop = -80;
 	const fixedLeftOffset = window.innerWidth * -0.0333;
 	const bottomOffset = 220;
@@ -73,6 +73,7 @@ $(function () {
 				position: 'fixed',
 				top: fixedTop,
 				left: containerLeft + fixedLeftOffset,
+				//left: '0',
 				bottom: 'auto'
 			});
 		} else {

@@ -37,7 +37,7 @@ $pickup_query = new WP_Query(array(
 
 							$card_thumb_url = get_the_post_thumbnail_url(get_the_ID(), 'medium_large');
 							if (empty($card_thumb_url)) {
-								$card_thumb_url = $img_path . 'common/news-dummy.jpp';
+								$card_thumb_url = $img_path . 'common/news-dummy.jpg';
 							}
 
 							$renovation_terms = get_the_terms(get_the_ID(), 'renovation');

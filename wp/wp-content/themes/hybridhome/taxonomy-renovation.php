@@ -60,7 +60,6 @@ $current_term = get_queried_object();
 			</div>
 		</div>
 	</section><!-- /fv -->
-	<?php get_template_part('inc/pickup-slider'); ?>
 	<section class="works">
 	<div class="inr -w1400 round-con">
 		<?php get_template_part('inc/sort'); ?>

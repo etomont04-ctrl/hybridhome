@@ -1,0 +1,117 @@
+@import "functions.scss";
+@import url('https://fonts.googleapis.com/css2?family=LINE+Seed+JP:wght@400;700&display=swap');
+
+
+/* ==========================================================================
+	fv
+========================================================================== */
+.fv{
+	position: relative;
+	padding-top: var(--head-mt);
+	.inr{
+		$conW:1440;
+		h1{
+			width: get_calc(269,$conW);
+			min-width:304px;
+		}
+	}
+	@include max-width(1050){
+		.inr{
+			$conW:740;
+			h1{
+				width: get_calc(371,$conW);
+				min-width:185px;
+			}
+		}
+	}
+}
+
+/* ==========================================================================
+	contact_wrap
+========================================================================== */
+.contact_wrap{
+	position: relative;
+	$conW:1400;
+	z-index: 20;
+	@include gradient-bg(to bottom, transparent,var(--base-bg-color05));
+	.inr{
+		position: relative;
+		container-type: inline-size;
+		z-index: 10;
+	}
+	.intro_txt{
+		width: get_calc(1140,$conW);
+		margin: getCqw(70,$conW) auto getCqw(75,$conW);
+		font-size: getCqw(16,$conW);
+		font-weight: 500;
+		line-height: calc(66/28);
+		letter-spacing: -0.04em;
+	}
+	.kumonchu{
+		position: absolute;
+		width: get_calc(431,1400);
+		max-width:530px;
+		bottom:calc(100% - 290px);
+		left: get_calc(1120,1400);
+		z-index: 5;
+	}
+
+	.round-con{
+		background:var(--base-color-white);
+	}
+	.-tell{
+		@include fl;
+		padding:getCqw(60,$conW) getCqw(130,$conW) getCqw(50,$conW);
+		.tit_area{
+			width: get_calc(917,2280);
+			h2{
+				width: 100%;
+				margin-bottom: getCqw(22,$conW);
+			}
+			.en{
+				font-size: getCqw(18,$conW);
+				color:var(--base-text-color02);
+				letter-spacing: 0.08em;
+			}
+		}
+		.tel_area{
+			position: relative;
+			width: get_calc(1060,2280);
+			a{
+				position: relative;
+				display: block;
+				margin-bottom: getCqw(10,$conW);
+				.line{
+					font-family:var(--line-seed);
+					font-size: getCqw(24,$conW);
+					position: absolute;
+					left: 0;
+					bottom: 0;
+					transform:translateX(-100%);
+				}
+				span{
+					display: block;
+					font-size: getCqw(90,$conW);
+					color:var(--base-color-green07);
+					letter-spacing: -0.04em;
+					font-weight: 300;
+					white-space: nowrap;
+					margin-top: -20px;
+				}
+			}
+			.btm_txt{
+				display:inline-block;
+				font-size: getCqw(14,$conW);
+				font-weight: 500;
+				margin-right: getCqw(40,$conW);
+				margin-left: 10px;
+				span{
+					font-weight: 500;
+					color:var(--base-color-green05);
+				}
+			}
+		}
+	}
+
+}
+
