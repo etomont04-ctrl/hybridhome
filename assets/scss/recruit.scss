@@ -10,8 +10,8 @@
 	.inr{
 		$conW:1440;
 		h1{
-			width: get_calc(183,$conW);
-			min-width:183px;
+			width: get_calc(188,$conW);
+			min-width:188px;
 		}
 	}
 	@include max-width(1050){
@@ -24,6 +24,110 @@
 		}
 	}
 }
+
+/* ==========================================================================
+	intro
+========================================================================== */
+.intro{
+	position: relative;
+	@include gradient-bg(to bottom, transparent,var(--base-bg-color11));
+	.inr{
+		$conW:1400;
+		container-type: inline-size;
+		z-index: 20;
+		.text_wrap{
+			@include fl;
+			padding-top:getCqw(90,$conW);
+			width: get_calc(1020,$conW);
+			margin-inline:auto;
+			margin-bottom: getCqw(140,$conW);
+		}
+		h2{
+			width: get_calc(154,1020);
+			margin-left: getCqw(70,$conW);
+		}
+		p{
+			font-size: getCqw(16,$conW);
+			line-height: calc(80/32);
+			width: get_calc(550,1020);
+			font-weight: 500;
+			letter-spacing: -0.08em;
+		}
+		.tori{
+			position: absolute;
+			width: min(350px,get_calc(238,$conW));
+			left: max(-200px,getCqw(-60,$conW));
+			top:getCqw(380,$conW);
+			z-index: 10;
+			animation: bird-float 6s ease-in-out infinite;
+			img{
+
+			animation: bird-sway 4.6s ease-in-out infinite;
+			will-change: transform;
+			transform-origin: 50% 60%;
+
+			}
+		}
+	}
+	.intro-loop{
+		position: relative;
+		display: flex;
+		flex-wrap: nowrap;
+		width: 100%;
+		z-index: 10;
+		gap:70px;
+	}
+	.intro-loop__inner{
+		position: relative;
+		display: flex;
+		align-items: center;
+		// flex: 0 0 auto;
+		gap:70px;
+		will-change: transform;
+		animation: LoopX 70s infinite linear 1s both;
+	}
+	.intro-loop__img{
+		display: block;
+		width: 340px;
+		height: auto;
+		flex: 0 0 auto;
+		border-radius:30px;
+	}
+	.cloud-bg{
+		position: absolute;
+		width: 2015px;
+		left: -63px;
+		bottom: -90px;
+		z-index: 6;
+
+	}
+	.town-bg{
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		height: 758px;
+		z-index: 5;
+		background:url(../img/recruit/intro-town_bg.webp) center bottom;
+		background-size:4999px 758px;
+	}
+	.btm_cloud{
+		position: absolute;
+		z-index: 15;
+		&.cloud01{
+			width: 1804px;
+			right: calc(50% - 340px);
+			top: calc(100% - 235px);
+		}
+		&.cloud02{
+			width: 1807px;
+			left: calc(50% - 616px);
+			top: calc(100% - 150px);
+		}
+	}
+
+}
+
 
 
 /* ==========================================================================

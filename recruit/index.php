@@ -15,9 +15,9 @@ if ($host === 'localhost' || $host === '127.0.0.1') {
 	// 本番環境
 	include($_SERVER['DOCUMENT_ROOT'] . '/assets/inc/root.php');
 }
-$UNIQUE_CSS = '<link rel="stylesheet" href="../assets/css/company.css?'.$Ymd.'">';
+$UNIQUE_CSS = '<link rel="stylesheet" href="../assets/css/recruit.css?'.$Ymd.'">';
 $UNIQUE_SCRIPT = '';
-$uri = "company";
+$uri = "recruit";
 ?>
 <!DOCTYPE html>
 <html lang="ja">
@@ -36,15 +36,69 @@ $uri = "company";
 					<img src="<?= $this_img_path; ?>fv.webp" alt="" class="fit_img">
 				</picture>
 			</figure>
-			<h1 class="inview"><img src="<?= $this_img_path; ?>title.webp" alt="会社概要" decoding="async"></h1>
+			<h1 class="inview"><img src="<?= $this_img_path; ?>title.webp" alt="採用情報" decoding="async"></h1>
 			<figure class="cloud -left"><img src="<?= $img_path; ?>common/illust/fv-cloud01.webp" alt="" decoding="async"></figure>
 			<figure class="cloud -right"><img src="<?= $img_path; ?>common/illust/fv-cloud02.webp" alt="" decoding="async"></figure>
 			<div class="pan inview bt_one">
 				<a href="<?= $ROOT_DIR; ?>">TOP</a>
-				<p>会社概要</p>
+				<p>採用情報</p>
 			</div>
 		</div>
 	</section><!-- /fv -->
+
+	<section class="intro">
+		<div class="inr -w1400">
+			<div class="text_wrap">
+				<h2>
+					<picture>
+						<source media="(max-width: 800px)" srcset="<?= $this_img_path; ?>intro_title-sp.webp">
+						<img src="<?= $this_img_path; ?>intro_title.webp" alt="わたしたちと一緒にお客様の暮らしをつくりましょう">
+					</picture>
+				</h2>
+				<p>
+					ハイブリッドホームは、単なるリノベーション会社ではありません。<br>お客様一人ひとりの「暮らしやすい住まい」を、丁寧に形にしていく会社です。<br>
+					だからこそ、住宅業界の経験者はもちろん、お客様に寄り添いながら「暮らしをつくる」ことに関心のある未経験の方とも、出会いたいと考えています。<br>
+					<br>
+					20年にわたり、まちに根づいて仕事をしてきました。気づけば、顔見知りのお客様や仲間が増え、まちのあちこちにハイブリッドホームの種が根づき、芽吹いている実感があります。誠実に仕事をしてきたからこそ、いまがあります。<br>
+					<br>
+					これからも、まちと一緒に育っていく会社です。その歩みに加わってくれる方をお待ちしています。
+				</p>
+			</div>
+			<figure class="tori"><img src="<?= $this_img_path; ?>intro-tori.webp" alt="" decoding="async"></figure>
+
+		</div>
+		<div class="intro-loop">
+			<div class="intro-loop__inner">
+				<img src="<?= $this_img_path; ?>intro-loop_img01.webp" decoding="async"  class="intro-loop__img">
+				<img src="<?= $this_img_path; ?>intro-loop_img02.webp" decoding="async"  class="intro-loop__img">
+				<img src="<?= $this_img_path; ?>intro-loop_img03.webp" decoding="async"  class="intro-loop__img">
+				<img src="<?= $this_img_path; ?>intro-loop_img04.webp" decoding="async"  class="intro-loop__img">
+				<img src="<?= $this_img_path; ?>intro-loop_img05.webp" decoding="async"  class="intro-loop__img">
+				<img src="<?= $this_img_path; ?>intro-loop_img06.webp" decoding="async"  class="intro-loop__img">
+				<img src="<?= $this_img_path; ?>intro-loop_img07.webp" decoding="async"  class="intro-loop__img">
+				<img src="<?= $this_img_path; ?>intro-loop_img08.webp" decoding="async"  class="intro-loop__img">
+			</div>
+			<div class="intro-loop__inner">
+				<img src="<?= $this_img_path; ?>intro-loop_img01.webp" decoding="async"  class="intro-loop__img">
+				<img src="<?= $this_img_path; ?>intro-loop_img02.webp" decoding="async"  class="intro-loop__img">
+				<img src="<?= $this_img_path; ?>intro-loop_img03.webp" decoding="async"  class="intro-loop__img">
+				<img src="<?= $this_img_path; ?>intro-loop_img04.webp" decoding="async"  class="intro-loop__img">
+				<img src="<?= $this_img_path; ?>intro-loop_img05.webp" decoding="async"  class="intro-loop__img">
+				<img src="<?= $this_img_path; ?>intro-loop_img06.webp" decoding="async"  class="intro-loop__img">
+				<img src="<?= $this_img_path; ?>intro-loop_img07.webp" decoding="async"  class="intro-loop__img">
+				<img src="<?= $this_img_path; ?>intro-loop_img08.webp" decoding="async"  class="intro-loop__img">
+			</div>
+		</div>
+
+		<div class="town-bg"></div>
+		<figure  class="cloud-bg">
+			<img src="<?= $this_img_path; ?>intro-cloud_bg.webp" alt="" decoding="async">
+		</figure>
+		<figure class="btm_cloud cloud01"><img src="<?= $this_img_path; ?>intro-btm_cloud01.webp" alt="" decoding="async"></figure>
+		<figure class="btm_cloud cloud02"><img src="<?= $this_img_path; ?>intro-btm_cloud02.webp" alt="" decoding="async"></figure>
+
+
+	</section>
 	<div class="company-wrap">
 		<div class="inr -w1400 round-con">
 			<figure class="kumo -risu"><img src="<?= $this_img_path; ?>fv-risu.webp" alt="" decoding="async"></figure>
