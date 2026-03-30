@@ -64,7 +64,7 @@ $uri = "contact";
 					</div>
 				</div>
 			</section>
-			<section class="round-con -form">
+			<section class="round-con form">
 				<div class="tit_area">
 					<h2><img src="<?= $this_img_path; ?>form_title.png" alt="メールでお問い合わせ" decoding="async"></h2>
 					<p class="en">Mail Form</p>
@@ -73,19 +73,19 @@ $uri = "contact";
 				<ol class="step">
 					<li class="this">
 						<span class="en">step 01</span>
-						<p class="step-text"><img src="<?= $this_img_path; ?>step-text01.png" alt="内容入力" decoding="async"></p>
+						<p class="step-text"><img src="<?= $img_path; ?>common/step-text01.png" alt="内容入力" decoding="async"></p>
 					</li>
 					<li>
 						<span class="en">step 02</span>
-						<p class="step-text"><img src="<?= $this_img_path; ?>step-text02.png" alt="内容確認" decoding="async"></p>
+						<p class="step-text"><img src="<?= $img_path; ?>common/step-text02.png" alt="内容確認" decoding="async"></p>
 					</li>
 					<li>
 						<span class="en">step 03</span>
-						<p class="step-text"><img src="<?= $this_img_path; ?>step-text03.png" alt="送信完了" decoding="async"></p>
+						<p class="step-text"><img src="<?= $img_path; ?>common/step-text03.png" alt="送信完了" decoding="async"></p>
 					</li>
 				</ol>
 				<form id="form" action="conf.php" method="post">
-					<div class="form_wrap">
+					<div class="form_wrap -contact">
 						<div class="box -full">
 							<div class="form_tit req"><label>お問い合わせ種別</label></div>
 							<ul class="form-list input-radio">

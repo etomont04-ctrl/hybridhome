@@ -129,7 +129,7 @@ if ($tel !== '' && !preg_match('/^\d{2,4}-?\d{2,4}-?\d{3,4}$/', $tel)) {
 						<p><a href="javascript:history.back();">入力画面に戻る</a></p>
 					</div>
 				<?php else : ?>
-				<div class="form_wrap">
+				<div class="form_wrap -contact">
 					<div class="box -full">
 						<div class="form_tit req"><label>お問い合わせ種別</label></div>
 						<div class="form_input -conf"><p class="form-item"><?= h($shubetsu); ?></p></div>
