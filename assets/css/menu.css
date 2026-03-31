@@ -540,6 +540,12 @@
   .head .g-nav {
     display: none;
   }
+  .head_link-area {
+    display: none !important;
+  }
+  .corner {
+    display: none !important;
+  }
 }
 @media screen and (max-width: 1330px) {
   .head .head_link-area .w_link {

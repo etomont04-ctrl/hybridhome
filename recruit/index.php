@@ -47,6 +47,8 @@ $uri = "recruit";
 	</section><!-- /fv -->
 
 	<section class="intro">
+		<figure class="top_cloud cloud01"><img src="<?= $this_img_path; ?>intro-top_cloud01.webp" alt="" decoding="async"></figure>
+		<figure class="top_cloud cloud02"><img src="<?= $this_img_path; ?>intro-top_cloud02.webp" alt="" decoding="async"></figure>
 		<div class="inr -w1400">
 			<div class="text_wrap">
 				<h2>
@@ -94,6 +96,7 @@ $uri = "recruit";
 		</figure>
 		<figure class="btm_cloud cloud01"><img src="<?= $this_img_path; ?>intro-btm_cloud01.webp" alt="" decoding="async"></figure>
 		<figure class="btm_cloud cloud02"><img src="<?= $this_img_path; ?>intro-btm_cloud02.webp" alt="" decoding="async"></figure>
+		<figure class="btm_cloud cloud03 tab_on"><img src="<?= $this_img_path; ?>intro-btm_cloud03.webp" alt="" decoding="async"></figure>
 	</section><!-- /intro -->
 
 	<div class="recruit-wrap">
@@ -103,7 +106,8 @@ $uri = "recruit";
 					<picture>
 						<source media="(max-width: 1050px)" srcset="<?= $this_img_path; ?>attractive-title-sp.webp">
 						<img src="<?= $this_img_path; ?>attractive-title.webp" alt="ハイブリッドホームで働く力">
-					</picture></h2>
+					</picture>
+				</h2>
 				<span class="en en-tit">Attractive points </span>
 				<ul class="attractive_list">
 					<li class="list01 inview bt">
@@ -139,6 +143,9 @@ $uri = "recruit";
 						<p class="n_txt">建築士やインテリアコーディネーターのスキルを学び、仕事の幅が広がります。</p>
 					</li>
 				</ul>
+				<figure class="risu inview sb"><img src="<?= $this_img_path; ?>attractive-risu.webp" alt="" decoding="async"></figure>
+				<figure class="kumonchu inview sb"><img src="<?= $this_img_path; ?>attractive-kumonchu.webp" alt="" decoding="async"></figure>
+				<figure class="duck inview sb tab_off"><img src="<?= $this_img_path; ?>attractive-duck.webp" alt="" decoding="async"></figure>
 			</section><!-- /attractive -->
 			<section class="flow">
 				<h2><img src="<?= $this_img_path; ?>flow-title.webp" alt="採用フロー" decoding="async"></h2>
@@ -207,6 +214,8 @@ $uri = "recruit";
 						<p class="n_txt">条件の確認後、入社手続きを行います。入社後は3か月間の研修期間（試用期間あり）があります。</p>
 					</li>
 				</ul>
+				<figure class="kumonchu inview sb"><img src="<?= $this_img_path; ?>flow-kumonchu.webp" alt="" decoding="async"></figure>
+				<figure class="duck inview sb"><img src="<?= $this_img_path; ?>flow-duck.webp" alt="" decoding="async"></figure>
 			</section><!-- /flow -->
 
 			<section class="description">

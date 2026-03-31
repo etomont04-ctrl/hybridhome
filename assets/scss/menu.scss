@@ -240,6 +240,12 @@
 	.head .g-nav{
 		display: none;
 	}
+	.head_link-area{
+		display: none !Important;
+	}
+	.corner{
+		display: none !Important;
+	}
 }
 
 @include max-width(1330){

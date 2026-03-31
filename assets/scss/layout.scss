@@ -1192,7 +1192,7 @@
 					margin-top: getCqw(60,$conW);
 			}
 
-			&.-recruit .box:nth-child(n + 3){
+			&.-recruit .box:not(:first-child){
 				margin-top: getCqw(60,$conW);
 			}
 			.form_tit {
@@ -1248,6 +1248,12 @@
 						top:getCqw(7,$conW);
 					}
 				}
+			}
+			select {
+				margin-top:getCqw(20,$conW);
+				font-size:max(14px,getCqw(24,$conW));
+				padding:getCqw(40,$conW);
+				background-position: right 1.5rem center;
 			}
 			.btn_wrap{
 				margin: getCqw(120,$conW) auto 0;
