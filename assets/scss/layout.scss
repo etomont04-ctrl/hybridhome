@@ -242,7 +242,12 @@
 	}
 	&.-w1300{
 		@include w_vw(1300);
-
+	}
+	&.-w1140{
+		@include w_vw(1140);
+		@include max-width(1050){
+			width:get_calc(760,800);
+		}
 	}
 
 	@include min-width(2000){

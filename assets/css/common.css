@@ -50,6 +50,8 @@
   --base-color-green09:#2b9594;
   --base-color-green10:#5eb195;
   --base-color-green11:#cbedef;
+  --base-color-green12:#d7f1f1;
+  --base-color-green13:#3da4a3;
   --base-color-wood:#6d240e;
   --base-color-blue:#14a5b6;
   --base-color-blue02:#32a4ab;
@@ -709,6 +711,8 @@ img.preload {
   --base-color-green09:#2b9594;
   --base-color-green10:#5eb195;
   --base-color-green11:#cbedef;
+  --base-color-green12:#d7f1f1;
+  --base-color-green13:#3da4a3;
   --base-color-wood:#6d240e;
   --base-color-blue:#14a5b6;
   --base-color-blue02:#32a4ab;
@@ -2280,6 +2284,8 @@ img.preload {
   --base-color-green09:#2b9594;
   --base-color-green10:#5eb195;
   --base-color-green11:#cbedef;
+  --base-color-green12:#d7f1f1;
+  --base-color-green13:#3da4a3;
   --base-color-wood:#6d240e;
   --base-color-blue:#14a5b6;
   --base-color-blue02:#32a4ab;
@@ -3104,6 +3110,8 @@ img.preload {
   --base-color-green09:#2b9594;
   --base-color-green10:#5eb195;
   --base-color-green11:#cbedef;
+  --base-color-green12:#d7f1f1;
+  --base-color-green13:#3da4a3;
   --base-color-wood:#6d240e;
   --base-color-blue:#14a5b6;
   --base-color-blue02:#32a4ab;
@@ -3479,6 +3487,14 @@ img.preload {
 }
 .inr.-w1300 {
   width: clamp(780px, 86.6666666667vw, 1664px);
+}
+.inr.-w1140 {
+  width: clamp(684px, 76vw, 1459.2px);
+}
+@media screen and (max-width: 1050px) {
+  .inr.-w1140 {
+    width: 95%;
+  }
 }
 @media screen and (min-width: 2000px) {
   .inr.-m2000.-rg {
@@ -5900,6 +5916,8 @@ img.preload {
   --base-color-green09:#2b9594;
   --base-color-green10:#5eb195;
   --base-color-green11:#cbedef;
+  --base-color-green12:#d7f1f1;
+  --base-color-green13:#3da4a3;
   --base-color-wood:#6d240e;
   --base-color-blue:#14a5b6;
   --base-color-blue02:#32a4ab;
