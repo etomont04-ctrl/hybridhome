@@ -600,7 +600,7 @@
     aspect-ratio: 740/950;
     max-height: 1000px;
     border-radius: 30px;
-    margin-bottom: 4.5rem;
+    margin-bottom: f 8rem;
   }
   .works_d-fv .inr .fv-img:before {
     border: 8px solid var(--base-color-white);
@@ -1691,9 +1691,6 @@
   }
   .bf_area .kiji_area h3:not([class]) {
     font-size: min(30px, 5.8333333333cqw);
-    -webkit-box-shadow: 5px 5px 0 #cfe9ed;
-    box-shadow: 5px 5px 0 #cfe9ed;
-    padding: 8px;
   }
   .bf_area .kiji_area p:not([class]), .bf_area .kiji_area a:not([class]) {
     font-size: min(17px, 3.8888888889cqw);
@@ -2091,9 +2088,6 @@
     margin-top: min(9.3vw, 180px);
     margin-inline: auto;
   }
-  .works-detail .inr .works-detail_sec:first-child {
-    margin-top: min(17.5vw, 140px);
-  }
   .works-detail .inr .tit_area {
     gap: 1.6rem;
     margin-bottom: 7.8947368421cqw;
@@ -2232,7 +2226,7 @@
     border: 1px solid var(--base-border-color05);
   }
   .works-detail .inr .voice-sec .voice-qa .img_area {
-    padding-top: 0;
+    padding-top: 2rem;
     width: 13.3333333333%;
   }
   .works-detail .inr .voice-sec .voice-qa .img_area .img {
