@@ -52,6 +52,7 @@
   --base-color-green11:#cbedef;
   --base-color-green12:#d7f1f1;
   --base-color-green13:#3da4a3;
+  --base-color-green14:#58a783;
   --base-color-wood:#6d240e;
   --base-color-blue:#14a5b6;
   --base-color-blue02:#32a4ab;
@@ -713,6 +714,7 @@ img.preload {
   --base-color-green11:#cbedef;
   --base-color-green12:#d7f1f1;
   --base-color-green13:#3da4a3;
+  --base-color-green14:#58a783;
   --base-color-wood:#6d240e;
   --base-color-blue:#14a5b6;
   --base-color-blue02:#32a4ab;
@@ -2286,6 +2288,7 @@ img.preload {
   --base-color-green11:#cbedef;
   --base-color-green12:#d7f1f1;
   --base-color-green13:#3da4a3;
+  --base-color-green14:#58a783;
   --base-color-wood:#6d240e;
   --base-color-blue:#14a5b6;
   --base-color-blue02:#32a4ab;
@@ -3112,6 +3115,7 @@ img.preload {
   --base-color-green11:#cbedef;
   --base-color-green12:#d7f1f1;
   --base-color-green13:#3da4a3;
+  --base-color-green14:#58a783;
   --base-color-wood:#6d240e;
   --base-color-blue:#14a5b6;
   --base-color-blue02:#32a4ab;
@@ -3487,6 +3491,12 @@ img.preload {
 }
 .inr.-w1300 {
   width: clamp(780px, 86.6666666667vw, 1664px);
+}
+.inr.-w1200 {
+  width: clamp(720px, 80vw, 1536px);
+}
+.inr.-w1250 {
+  width: clamp(750px, 83.3333333333vw, 1600px);
 }
 .inr.-w1140 {
   width: clamp(684px, 76vw, 1459.2px);
@@ -5918,6 +5928,7 @@ img.preload {
   --base-color-green11:#cbedef;
   --base-color-green12:#d7f1f1;
   --base-color-green13:#3da4a3;
+  --base-color-green14:#58a783;
   --base-color-wood:#6d240e;
   --base-color-blue:#14a5b6;
   --base-color-blue02:#32a4ab;

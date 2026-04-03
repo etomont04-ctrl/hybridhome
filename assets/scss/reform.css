@@ -53,7 +53,6 @@
   --base-color-green11:#cbedef;
   --base-color-green12:#d7f1f1;
   --base-color-green13:#3da4a3;
-  --base-color-green14:#58a783;
   --base-color-wood:#6d240e;
   --base-color-blue:#14a5b6;
   --base-color-blue02:#32a4ab;
@@ -223,8 +222,8 @@
   padding-top: var(--head-mt);
 }
 .fv .inr h1 {
-  width: 13.9583333333%;
-  min-width: 201px;
+  width: 35.7638888889%;
+  min-width: 515px;
 }
 .fv:after {
   content: "";
@@ -254,46 +253,37 @@
   background: linear-gradient(to bottom, #f3fefe 0%, #b9fbfc calc(100% - 35rem), #fff 100%);
   padding-bottom: 12rem;
 }
-.intro .top_cloud {
-  position: absolute;
-  z-index: 5;
-}
-.intro .top_cloud.cloud01 {
-  width: 981px;
-  right: calc(50% + 350px);
-  top: -39px;
-  z-index: 1;
-}
-.intro .top_cloud.cloud02 {
-  width: 981px;
-  left: calc(50% + 400px);
-  top: -100px;
-}
 .intro .inr {
   container-type: inline-size;
   z-index: 20;
 }
 .intro .inr .text_wrap {
   position: relative;
-  padding-top: 9.649122807cqw;
-  width: 89.4736842105%;
-  margin-inline: auto;
-  margin-bottom: 10.0877192982cqw;
+  padding-top: 22.9166666667cqw;
+  padding-bottom: 44.1666666667cqw;
+  width: 45.8333333333%;
   z-index: 15;
 }
-.intro .inr h2 {
-  width: max(390px, 36.8421052632%);
+.intro .inr .text_wrap h2 {
+  width: max(390px, 35%);
+  margin-bottom: 4.5833333333cqw;
+}
+.intro .inr .text_wrap p {
+  font-size: max(13px, 1.3333333333cqw);
+  font-weight: 500;
+  color: var(--base-color-white);
+  line-height: 2.25;
 }
 .intro .inr .kumonchu {
   position: absolute;
-  width: 37.8070175439cqw;
+  width: 35.9166666667cqw;
   z-index: 10;
   -webkit-animation: bird-float 6s ease-in-out infinite;
   animation: bird-float 6s ease-in-out infinite;
 }
 .intro .inr .kumonchu.kumonchu01 {
-  top: 5.2631578947cqw;
-  left: 70.1754385965%;
+  top: 5cqw;
+  left: 66.6666666667%;
   z-index: 10;
   -webkit-animation-delay: -0.5s;
   animation-delay: -0.5s;
@@ -310,8 +300,8 @@
           transition-delay: 1.6s;
 }
 .intro .inr .kumonchu.kumonchu02 {
-  top: -7.0175438596cqw;
-  left: 84.2105263158%;
+  top: -6.6666666667cqw;
+  left: 80%;
   --W:862;
   --H:1190;
 }

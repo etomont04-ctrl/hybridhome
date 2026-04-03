@@ -11,8 +11,8 @@
 	.inr{
 		$conW:1440;
 		h1{
-			width: get_calc(201,$conW);
-			min-width:201px;
+			width: get_calc(515,$conW);
+			min-width:515px;
 		}
 	}
 	&:after{
@@ -37,52 +37,143 @@
 	}
 }
 
+
 /* ==========================================================================
 	intro
 ========================================================================== */
 .intro{
 	position: relative;
-	background: linear-gradient(to bottom, #f3fefe 0%, #b9fbfc calc(100% - 35rem), #fff 100%);
-	padding-bottom: 12rem;
-	.top_cloud{
-		position: absolute;
-		z-index: 5;
-		&.cloud01{
-			width: 981px;
-			right: calc(50% + 350px);
-			top: -39px;
-			z-index: 1;
-		}
-		&.cloud02{
-			width: 981px;
-			left: calc(50% + 400px);
-			top:-100px;
-		}
-	}
+	background: linear-gradient(to bottom, #f3fefe 0%, #b9fbfc 87%, #fff 100%);
 	.inr{
-		$conW:1140;
+		$conW:1200;
 		container-type: inline-size;
 		z-index: 20;
 		.text_wrap{
 			position: relative;
-			padding-top:getCqw(110,$conW);
-			width: get_calc(1020,$conW);
-			margin-inline:auto;
-			margin-bottom: getCqw(115,$conW);
+			padding-top:getCqw(275,$conW);
+			padding-bottom:getCqw(530,$conW);
+			padding-bottom: 530px;
+			width: get_calc(550,$conW);
 			z-index: 15;
+			h2{
+				width: max(400px,get_calc(420,$conW));
+				margin-bottom:getCqw(55,$conW);
+			}
+			p{
+				font-size: max(13px,getCqw(16,$conW));
+				font-weight: 500;
+				color:var(--base-text-color02);
+				line-height: calc(36/16);
+				letter-spacing: -0.04em;
+			}
 		}
-		h2{
-			width: max(390px,get_calc(420,$conW));
+		.about_wrap{
+			position: absolute;
+			right: 0;
+			top: getCqw(180,$conW);
+			width: get_calc(630,$conW);
+			aspect-ratio:630/480;
+			.line{
+				display: table;
+				position: absolute;
+				left: 0;
+				right: 0;
+				top: 0;
+				bottom: 0;
+				font-size: getCqw(100,$conW);
+				color:var(--base-color-white);
+				font-weight: 100;
+				font-family:var(--line-seed);
+				z-index: 10;
+				margin:auto;
+			}
+			.circle_box{
+				position: absolute;
+				@include fcwh02;
+				width: get_calc(350,630);
+				aspect-ratio:1/1;
+				border-radius:50%;
+				&:before{
+					content: "";
+					position: absolute;
+					inset: 0;
+					z-index: 1;
+					border-radius:50%;
+					opacity:.8;
+				}
+				&:after{
+					content: "";
+					position: absolute;
+					inset: 0;
+					background-image: url(../img/common/bg-pattern.webp);
+					background-repeat: repeat;
+					background-size:cover;
+					// background-size: 987px 1270px;
+					opacity: .2;
+					mix-blend-mode: soft-light;
+					pointer-events: none;
+					border-radius:50%;
+					z-index: 2;
+				}
+				h3{
+					position: relative;
+					margin-bottom: getCqw(20,$conW);
+					z-index: 10;
+				}
+				p{
+					position: relative;
+					font-size: getCqw(18,$conW);
+					line-height:2;
+					color:var(--base-color-white);
+					text-align: center;
+					z-index: 10;
+					span{
+						display: inline;
+						background-image: linear-gradient(#7fbdbf, #7fbdbf);
+						background-repeat: no-repeat;
+						background-position: 0 100%;
+						background-size: 100% 1px;
+						-webkit-box-decoration-break: clone;
+						box-decoration-break: clone;
+					}
+				}
+				&.-reform{
+					position: absolute;
+					left: 0;
+					top: 0;
+					&:before{
+						background:var(--base-color-green13);
+					}
+					h3{
+						width: get_calc(120,350);
+					}
+				}
+				&.-renovation{
+					position: absolute;
+					right: 0;
+					bottom: 0;
+					&:before{
+						background:var(--base-color-green14);
+					}
+					h3{
+						width: get_calc(171,350);
+					}
+					p span{
+						background-image: linear-gradient(#8bc0ac, #8bc0ac);
+
+					}
+				}
+			}
 		}
 		.kumonchu{
 			position: absolute;
-			width: getCqw(431,$conW);
+			width: min(431px,getCqw(431,$conW));
 			z-index: 10;
 			-webkit-animation: bird-float 6s ease-in-out infinite;
 			animation: bird-float 6s ease-in-out infinite;
-			&.kumonchu01{
-				top: getCqw(60,$conW);
-				left: get_calc(800,$conW);
+			&.-kumonchu{
+				bottom: getCqw(-145,$conW);
+				left: max(-255px,get_calc(-255,$conW));
 				z-index: 10;
 				-webkit-animation-delay: -0.5s;
 				animation-delay: -0.5s;
@@ -97,11 +188,12 @@
 					transition-delay:1.6s;
 				}
 			}
-			&.kumonchu02{
-				top: getCqw(-80,$conW);
-				left: get_calc(960,$conW);
-				--W:862;
-				--H:1190;
+			&.-duck{
+				width: min(185px,getCqw(185,$conW));
+				bottom: getCqw(48,$conW);
+				left: get_calc(50,$conW);
+				--W:185;
+				--H:189;
 				&:after{
 					--bW:388;
 					--bT:15;
@@ -113,52 +205,15 @@
 			}
 		}
 	}
-	.intro-loop{
-		position: relative;
-		display: flex;
-		flex-wrap: nowrap;
-		width: 100%;
-		z-index: 20;
-	}
-	.intro-loop__inner{
-		position: relative;
-		display: flex;
-		align-items: flex-start;
-		// flex: 0 0 auto;
-		gap:30px;
-		will-change: transform;
-		animation: LoopX 70s infinite linear 1s both;
-	}
-	.intro-loop__img{
-		display: block;
-		width: 320px;
-		height: auto;
-		flex: 0 0 auto;
-		border-radius:30px;
-		&:last-child{margin-right: 30px;}
-		&:nth-child(even){
-			margin-top: 70px;
-		}
-	}
-	.cloud-bg{
-		position: absolute;
-		width: 2015px;
-		left: -63px;
-		bottom: -90px;
-		z-index: 6;
-
-	}
 	.town-bg{
 		position: absolute;
 		left: 0;
-		bottom: 155px;
+		bottom: 0;
 		width: 100%;
-		height: 609px;
+		height: 392px;
 		z-index: 5;
-		background:url(../img/staff/intro-town_bg.webp) center bottom;
-		background-size:4261px 609px;
-		-webkit-mask-image: linear-gradient(to bottom, #000 90%, transparent 100%);
-		mask-image: linear-gradient(to bottom, #000 90%, transparent 100%);
+		background:url(../img/reform/intro-town_bg.webp) center bottom repeat;
+		background-size:3540px 392px;
 	}
 	.btm_risu{
 		position: absolute;
@@ -272,7 +327,28 @@
 	}
 }
 
+/* ==========================================================================
+	feature
+========================================================================== */
+.feature{
+	position: relative;
+	.feature-intro{
+		position: relative;
+		@include fl;
+		margin-bottom: 9rem;
+		.img{
+			width: get_calc(800,1250);
+			img{
+				border-radius:1rem;
+			}
+		}
+		h2{
+			width: get_calc(221,1250);
+			margin-right: get_calc(60,1250);
+		}
+	}
 
+}
 
 /* ==========================================================================
 	profile-wrap
