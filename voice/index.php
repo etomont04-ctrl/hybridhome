@@ -15,9 +15,9 @@ if ($host === 'localhost' || $host === '127.0.0.1') {
 	// 本番環境
 	include($_SERVER['DOCUMENT_ROOT'] . '/assets/inc/root.php');
 }
-$UNIQUE_CSS = '<link rel="stylesheet" href="../assets/css/partner.css?'.$Ymd.'">';
+$UNIQUE_CSS = '<link rel="stylesheet" href="../assets/css/voice.css?'.$Ymd.'">';
 $UNIQUE_SCRIPT = '';
-$uri = "partner";
+$uri = "voice";
 ?>
 <!DOCTYPE html>
 <html lang="ja">
@@ -28,20 +28,53 @@ $uri = "partner";
 <div class="of-wrap">
 	<?php include($root_path . 'assets/inc/menu.php'); ?>
 	<main>
-	<section class="fv inview">
+	<section class="voice-fv inview">
 		<div class="inr -m2000">
-			<figure class="fv-img">
-				<picture>
-					<source media="(max-width: 1050px)" srcset="<?= $this_img_path; ?>fv-sp.webp">
-					<img src="<?= $this_img_path; ?>fv.webp" alt="" class="fit_img">
-				</picture>
-			</figure>
-			<h1 class="inview"><img src="<?= $this_img_path; ?>title.webp" alt="ハイブリッドの仲間たち" decoding="async"></h1>
-			<figure class="cloud -left"><img src="<?= $img_path; ?>common/illust/fv-cloud01.webp" alt="" decoding="async"></figure>
-			<figure class="cloud -right"><img src="<?= $img_path; ?>common/illust/fv-cloud02.webp" alt="" decoding="async"></figure>
+			<h1 class="inview"><img src="<?= $this_img_path; ?>title.webp" alt="お客様の声" decoding="async"></h1>
 			<div class="pan inview bt_one">
 				<a href="<?= $ROOT_DIR; ?>">TOP</a>
-				<p>ハイブリッドの仲間たち</p>
+				<p>お客様の声</p>
+			</div>
+			<figure class="cloud -left"><img src="<?= $img_path; ?>common/n-fv-cloud01.webp" alt="" decoding="async"></figure>
+			<figure class="cloud -right"><img src="<?= $img_path; ?>common/n-fv-cloud02.webp" alt="" decoding="async"></figure>
+			<figure class="illust"><img src="<?= $this_img_path; ?>fv-illust.webp" alt="" decoding="async"></figure>
+			<div class="town_bg"></div>
+
+			<div class="main-links">
+				<a href="#voice01" class="link">
+					<span class="name"><img src="<?= $this_img_path; ?>main-link01_name.png" alt="川崎市 H様" decoding="async"></span>
+					<p class="title"><img src="<?= $this_img_path; ?>main-link01_title.webp" alt="大胆に、細やかに。暮らしに寄り添う" decoding="async">
+						<p class="link_btn -blue">
+						<span class="text">事例一覧へ</span>
+						<i class="arrow"><img src="<?= $img_path; ?>common/arrow-w.png" alt="" decoding="async"></i>
+					</p>
+					<figure class="img">
+						<img src="<?= $this_img_path; ?>main-link01_bg.webp" alt="" decoding="async">
+					</figure>
+				</a>
+				<a href="#voice02" class="link">
+					<span class="name"><img src="<?= $this_img_path; ?>main-link02_name.png" alt="川崎市 H様" decoding="async"></span>
+					<p class="title"><img src="<?= $this_img_path; ?>main-link02_title.webp" alt="大胆に、細やかに。暮らしに寄り添う" decoding="async">
+						<p class="link_btn -blue">
+						<span class="text">事例一覧へ</span>
+						<i class="arrow"><img src="<?= $img_path; ?>common/arrow-w.png" alt="" decoding="async"></i>
+					</p>
+					<figure class="img">
+						<img src="<?= $this_img_path; ?>main-link02_bg.webp" alt="" decoding="async">
+					</figure>
+				</a>
+				<a href="#voice03" class="link">
+					<span class="name"><img src="<?= $this_img_path; ?>main-link03_name.png" alt="川崎市 H様" decoding="async"></span>
+					<p class="title"><img src="<?= $this_img_path; ?>main-link03_title.webp" alt="大胆に、細やかに。暮らしに寄り添う" decoding="async">
+						<p class="link_btn -blue">
+						<span class="text">事例一覧へ</span>
+						<i class="arrow"><img src="<?= $img_path; ?>common/arrow-w.png" alt="" decoding="async"></i>
+					</p>
+					<figure class="img">
+						<img src="<?= $this_img_path; ?>main-link03_bg.webp" alt="" decoding="async">
+					</figure>
+				</a>
+
 			</div>
 		</div>
 	</section><!-- /fv -->
