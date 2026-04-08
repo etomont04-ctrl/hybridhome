@@ -255,6 +255,9 @@
 			width:get_calc(760,800);
 		}
 	}
+	&.-w980{
+		@include w_vw(980);
+	}
 
 	@include min-width(2000){
 		&.-m2000.-rg{

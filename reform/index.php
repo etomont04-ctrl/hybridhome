@@ -50,7 +50,10 @@ $uri = "reform";
 		<div class="inr -w1200">
 			<div class="text_wrap">
 				<h2>
-					<img src="<?= $this_img_path; ?>intro_title.webp" alt="ハイブリッドホームのリフォーム&リノベーション">
+					<picture>
+						<source media="(max-width: 1050px)" srcset="<?= $this_img_path; ?>intro_title-sp.webp">
+						<img src="<?= $this_img_path; ?>intro_title.webp" alt="ハイブリッドホームのリフォーム&リノベーション">
+					</picture>
 				</h2>
 				<p>暮らした時間ごと大切にするため、わたしたちハイブリッドホームは、<br>すべての工事を単なる改修に終わらせず、必ず新たな価値を創造いたします。</p>
 			</div>
@@ -64,6 +67,7 @@ $uri = "reform";
 					<h3><img src="<?= $this_img_path; ?>intro_renovation_tit.png" alt="リフォーム" decoding="async"></h3>
 					<p><span>いまある住宅に、<br>新しい価値や機能を<br>プラスすること</span></p>
 				</div>
+				<figure class="bird tab_off"><img src="<?= $this_img_path; ?>intro-bird.webp" alt="" decoding="async"></figure>
 			</div>
 			<figure class="kumonchu -kumonchu sb inview"><img src="<?= $this_img_path; ?>intro-kumonchu.webp" alt="" decoding="async"></figure>
 			<figure class="kumonchu -duck sb inview"><img src="<?= $this_img_path; ?>intro-duck.webp" alt="" decoding="async"></figure>
@@ -79,621 +83,378 @@ $uri = "reform";
 			</picture>
 		</figure>
 	</section><!-- /intro -->
-
 	<div class="feature">
-
 		<section class="feature-intro inr -w1250">
-			<figure class="img">
+			<figure class="img tab_off">
 				<img src="<?= $this_img_path; ?>feature_intro-img.webp" alt="" decoding="async">
 			</figure>
 			<h2><img src="<?= $this_img_path; ?>feature_intro-title.webp" alt="たしたちは、みなさまの住まいのプランナーです。" decoding="async"></h2>
 		</section><!-- /feature-intro -->
 
-	</div>
-
-	<div class="profile-wrap">
-		<div class="inr -w1400 round-con">
-			<article class="profile-box -box01">
-				<p class="en num">
-					Hybrid home’s Staff Profiles <span class="line">#01</span>
-				</p>
-				<h2 class="title-box">
-					<span class="title01">
-						<picture>
-							<source media="(max-width: 800px)" srcset="<?= $this_img_path; ?>profile01-title-sp.webp">
-							<img src="<?= $this_img_path; ?>profile01-title.webp" alt="限られた空間を有効利用するご提案が得意です">
-						</picture>
-					</span>
-					<span class="title02 tab_on">
-						<img src="<?= $this_img_path; ?>profile01-title02-sp.webp" alt="ご提案が得意です">
-					</span>
-
-				</h2>
-				<div class="img_area">
-					<figure class="img"><img src="<?= $this_img_path; ?>profile01-img.webp" alt="" decoding="async"></figure>
-					<div class="name_area">
-						<span class="job -director"><img src="<?= $this_img_path; ?>profile-job_director.png" alt="ディレクター" decoding="async"></span>
-						<p class="name"><img src="<?= $this_img_path; ?>profile01-name.png" alt="木村正二" decoding="async"></p>
-					</div>
-				</div><!-- /img_area -->
-				<div class="question-box">
-					<p class="question question01"><img src="<?= $this_img_path; ?>profile01-Q01.png" alt="住まいとはどんな存在？" decoding="async"></p>
-					<p class="n_txt">心の安全基地、でしょうか。</p>
-				</div>
-				<div class="question-box">
-					<p class="question question02"><img src="<?= $this_img_path; ?>profile01-Q02.png" alt="ハイブリッドホームが得意なことは？" decoding="async"></p>
-					<p class="n_txt">建物・外構を含め、トータルな住まいのご提案ができます。どんな些細なことでもご要望を真摯に受け止め、＋αのご提案をスピーディに行っています。</p>
-				</div>
-				<div class="question-box">
-					<p class="question question03"><img src="<?= $this_img_path; ?>profile01-Q03.png" alt="住まいとはどんな存在？" decoding="async"></p>
-					<p class="n_txt">お住まいに愛着があり、暮らすことに興味や関心のある方は、ぜひハイブリッドホームにお越しください</p>
-				</div>
-			</article><!-- box01 -->
-			<article class="profile-box -box02 -rev">
-				<p class="en num">
-					Hybrid home’s Staff Profiles <span class="line">#02</span>
-				</p>
-				<h2 class="title-box">
-					<span class="title01">
-						<picture>
-							<source media="(max-width: 800px)" srcset="<?= $this_img_path; ?>profile02-title01-sp.webp">
-							<img src="<?= $this_img_path; ?>profile02-title01.webp" alt="30年くらいで、全面リフォームを検討の方、">
-						</picture>
-					</span>
-					<span class="title02">
-						<picture>
-							<source media="(max-width: 800px)" srcset="<?= $this_img_path; ?>profile02-title02-sp.webp">
-							<img src="<?= $this_img_path; ?>profile02-title02.webp" alt="">
-						</picture>
-					</span>
-				</h2>
-				<div class="img_area">
-					<figure class="img"><img src="<?= $this_img_path; ?>profile02-img.webp" alt="" decoding="async"></figure>
-					<div class="name_area">
-						<span class="job -director"><img src="<?= $this_img_path; ?>profile-job_director.png" alt="ディレクター" decoding="async"></span>
-						<p class="name"><img src="<?= $this_img_path; ?>profile02-name.png" alt="日下部達也" decoding="async"></p>
-					</div>
-				</div><!-- /img_area -->
-				<div class="question-box">
-					<p class="question question01"><img src="<?= $this_img_path; ?>profile02-Q01.png" alt="住まいとはどんな存在？" decoding="async"></p>
-					<p class="n_txt">家族との安らぎや関係を、自分のセンスでつくった「家」という場所で実現するものだと思います。</p>
-				</div>
-				<div class="question-box">
-					<p class="question question02"><img src="<?= $this_img_path; ?>profile02-Q02.png" alt="ハイブリッドホームが得意なことは？" decoding="async"></p>
-					<p class="n_txt">地域に密着型の店舗で、経験豊かなスタッフがお客様に寄り添い、いい提案ができること。</p>
-				</div>
-				<div class="question-box">
-					<p class="question question04"><img src="<?= $this_img_path; ?>profile02-Q04.png" alt="あなたが得意なことは？" decoding="async"></p>
-					<p class="n_txt">耐震断熱に関する知識や資格を持っており、建物の性能向上リノベーション工事が得意です。また鉄骨造やRC造の工事もおまかせください。</p>
-				</div>
-			</article><!-- box02 -->
-			<article class="profile-box -box03">
-				<p class="en num">
-					Hybrid home’s Staff Profiles <span class="line">#03</span>
-				</p>
-				<h2 class="title-box">
-					<span class="title01">
-						<picture>
-							<source media="(max-width: 800px)" srcset="<?= $this_img_path; ?>profile03-title01-sp.webp">
-							<img src="<?= $this_img_path; ?>profile03-title01.webp" alt="ともにいいものを創り上げたいお客様は、">
-						</picture>
-					</span>
-					<span class="title02">
-						<picture>
-							<source media="(max-width: 800px)" srcset="<?= $this_img_path; ?>profile03-title02-sp.webp">
-							<img src="<?= $this_img_path; ?>profile03-title02.webp" alt="ぜひ当社へ！">
-						</picture>
-					</span>
-				</h2>
-				<div class="img_area">
-					<figure class="cloud cloud01 tab_off"><img src="<?= $this_img_path; ?>profile-cloud01.webp" alt="" decoding="async"></figure>
-					<figure class="img"><img src="<?= $this_img_path; ?>profile03-img.webp" alt="" decoding="async"></figure>
-					<div class="name_area">
-						<span class="job -director"><img src="<?= $this_img_path; ?>profile-job_director.png" alt="ディレクター" decoding="async"></span>
-						<p class="name"><img src="<?= $this_img_path; ?>profile03-name.png" alt="西田功" decoding="async"></p>
-					</div>
-				</div><!-- /img_area -->
-				<div class="question-box">
-					<p class="question question01"><img src="<?= $this_img_path; ?>profile01-Q01.png" alt="住まいとはどんな存在？" decoding="async"></p>
-					<p class="n_txt">くつろげる空間。居心地のよい空間。</p>
-				</div>
-				<div class="question-box">
-					<p class="question question02"><img src="<?= $this_img_path; ?>profile01-Q02.png" alt="ハイブリッドホームが得意なことは？" decoding="async"></p>
-					<p class="n_txt">お客様と一緒に、ここちよい空間をつくり出すこと。建設会社の中には、お客様とのコミュニケーションを苦手としているところもありますが、ハイブリッドホーム社員も職人も、お客様との打ち合わせや会話が大好きだと思います。</p>
-				</div>
-				<div class="question-box">
-					<p class="question question04"><img src="<?= $this_img_path; ?>profile01-Q04.png" alt="あなたが得意なことは？" decoding="async"></p>
-					<p class="n_txt">お客様のイメージが湧きやすいように、その場で絵や図をスケッチして、ご説明すること。</p>
-				</div>
-			</article><!-- box03 -->
-			<article class="profile-box -box04 -rev">
-				<p class="en num">
-					Hybrid home’s Staff Profiles <span class="line">#04</span>
-				</p>
-				<h2 class="title-box">
-					<span class="title01">
-						<picture>
-							<source media="(max-width: 1050px)" srcset="<?= $this_img_path; ?>profile04-title01-sp.webp">
-							<img src="<?= $this_img_path; ?>profile04-title.webp" alt="ご希望をなんでもお聞かせください">
-						</picture>
-					</span>
-					<span class="title02 tab_on">
-						<picture>
-							<source media="(max-width: 1050px)" srcset="<?= $this_img_path; ?>profile04-title02-sp.webp">
-							<img src="<?= $this_img_path; ?>profile04-title02.webp" alt="ぜひお声がけください">
-						</picture>
-					</span>
-				</h2>
-				<div class="img_area">
-					<figure class="img"><img src="<?= $this_img_path; ?>profile04-img.webp" alt="" decoding="async"></figure>
-					<div class="name_area">
-						<span class="job -senior-planner"><img src="<?= $this_img_path; ?>profile-job_senior-planner.png" alt="シニアプランナー" decoding="async"></span>
-						<p class="name"><img src="<?= $this_img_path; ?>profile04-name.png" alt="岩嵜勝士" decoding="async"></p>
-					</div>
-				</div><!-- /img_area -->
-				<div class="question-box">
-					<p class="question question01"><img src="<?= $this_img_path; ?>profile02-Q01.png" alt="住まいとはどんな存在？" decoding="async"></p>
-					<p class="n_txt">家族みんなの心の拠り所であり、自分自身を取り戻す場所</p>
-				</div>
-				<div class="question-box">
-					<p class="question question02"><img src="<?= $this_img_path; ?>profile02-Q02.png" alt="ハイブリッドホームが得意なことは？" decoding="async"></p>
-					<p class="n_txt">一人ひとりがお客様と信頼関係を築いて奮闘できること</p>
-				</div>
-				<div class="question-box">
-					<p class="question question05"><img src="<?= $this_img_path; ?>profile02-Q05.png" alt="興味があること、好きなことは？" decoding="async"></p>
-					<p class="n_txt">楽器を演奏するのが好きです。ブラジルのタンバリン「パンデイロ」も得意です。</p>
-				</div>
-			</article><!-- box04 -->
-			<article class="profile-box -box05">
-				<p class="en num">
-					Hybrid home’s Staff Profiles <span class="line">#05</span>
-				</p>
-				<h2 class="title-box">
-					<span class="title01"><img src="<?= $this_img_path; ?>profile05-title.webp" alt="プランニングならおまかせください" decoding="async"></span>
-				</h2>
-				<div class="img_area">
-					<figure class="img"><img src="<?= $this_img_path; ?>profile-dummy.webp" alt="" decoding="async"></figure>
-					<div class="name_area">
-						<span class="job -senior-planner"><img src="<?= $this_img_path; ?>profile-job_senior-planner.png" alt="シニアプランナー" decoding="async"></span>
-						<p class="name"><img src="<?= $this_img_path; ?>profile05-name.png" alt="岡田美幸" decoding="async"></p>
-					</div>
-				</div><!-- /img_area -->
-				<div class="question-box">
-					<p class="question question01"><img src="<?= $this_img_path; ?>profile01-Q01.png" alt="住まいとはどんな存在？" decoding="async"></p>
-					<p class="n_txt">一日のストレスや疲れを解消して、明日に備える場所。</p>
-				</div>
-				<div class="question-box">
-					<p class="question question04"><img src="<?= $this_img_path; ?>profile01-Q04.png" alt="ハイブリッドホームが得意なことは？" decoding="async"></p>
-					<p class="n_txt">お客様の立場に立って考え、計画中から工事中まで、リフォームを楽しんでいただけるよう気配りをすること。</p>
-				</div>
-				<div class="question-box">
-					<p class="question question05"><img src="<?= $this_img_path; ?>profile01-Q05.png" alt="興味があること、好きなことは？" decoding="async"></p>
-					<p class="n_txt">一泊弾丸旅行を計画して実施するのが好きです。</p>
-				</div>
-			</article><!-- box05 -->
-			<article class="profile-box -box06 -rev">
-				<p class="en num">
-					Hybrid home’s Staff Profiles <span class="line">#06</span>
-				</p>
-				<h2 class="title-box">
-					<span class="title01">
-						<picture>
-							<source media="(max-width: 1050px)" srcset="<?= $this_img_path; ?>profile06-title01-sp.webp">
-							<img src="<?= $this_img_path; ?>profile06-title01.webp" alt="">
-						</picture>
-					</span>
-					<span class="title02">
-						<picture>
-							<source media="(max-width: 1050px)" srcset="<?= $this_img_path; ?>profile06-title02-sp.webp">
-							<img src="<?= $this_img_path; ?>profile06-title02.webp" alt="ゆいところに手が届くプランニングをしています">
-						</picture>
-					</span>
-					<span class="title03">
-						<img src="<?= $this_img_path; ?>profile06-title03-sp.webp" alt="" decoding="async">
-					</span>
-				</h2>
-				<div class="img_area">
-					<figure class="cloud cloud02 tab_off"><img src="<?= $this_img_path; ?>profile-cloud02.webp" alt="" decoding="async"></figure>
-					<figure class="img"><img src="<?= $this_img_path; ?>profile06-img.webp" alt="" decoding="async"></figure>
-					<div class="name_area">
-						<span class="job -senior-planner"><img src="<?= $this_img_path; ?>profile-job_senior-planner.png" alt="シニアプランナー" decoding="async"></span>
-						<p class="name"><img src="<?= $this_img_path; ?>profile06-name.png" alt="木村香" decoding="async"></p>
-					</div>
-				</div><!-- /img_area -->
-				<div class="question-box">
-					<p class="question question01"><img src="<?= $this_img_path; ?>profile02-Q01.png" alt="住まいとはどんな存在？" decoding="async"></p>
-					<p class="n_txt">「伴侶」のような存在。自分の生き方が色濃く反映される場所です。自分自身と一緒に成長・変化する、人生をともにする大切な存在です。</p>
-				</div>
-				<div class="question-box">
-					<p class="question question04"><img src="<?= $this_img_path; ?>profile02-Q04.png" alt="あなたが得意なことは？" decoding="async"></p>
-					<p class="n_txt">リフォーム後の暮らしを想像しながら、プランニングのご提案ができることです。お客様の家で「もしも私が住むとしたら…」という想像をいつも働かせています。</p>
-				</div>
-				<div class="question-box">
-					<p class="question question05"><img src="<?= $this_img_path; ?>profile02-Q05.png" alt="興味があること、好きなことは？" decoding="async"></p>
-					<p class="n_txt">ちょこちょこリフォーム＋DIYで、自分仕様に住まいを変えています。2匹の猫対策として造作した棚や格子建具で囲ったキッチンスペース、天井のクロスをコツコツ剥がしてコンクリートを見せたリビングがお気に入りです。</p>
-				</div>
-			</article><!-- box06 -->
-			<article class="profile-box -box07">
-				<p class="en num">
-					Hybrid home’s Staff Profiles <span class="line">#07</span>
-				</p>
-				<h2 class="title-box">
-					<span class="title01">
-						<picture>
-							<source media="(max-width: 1050px)" srcset="<?= $this_img_path; ?>profile07-title01-sp.webp">
-							<img src="<?= $this_img_path; ?>profile07-title.webp" alt="お客様と笑顔でお話しするのが得意です">
-						</picture>
-				</span>
-				<span class="title02"><img src="<?= $this_img_path; ?>profile07-title02-sp.webp" alt="" decoding="async"></span>
-				</h2>
-				<div class="img_area">
-					<figure class="img"><img src="<?= $this_img_path; ?>profile07-img.webp" alt="" decoding="async"></figure>
-					<div class="name_area">
-						<span class="job -planner"><img src="<?= $this_img_path; ?>profile-job_planner.png" alt="プランナー" decoding="async"></span>
-						<p class="name"><img src="<?= $this_img_path; ?>profile07-name.png" alt="安藤凛" decoding="async"></p>
-					</div>
-				</div><!-- /img_area -->
-				<div class="question-box">
-					<p class="question question01"><img src="<?= $this_img_path; ?>profile01-Q01.png" alt="住まいとはどんな存在？" decoding="async"></p>
-					<p class="n_txt">早く帰りたい！と思わせてくれる、癒やしの場所。</p>
-				</div>
-				<div class="question-box">
-					<p class="question question04"><img src="<?= $this_img_path; ?>profile01-Q04.png" alt="あなたが得意なことは？" decoding="async"></p>
-					<p class="n_txt">お客様と笑顔でお話しすること。</p>
-				</div>
-				<div class="question-box">
-					<p class="question question06"><img src="<?= $this_img_path; ?>profile01-Q06.png" alt="自分の住まいの好きなところは？" decoding="async"></p>
-					<p class="n_txt">自分の部屋です。ベッドでゴロゴロも好きですし、窓の近くにある机でメイクをするのも好きです。</p>
-				</div>
-			</article><!-- box07 -->
-			<article class="profile-box -box08 -rev">
-				<p class="en num">
-					Hybrid home’s Staff Profiles <span class="line">#08</span>
-				</p>
-				<h2 class="title-box">
-					<span class="title01"><img src="<?= $this_img_path; ?>profile08-title.webp" alt="末永くお客様に寄り添いたい" decoding="async"></span>
-				</h2>
-				<div class="img_area">
-					<figure class="img"><img src="<?= $this_img_path; ?>profile08-img.webp" alt="" decoding="async"></figure>
-					<div class="name_area">
-						<span class="job -planner"><img src="<?= $this_img_path; ?>profile-job_planner.png" alt="プランナー" decoding="async"></span>
-						<p class="name"><img src="<?= $this_img_path; ?>profile08-name.png" alt="上岡仁" decoding="async"></p>
-					</div>
-				</div><!-- /img_area -->
-				<div class="question-box">
-					<p class="question question01"><img src="<?= $this_img_path; ?>profile02-Q01.png" alt="住まいとはどんな存在？" decoding="async"></p>
-					<p class="n_txt">一日が始まり、終わる場所。旅行も大好きですが、やはり自宅以上にリラックスできる環境はありません。</p>
-				</div>
-				<div class="question-box">
-					<p class="question question04"><img src="<?= $this_img_path; ?>profile02-Q04.png" alt="あなたが得意なことは？" decoding="async"></p>
-					<p class="n_txt">老若男女どんな方とも明るく話ができることです。</p>
-				</div>
-				<div class="question-box">
-					<p class="question question05"><img src="<?= $this_img_path; ?>profile02-Q06.png" alt="興味があること、好きなことは？" decoding="async"></p>
-					<p class="n_txt">一人暮らしながら、寝室とダイニング以外にもう一部屋あるところ。ソファーでくつろぎながら映画を見られる、リラックスできる環境がお気に入りです。</p>
-				</div>
-			</article><!-- box08 -->
-			<article class="profile-box -box09">
-				<p class="en num">
-					Hybrid home’s Staff Profiles <span class="line">#09</span>
-				</p>
-				<h2 class="title-box">
-					<span class="title01"><img src="<?= $this_img_path; ?>profile09-title.webp" alt="アットホームな会社です" decoding="async"></span>
-				</h2>
-				<div class="img_area">
-					<figure class="cloud cloud01 tab_off"><img src="<?= $this_img_path; ?>profile-cloud01.webp" alt="" decoding="async"></figure>
-					<figure class="img"><img src="<?= $this_img_path; ?>profile09-img.webp" alt="" decoding="async"></figure>
-					<div class="name_area">
-						<span class="job -planner"><img src="<?= $this_img_path; ?>profile-job_planner.png" alt="プランナー" decoding="async"></span>
-						<p class="name"><img src="<?= $this_img_path; ?>profile09-name.png" alt="田中有希子" decoding="async"></p>
-					</div>
-				</div><!-- /img_area -->
-				<div class="question-box">
-					<p class="question question01"><img src="<?= $this_img_path; ?>profile01-Q01.png" alt="住まいとはどんな存在？" decoding="async"></p>
-					<p class="n_txt">家族と時間を過ごす場所。安心して自分らしくいられる場所。</p>
-				</div>
-				<div class="question-box">
-					<p class="question question04"><img src="<?= $this_img_path; ?>profile01-Q04.png" alt="あなたが得意なことは？" decoding="async"></p>
-					<p class="n_txt">お困りのことなどを聞くと、ついついお客様に共感してしまいます。</p>
-				</div>
-				<div class="question-box">
-					<p class="question question05"><img src="<?= $this_img_path; ?>profile01-Q05.png" alt="興味があること、好きなことは？" decoding="async"></p>
-					<p class="n_txt">いろんなことに興味があります。空間心理学、ミシン、模様替えなどなど。</p>
-				</div>
-			</article><!-- box09 -->
-			<article class="profile-box -box10 -rev">
-				<p class="en num">
-					Hybrid home’s Staff Profiles <span class="line">#10</span>
-				</p>
-				<h2 class="title-box">
-					<span class="title01"><img src="<?= $this_img_path; ?>profile10-title.webp" alt="高品質なリフォームを提供します！" decoding="async"></span>
-				</h2>
-				<div class="img_area">
-					<figure class="img"><img src="<?= $this_img_path; ?>profile10-img.webp" alt="" decoding="async"></figure>
-					<div class="name_area">
-						<span class="job -planner"><img src="<?= $this_img_path; ?>profile-job_planner.png" alt="プランナー" decoding="async"></span>
-						<p class="name"><img src="<?= $this_img_path; ?>profile10-name.png" alt="西谷幸貴" decoding="async"></p>
-					</div>
-				</div><!-- /img_area -->
-				<div class="question-box">
-					<p class="question question01"><img src="<?= $this_img_path; ?>profile02-Q01.png" alt="住まいとはどんな存在？" decoding="async"></p>
-					<p class="n_txt">人々に安心・安全・快適な環境を与え、様々な生活スタイルを実現してくれる存在。</p>
-				</div>
-				<div class="question-box">
-					<p class="question question04"><img src="<?= $this_img_path; ?>profile02-Q04.png" alt="あなたが得意なことは？" decoding="async"></p>
-					<p class="n_txt">気になることはとことん調べること。お客様のご要望に応えるために、時間を惜しまず、自分の言葉で説明できるまで調べて、最高のプランをご提案します。</p>
-				</div>
-				<div class="question-box">
-					<p class="question question05"><img src="<?= $this_img_path; ?>profile02-Q06.png" alt="興味があること、好きなことは？" decoding="async"></p>
-					<p class="n_txt">台所で、毎朝コーヒーを挽き、ゆっくり淹れている時が至福の時間です。</p>
-				</div>
-			</article><!-- box10 -->
-			<article class="profile-box -box11">
-				<p class="en num">
-					Hybrid home’s Staff Profiles <span class="line">#11</span>
-				</p>
-				<h2 class="title-box">
-					<span class="title01">
-						<picture>
-							<source media="(max-width: 1050px)" srcset="<?= $this_img_path; ?>profile11-title01-sp.webp">
-							<img src="<?= $this_img_path; ?>profile11-title.webp" alt="大切なお住まいの話を聞かせてください">
-						</picture>
-					</span>
-					<span class="title02">
-						<img src="<?= $this_img_path; ?>profile11-title02-sp.webp" alt="" decoding="async">
-					</span>
-				</h2>
-				<div class="img_area">
-					<figure class="img"><img src="<?= $this_img_path; ?>profile11-img.webp" alt="" decoding="async"></figure>
-					<div class="name_area">
-						<span class="job -engineer"><img src="<?= $this_img_path; ?>profile-job_engineer.png" alt="エンジニア" decoding="async"></span>
-						<p class="name"><img src="<?= $this_img_path; ?>profile11-name.png" alt="西谷幸貴" decoding="async"></p>
-					</div>
-				</div><!-- /img_area -->
-				<div class="question-box">
-					<p class="question question01"><img src="<?= $this_img_path; ?>profile01-Q01.png" alt="住まいとはどんな存在？" decoding="async"></p>
-					<p class="n_txt">心身ともに癒やされる、空間や生活を豊かにする、生活の砦</p>
-				</div>
-				<div class="question-box">
-					<p class="question question04"><img src="<?= $this_img_path; ?>profile01-Q04.png" alt="あなたが得意なことは？" decoding="async"></p>
-					<p class="n_txt">増築や改築など、既存の建物とうまく納める方法を提案して解決することが得意です。</p>
-				</div>
-				<div class="question-box">
-					<p class="question question06"><img src="<?= $this_img_path; ?>profile01-Q06.png" alt="自分の住まいの好きなところは？" decoding="async"></p>
-					<p class="n_txt">自分で製作した木工椅子に座って、グラス片手に心を無にしてお酒を飲むのが好きです。</p>
-				</div>
-			</article><!-- box11 -->
-			<article class="profile-box -box12 -rev">
-				<p class="en num">
-					Hybrid home’s Staff Profiles <span class="line">#12</span>
-				</p>
-				<h2 class="title-box">
-					<span class="title01">
-						<picture>
-							<source media="(max-width: 1050px)" srcset="<?= $this_img_path; ?>profile12-title01-sp.webp">
-							<img src="<?= $this_img_path; ?>profile12-title.webp" alt="">
-						</picture>
-					</span>
-					<span class="title02">
-						<img src="<?= $this_img_path; ?>profile12-title02-sp.webp" alt="">
-					</span>
-				</h2>
-				<div class="img_area">
-					<figure class="cloud cloud02 tab_off"><img src="<?= $this_img_path; ?>profile-cloud02.webp" alt="" decoding="async"></figure>
-					<figure class="img"><img src="<?= $this_img_path; ?>profile12-img.webp" alt="" decoding="async"></figure>
-					<div class="name_area">
-						<span class="job -engineer"><img src="<?= $this_img_path; ?>profile-job_engineer.png" alt="エンジニア" decoding="async"></span>
-						<p class="name"><img src="<?= $this_img_path; ?>profile12-name.png" alt="若林大樹" decoding="async"></p>
-					</div>
-				</div><!-- /img_area -->
-				<div class="question-box">
-					<p class="question question01"><img src="<?= $this_img_path; ?>profile02-Q01.png" alt="住まいとはどんな存在？" decoding="async"></p>
-					<p class="n_txt">外部から身を守る場所。心が安らぐ場所。自分に活力を蓄え、豊かにしてくれる存在。</p>
-				</div>
-				<div class="question-box">
-					<p class="question question04"><img src="<?= $this_img_path; ?>profile02-Q04.png" alt="あなたが得意なことは？" decoding="async"></p>
-					<p class="n_txt">場を和ませることが得意です。みなさんと穏やかに話すことができます。</p>
-				</div>
-				<div class="question-box">
-					<p class="question question05"><img src="<?= $this_img_path; ?>profile02-Q05.png" alt="興味があること、好きなことは？" decoding="async"></p>
-					<p class="n_txt">サラブレッドを見たり応援したりするのが好きです。好きが高じて、一口馬主の会員になっています。</p>
-				</div>
-			</article><!-- box12 -->
-			<article class="profile-box -box13">
-				<p class="en num">
-					Hybrid home’s Staff Profiles <span class="line">#13</span>
-				</p>
-				<h2 class="title-box">
-					<span class="title01"><img src="<?= $this_img_path; ?>profile13-title01.webp" alt="明確なビジョンをお持ちのお客様、" decoding="async"></span>
-					<span class="title02"><img src="<?= $this_img_path; ?>profile13-title02.webp" alt="ぜひご一緒しましょう" decoding="async"></span>
-				</h2>
-				<div class="img_area">
-					<figure class="img"><img src="<?= $this_img_path; ?>profile13-img.webp" alt="" decoding="async"></figure>
-					<div class="name_area">
-						<span class="job -assistant"><img src="<?= $this_img_path; ?>profile-job_assistant.png" alt="アシスタント" decoding="async"></span>
-						<p class="name"><img src="<?= $this_img_path; ?>profile13-name.png" alt="遠藤靖恵" decoding="async"></p>
-					</div>
-				</div><!-- /img_area -->
-				<div class="question-box">
-					<p class="question question01"><img src="<?= $this_img_path; ?>profile01-Q01.png" alt="住まいとはどんな存在？" decoding="async"></p>
-					<p class="n_txt">安心で安全な、くつろげる空間。</p>
-				</div>
-				<div class="question-box">
-					<p class="question question04"><img src="<?= $this_img_path; ?>profile01-Q04.png" alt="あなたが得意なことは？" decoding="async"></p>
-					<p class="n_txt">既存図のない家の立面図を描くのが得意です</p>
-				</div>
-				<div class="question-box">
-					<p class="question question06"><img src="<?= $this_img_path; ?>profile01-Q06.png" alt="自分の住まいの好きなところは？" decoding="async"></p>
-					<p class="n_txt">古いものが好きで、博物館や美術館へ行ったり、骨董市を眺めたりします。</p>
-				</div>
-			</article><!-- box13 -->
-			<article class="profile-box -box14 -rev">
-				<div class="text_area">
+		<section class="feature-box_wrap -box01 inr -m2000">
+			<div class="feature-box">
+				<div class="text_area -v1">
 					<p class="en num">
-						Hybrid home’s Staff Profiles <span class="line">#14</span>
+						Hybrid home’s Features <span class="line">#01</span>
 					</p>
-					<h2 class="title-box">
-						<span class="title01"><img src="<?= $this_img_path; ?>profile14-title.webp" alt="お客様の悩みに、親身になって寄り添います" decoding="async"></span>
+					<h2>
+						<span>
+							<picture>
+								<source media="(max-width: 1050px)" srcset="<?= $this_img_path; ?>features01-title-sp01.webp">
+								<img src="<?= $this_img_path; ?>features01-title.webp" alt="本当の意味で、お客様本意の仕事を">
+							</picture>
+						</span>
+						<span class="tab_on"><img src="<?= $this_img_path; ?>features01-title-sp02.webp" alt="" decoding="async"></span>
 					</h2>
-					<div class="question-box">
-						<p class="question question01"><img src="<?= $this_img_path; ?>profile02-Q01.png" alt="住まいとはどんな存在？" decoding="async"></p>
-						<p class="n_txt">最大にリラックスできる場所。ほっとできる場所。家族が集まる場所。</p>
+					<p class="n_txt">わたしたちは、お客様のご要望に真摯に耳を傾けます。<br class="tab_off">
+						「こんな暮らしをしたい」「この部屋の使い勝手をよくしたい」など、<br class="tab_off">
+						日々の暮らしや人生設計の中から出てくる様々な言葉を手がかりに、考えています。<br >
+						<br>
+						しかし、お客様の要望がそのまま正解であるとは限りません。<br class="tab_off">
+						本当はもっとよい解決方法があるかもしれない、<br class="tab_off">
+						ご要望の通りだと将来使いにくくなるかもしれない。<br class="tab_off">これまでの経験とプロの目線に裏打ちされたプランを作成し、<br class="tab_off">
+						本当にお客様が暮らしやすい住まいを実現します。<br>
+						<br>
+						「想像していた以上のものができあがって、感動した」と言っていただくことが、<br class="tab_off">
+						わたしたちのよろこびです。
+					</p>
+				</div>
+				<div class="img_area -v1">
+					<figre class="img"><img src="<?= $this_img_path; ?>features01-img.webp" alt="" decoding="async"></figre>
+					<figure class="risu inview sb">
+						<img src="<?= $this_img_path; ?>feature-risu.webp" alt="" decoding="async">
+					</figure>
+				</div>
+				<figure class="cloud">
+					<img src="<?= $this_img_path; ?>feature-cloud.webp" alt="" decoding="async">
+				</figure>
+			</div>
+		</section><!-- /box01 -->
+		<section class="feature-box_wrap -box02 inr -m2000">
+			<div class="feature-box -rev">
+				<div class="text_area -v2">
+					<p class="en num">
+						Hybrid home’s Features <span class="line">#02</span>
+					</p>
+					<h2>
+						<span><img src="<?= $this_img_path; ?>features02-title.webp" alt="多様な視点からご提案" decoding="async"></span>
+					</h2>
+					<p class="n_txt">わたしたちはヒアリングの際、できる限り2人体制でうかがうようにしています。<br>
+					それは、複数の耳で聞くことで確実にヒアリングし、<br>異なる立場から考えることで、プランの充実度を増すことができるからです。<br>
+					<br>
+					豊かな現場経験、生活経験を持つスタッフが、<br>お客様のニーズを汲み取り、的確なプランをご提案いたします。
+					</p>
+				</div>
+				<div class="img_area -v2">
+					<figre class="img"><img src="<?= $this_img_path; ?>features02-img.webp" alt="" decoding="async"></figre>
+				</div>
+			</div>
+		</section><!-- /box02 -->
+		<section class="feature-box_wrap -box03 inr -m2000">
+			<div class="feature-box">
+				<div class="text_area -v1">
+					<p class="en num">
+						Hybrid home’s Features <span class="line">#03</span>
+					</p>
+					<h2>
+						<span>
+							<picture>
+								<source media="(max-width: 1050px)" srcset="<?= $this_img_path; ?>features03-title-sp01.webp">
+								<img src="<?= $this_img_path; ?>features03-title.webp" alt="時間軸と暮らし方からアドバイス">
+							</picture>
+						</span>
+						<span class="tab_on"><img src="<?= $this_img_path; ?>features03-title-sp02.webp" alt="" decoding="async"></span>
+					</h2>
+					<p class="n_txt">やりたいことがあっても、それをどうやって形にするかを言葉にするのは難しいもの。<br>
+					そのような方こそ、安心してハイブリッドホームにご相談ください。<br>
+					<br>
+					わたしたちは、お客様がこれまでにどのように暮らしてきて、<br>
+					これからどのように暮らしていきたいかという「時間軸」をもとに、<br>
+					いま必要な工事、いずれ必要になるかもしれない工事などを、整理してプランニングいたします。<br>
+					<br>
+					またふだんのお住まい方や趣味、荷物の量などを丁寧にヒアリングし、<br>
+					動線や収納の場所や量、コンセントの位置まで具体的に検討します。
+					</p>
+				</div>
+				<div class="img_area -v1">
+					<figre class="img"><img src="<?= $this_img_path; ?>features03-img.webp" alt="" decoding="async"></figre>
+				</div>
+			</div>
+			<figure class="cloud">
+				<img src="<?= $this_img_path; ?>feature-cloud02.webp" alt="" decoding="async">
+			</figure>
+			<figure class="duck inview sb">
+				<img src="<?= $this_img_path; ?>feature-duck.webp" alt="" decoding="async">
+			</figure>
+		</section><!-- /box03 -->
+		<section class="feature-box_wrap -box04 inr -m2000">
+			<div class="feature-box -rev">
+				<div class="text_area -v2">
+					<p class="en num">
+						Hybrid home’s Features <span class="line">#04</span>
+					</p>
+					<h2>
+						<span><img src="<?= $this_img_path; ?>features04-title.webp" alt="細かすぎるのが自慢です" decoding="async"></span>
+					</h2>
+					<p class="n_txt">わたしたちは現地調査の際、細かく寸法をとったうえで、プランニングします。<br>
+					それは、いまの住宅の現状を正確に把握することが、<br>
+					よいプランをつくるために必要不可欠だからです。<br>
+					<br>
+					わたしたちはほぼ毎日、工事現場に出向きます。<br>
+					現場の職人たちと細かく進捗を確認し、お客様とコミュニケーションをとることが、<br>満足いくリノベーションには大切だと考えているからです。
+					</p>
+				</div>
+				<div class="img_area -v2">
+					<figre class="img"><img src="<?= $this_img_path; ?>features04-img.webp" alt="" decoding="async"></figre>
+				</div>
+			</div>
+		</section><!-- /box04 -->
+		<section class="feature-box_wrap -box05 inr -m2000">
+			<div class="feature-box">
+				<div class="text_area -v1">
+					<p class="en num">
+						Hybrid home’s Features <span class="line">#05</span>
+					</p>
+					<h2>
+						<span>
+							<picture>
+								<source media="(max-width: 1050px)" srcset="<?= $this_img_path; ?>features05-title-sp01.webp">
+								<img src="<?= $this_img_path; ?>features05-title.webp" alt="信頼のおける専任協力業者がいます">
+							</picture>
+						</span>
+						<span class="tab_on"><img src="<?= $this_img_path; ?>features05-title-sp02.webp" alt="" decoding="async"></span>
+					</h2>
+					<p class="n_txt">人手不足が進むいま、信頼できる職人を確保するのは、工事を成功させる必須条件です。<br>
+					リフォーム＆リノベーションには、様々な状況に対応できる高い技術力が必要です。<br>
+					ハイブリッドホームは、60社以上80人以上の優れた専任協力業者、<br>職人たちと連携しています。
+					</p>
+				</div>
+				<div class="img_area -v1">
+					<figre class="img"><img src="<?= $this_img_path; ?>features05-img.webp" alt="" decoding="async"></figre>
+				</div>
+			</div>
+			<figure class="kumonchu inview sb">
+				<img src="<?= $this_img_path; ?>feature-kumonchu.webp" alt="" decoding="async">
+			</figure>
+			<figure class="risu inview sb">
+				<img src="<?= $this_img_path; ?>feature05-risu.webp" alt="" decoding="async">
+			</figure>
+
+		</section><!-- /box03 -->
+	</div><!-- /feature -->
+
+	<div class="process">
+		<div class="inr -w1200">
+			<h2>
+				<picture>
+					<source media="(max-width: 1050px)" srcset="<?= $this_img_path; ?>process_title-sp.webp">
+					<img src="<?= $this_img_path; ?>process_title.webp" alt="リフォーム&リノベーションの流れ">
+				</picture>
+			</h2>
+			<span class="en en-tit">Renovation Process</span>
+			<ul class="process_list inview bt">
+				<li class="list01">
+					<div class="num_box">
+						<p class="en">process</p>
+						<p class="en num">01</p>
 					</div>
-					<div class="question-box">
-						<p class="question question04"><img src="<?= $this_img_path; ?>profile02-Q04.png" alt="あなたが得意なことは？" decoding="async"></p>
-						<p class="n_txt">クリエイティブな発想が得意です。</p>
+					<div class="img_area">
+						<figure class="img">
+							<img src="<?= $this_img_path; ?>process01-img.webp" alt="" decoding="async">
+						</figure>
 					</div>
-					<div class="question-box">
-						<p class="question question06"><img src="<?= $this_img_path; ?>profile02-Q06.png" alt="自分の住まいの好きなところは？" decoding="async"></p>
-						<p class="n_txt">夫と2人で立てるキッチンがお気に入りです。音楽を聴きながら、ビールを飲みながら、一緒に料理ができます。</p>
+					<div class="text_area">
+						<div>
+							<h3><img src="<?= $this_img_path; ?>process01-title.png" alt="お問い合わせ" decoding="async"></h3>
+							<p class="n_txt">お電話またはホームページからお問い合わせください。ハイブリッドホーム担当者から、折り返しご連絡いたします。</p>
+						</div>
 					</div>
-				</div><!-- /text_area -->
-				<div class="img_area">
-					<figure class="img"><img src="<?= $this_img_path; ?>profile-dummy.webp" alt="" decoding="async"></figure>
-					<div class="name_area">
-						<span class="job -assistant"><img src="<?= $this_img_path; ?>profile-job_assistant.png" alt="アシスタント" decoding="async"></span>
-						<p class="name"><img src="<?= $this_img_path; ?>profile14-name.png" alt="遠藤靖恵" decoding="async"></p>
+				</li>
+				<li class="list02">
+					<div class="num_box">
+						<p class="en">process</p>
+						<p class="en num">02</p>
 					</div>
-				</div><!-- /img_area -->
-			</article><!-- box14 -->
-			<article class="profile-box -box15">
-				<p class="en num">
-					Hybrid home’s Staff Profiles <span class="line">#15</span>
-				</p>
-				<h2 class="title-box">
-					<span class="title01"><img src="<?= $this_img_path; ?>profile15-title.webp" alt="コツコツとした作業が好きです" decoding="async"></span>
-				</h2>
-				<div class="img_area">
-					<figure class="cloud cloud01 tab_off"><img src="<?= $this_img_path; ?>profile-cloud01.webp" alt="" decoding="async"></figure>
-					<figure class="img"><img src="<?= $this_img_path; ?>profile-dummy.webp" alt="" decoding="async"></figure>
-					<div class="name_area">
-						<span class="job -assistant"><img src="<?= $this_img_path; ?>profile-job_assistant.png" alt="アシスタント" decoding="async"></span>
-						<p class="name"><img src="<?= $this_img_path; ?>profile15-name.png" alt="中田奈美恵" decoding="async"></p>
+					<div class="img_area">
+						<figure class="img">
+							<img src="<?= $this_img_path; ?>process02-img.webp" alt="" decoding="async">
+						</figure>
 					</div>
-				</div><!-- /img_area -->
-				<div class="question-box">
-					<p class="question question01"><img src="<?= $this_img_path; ?>profile01-Q01.png" alt="住まいとはどんな存在？" decoding="async"></p>
-					<p class="n_txt">自分とそのほかの世界の境界。住んでいる人が反映されてしまう場所でもありますね。</p>
-				</div>
-				<div class="question-box">
-					<p class="question question04"><img src="<?= $this_img_path; ?>profile01-Q04.png" alt="あなたが得意なことは？" decoding="async"></p>
-					<p class="n_txt">営業担当が手描きしたものを、CADで描き起こしています。集中して作業するのが得意です。</p>
-				</div>
-				<div class="question-box">
-					<p class="question question06"><img src="<?= $this_img_path; ?>profile01-Q06.png" alt="自分の住まいの好きなところは？" decoding="async"></p>
-					<p class="n_txt">古い建物ですが、南向きに広いベランダがあり、緑色のカーテンを掛けています。中国茶をゆっくり淹れて飲むのが好きです。</p>
-				</div>
-			</article><!-- box15 -->
-			<article class="profile-box -box16 -rev">
-				<p class="en num">
-					Hybrid home’s Staff Profiles <span class="line">#16</span>
-				</p>
-				<h2 class="title-box">
-					<span class="title01">
-						<picture>
-							<source media="(max-width: 800px)" srcset="<?= $this_img_path; ?>profile16-title01-sp.webp">
-							<img src="<?= $this_img_path; ?>profile16-title.webp" alt="">
-						</picture>
-					</span>
-					<span class="title02"><img src="<?= $this_img_path; ?>profile16-title02-sp.webp" alt="" decoding="async"></span>
-				</h2>
-				<div class="img_area">
-					<figure class="img"><img src="<?= $this_img_path; ?>profile16-img.webp" alt="" decoding="async"></figure>
-					<div class="name_area">
-						<span class="job -partner-support"><img src="<?= $this_img_path; ?>profile-job_partner-support.png" alt="ディレクター" decoding="async"></span>
-						<p class="name"><img src="<?= $this_img_path; ?>profile16-name.png" alt="中村由美子" decoding="async"></p>
+					<div class="text_area">
+						<div>
+							<h3><img src="<?= $this_img_path; ?>process02-title.png" alt="現地調査・ヒアリング" decoding="async"></h3>
+							<p class="n_txt">的確なプランをご提案するため、基本的に現地にて調査をしながらご相談をお受けしています。実際のお住まいを見ながら、ご要望をお伝えください。</p>
+						</div>
 					</div>
-				</div><!-- /img_area -->
-				<div class="question-box">
-					<p class="question question01"><img src="<?= $this_img_path; ?>profile02-Q01.png" alt="住まいとはどんな存在？" decoding="async"></p>
-					<p class="n_txt">家族の生活が豊かになるための居場所。掃除をしたり、手入れをしたり、思い思いに誂えたりすることで、より心地いい空間になっていきます。</p>
-				</div>
-				<div class="question-box">
-					<p class="question question06"><img src="<?= $this_img_path; ?>profile02-Q06.png" alt="自分の住まいの好きなところは？" decoding="async"></p>
-					<p class="n_txt">リビングです。最近観葉植物を育てており、お気に入りの北欧アンティーク家具とコーディネートして楽しんでいます。</p>
-				</div>
-				<div class="question-box">
-					<p class="question question03"><img src="<?= $this_img_path; ?>profile02-Q03.png" alt="自分の住まいの好きなところは？" decoding="async"></p>
-					<p class="n_txt">毎日の暮らしをより快適tにすることを、大切に思っているお客様と出会いたいです。たとえリフォームしたいけれどなにから手をつけていいかわからないという方でも、じっくりお話を聞き、一緒に理想の住まいを作っていきたいと思います。</p>
-				</div>
-			</article><!-- box16 -->
-			<article class="profile-box -box17">
-				<p class="en num">
-					Hybrid home’s Staff Profiles <span class="line">#17</span>
-				</p>
-				<h2 class="title-box">
-					<span class="title01">
-						<picture>
-							<source media="(max-width: 1050px)" srcset="<?= $this_img_path; ?>profile17-title01-sp.webp">
-							<img src="<?= $this_img_path; ?>profile17-title.webp" alt="">
-						</picture>
-					</span>
-					<span class="title02"><img src="<?= $this_img_path; ?>profile17-title02-sp.webp" alt="コツコツとした作業が好きです" decoding="async"></span>
-				</h2>
-				<div class="img_area">
-					<figure class="img"><img src="<?= $this_img_path; ?>profile17-img.webp" alt="" decoding="async"></figure>
-					<div class="name_area">
-						<span class="job -president"><img src="<?= $this_img_path; ?>profile-job_president.png" alt="代表取締役社長" decoding="async"></span>
-						<p class="name"><img src="<?= $this_img_path; ?>profile17-name.png" alt="星野康次" decoding="async"></p>
+				</li>
+				<li class="list03">
+					<div class="num_box">
+						<p class="en">process</p>
+						<p class="en num">03</p>
 					</div>
-				</div><!-- /img_area -->
-				<div class="question-box">
-					<p class="question question01"><img src="<?= $this_img_path; ?>profile01-Q01.png" alt="住まいとはどんな存在？" decoding="async"></p>
-					<p class="n_txt">ご夫婦、ご家族、それぞれの家庭にいろんな形はありますが、「絆」を深めることができる場所ではないでしょうか。</p>
-				</div>
-				<div class="question-box">
-					<p class="question question04"><img src="<?= $this_img_path; ?>profile01-Q04.png" alt="あなたが得意なことは？" decoding="async"></p>
-					<p class="n_txt">建物に対するお客様の要望を、具体的な形にすることを通して、感動していただくこと。</p>
-				</div>
-				<div class="question-box">
-					<p class="question question03"><img src="<?= $this_img_path; ?>profile01-Q03.png" alt="自分の住まいの好きなところは？" decoding="async"></p>
-					<p class="n_txt">包み隠さずにご自身のお考えや求めることをお話いただける方には、きっとご満足いただける仕事ができます。</p>
-				</div>
-			</article><!-- box15 -->
-			<article class="profile-box -box18 -rev">
-				<p class="en num">
-					Hybrid home’s Staff Profiles <span class="line">#18</span>
-				</p>
-				<h2 class="title-box">
-					<span class="title01">
-						<picture>
-							<source media="(max-width: 1050px)" srcset="<?= $this_img_path; ?>profile18-title01-sp.webp">
-							<img src="<?= $this_img_path; ?>profile18-title01.webp" alt="">
-						</picture>
-					</span>
-					<span class="title02">
-						<picture>
-							<source media="(max-width: 800px)" srcset="<?= $this_img_path; ?>profile18-title02-sp.webp">
-							<img src="<?= $this_img_path; ?>profile18-title02.webp" alt="熱を持って取り組みます">
-						</picture>
-					</span>
-					<span class="title03">
-						<img src="<?= $this_img_path; ?>profile18-title03-sp.webp" alt="">
-					</span>
-				</h2>
-				<div class="img_area">
-					<figure class="cloud cloud02 tab_off"><img src="<?= $this_img_path; ?>profile-cloud02.webp" alt="" decoding="async"></figure>
-					<figure class="img"><img src="<?= $this_img_path; ?>profile18-img.webp" alt="" decoding="async"></figure>
-					<div class="name_area">
-						<span class="job -chairman"><img src="<?= $this_img_path; ?>profile-job_chairman.png" alt="会長" decoding="async"></span>
-						<p class="name"><img src="<?= $this_img_path; ?>profile18-name.png" alt="古澤智一" decoding="async"></p>
+					<div class="img_area">
+						<figure class="img">
+							<img src="<?= $this_img_path; ?>process03-img.webp" alt="" decoding="async">
+						</figure>
 					</div>
-				</div><!-- /img_area -->
-				<div class="question-box">
-					<p class="question question01"><img src="<?= $this_img_path; ?>profile02-Q01.png" alt="住まいとはどんな存在？" decoding="async"></p>
-					<p class="n_txt">家族や友人とともに過ごす時間を生み出す、人生舞台だと思います。</p>
-				</div>
-				<div class="question-box">
-					<p class="question question02"><img src="<?= $this_img_path; ?>profile02-Q02.png" alt="ハイブリッドホームが得意なことは？" decoding="async"></p>
-					<p class="n_txt">お客様のニーズを深く理解する力→柔軟なプランニング→高い技術力と職方の連携→安心のアフターフォロー</p>
-				</div>
-				<div class="question-box">
-					<p class="question question03"><img src="<?= $this_img_path; ?>profile02-Q03.png" alt="自分の住まいの好きなところは？" decoding="async"></p>
-					<p class="n_txt">自宅には水槽があり、海水魚の飼育をしています。3週間に一度の水換え作業は、心のリフレッシュになっています。園芸も好きで、町田店の花壇担当です！</p>
-				</div>
-			</article><!-- box16 -->
+					<div class="text_area">
+						<div>
+							<h3><img src="<?= $this_img_path; ?>process03-title.png" alt="プランニング・お見積り" decoding="async"></h3>
+							<p class="n_txt">ご要望やお困りごとを解決するプランをご提案いたします。内容について、納得いくまで担当者におたずねください。</p>
+						</div>
+					</div>
+				</li>
+				<li class="list04">
+					<div class="num_box">
+						<p class="en">process</p>
+						<p class="en num">04</p>
+					</div>
+					<div class="img_area">
+						<figure class="img">
+							<img src="<?= $this_img_path; ?>process04-img.webp" alt="" decoding="async">
+						</figure>
+					</div>
+					<div class="text_area">
+						<div>
+							<h3><img src="<?= $this_img_path; ?>process04-title.png" alt="ご契約" decoding="async"></h3>
+							<p class="n_txt">最終プランと工事金額をご確認いただき、契約書を取り交わします。なお、ご契約までのやりとりは、無料で対応いたしております。</p>
+						</div>
+					</div>
+				</li>
+				<li class="list05">
+					<div class="num_box">
+						<p class="en">process</p>
+						<p class="en num">05</p>
+					</div>
+					<div class="img_area">
+						<figure class="img">
+							<img src="<?= $this_img_path; ?>process05-img.webp" alt="" decoding="async">
+						</figure>
+					</div>
+					<div class="text_area">
+						<div>
+							<h3><img src="<?= $this_img_path; ?>process05-title.png" alt="工事" decoding="async"></h3>
+							<p class="n_txt">ハイブリッドホームの現場監督と専任指定業者が、責任を持って工事を行います。工事中でもわからない点があれば、なんでもおたずねください。</p>
+						</div>
+					</div>
+				</li>
+				<li class="list06">
+					<div class="num_box">
+						<p class="en">process</p>
+						<p class="en num">06</p>
+					</div>
+					<div class="img_area">
+						<figure class="img">
+							<img src="<?= $this_img_path; ?>process06-img.webp" alt="" decoding="async">
+						</figure>
+					</div>
+					<div class="text_area">
+						<div>
+							<h3><img src="<?= $this_img_path; ?>process06-title.png" alt="お引き渡し" decoding="async"></h3>
+							<p class="n_txt">お客様立会いのもと、完成検査を実施いたします。十分にご納得いただいた後、保証書を発行いたします。</p>
+						</div>
+					</div>
+				</li>
+				<li class="list07">
+					<div class="num_box">
+						<p class="en">process</p>
+						<p class="en num">07</p>
+					</div>
+					<div class="img_area">
+						<figure class="img">
+							<img src="<?= $this_img_path; ?>process07-img.webp" alt="" decoding="async">
+						</figure>
+					</div>
+					<div class="text_area">
+						<div>
+							<h3><img src="<?= $this_img_path; ?>process07-title.png" alt="アフターメンテナンス" decoding="async"></h3>
+							<p class="n_txt">ハイブリッドホームでは独自に、構造体10年間・外装屋根5年間・内装2年間の保証をつけています。期間内は無償で修理対応いたします。また12ヶ月・24ヶ月で定期点検のご案内をお送りします。工事箇所だけでなく、住まいの疑問についてもご相談ください。</p>
+						</div>
+					</div>
+				</li>
+			</ul><!-- /process_list -->
 		</div><!-- /inr -->
-	</div><!-- /profile-wrap -->
+	</div><!--/ process -->
+	<div class="works">
+		<div class="inr -w1200">
+			<div class="title_area">
+				<h2><img src="<?= $this_img_path; ?>works_title.webp" alt="施工事例のPICK UP" decoding="async"></h2>
+				<span class="en en-tit">Pick up Works</span>
+				<a href="<?= $works_link ?>" class="link_wrap">
+					<p class="link_btn -blue">
+						<span class="text">事例一覧へ</span>
+						<i class="arrow"><img src="<?= $img_path; ?>common/arrow-w.png" alt="" decoding="async"></i>
+					</p>
+				</a>
+			</div>
+			<div class="works_list-wrap">
+				<figure class="duck sb inview bt_one"><img src="<?= $this_img_path; ?>works-duck.webp" alt="" decoding="async"></figure>
+				<ul class="works_list inview bt">
+					<li>
+						<article class="card">
+							<div class="card__link">
+							<a class="link" href="#"></a>
+								<div class="card__photo uchi">
+									<img src="<?= $img_path; ?>top/project_img.webp" alt="" decoding="async" class="fit_img">
+								</div>
+								<div class="card__body">
+									<h3 class="card__title">愛車と同居できる家</h3>
+									<div class="card__tags"><a href="#d">#ウッドデッキ</a>　<a href="#">#エクステリア</a></div>
+									<a href="#c" class="card__area">町田市</a>
+								</div>
+							</div>
+						</article>
+					</li>
+					<li>
+						<article class="card">
+							<div class="card__link">
+							<a class="link" href="#"></a>
+								<div class="card__photo uchi">
+									<img src="<?= $img_path; ?>top/project_img.webp" alt="" decoding="async" class="fit_img">
+								</div>
+								<div class="card__body">
+									<h3 class="card__title">愛車と同居できる家</h3>
+									<div class="card__tags"><a href="#d">#ウッドデッキ</a>　<a href="#">#エクステリア</a></div>
+									<a href="#c" class="card__area">町田市</a>
+								</div>
+							</div>
+						</article>
+					</li>
+					<li>
+						<article class="card">
+							<div class="card__link">
+							<a class="link" href="#"></a>
+								<div class="card__photo uchi">
+									<img src="<?= $img_path; ?>top/project_img.webp" alt="" decoding="async" class="fit_img">
+								</div>
+								<div class="card__body">
+									<h3 class="card__title">愛車と同居できる家</h3>
+									<div class="card__tags"><a href="#d">#ウッドデッキ</a>　<a href="#">#エクステリア</a></div>
+									<a href="#c" class="card__area">町田市</a>
+								</div>
+							</div>
+						</article>
+					</li>
+				</ul><!--/works-list -->
+			</div>
+			<a href="<?= $qa_link; ?>" class="qa-bnr">
+				<i class="icon icon01"><img src="<?= $this_img_path; ?>qa-bnr_icon01.png" alt="" decoding="async"></i>
+				<i class="icon icon02"><img src="<?= $this_img_path; ?>qa-bnr_icon02.png" alt="" decoding="async"></i>
+				<i class="icon icon03"><img src="<?= $this_img_path; ?>qa-bnr_icon03.png" alt="" decoding="async"></i>
+				<i class="icon icon04"><img src="<?= $this_img_path; ?>qa-bnr_icon04.png" alt="" decoding="async"></i>
+				<p class="text text01">
+					<picture>
+						<source media="(max-width: 1050px)" srcset="<?= $this_img_path; ?>qa-bnr_txt01-sp.webp">
+						<img src="<?= $this_img_path; ?>qa-bnr_txt01.webp" alt="リフォーム&リノベーションのあれこれ、お答えします！">
+					</picture>
+				</p>
+				<p class="text text02"><img src="<?= $this_img_path; ?>qa-bnr_txt02.webp" alt="" decoding="async"></p>
+				<figure class="man"><img src="<?= $this_img_path; ?>qa-bnr_man.webp" alt="" decoding="async"></figure>
+				<figure class="girl"><img src="<?= $this_img_path; ?>qa-bnr_girl.webp" alt="" decoding="async"></figure>
+			</a>
+		</div><!-- /inr -->
+	</div><!-- /works -->
+
 	</main>
 <?php include($root_path . '/assets/inc/footer.php'); ?>
 

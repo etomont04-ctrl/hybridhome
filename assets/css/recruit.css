@@ -29,6 +29,7 @@
   --base-text-color:#29221f;
   --base-text-color02:#1e525a;
   --base-text-color03:#383838;
+  --base-text-color04:#3a3939;
   --base-bg-color:#e8ebed;
   --base-bg-color02:#fafcfd;
   --base-bg-color03:#c3ced5;
@@ -40,6 +41,7 @@
   --base-bg-color09:#eee;
   --base-bg-color10:#c9d9dc;
   --base-bg-color11:#b9fbfc;
+  --base-bg-color12:#0c405b;
   --base-color-green:#32929e;
   --base-color-green02:#9dd1d0;
   --base-color-green03:#2c6c76;
@@ -54,6 +56,7 @@
   --base-color-green12:#d7f1f1;
   --base-color-green13:#3da4a3;
   --base-color-green14:#58a783;
+  --base-color-green15:#206e81;
   --base-color-wood:#6d240e;
   --base-color-blue:#14a5b6;
   --base-color-blue02:#32a4ab;
@@ -94,6 +97,7 @@
   --base-btn-color01-hv:#137a80;
   --base-bubble-bg:#dbe2e2;
   --base-bubble-bg02:#cff0f1;
+  --base-bubble-bg03:#a8c4c4;
   --hanten:scale(-1, -1);
   --hantenX:scale(-1, 1);
   --hantenY:scaleY(-1);
