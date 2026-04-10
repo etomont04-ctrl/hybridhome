@@ -155,7 +155,7 @@ $uri = "company";
 						<h3>本社 首都圏事業部</h3>
 						<p class="n_txt">東京都千代田区神田鍛冶町3-7-6翔和鍛冶町ビル4階<br>TEL：03-3252-8100　FAX：03-3252-8566
 						</p>
-						<a href="<?= $map_hon ?>" target="_blank" class="map_link">
+						<a href="<?= $map_hon; ?>" target="_blank" class="map_link">
 							<i class="map_icon"><img src="<?= $img_path; ?>common/map_icon.webp" alt="" decoding="async"></i>
 								Google Map
 						</a>
@@ -165,7 +165,7 @@ $uri = "company";
 						<h3>町田店</h3>
 						<p class="n_txt">東京都町田市玉川学園2-11-1ヴェルデ玉川<br>TEL：0800-111-8146　FAX：042-728-1253
 						</p>
-						<a href="<?= $map_hon ?>" target="_blank" class="map_link">
+						<a href="<?= $map_machida; ?>" target="_blank" class="map_link">
 							<i class="map_icon"><img src="<?= $img_path; ?>common/map_icon.webp" alt="" decoding="async"></i>
 								Google Map
 						</a>
@@ -175,7 +175,7 @@ $uri = "company";
 						<h3>新百合ヶ丘店</h3>
 						<p class="n_txt">神奈川県川崎市麻生区上麻生1-7-14 パストラル新百合Ⅱ<br>TEL：044-959-6630　FAX：044-959-6632
 						</p>
-						<a href="<?= $map_hon ?>" target="_blank" class="map_link">
+						<a href="<?= $map_yirigaoka; ?>" target="_blank" class="map_link">
 							<i class="map_icon"><img src="<?= $img_path; ?>common/map_icon.webp" alt="" decoding="async"></i>
 								Google Map
 						</a>

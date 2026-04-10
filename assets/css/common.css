@@ -73,6 +73,8 @@
   --base-color-gray05:#a4a4a4;
   --base-color-gray06:#ccc;
   --base-color-gray07:#b4c0c8;
+  --base-color-gray08:#e4e4e4;
+  --base-color-gray09:#a7a7a7;
   --base-color-gold:#977f4b;
   --base-color-silver:#97a4ad;
   --base-color-bronze:#664e1a;
@@ -739,6 +741,8 @@ img.preload {
   --base-color-gray05:#a4a4a4;
   --base-color-gray06:#ccc;
   --base-color-gray07:#b4c0c8;
+  --base-color-gray08:#e4e4e4;
+  --base-color-gray09:#a7a7a7;
   --base-color-gold:#977f4b;
   --base-color-silver:#97a4ad;
   --base-color-bronze:#664e1a;
@@ -2337,6 +2341,8 @@ img.preload {
   --base-color-gray05:#a4a4a4;
   --base-color-gray06:#ccc;
   --base-color-gray07:#b4c0c8;
+  --base-color-gray08:#e4e4e4;
+  --base-color-gray09:#a7a7a7;
   --base-color-gold:#977f4b;
   --base-color-silver:#97a4ad;
   --base-color-bronze:#664e1a;
@@ -3168,6 +3174,8 @@ img.preload {
   --base-color-gray05:#a4a4a4;
   --base-color-gray06:#ccc;
   --base-color-gray07:#b4c0c8;
+  --base-color-gray08:#e4e4e4;
+  --base-color-gray09:#a7a7a7;
   --base-color-gold:#977f4b;
   --base-color-silver:#97a4ad;
   --base-color-bronze:#664e1a;
@@ -4990,7 +4998,7 @@ img.preload {
   width: 250px;
   aspect-ratio: 250/60;
   padding-left: 38px;
-  border-radius: 30px;
+  border-radius: 999px;
   overflow: hidden;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -5010,7 +5018,7 @@ img.preload {
   margin: auto;
   z-index: 2;
   border: 1px solid var(--base-color-white);
-  border-radius: 30px;
+  border-radius: 999px;
   background-size: cover;
   -webkit-mask-image: -webkit-gradient(linear, left top, right top, color-stop(0, #000), color-stop(12%, #000), color-stop(12%, transparent), color-stop(88%, transparent), color-stop(88%, #000), to(#000));
   -webkit-mask-image: linear-gradient(to right, #000 0, #000 12%, transparent 12%, transparent 88%, #000 88%, #000 100%);
@@ -5988,6 +5996,8 @@ img.preload {
   --base-color-gray05:#a4a4a4;
   --base-color-gray06:#ccc;
   --base-color-gray07:#b4c0c8;
+  --base-color-gray08:#e4e4e4;
+  --base-color-gray09:#a7a7a7;
   --base-color-gold:#977f4b;
   --base-color-silver:#97a4ad;
   --base-color-bronze:#664e1a;

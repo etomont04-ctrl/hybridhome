@@ -69,6 +69,9 @@ $business_hours = "9:00～18:00（日・月曜・祝祭日定休）";
 
 //外部リンク
 $map_link = "https://maps.app.goo.gl/LQ2RPs2KQAe8apW97";
+$map_hon = "https://maps.app.goo.gl/nAJmoiXcoLQdkX1W8";
+$map_machida = "https://maps.app.goo.gl/668Lpuf4FxtQJpbT6";
+$map_yirigaoka = "https://maps.app.goo.gl/FDMnrxKxHHvfGSnP6";
 $map_link_omiya = "https://maps.app.goo.gl/Npsx5kPraqatgR929";
 
 //内部リンク
@@ -77,7 +80,7 @@ $reform_link = $ROOT_DIR . 'reform/';
 $works_link = $ROOT_DIR . 'works/';
 $voice_link = $ROOT_DIR . 'voice/';
 $staff_link = $ROOT_DIR . 'staff/';
-$member_link = $ROOT_DIR . 'member/';
+$partner_link = $ROOT_DIR . 'partner/';
 $news_link = $ROOT_DIR . 'news/';
 $company_link = $ROOT_DIR . 'company/';
 $recruit_link = $ROOT_DIR . 'recruit/';

@@ -26,25 +26,25 @@
 							<h3>本社リノベーション事業部</h3>
 							<p class="n_txt">東京都千代田区神田鍛冶町3-7-6<br>翔和鍛冶町ビル4階<br>TEL：03-3252-8100　FAX：03-3252-8566
 							</p>
-							<a href="<?= $map_hon ?>" taget="_blank" class="map_link">
+							<a href="<?= $map_hon ?>" target="_blank" class="map_link">
 								<i class="map_icon"><img src="<?= $img_path; ?>common/map_icon.webp" alt="" decoding="async"></i>
 									Google Map
 							</a>
 						</div>
 						<div class="company-block">
-							<h3>本社リノベーション事業部</h3>
-							<p class="n_txt">東京都千代田区神田鍛冶町3-7-6<br>翔和鍛冶町ビル4階<br>TEL：03-3252-8100　FAX：03-3252-8566
+							<h3>町田店</h3>
+							<p class="n_txt">東京都町田市玉川学園2-11-1<br>ヴェルデ玉川<br>TEL：0800-111-8146　FAX：042-728-1253
 							</p>
-							<a href="<?= $map_hon ?>" taget="_blank" class="map_link">
+							<a href="<?= $map_hon ?>" target="_blank" class="map_link">
 								<i class="map_icon"><img src="<?= $img_path; ?>common/map_icon.webp" alt="" decoding="async"></i>
 									Google Map
 							</a>
 						</div>
 						<div class="company-block">
-							<h3>本社リノベーション事業部</h3>
-							<p class="n_txt">東京都千代田区神田鍛冶町3-7-6<br>翔和鍛冶町ビル4階<br>TEL：03-3252-8100　FAX：03-3252-8566
+							<h3>新百合ヶ丘店</h3>
+							<p class="n_txt">神奈川県川崎市麻生区<br>上麻生1-7-14 パストラル新百合Ⅱ<br>TEL：044-959-6630　FAX：044-959-6632
 							</p>
-							<a href="<?= $map_hon ?>" taget="_blank" class="map_link">
+							<a href="<?= $map_hon ?>" target="_blank" class="map_link">
 								<i class="map_icon"><img src="<?= $img_path; ?>common/map_icon.webp" alt="" decoding="async"></i>
 									Google Map
 							</a>
@@ -54,23 +54,23 @@
 						<li>
 							<a href="<?= $ROOT_DIR; ?>" class="hv_ar link"><i class="arrow -w10"><img src="<?= $img_path; ?>common/arrow-g.png" alt="" decoding="async"></i>トップページ</a>
 							<a href="<?= $about_link; ?>" class="hv_ar link"><i class="arrow -w10"><img src="<?= $img_path; ?>common/arrow-g.png" alt="" decoding="async"></i>私たちについて</a>
-							<a href="<?= $about_link; ?>" class="hv_ar link -ls"><i class="arrow -w10"><img src="<?= $img_path; ?>common/arrow-g.png" alt="" decoding="async"></i>リフォーム＆リノベーション</a>
-							<a href="<?= $about_link; ?>" class="hv_ar link"><i class="arrow -w10"><img src="<?= $img_path; ?>common/arrow-g.png" alt="" decoding="async"></i>施工事例</a>
-							<a href="<?= $about_link; ?>" class="hv_ar link"><i class="arrow -w10"><img src="<?= $img_path; ?>common/arrow-g.png" alt="" decoding="async"></i>お客様の声</a>
+							<a href="<?= $reform_link; ?>" class="hv_ar link -ls"><i class="arrow -w10"><img src="<?= $img_path; ?>common/arrow-g.png" alt="" decoding="async"></i>リフォーム＆リノベーション</a>
+							<a href="<?= $works_link; ?>" class="hv_ar link"><i class="arrow -w10"><img src="<?= $img_path; ?>common/arrow-g.png" alt="" decoding="async"></i>施工事例</a>
+							<a href="<?= $voice_link; ?>" class="hv_ar link"><i class="arrow -w10"><img src="<?= $img_path; ?>common/arrow-g.png" alt="" decoding="async"></i>お客様の声</a>
 						</li>
 						<li>
-							<a href="<?= $ROOT_DIR; ?>" class="hv_ar link"><i class="arrow -w10"><img src="<?= $img_path; ?>common/arrow-g.png" alt="" decoding="async"></i>社員紹介</a>
-							<a href="<?= $about_link; ?>" class="hv_ar link"><i class="arrow -w10"><img src="<?= $img_path; ?>common/arrow-g.png" alt="" decoding="async"></i>ハイブリッドの仲間たち</a>
-							<a href="<?= $about_link; ?>" class="hv_ar link"><i class="arrow -w10"><img src="<?= $img_path; ?>common/arrow-g.png" alt="" decoding="async"></i>会社概要</a>
-							<a href="<?= $about_link; ?>" class="hv_ar link"><i class="arrow -w10"><img src="<?= $img_path; ?>common/arrow-g.png" alt="" decoding="async"></i>採用情報</a>
-							<a href="<?= $about_link; ?>" class="hv_ar link"><i class="arrow -w10"><img src="<?= $img_path; ?>common/arrow-g.png" alt="" decoding="async"></i>お問い合わせ</a>
+							<a href="<?= $staff_link; ?>" class="hv_ar link"><i class="arrow -w10"><img src="<?= $img_path; ?>common/arrow-g.png" alt="" decoding="async"></i>社員紹介</a>
+							<a href="<?= $partner_link; ?>" class="hv_ar link"><i class="arrow -w10"><img src="<?= $img_path; ?>common/arrow-g.png" alt="" decoding="async"></i>ハイブリッドの仲間たち</a>
+							<a href="<?= $company_link; ?>" class="hv_ar link"><i class="arrow -w10"><img src="<?= $img_path; ?>common/arrow-g.png" alt="" decoding="async"></i>会社概要</a>
+							<a href="<?= $recruit_link; ?>" class="hv_ar link"><i class="arrow -w10"><img src="<?= $img_path; ?>common/arrow-g.png" alt="" decoding="async"></i>採用情報</a>
+							<a href="<?= $contact_link; ?>" class="hv_ar link"><i class="arrow -w10"><img src="<?= $img_path; ?>common/arrow-g.png" alt="" decoding="async"></i>お問い合わせ</a>
 						</li>
 						<li>
-							<a href="<?= $ROOT_DIR; ?>" class="hv_ar link"><i class="arrow -w10"><img src="<?= $img_path; ?>common/arrow-g.png" alt="" decoding="async"></i>ブログ</a>
-							<a href="<?= $about_link; ?>" class="s_link">お知らせ</a>
-							<a href="<?= $about_link; ?>" class="s_link">よくある質問</a>
-							<a href="<?= $about_link; ?>" class="s_link">動画配信サービス</a>
-							<a href="<?= $about_link; ?>" class="s_link">お客様アンケート</a>
+							<a href="<?= $news_link; ?>" class="hv_ar link"><i class="arrow -w10"><img src="<?= $img_path; ?>common/arrow-g.png" alt="" decoding="async"></i>ブログ</a>
+							<a href="<?= $news_link; ?>" class="s_link">お知らせ</a>
+							<a href="<?= $news_link; ?>" class="s_link">よくある質問</a>
+							<a href="<?= $news_link; ?>" class="s_link">動画配信サービス</a>
+							<a href="<?= $news_link; ?>" class="s_link">お客様アンケート</a>
 						</li>
 					</ul><!--/link-area -->
 				</div><!-- /footer_link-area -->

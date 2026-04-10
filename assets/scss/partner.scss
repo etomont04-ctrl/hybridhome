@@ -415,7 +415,7 @@
 					box-shadow: 4px 4px 0 #a8c4c4;
 				}
 			}
-			.-bubble01{
+			.bubble_area.-bubble01{
 				margin-top: getCqw(60,$conW);
 				transform:translateX(getCqw(-100,$conW));
 				.people-box{
@@ -423,21 +423,21 @@
 					top: getCqw(-60,$conW);
 				}
 			}
-			.-bubble02{
+			.bubble_area.-bubble02{
 				margin-top: getCqw(70,$conW);
 				.people-box{
 					left: getCqw(-100,$conW);
 					top: getCqw(130,$conW);
 				}
 			}
-			.-bubble03{
+			.bubble_area.-bubble03{
 				transform:translateX(getCqw(70,$conW));
 				.people-box{
 					left: getCqw(-100,$conW);
 					top: getCqw(80,$conW);
 				}
 			}
-			.-bubble04{
+			.bubble_area.-bubble04{
 				transform:translateX(getCqw(150,$conW));
 				margin-top: getCqw(70,$conW);
 				.people-box{
@@ -445,7 +445,7 @@
 					top: getCqw(130,$conW);
 				}
 			}
-			.-bubble05{
+			.bubble_area.-bubble05{
 				margin-top: getCqw(70,$conW);
 				transform:translateX(getCqw(70,$conW));
 				.people-box{
@@ -453,7 +453,7 @@
 					top: getCqw(80,$conW);
 				}
 			}
-			.-bubble06{
+			.bubble_area.-bubble06{
 				transform:translateX(getCqw(150,$conW));
 				margin-top: getCqw(70,$conW);
 				.people-box{
@@ -461,7 +461,7 @@
 					top: getCqw(130,$conW);
 				}
 			}
-			.-bubble07{
+			.bubble_area.-bubble07{
 				margin-top: getCqw(60,$conW);
 				transform:translateX(getCqw(-100,$conW));
 				.people-box{
@@ -469,7 +469,7 @@
 					top: getCqw(-60,$conW);
 				}
 			}
-			.-bubble08{
+			.bubble_area.-bubble08{
 				margin-top: getCqw(80,$conW);
 				.people-box{
 					left: getCqw(-100,$conW);
@@ -722,7 +722,7 @@
 						box-shadow: 3px 3px 0 #a8c4c4;
 					}
 				}
-				.-bubble01{
+				.bubble_area.-bubble01{
 					margin-top: 0;
 					transform:translateX(0);
 					.people-box{
@@ -731,7 +731,7 @@
 						transform:translateY(-50%);
 					}
 				}
-				.-bubble02{
+				.bubble_area.-bubble02{
 					margin-left: auto;
 					margin-top: getCqw(100,$conW);
 					.people-box{
@@ -740,7 +740,7 @@
 						transform:translateY(-50%);
 					}
 				}
-				.-bubble03{
+				.bubble_area.-bubble03{
 					transform:translateX(0);
 					margin-top: getCqw(200,$conW);
 					.bubble_box{
@@ -752,7 +752,7 @@
 						transform:translateY(-50%);
 					}
 				}
-				.-bubble04{
+				.bubble_area.-bubble04{
 					transform:translateX(0);
 					margin-top: getCqw(100,$conW);
 					width: 100%;
@@ -765,7 +765,7 @@
 						transform:translateY(-50%);
 					}
 				}
-				.-bubble05{
+				.bubble_area.-bubble05{
 					transform:translateX(0);
 					margin-top: getCqw(100,$conW);
 					.bubble_box{
@@ -777,7 +777,7 @@
 						transform:translateY(-50%);
 					}
 				}
-				.-bubble06{
+				.bubble_area.-bubble06{
 					transform:translateX(0);
 					margin-top: getCqw(100,$conW);
 					width: 100%;
@@ -791,7 +791,7 @@
 						margin:auto;
 					}
 				}
-				.-bubble07{
+				.bubble_area.-bubble07{
 					transform:translateX(0);
 					margin-top: getCqw(100,$conW);
 					.people-box{
@@ -800,7 +800,7 @@
 						transform:translateY(-50%);
 					}
 				}
-				.-bubble08{
+				.bubble_area.-bubble08{
 					transform:translateX(0);
 					margin-top: getCqw(100,$conW);
 					.bubble_box{
