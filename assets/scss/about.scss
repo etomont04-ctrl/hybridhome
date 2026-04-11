@@ -152,6 +152,12 @@
 		h2{
 			width: get_calc(595,640);
 		}
+		.cloud{
+			position: absolute;
+			width: get_calc(1550,$conW);
+			left: get_calc(190,$conW);
+			top: getCqw(-180,$conW);
+		}
 		.bird{
 			width: get_calc(251,$conW);
 			left: get_calc(509,$conW);
@@ -513,7 +519,7 @@
 		}
 		.sub-tit{
 			font-size: 17px;
-			padding:10px 80px 10px 14px;
+			padding:8px 80px 8px 14px;
 			margin-inline:auto;
 			img{
 				position: absolute;
@@ -523,7 +529,7 @@
 			}
 		}
 		h3{
-			margin:0 auto getCqw(90,1500);
+			margin:0 auto getCqw(90,$conW);
 			span{
 				position: relative;
 				display: table;

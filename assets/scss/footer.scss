@@ -67,14 +67,16 @@
 				.link_btn{
 					width: getCqw(280,$conW);
 					border-radius:getCqw(30,$conW);
-					aspect-ratio: 280 / 60;
+					aspect-ratio:auto;
+					padding-top: 18px;
+					padding-bottom: 18px;
 					&:before{
 						// background-image:url(../img/common/link-btn_border02.png);
 						// aspect-ratio: 270 / 50;
 						border-radius:getCqw(30,$conW);
 					}
 					.text{
-						font-size: getCqw(18,$conW);
+						font-size: clamp(10px,getCqw(18,$conW),18px);
 					}
 					.arrow{
 						width: getCqw(16,$conW);
@@ -265,22 +267,29 @@
 							font-size:max(12px,getCqw(26,$areaW));
 						}
 					}
+					.link_wrap{
+						display:flex;
+						justify-content: center;
+						margin:0 auto;
+					}
 					.link_btn{
-						width: getCqw(460,$conW);
-						border-radius:getCqw(50,$conW);
-						aspect-ratio: 460 / 100;
+						width: get_calc(460,$conW);
+						aspect-ratio: auto;
+						border-radius:999px;
+						padding-top: clamp(10px,getCqw(30,$areaW),30px);
+						padding-bottom: clamp(10px,getCqw(30,$areaW),30px);
 						&:before{
-							border-radius:getCqw(50,$conW);
+							border-radius:getCqw(50,$areaW);
 							background:none;
 							// background-image:url(../img/common/link-btn_border02.png);
 							// aspect-ratio: 270 / 50;
 						}
 						.text{
-							font-size: getCqw(32,$conW);
+							font-size: clamp(14px,getCqw(32,$areaW),28px);
 						}
 						.arrow{
-							width: getCqw(24,$conW);
-							height: getCqw(24,$conW);
+							width: min(24px,getCqw(24,$areaW));
+							height: min(24px,getCqw(24,$areaW));
 						}
 					}
 				}

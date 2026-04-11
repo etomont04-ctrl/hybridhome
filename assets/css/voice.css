@@ -583,6 +583,7 @@
           box-sizing: border-box;
   overflow: hidden;
   z-index: 5;
+  text-align: center;
 }
 .main-links .link:after {
   content: "";
@@ -624,7 +625,6 @@
   margin-bottom: 4.8611111111cqw;
 }
 .main-links .link .link_btn {
-  display: table;
   width: auto;
   padding: 1.1805555556cqw 4.1666666667cqw 1.1805555556cqw 2.9166666667cqw;
   margin: 0 auto;
@@ -719,6 +719,9 @@
     aspect-ratio: 760/620;
     border-radius: 30px;
     padding-top: 14.4736842105cqw;
+  }
+  .main-links .link + .link {
+    margin-top: 3.9473684211cqw;
   }
   .main-links .link:after {
     border-radius: 30px;

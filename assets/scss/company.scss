@@ -313,7 +313,7 @@
 				width: 100%;
 				margin-top: getCqw(125,$conW);
 				.n_txt{
-					font-size: max(18px,getCqw(28,$conW));
+					font-size: min(18px,getCqw(28,$conW));
 					line-height: calc(66/28);
 				}
 			}

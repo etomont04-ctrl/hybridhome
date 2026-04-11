@@ -244,8 +244,9 @@
 ========================================================================== */
 .intro {
   position: relative;
-  background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(var(--base-bg-color11)));
-  background: linear-gradient(to bottom, transparent 0%, var(--base-bg-color11) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(95%, var(--base-bg-color11)), to(transparent));
+  background: linear-gradient(to bottom, transparent 0%, var(--base-bg-color11) 95%, transparent 100%);
+  margin-bottom: 12rem;
   margin-bottom: 12rem;
 }
 .intro .top_cloud {
@@ -339,6 +340,9 @@
           flex: 0 0 auto;
   border-radius: 30px;
 }
+.intro .intro-loop__img:nth-child(odd) {
+  width: 540px;
+}
 .intro .intro-loop__img:last-child {
   margin-right: 70px;
 }
@@ -421,6 +425,9 @@
   .intro .intro-loop__img {
     width: 205px;
     border-radius: 15px;
+  }
+  .intro .intro-loop__img:nth-child(odd) {
+    width: 325px;
   }
   .intro .intro-loop__img:last-child {
     margin-right: 40px;
@@ -1055,13 +1062,13 @@
     top: 10.5263157895cqw;
   }
   .recruit-wrap .inr .attractive_list .points-img {
-    margin-bottom: 6.5789473684cqw;
+    margin-bottom: 5.2631578947cqw;
   }
   .recruit-wrap .inr .attractive_list .points-img img {
     border-radius: 5px;
   }
   .recruit-wrap .inr .attractive_list .n_txt {
-    font-size: max(18px, 3.6842105263cqw);
+    font-size: min(17px, 3.6842105263cqw);
   }
   .recruit-wrap .inr .attractive_list li:not(:first-child) {
     margin-top: 18.4210526316cqw;
@@ -1075,6 +1082,13 @@
   .recruit-wrap .inr .attractive_list .list01:before {
     width: 57.8125%;
     aspect-ratio: 370/90;
+  }
+  .recruit-wrap .inr .attractive_list .list01:after {
+    width: 93.75%;
+    aspect-ratio: 600/410;
+    top: 44.7368421053cqw;
+    left: -7.6315789474cqw;
+    border-radius: 0 5px 5px 0;
   }
   .recruit-wrap .inr .attractive_list .list01 h3 {
     width: 57.8125%;
@@ -1090,12 +1104,29 @@
     width: 68.75%;
     aspect-ratio: 440/90;
   }
+  .recruit-wrap .inr .attractive_list .list03:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 93.75%;
+    aspect-ratio: 600/410;
+    top: -9.2105263158cqw;
+    left: 13.0263157895cqw;
+    border-radius: 0 5px 5px 0;
+    background: url(../img/recruit/attractive-bg.webp);
+    background-size: cover;
+    border-radius: 10px 0 0 10px;
+    z-index: 1;
+  }
   .recruit-wrap .inr .attractive_list .list03 h3 {
     width: 68.75%;
   }
   .recruit-wrap .inr .attractive_list .list04:before {
     width: 101.5625%;
     aspect-ratio: 650/90;
+  }
+  .recruit-wrap .inr .attractive_list .list04:after {
+    display: none;
   }
   .recruit-wrap .inr .attractive_list .list04 h3 {
     width: 101.5625%;
@@ -1144,7 +1175,7 @@
     margin: 0 0 3.9473684211cqw;
   }
   .recruit-wrap .inr .flow .n_txt {
-    font-size: max(18px, 3.6842105263cqw);
+    font-size: min(17px, 3.6842105263cqw);
     line-height: 50/28;
     width: 100%;
     margin: 0;
@@ -1252,6 +1283,9 @@
   }
   .recruit-wrap .inr .description .data-list_wrap {
     width: 93.4210526316%;
+  }
+  .recruit-wrap .inr .description .data-list_wrap h3 {
+    width: 39.4366197183%;
   }
   .recruit-wrap .inr .description .data-list {
     position: relative;

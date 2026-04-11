@@ -139,8 +139,8 @@ $uri = "reform";
 					<h2>
 						<span><img src="<?= $this_img_path; ?>features02-title.webp" alt="多様な視点からご提案" decoding="async"></span>
 					</h2>
-					<p class="n_txt">わたしたちはヒアリングの際、できる限り2人体制でうかがうようにしています。<br>
-					それは、複数の耳で聞くことで確実にヒアリングし、<br>異なる立場から考えることで、プランの充実度を増すことができるからです。<br>
+					<p class="n_txt">わたしたちはヒアリングの際、できる限り2人体制でうかがうようにしています。<br class="tab_off">
+					それは、複数の耳で聞くことで確実にヒアリングし、<br class="tab_off">異なる立場から考えることで、プランの充実度を増すことができるからです。<br>
 					<br>
 					豊かな現場経験、生活経験を持つスタッフが、<br>お客様のニーズを汲み取り、的確なプランをご提案いたします。
 					</p>
@@ -165,14 +165,14 @@ $uri = "reform";
 						</span>
 						<span class="tab_on"><img src="<?= $this_img_path; ?>features03-title-sp02.webp" alt="" decoding="async"></span>
 					</h2>
-					<p class="n_txt">やりたいことがあっても、それをどうやって形にするかを言葉にするのは難しいもの。<br>
+					<p class="n_txt">やりたいことがあっても、それをどうやって形にするかを言葉にするのは難しいもの。<br class="tab_off">
 					そのような方こそ、安心してハイブリッドホームにご相談ください。<br>
 					<br>
-					わたしたちは、お客様がこれまでにどのように暮らしてきて、<br>
-					これからどのように暮らしていきたいかという「時間軸」をもとに、<br>
+					わたしたちは、お客様がこれまでにどのように暮らしてきて、<br class="tab_off">
+					これからどのように暮らしていきたいかという「時間軸」をもとに、<br class="tab_off">
 					いま必要な工事、いずれ必要になるかもしれない工事などを、整理してプランニングいたします。<br>
 					<br>
-					またふだんのお住まい方や趣味、荷物の量などを丁寧にヒアリングし、<br>
+					またふだんのお住まい方や趣味、荷物の量などを丁寧にヒアリングし、<br class="tab_off">
 					動線や収納の場所や量、コンセントの位置まで具体的に検討します。
 					</p>
 				</div>
@@ -196,12 +196,12 @@ $uri = "reform";
 					<h2>
 						<span><img src="<?= $this_img_path; ?>features04-title.webp" alt="細かすぎるのが自慢です" decoding="async"></span>
 					</h2>
-					<p class="n_txt">わたしたちは現地調査の際、細かく寸法をとったうえで、プランニングします。<br>
-					それは、いまの住宅の現状を正確に把握することが、<br>
+					<p class="n_txt">わたしたちは現地調査の際、細かく寸法をとったうえで、プランニングします。<br class="tab_off">
+					それは、いまの住宅の現状を正確に把握することが、<br class="tab_off">
 					よいプランをつくるために必要不可欠だからです。<br>
 					<br>
 					わたしたちはほぼ毎日、工事現場に出向きます。<br>
-					現場の職人たちと細かく進捗を確認し、お客様とコミュニケーションをとることが、<br>満足いくリノベーションには大切だと考えているからです。
+					現場の職人たちと細かく進捗を確認し、お客様とコミュニケーションをとることが、<br class="tab_off">満足いくリノベーションには大切だと考えているからです。
 					</p>
 				</div>
 				<div class="img_area -v2">
@@ -224,14 +224,17 @@ $uri = "reform";
 						</span>
 						<span class="tab_on"><img src="<?= $this_img_path; ?>features05-title-sp02.webp" alt="" decoding="async"></span>
 					</h2>
-					<p class="n_txt">人手不足が進むいま、信頼できる職人を確保するのは、工事を成功させる必須条件です。<br>
-					リフォーム＆リノベーションには、様々な状況に対応できる高い技術力が必要です。<br>
-					ハイブリッドホームは、60社以上80人以上の優れた専任協力業者、<br>職人たちと連携しています。
+					<p class="n_txt">人手不足が進むいま、信頼できる職人を確保するのは、工事を成功させる必須条件です。<br class="tab_off">
+					リフォーム＆リノベーションには、様々な状況に対応できる高い技術力が必要です。<br class="tab_off">
+					ハイブリッドホームは、60社以上80人以上の優れた専任協力業者、<br class="tab_off">職人たちと連携しています。
 					</p>
 				</div>
 				<div class="img_area -v1">
 					<figre class="img"><img src="<?= $this_img_path; ?>features05-img.webp" alt="" decoding="async"></figre>
 				</div>
+				<figure class="cloud tab_off">
+					<img src="<?= $this_img_path; ?>feature-cloud03.webp" alt="" decoding="async">
+				</figure>
 			</div>
 			<figure class="kumonchu inview sb">
 				<img src="<?= $this_img_path; ?>feature-kumonchu.webp" alt="" decoding="async">

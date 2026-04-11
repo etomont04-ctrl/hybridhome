@@ -28,7 +28,8 @@
 			<a href="<?= $about_link; ?>" class="nav_link -full"><i class="arrow"><img src="<?= $img_path; ?>common/arrow-g.png" alt="" decoding="async"></i>私たちについて</a>
 			<a href="<?= $reform_link; ?>" class="nav_link -full"><i class="arrow"><img src="<?= $img_path; ?>common/arrow-g.png" alt="" decoding="async"></i>リフォーム&amp;リノベーション</a>
 			<a href="<?= $partner_link; ?>" class="nav_link -full"><i class="arrow"><img src="<?= $img_path; ?>common/arrow-g.png" alt="" decoding="async"></i>ハイブリッドの仲間たち</a>
-			<a href="<?= $works_link; ?>" class="nav_link -half"><i class="arrow"><img src="<?= $img_path; ?>common/arrow-g.png" alt="" decoding="async"></i>施工事例</a>
+			<a href="<?= $works_link; ?>" class="nav_link -full"><i class="arrow"><img src="<?= $img_path; ?>common/arrow-g.png" alt="" decoding="async"></i>施工事例</a>
+			<a href="<?= $recruit_link; ?>" class="nav_link -half"><i class="arrow"><img src="<?= $img_path; ?>common/arrow-g.png" alt="" decoding="async"></i>採用情報</a>
 			<a href="<?= $voice_link; ?>" class="nav_link -half"><i class="arrow"><img src="<?= $img_path; ?>common/arrow-g.png" alt="" decoding="async"></i>お客様の声</a>
 			<a href="<?= $staff_link; ?>" class="nav_link -half"><i class="arrow"><img src="<?= $img_path; ?>common/arrow-g.png" alt="" decoding="async"></i>社員紹介</a>
 			<a href="<?= $company_link; ?>" class="nav_link -half"><i class="arrow"><img src="<?= $img_path; ?>common/arrow-g.png" alt="" decoding="async"></i>会社概要</a>

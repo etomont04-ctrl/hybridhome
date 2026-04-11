@@ -212,7 +212,7 @@ $uri = "voice";
 					<div class="img_area">
 						<figure class="img"><img src="<?= $this_img_path; ?>voice01-box04-img.webp" alt="" decoding="async"></figure>
 						<figure class="duck sb inview"><img src="<?= $this_img_path; ?>voice-box-big_duck.webp" alt="" decoding="async"></figure>
-						<figure class="risu"><img src="<?= $this_img_path; ?>voice-box-risu.webp" alt="" decoding="async"></figure>
+						<figure class="risu"><img src="<?= $this_img_path; ?>voice-box-risu02.webp" alt="" decoding="async"></figure>
 					</div>
 					<a href="<?= $jirei_link01; ?>" class="link_wrap">
 						<p class="link_btn -blue">
@@ -364,7 +364,7 @@ $uri = "voice";
 				<div class="img_area">
 					<figure class="img"><img src="<?= $this_img_path; ?>voice02-box04-img.webp" alt="" decoding="async"></figure>
 					<figure class="duck sb inview"><img src="<?= $this_img_path; ?>voice-box-big_duck.webp" alt="" decoding="async"></figure>
-					<figure class="risu"><img src="<?= $this_img_path; ?>voice-box-risu.webp" alt="" decoding="async"></figure>
+					<figure class="risu"><img src="<?= $this_img_path; ?>voice-box-risu02.webp" alt="" decoding="async"></figure>
 				</div>
 				<a href="<?= $jirei_link01; ?>" class="link_wrap">
 					<p class="link_btn -blue">
@@ -509,7 +509,7 @@ $uri = "voice";
 				<div class="img_area">
 					<figure class="img"><img src="<?= $this_img_path; ?>voice03-box04-img.webp" alt="" decoding="async"></figure>
 					<figure class="duck sb inview"><img src="<?= $this_img_path; ?>voice-box-big_duck.webp" alt="" decoding="async"></figure>
-					<figure class="risu"><img src="<?= $this_img_path; ?>voice-box-risu.webp" alt="" decoding="async"></figure>
+					<figure class="risu"><img src="<?= $this_img_path; ?>voice-box-risu02.webp" alt="" decoding="async"></figure>
 				</div>
 				<a href="<?= $jirei_link01; ?>" class="link_wrap">
 					<p class="link_btn -blue">

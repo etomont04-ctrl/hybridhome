@@ -27,7 +27,6 @@
 	}
 }
 
-
 /* ==========================================================================
 	contact_wrap
 ========================================================================== */
@@ -118,8 +117,7 @@
 			}
 		}
 	}
-	.-form{
-		padding:getCqw(140,$conW) getCqw(125,$conW) getCqw(145,$conW);
+	.form{
 		&.-conf{
 			margin-top:getCqw(120,$conW);
 		}
@@ -363,6 +361,41 @@
 		textarea{
 			resize: none;
 		}
+		.btn_wrap{
+			margin: getCqw(120,$conW) auto 0;
+			&.-conf{
+				@include fc;
+				flex-direction:row-reverse;
+				gap:3rem;
+			}
+			input{
+				opacity: 0;
+				position: absolute;
+				left: 0;
+				z-index: 10;
+				-webkit-transition: none;
+				transition: none;
+				width: 100%;
+				height: 100%;
+			}
+			.link_btn{
+				width: auto;
+				aspect-ratio:auto;
+				padding:20px 110px 20px 40px;
+			}
+			.link_btn.-rev{
+				padding-right: 38px;
+				padding-left: 0;
+				justify-content: flex-end;
+				.arrow{
+					right: auto;
+					left: 20px;
+					img{
+						transform:var(--hantenX);
+					}
+				}
+			}
+		}
 	}
 
 	@include max-width(1050){
@@ -491,12 +524,12 @@
 			}
 			.form_tit {
 				label{
-					font-size:min(16px,getCqw(28,$conW));
+					font-size:max(17px,getCqw(28,$conW));
 				}
 				&.req:after{
-					font-size: min(14px,getCqw(22,$conW));
+					font-size: min(16px,getCqw(28,$conW));
 					font-weight: 600;
-					padding:5px 12px 6px;
+					padding:5px 12px 8px;
 					margin-left: 8px;
 				}
 			}

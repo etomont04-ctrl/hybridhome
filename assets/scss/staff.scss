@@ -66,7 +66,8 @@
 		.text_wrap{
 			position: relative;
 			padding-top:getCqw(110,$conW);
-			width: get_calc(1020,$conW);
+			width: 100%;
+			// width: get_calc(1020,$conW);
 			margin-inline:auto;
 			margin-bottom: getCqw(115,$conW);
 			z-index: 15;
@@ -239,7 +240,7 @@
 		}
 		.intro-loop__img{
 			width: 190px;
-			border-radius:30px;
+			border-radius:15px;
 			&:last-child{margin-right: 20px;}
 			&:nth-child(even){
 				margin-top: 40px;
@@ -787,7 +788,7 @@
 						margin-bottom:15px;
 					}
 					.n_txt{
-						font-size: max(18px,getCqw(28,$conW));
+						font-size: min(18px,getCqw(28,$conW));
 						line-height: calc(56/28);
 					}
 				}

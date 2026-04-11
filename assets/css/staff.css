@@ -282,7 +282,7 @@
 .intro .inr .text_wrap {
   position: relative;
   padding-top: 9.649122807cqw;
-  width: 89.4736842105%;
+  width: 100%;
   margin-inline: auto;
   margin-bottom: 10.0877192982cqw;
   z-index: 15;
@@ -469,7 +469,7 @@
   }
   .intro .intro-loop__img {
     width: 190px;
-    border-radius: 30px;
+    border-radius: 15px;
   }
   .intro .intro-loop__img:last-child {
     margin-right: 20px;
@@ -1002,7 +1002,7 @@
     margin-bottom: 15px;
   }
   .profile-wrap .inr .profile-box .question-box .n_txt {
-    font-size: max(18px, 3.6842105263cqw);
+    font-size: min(18px, 3.6842105263cqw);
     line-height: 2;
   }
   .profile-wrap .inr .profile-box .img_area {

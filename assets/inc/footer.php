@@ -23,7 +23,7 @@
 				<div class="footer_link-area">
 					<div class="company-area">
 						<div class="company-block">
-							<h3>本社リノベーション事業部</h3>
+							<h3>本社首都圏事業部</h3>
 							<p class="n_txt">東京都千代田区神田鍛冶町3-7-6<br>翔和鍛冶町ビル4階<br>TEL：03-3252-8100　FAX：03-3252-8566
 							</p>
 							<a href="<?= $map_hon ?>" target="_blank" class="map_link">

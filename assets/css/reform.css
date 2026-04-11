@@ -232,17 +232,10 @@
   width: 35.7638888889%;
   min-width: 515px;
 }
-.fv:after {
-  content: "";
-  display: block;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 97px;
-  background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#f3fefe));
-  background: linear-gradient(to bottom, #fff 0%, #f3fefe 100%);
-  z-index: 1;
+@media screen and (min-width: 1051px) {
+  .fv .inr .cloud.-right {
+    bottom: 40px;
+  }
 }
 @media screen and (max-width: 1050px) {
   .fv .inr h1 {
@@ -328,12 +321,12 @@
   aspect-ratio: 630/480;
 }
 .intro .inr .about_wrap .line {
-  display: table;
+  display: block;
   position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   font-size: 8.3333333333cqw;
   color: var(--base-color-white);
   font-weight: 100;
@@ -539,7 +532,7 @@
     margin-inline: auto;
   }
   .intro .inr .text_wrap p {
-    font-size: max(18px, 3.8888888889cqw);
+    font-size: min(18px, 3.8888888889cqw);
     line-height: 2.3571428571;
   }
   .intro .inr .text_wrap p br {
@@ -924,6 +917,13 @@
   -webkit-transition-delay: 1.6s;
           transition-delay: 1.6s;
 }
+.feature .feature-box_wrap.-box05 .cloud {
+  position: absolute;
+  width: 90.1333333333%;
+  bottom: -25.3333333333cqw;
+  left: 58.4615384615%;
+  z-index: 20;
+}
 .feature .-box01 {
   margin-bottom: min(230px, 15.33vw);
 }
@@ -1051,13 +1051,13 @@
     width: 45.5882352941%;
     left: 63.2352941176%;
     top: 120.3125cqw;
-    --W:310;
-    --H:284;
+    --W:155;
+    --H:142;
   }
   .feature .feature-box_wrap.-box01 .img_area .risu:after {
     --bW:157;
-    --bT:-78;
-    --bL:-35;
+    --bT:-75;
+    --bL:-68;
     --imgURL: url("../img/reform/feature01-risu-sb-sp.png");
     aspect-ratio: 278/110;
   }

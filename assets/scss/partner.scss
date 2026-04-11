@@ -53,7 +53,7 @@
 			position: relative;
 			@include fl;
 			padding-top:getCqw(110,$conW);
-				padding-bottom: getCqw(200,$conW);
+			padding-bottom: getCqw(130,$conW);
 			z-index: 30;
 			h2{
 				width: max(250px,get_calc(309,$conW));
@@ -135,11 +135,12 @@
 	.town-bg{
 		position: absolute;
 		left: 0;
-		bottom: 110px;
+		// bottom: 110px;
+		bottom: 220px;
 		width: 100%;
 		height: 755px;
 		z-index: 5;
-		background:url(../img/partner/intro-town_bg.webp) center bottom;
+		background:url(../img/partner/intro-town_bg.webp) center top;
 		background-size:3252px 755px;
 		opacity:.4;
 		-webkit-mask-image: linear-gradient(to bottom, #000 90%, transparent 100%);
@@ -228,7 +229,7 @@
 			width: 1434px;
 			left: calc(50% + 90px);
 			bottom:50px;
-			z-index: 20;
+			z-index: 60;
 		}
 	}
 }
@@ -296,7 +297,7 @@
 				margin-bottom: getCqw(230,$conW);
 			.img_area{
 				width: get_calc(680,$conW);
-				transform:translateX(getCqw(-180,$conW));
+				transform:translateX(getCqw(-110,$conW));
 				.img img{
 					position: relative;
 					border-radius:0 10px 10px 0;
@@ -734,6 +735,9 @@
 				.bubble_area.-bubble02{
 					margin-left: auto;
 					margin-top: getCqw(100,$conW);
+					.bubble_box{
+						margin-left: auto;
+					}
 					.people-box{
 						left: 0;
 						top: 50%;
@@ -757,6 +761,7 @@
 					margin-top: getCqw(100,$conW);
 					width: 100%;
 					.bubble_box{
+						width: 100%;
 						padding:getCqw(50,$conW) getCqw(45,$conW);
 					}
 					.people-box{
@@ -782,6 +787,7 @@
 					margin-top: getCqw(100,$conW);
 					width: 100%;
 					.bubble_box{
+					width: 100%;
 						padding:getCqw(50,$conW) getCqw(45,$conW);
 					}
 					.people-box{

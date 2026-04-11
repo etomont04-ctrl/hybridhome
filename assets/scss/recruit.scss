@@ -31,7 +31,10 @@
 ========================================================================== */
 .intro{
 	position: relative;
-	@include gradient-bg(to bottom, transparent,var(--base-bg-color11));
+	// @include gradient-bg(to bottom, transparent,var(--base-bg-color11));
+
+    background: linear-gradient(to bottom, transparent 0%, var(--base-bg-color11) 95%, transparent 100%);
+    margin-bottom: 12rem;
 	margin-bottom: 12rem;
 	.top_cloud{
 		position: absolute;
@@ -107,6 +110,9 @@
 		height: auto;
 		flex: 0 0 auto;
 		border-radius:30px;
+		&:nth-child(odd){
+			width: 540px;
+		}
 		&:last-child{margin-right: 70px;}
 	}
 	.cloud-bg{
@@ -190,6 +196,9 @@
 		.intro-loop__img{
 			width: 205px;
 			border-radius:15px;
+			&:nth-child(odd){
+				width: 325px;
+			}
 			&:last-child{margin-right: 40px;}
 		}
 		.cloud-bg{
@@ -824,11 +833,11 @@
 					top: getCqw(80,$conW);
 				}
 				.points-img{
-					margin-bottom:getCqw(50,$conW);
+					margin-bottom:getCqw(40,$conW);
 					img{border-radius:5px;}
 				}
 				.n_txt{
-					font-size: max(18px,getCqw(28,$conW));
+					font-size: min(17px,getCqw(28,$conW));
 				}
 				li:not(:first-child){
 					margin-top: getCqw(140,$conW);
@@ -841,6 +850,13 @@
 					&:before{
 						width: get_calc(370,640);
 						aspect-ratio:370/90;
+					}
+					&:after{
+						width:get_calc(600,640);
+						aspect-ratio:600/410;
+						top:getCqw(340,$conW);
+						left: getCqw(-58,$conW);
+						border-radius:0 5px 5px 0;
 					}
 					h3{
 						width: get_calc(370,640);
@@ -860,6 +876,20 @@
 						width: get_calc(440,640);
 						aspect-ratio:440/90;
 					}
+					&:after{
+						content:"";
+						display: block;
+						position: absolute;
+						width:get_calc(600,640);
+						aspect-ratio:600/410;
+						top:getCqw(-70,$conW);
+						left: getCqw(99,$conW);
+						border-radius:0 5px 5px 0;
+						background:url(../img/recruit/attractive-bg.webp);
+						background-size:cover;
+						border-radius:10px 0 0 10px;
+						z-index: 1;
+					}
 					h3{
 						width: get_calc(440,640);
 					}
@@ -868,6 +898,9 @@
 					&:before{
 						width: get_calc(650,640);
 						aspect-ratio:650/90;
+					}
+					&:after{
+						display: none;
 					}
 					h3{
 						width: get_calc(650,640);
@@ -918,7 +951,7 @@
 					margin:0 0 getCqw(30,$conW);
 				}
 				.n_txt{
-					font-size: max(18px,getCqw(28,$conW));
+					font-size: min(17px,getCqw(28,$conW));
 					line-height: 50/28;
 					width: 100%;
 					margin:0;
@@ -1036,6 +1069,10 @@
 				}
 				.data-list_wrap{
 					width: get_calc(710,$conW);
+
+					h3{
+						width: get_calc(280,710);
+					}
 				}
 				.data-list{
 					position: relative;

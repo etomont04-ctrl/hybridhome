@@ -107,15 +107,15 @@ if ($tel !== '' && !preg_match('/^\d{2,4}-?\d{2,4}-?\d{3,4}$/', $tel)) {
 				<ol class="step -conf">
 					<li>
 						<span class="en">step 01</span>
-						<p class="step-text"><img src="<?= $this_img_path; ?>step-text01.png" alt="内容入力" decoding="async"></p>
+						<p class="step-text"><img src="<?= $img_path; ?>common/step-text01.png" alt="内容入力" decoding="async"></p>
 					</li>
 					<li class="this">
 						<span class="en">step 02</span>
-						<p class="step-text"><img src="<?= $this_img_path; ?>step-text02.png" alt="内容確認" decoding="async"></p>
+						<p class="step-text"><img src="<?= $img_path; ?>common/step-text02.png" alt="内容確認" decoding="async"></p>
 					</li>
 					<li>
 						<span class="en">step 03</span>
-						<p class="step-text"><img src="<?= $this_img_path; ?>step-text03.png" alt="送信完了" decoding="async"></p>
+						<p class="step-text"><img src="<?= $img_path; ?>common/step-text03.png" alt="送信完了" decoding="async"></p>
 					</li>
 				</ol>
 				<?php if (!empty($errors)) : ?>

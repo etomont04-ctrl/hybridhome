@@ -87,7 +87,7 @@ $uri = "company";
 					<div class="data_row">
 						<dt class="data_head">本社所在地</dt>
 						<dd class="data_body">
-							〒101-0045　東京都千代田区神田鍛冶町 3-7-6　翔和鍛冶町ビル 4 階<br class="taf_on">
+							〒101-0045　東京都千代田区神田鍛冶町 3-7-6　翔和鍛冶町ビル 4 階<br class="tab_on">
 							<a href="<?= $map_hon ?>" target="_blank" class="map_link">
 								<i class="map_icon"><img src="<?= $img_path; ?>common/map_icon.webp" alt="" decoding="async"></i>
 									Google Map

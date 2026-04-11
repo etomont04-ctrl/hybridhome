@@ -558,7 +558,7 @@
     margin-top: 16.4473684211cqw;
   }
   .company-wrap .-message .text_area .n_txt {
-    font-size: max(18px, 3.6842105263cqw);
+    font-size: min(18px, 3.6842105263cqw);
     line-height: 2.3571428571;
   }
   .company-wrap .-company {

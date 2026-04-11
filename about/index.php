@@ -50,6 +50,7 @@ $uri = "about";
 			<div class="title_area">
 				<h2><img src="<?= $this_img_path; ?>intro_title.webp" alt="ハイブリッドホームは、家を大切に住みつぎたい人のためのリフォーム&リノベーション会社です。" decoding="async"></h2>
 			</div>
+			<figure class="cloud tab_on"><img src="<?= $this_img_path; ?>intro_cloud.webp" alt="" decoding="async"></figure>
 			<figure class="bird bird02"><img src="<?= $this_img_path; ?>intro_bird.webp" alt="" decoding="async"></figure>
 			<div class="intro-loopY">
 				<div class="intro-loopY__track">
@@ -98,14 +99,14 @@ $uri = "about";
 						<span class="tab_on"><img src="<?= $this_img_path; ?>policy_sec-tit01-tab01.webp" alt="家を大切にする＝" decoding="async" class="-sp_tit01"></span>
 						<span class="tab_on"><img src="<?= $this_img_path; ?>policy_sec-tit01-tab02.webp" alt="自分を大切にすること" decoding="async" class="-sp_tit02"></span>
 					</h3>
-					<p class="n_txt">家とは不思議なものです。<br>機能だけを考えれば、雨風を防ぎ、安全に過ごせる場所であれば十分なはず。<br>
+					<p class="n_txt">家とは不思議なものです。<br class="tab_off">機能だけを考えれば、雨風を防ぎ、安全に過ごせる場所であれば十分なはず。<br>
 					ところが家はそれだけの存在にとどまりません。<br>
-					いつしか自分の気配がにじみだし、家族の気配と混ざり合って、<br>
-					たんなる木や石でできた箱を越えた、<br>
+					いつしか自分の気配がにじみだし、家族の気配と混ざり合って、<br class="tab_off">
+					たんなる木や石でできた箱を越えた、<br class="tab_off">
 					唯一無二の場所になります。<br>
 					<br>
-					家を大切にすることは、そこに住む自分を大切にすること。<br>
-					そこで暮らした時間ごと大切にするために、<br>
+					家を大切にすることは、そこに住む自分を大切にすること。<br class="tab_off">
+					そこで暮らした時間ごと大切にするために、<br class="tab_off">
 					再び家へ息吹を吹き込みましょう。<br>
 					わたしたちハイブリッドホームが全力でお手伝いいたします。</p>
 					<a href="<?= $reform_link ?>" class="link_wrap">
