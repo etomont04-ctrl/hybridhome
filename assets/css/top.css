@@ -672,6 +672,8 @@ html.is-loading::after {
   aspect-ratio: 59/66;
   left: 97.1333333333%;
   top: 0;
+  -webkit-animation: leafRotate02 var(--leaf-rot-dur, 15s) ease-in-out infinite;
+          animation: leafRotate02 var(--leaf-rot-dur, 15s) ease-in-out infinite;
 }
 #kv .bg-leaf_area .leaf02 {
   height: 13.4529147982%;
@@ -689,18 +691,33 @@ html.is-loading::after {
   aspect-ratio: 58/57;
   left: 71.0666666667%;
   top: 53.6621823617%;
+  -webkit-transform-origin: left 60%;
+          transform-origin: left 60%;
+  will-change: transform;
+  -webkit-animation: leafRotate02 var(--leaf-rot-dur, 15s) ease-in-out infinite;
+          animation: leafRotate02 var(--leaf-rot-dur, 15s) ease-in-out infinite;
 }
 #kv .bg-leaf_area .leaf04 {
   height: 13.153961136%;
   aspect-ratio: 82/88;
   left: 14.3333333333%;
   top: 63.5276532138%;
+  -webkit-transform-origin: left 60%;
+          transform-origin: left 60%;
+  will-change: transform;
+  -webkit-animation: leafRotate02 var(--leaf-rot-dur, 15s) ease-in-out infinite;
+          animation: leafRotate02 var(--leaf-rot-dur, 15s) ease-in-out infinite;
 }
 #kv .bg-leaf_area .leaf05 {
   height: 7.4738415546%;
   aspect-ratio: 51/50;
   left: 0;
   bottom: 0;
+  -webkit-transform-origin: left 60%;
+          transform-origin: left 60%;
+  will-change: transform;
+  -webkit-animation: leafRotate03 var(--leaf-rot-dur, 25s) ease-in-out infinite;
+          animation: leafRotate03 var(--leaf-rot-dur, 25s) ease-in-out infinite;
 }
 #kv .bg-leaf_area.-winter .leaf01 {
   background-image: url("../img/top/winter_fv-leaf01.png");
@@ -779,6 +796,7 @@ html.is-loading::after {
   -webkit-transform: translate3d(0, 0, 0);
           transform: translate3d(0, 0, 0);
   --duration: 240s;
+  --gap:50px;
   -webkit-animation: cloudFlow var(--duration) linear infinite;
           animation: cloudFlow var(--duration) linear infinite;
 }
@@ -788,8 +806,8 @@ html.is-loading::after {
 }
 #kv .bg-cloud_area .bgcloud01 {
   top: 0;
-  -webkit-animation-delay: -60s;
-          animation-delay: -60s;
+  -webkit-animation-delay: -120s;
+          animation-delay: -120s;
 }
 #kv .bg-cloud_area .bgcloud02 {
   bottom: 0;
@@ -949,10 +967,14 @@ html.is-loading::after {
   }
   #kv .bg-cloud_area .bg-cloud {
     height: 44.5255474453%;
-    --duration: 120s;
+    -webkit-animation-delay: -45s;
+            animation-delay: -45s;
+    --duration: 100s;
   }
   #kv .bg-cloud_area .bgcloud02 {
-    --duration:140s;
+    -webkit-animation-delay: 0s;
+            animation-delay: 0s;
+    --duration:80s;
   }
   #kv .town_bg {
     bottom: 6.9958847737%;
@@ -1024,7 +1046,9 @@ html.is-loading::after {
   margin-bottom: 3.8cqw;
 }
 .intro .link_wrap {
+  position: relative;
   margin-left: auto;
+  z-index: 50;
 }
 .intro .intro-text {
   font-size: 1.0666666667cqw;
@@ -1533,8 +1557,10 @@ html.is-loading::after {
   margin-bottom: 3.3333333333cqw;
 }
 .project .link_btn {
+  position: relative;
   width: 16.6666666667cqw;
   border-radius: 2cqw;
+  z-index: 10;
 }
 .project .link_btn:before {
   border-radius: 2cqw;
@@ -1974,8 +2000,8 @@ html.is-loading::after {
   inset: 0;
   width: 100%;
   will-change: transform;
-  -webkit-animation: LoopY 14s linear infinite;
-          animation: LoopY 14s linear infinite;
+  -webkit-animation: LoopY02 14s linear infinite;
+          animation: LoopY02 14s linear infinite;
 }
 .reform .reform-contents_area .reform-loop__img {
   display: block;
@@ -2135,13 +2161,20 @@ html.is-loading::after {
 .staff .staff-kitchen_area .men {
   position: absolute;
   width: 52.9411764706%;
-  left: 29.9159663866%;
+  left: 24.8739495798%;
   top: 39.7383483238%;
   z-index: 7;
-  --dist: 10px;
-  --dur: 2s;
+  --dist: 30px;
+  --dur: 8s;
   -webkit-animation: anim-move-lr var(--dur) ease-in-out infinite alternate;
           animation: anim-move-lr var(--dur) ease-in-out infinite alternate;
+}
+.staff .staff-kitchen_area .men img {
+  -webkit-animation: pyoko-bounce-s 8s ease-in-out infinite;
+          animation: pyoko-bounce-s 8s ease-in-out infinite;
+  will-change: transform;
+  -webkit-transform-origin: 50% 60%;
+          transform-origin: 50% 60%;
 }
 .staff .staff-kitchen_area .kemuri {
   position: absolute;
@@ -2802,6 +2835,10 @@ html.is-loading::after {
   -webkit-animation: bird-sway-s 3.2s ease-in-out infinite;
           animation: bird-sway-s 3.2s ease-in-out infinite;
 }
+.news .news-balcony_area .leaf img {
+  -webkit-animation: bird-float-ss 10s ease-in-out infinite;
+          animation: bird-float-ss 10s ease-in-out infinite;
+}
 .news .news-balcony_area .girl {
   position: absolute;
   left: 34.664246824%;
@@ -2835,6 +2872,7 @@ html.is-loading::after {
   right: 0;
   top: 0;
   overflow: hidden;
+  z-index: 10;
 }
 .news .news-contents_area .illust_base {
   position: relative;
@@ -3066,6 +3104,7 @@ html.is-loading::after {
   }
   .news .news-contents_area h2 {
     width: 29.8611111111%;
+    margin-left: 5.5555555556%;
     margin-bottom: 12.5cqw;
   }
   .news .news-contents_area .link_btn {
@@ -3077,6 +3116,9 @@ html.is-loading::after {
   }
   .news .news-contents_area .link_btn .text {
     font-size: 4cqw;
+  }
+  .news .news-contents_area .link_btn .text span {
+    display: none;
   }
   .news .news-contents_area .link_btn .arrow {
     width: 3cqw;
@@ -3112,7 +3154,7 @@ html.is-loading::after {
   }
   .news .news-contents_area .news-link .cate {
     font-size: 3.25cqw;
-    padding: 0.75cqw 2.5cqw;
+    padding: 5px 2.5cqw;
     border-radius: 6.25cqw;
     -webkit-transform: translateY(-0.375cqw);
             transform: translateY(-0.375cqw);
@@ -3140,7 +3182,7 @@ html.is-loading::after {
   }
   .news .news-contents_area .link_wrap + .news-link .cate {
     font-size: 3.25cqw;
-    padding: 0.75cqw 2.5cqw;
+    padding: 5px 2.5cqw;
     border-radius: 6.25cqw;
     -webkit-transform: translateY(-0.375cqw);
             transform: translateY(-0.375cqw);

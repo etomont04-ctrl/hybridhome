@@ -80,8 +80,10 @@
 				</div>
 				<div class="illust_area tab_off">
 					<div class="tori">
-						<img src="<?= $img_path; ?>common/illust/footer-tori.webp" alt="" decoding="async" class="bf">
-						<img src="<?= $img_path; ?>common/illust/footer-tori_af.webp" alt="" decoding="async" class="af">
+						<div class="tori_in">
+							<img src="<?= $img_path; ?>common/illust/footer-tori.webp" alt="" decoding="async" class="bf">
+							<img src="<?= $img_path; ?>common/illust/footer-tori_af.webp" alt="" decoding="async" class="af">
+						</div>
 					</div>
 					<figure class="post"><img src="<?= $img_path; ?>common/illust/footer-post.webp" alt="" decoding="async"></figure>
 				</div>

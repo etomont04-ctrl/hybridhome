@@ -372,6 +372,7 @@ html.is-loading::after{
 			aspect-ratio:59/66;
 			left: get_calc(1457,$conW);
 			top: 0;
+			animation: leafRotate02 var(--leaf-rot-dur, 15s) ease-in-out infinite;
 		}
 		.leaf02{
 			height: get_calc(90,$leafH);
@@ -380,25 +381,34 @@ html.is-loading::after{
 			top: get_calc(143,$leafH);
 			transform-origin: left 60%;
 			will-change: transform;
-			animation: leafRotate var(--leaf-rot-dur, 30s) ease-in-out infinite
+			animation: leafRotate var(--leaf-rot-dur, 30s) ease-in-out infinite;
 		}
 		.leaf03{
 			height: get_calc(57,$leafH);
 			aspect-ratio:58/57;
 			left: get_calc(1066,$conW);
 			top: get_calc(359,$leafH);
+			transform-origin: left 60%;
+			will-change: transform;
+			animation: leafRotate02 var(--leaf-rot-dur, 15s) ease-in-out infinite;
 		}
 		.leaf04{
 			height: get_calc(88,$leafH);
 			aspect-ratio:82/88;
 			left: get_calc(215,$conW);
 			top: get_calc(425,$leafH);
+			transform-origin: left 60%;
+			will-change: transform;
+			animation: leafRotate02 var(--leaf-rot-dur, 15s) ease-in-out infinite;
 		}
 		.leaf05{
 			height: get_calc(50,$leafH);
 			aspect-ratio:51/50;
 			left:0;
 			bottom: 0;
+			transform-origin: left 60%;
+			will-change: transform;
+			animation: leafRotate03 var(--leaf-rot-dur, 25s) ease-in-out infinite;
 		}
 		@each $season in $seasons{
 			&.-#{$season}{
@@ -425,6 +435,7 @@ html.is-loading::after{
 			will-change: transform;
 			transform: translate3d(0,0,0);
 			--duration: 240s;
+			--gap:50px;
 			animation: cloudFlow var(--duration) linear infinite;
 			img{
 				width: auto;
@@ -433,7 +444,7 @@ html.is-loading::after{
 		}
 		.bgcloud01{
 			top: 0;
-			animation-delay:-60s;
+			animation-delay:-120s;
 		}
 		.bgcloud02{
 			bottom: 0;
@@ -597,10 +608,12 @@ html.is-loading::after{
 		.bg-cloud_area{
 			.bg-cloud{
 				height: get_calc(305,685);
-				--duration: 120s;
+				animation-delay:-45s;
+				--duration: 100s;
 			}
 			.bgcloud02{
-				--duration:140s;
+				animation-delay:0s;
+				--duration:80s;
 			}
 		}
 		.town_bg{
@@ -686,7 +699,9 @@ html.is-loading::after{
 		margin-bottom: getCqw(57,$conW);
 	}
 	.link_wrap{
+		position: relative;
 		margin-left:auto;
+		z-index: 50;
 	}
 	.intro-text{
 		font-size: getCqw(16,$conW);
@@ -1190,8 +1205,10 @@ html.is-loading::after{
 		margin-bottom: getCqw(50,$conW);
 	}
 	.link_btn{
+		position: relative;
 		width: getCqw(250,$conW);
 		border-radius:getCqw(30,$conW);
+		z-index: 10;
 		&:before{
 			border-radius:getCqw(30,$conW);
 		}
@@ -1601,7 +1618,7 @@ html.is-loading::after{
 			inset: 0;
 			width: 100%;
 			will-change: transform;
-			animation: LoopY 14s linear infinite;
+			animation: LoopY02 14s linear infinite;
 		}
 		.reform-loop__img{
 			display: block;
@@ -1772,12 +1789,17 @@ html.is-loading::after{
 		.men{
 			position: absolute;
 			width: get_calc(315,$areaW);
-			left: get_calc(178,$areaW);
+			left: get_calc(148,$areaW);
 			top: get_calc(486,$areaH);
 			z-index: 7;
-			--dist: 10px;
-			--dur: 2s;
+			--dist: 30px;
+			--dur: 8s;
 			animation: anim-move-lr var(--dur) ease-in-out infinite alternate;
+			img{
+				animation: pyoko-bounce-s 8s ease-in-out infinite;
+				will-change: transform;
+				transform-origin: 50% 60%;
+			}
 		}
 		.kemuri{
 			position: absolute;
@@ -2402,6 +2424,9 @@ html.is-loading::after{
 			width: get_calc(689,$areaW);
 			z-index: 10;
 			animation: bird-sway-s 3.2s ease-in-out infinite;
+			img{
+				animation: bird-float-ss 10s ease-in-out infinite;
+			}
 		}
 		.girl{
 			position: absolute;
@@ -2436,6 +2461,7 @@ html.is-loading::after{
 		$areaW:949;
 		$areaH:1132;
 		overflow: hidden;
+		z-index: 10;
 		.illust_base{
 			position: relative;
 			width: 100%;
@@ -2632,6 +2658,7 @@ html.is-loading::after{
 		}
 		h2{
 			width: get_calc(215,720);
+			margin-left: get_calc(40,720);
 			margin-bottom: getCqw(100,$conW);
 		}
 		.link_btn{
@@ -2642,6 +2669,7 @@ html.is-loading::after{
 			}
 			.text{
 				font-size: getCqw(32,$conW);
+				span{display: none;}
 			}
 			.arrow{
 				width: getCqw(24,$conW);
@@ -2673,7 +2701,7 @@ html.is-loading::after{
 			}
 			.cate{
 				font-size: getCqw(26,$conW);
-				padding: getCqw(6,$conW) getCqw(20,$conW);
+				padding:5px getCqw(20,$conW);
 				border-radius: getCqw(50,$conW);
 				transform:translateY( getCqw(-3,$conW));
 			}
@@ -2701,7 +2729,7 @@ html.is-loading::after{
 			}
 			.cate{
 				font-size: getCqw(26,$conW);
-				padding: getCqw(6,$conW) getCqw(20,$conW);
+				padding: 5px getCqw(20,$conW);
 				border-radius: getCqw(50,$conW);
 				transform:translateY( getCqw(-3,$conW));
 			}

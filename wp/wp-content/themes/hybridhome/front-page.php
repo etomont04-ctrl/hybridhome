@@ -188,7 +188,7 @@ $this_img_path = $img_path .  "top/";
 			<div class="title_area">
 				<h2><img src="<?= $this_img_path; ?>project_title.webp" alt="施工事例" decoding="async"></h2>
 				<span class="en">Featured project</span>
-				<a href="<?= $about_link ?>" class="link_wrap tab_off">
+				<a href="<?= $works_link ?>" class="link_wrap tab_off">
 					<p class="link_btn -red">
 						<span class="text">事例一覧へ</span>
 						<i class="arrow"><img src="<?= $img_path; ?>common/arrow-w.png" alt="" decoding="async"></i>
@@ -245,9 +245,9 @@ $this_img_path = $img_path .  "top/";
 					</div><!--/splide-->
 				</div><!--/splide-->
 			</section><!--/picks -->
-			<a href="<?= $about_link ?>" class="link_wrap tab_on">
+			<a href="<?= $works_link ?>" class="link_wrap tab_on">
 				<p class="link_btn -red">
-					<span class="text">私たちについて</span>
+					<span class="text">事例一覧へ</span>
 					<i class="arrow"><img src="<?= $img_path; ?>common/arrow-w.png" alt="" decoding="async"></i>
 				</p>
 			</a>
@@ -322,8 +322,14 @@ $this_img_path = $img_path .  "top/";
 				</div>
 				<div class="reform-loop">
 					<div class="reform-loop__inner">
-						<img src="<?= $this_img_path; ?>reform_roop-txt.webp" alt="Reform&Renov" decoding="async"  class="reform-loop__img">
-						<img src="<?= $this_img_path; ?>reform_roop-txt.webp" alt="Reform&Renov" decoding="async"  class="reform-loop__img -second">
+						<div class="reform-loop__img">
+							<img src="<?= $this_img_path; ?>reform_roop-txt.webp" alt="Reform&Renov" decoding="async">
+							<img src="<?= $this_img_path; ?>reform_roop-txt.webp" alt="Reform&Renov" decoding="async">
+						</div>
+						<div class="reform-loop__img">
+							<img src="<?= $this_img_path; ?>reform_roop-txt.webp" alt="Reform&Renov" decoding="async">
+							<img src="<?= $this_img_path; ?>reform_roop-txt.webp" alt="Reform&Renov" decoding="async">
+						</div>
 					</div>
 				</div>
 				<figrure class="illust_base">
@@ -516,7 +522,7 @@ $this_img_path = $img_path .  "top/";
 					</h2>
 					<a href="<?= $partners_link ?>" class="link_wrap">
 						<p class="link_btn -blue">
-							<span class="text">詳細ページへ</span>
+							<span class="text"><span>お知らせ</span>一覧へ</span>
 							<i class="arrow"><img src="<?= $img_path; ?>common/arrow-w.png" alt="" decoding="async"></i>
 						</p>
 					</a>
