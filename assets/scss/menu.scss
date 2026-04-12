@@ -8,9 +8,9 @@
 	box-sizing:border-box;
 	z-index:100;
 	opacity:1;
-	transition: all 0.3s ease;
 	$areaW:1420;
 	container-type: inline-size;
+	@include transition(opacity);
 	&.index:not(.fix){
 		display: none;
 	}
@@ -197,17 +197,27 @@
 			}
 		}
 	}
-	&.op{
-		opacity:0;
-	}
 	.corner{
 		display: none;
 	}
+	&.ready{
+		opacity: 0;
+		pointer-events: none;
+		transition: none;
+	}
 	&.fix{
 		@include fl;
-		opacity:1;
+		opacity:0;
 		padding:0;
 		height: auto;
+		pointer-events: none;
+		@include transition(opacity);
+		&.op{
+			opacity:1;
+			pointer-events: auto;
+			visibility:visible;
+			transform:translateY(0);
+		}
 		.logo{
 			width: 220ox;
 			padding-top: 20px;

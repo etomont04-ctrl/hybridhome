@@ -583,7 +583,11 @@ $this_img_path = $img_path .  "top/";
 			</figure>
 			<div class="sc-area">
 				<div class="town-area">
-					<figure class="cloud03"><img src="<?= $this_img_path; ?>lv-town.webp" alt="" decoding="async"></figure>
+					<picture>
+						<source media="(max-width: 1050px)" srcset="<?= $this_img_path; ?>lv-town-tab.webp">
+						<img src="<?= $this_img_path; ?>lv-town.webp" alt="">
+					</picture>
+
 				</div>
 				<figure class="lv-cloud cloud01"><img src="<?= $this_img_path; ?>lv-cloud01.webp" alt="" decoding="async"></figure>
 				<figure class="lv-cloud cloud02"><img src="<?= $this_img_path; ?>lv-cloud02.webp" alt="" decoding="async"></figure>

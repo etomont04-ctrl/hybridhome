@@ -176,7 +176,7 @@ $uri = "voice";
 					<p class="n_txt">洗面室も悩みがありました。収納が少なく、動線も悪くて。そこに「浴室のドアの位置を変えましょう」という提案が出てきて、またびっくりでした（笑）。</p>
 					<p class="bubble-txt -gray">ハイブリッドホーム</p>
 					<p class="n_txt">浴室のドアを、標準の位置から10cm移動して、造作家具の収納キャビネットを設置しました。洗面台のメーカーから取手を取り寄せ、面材を選定し、既製品と統一感のある便利なキャビネットになりました。H様は「ここが不便」とはっきりとお話ししていただけるので、提案しやすいんですよ。</p>
-					<p class="bubble-txt -gray">Hさま</p>
+					<p class="bubble-txt -white">Hさま</p>
 					<p class="n_txt">岡田さんは大胆なだけじゃなくて、すごく丁寧で細やかな提案もしてくださいます。キッチンの扉が傷んでいて相談したとき、他社はシステム全交換での見積もりでした。まだコンロやレンジフードは使えるのだけど、一体型だとしかたないのかなと諦めていたところ、岡田さんは「使えるものは使いましょう！」と扉と食洗機だけを取り替えるプランを提案してくれました。必要なものだけ替えることができたのもうれしいし、なにより費用がぐっと抑えられたのもありがたかったです。</p>
 				</div><!-- /box02 -->
 				<div class="voice-box box03">
@@ -259,8 +259,6 @@ $uri = "voice";
 			<figure class="cloud cloud02"><img src="<?= $this_img_path; ?>voice-sec-cloud02.webp" alt="" decoding="async"></figure>
 		</div>
 		<div class="inr -w1400 round-con">
-			<figure class="cloud cloud01"><img src="<?= $this_img_path; ?>voice-sec-clolud01.webp" alt="" decoding="async"></figure>
-			<figure class="cloud cloud02"><img src="<?= $this_img_path; ?>voice-sec-clolud02.webp" alt="" decoding="async"></figure>
 			<div class="data_area">
 				<div class="data_box">
 					<div class="tit_area">
@@ -385,7 +383,7 @@ $uri = "voice";
 		<div class="town-bg"></div>
 	</div><!-- /town-area -->
 	<section class="voice-sec" id="voice03">
-		<div class="inr -m2000  voice03">
+		<div class="inr -m2000 voice03">
 		<div class="main-img_area">
 			<figure class="img"><picture>
 				<source media="(max-width: 800px)" srcset="<?= $this_img_path; ?>voice03_main-img-sp.webp">
@@ -458,6 +456,7 @@ $uri = "voice";
 				<div class="img_area">
 					<figure class="img"><img src="<?= $this_img_path; ?>voice03-box01-img.webp" alt="" decoding="async"></figure>
 					<figure class="risu inview sb -sb03"><img src="<?= $this_img_path; ?>voice-box-risu.webp" alt="" decoding="async"></figure>
+					<figure class="cloud tab_off"><img src="<?= $this_img_path; ?>voice03-box01-cloud.webp" alt="" decoding="async"></figure>
 				</div>
 				<p class="bubble-txt -white">Tさま</p>
 				<p class="n_txt">以前ボストンに住んだことがあり、家を新築するにあたって、その雰囲気を取り入れたいと思いました。ボストンは、イギリスから移り住んだ方々の生活様式の影響で、直線だけではなく曲線を組み込んだ有機的なデザインが特徴です。</p>

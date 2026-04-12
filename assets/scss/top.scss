@@ -552,6 +552,9 @@ html.is-loading::after{
 			top: auto;
 			bottom: get_calc(-350,$conH);
 		}
+		.cloud06{
+			top: 160%;
+		}
 		.blog-link_area{
 			width: get_calc(1440,$conW);
 			left: 0;
@@ -666,11 +669,15 @@ html.is-loading::after{
 		bottom: get_calc(-726,$conH);
 	}
 	@include max-width(1050){
-		aspect-ratio:800/1800;
+		// aspect-ratio:800/1800;
+		aspect-ratio:800/1300;
 		max-height:13000px;
 		$conW:800;
 		// $conH:900;
 		$conH:2000;
+		.sv-cloud{
+			bottom: get_calc(-6006,$conH);
+		}
 	}
 }
 // ==========================================================================
@@ -2881,7 +2888,7 @@ html.is-loading::after{
 				top: get_calc(900,$areaH);
 			}
 			.cloud03{
-				width: get_calc(1638,$areaW);
+				width: get_calc(1500,$areaW);
 				left: get_calc(219,$areaW);
 				top: get_calc(1005,$areaH);
 			}

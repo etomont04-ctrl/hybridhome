@@ -912,6 +912,9 @@ html.is-loading::after {
     top: auto;
     bottom: -14.4032921811%;
   }
+  #kv .cloud06 {
+    top: 160%;
+  }
   #kv .blog-link_area {
     width: 90%;
     left: 0;
@@ -1017,8 +1020,11 @@ html.is-loading::after {
 }
 @media screen and (max-width: 1050px) {
   .sv {
-    aspect-ratio: 800/1800;
+    aspect-ratio: 800/1300;
     max-height: 13000px;
+  }
+  .sv .sv-cloud {
+    bottom: -300.3%;
   }
 }
 
@@ -3313,7 +3319,7 @@ html.is-loading::after {
     top: 38.0228136882%;
   }
   .lv .sc-area .cloud03 {
-    width: 204.75%;
+    width: 187.5%;
     left: 27.375%;
     top: 42.4588086185%;
   }

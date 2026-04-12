@@ -1123,7 +1123,10 @@
 			.link_btn{
 				width: auto;
 				aspect-ratio:auto;
-				padding:20px 110px 20px 60px;
+				padding:23px 120px 25px 40px;
+				.arrow{
+					right: 35px;
+				}
 			}
 			.link_btn.-rev{
 				padding-right: 60px;

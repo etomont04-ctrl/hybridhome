@@ -106,7 +106,7 @@
 		.bird{
 			position: absolute;
 			width: get_calc(306,$conW);
-			right: get_calc(-20,$conW);
+			right: get_calc(50,$conW);
 			top: getCqw(120,$conW);
 			z-index: 20;
 			animation: bird-float 6s ease-in-out infinite;
@@ -574,6 +574,12 @@
 		background: linear-gradient(to bottom, #fff 0%,#f4feff 100%);
 	}
 }
+#voice03{
+	background: linear-gradient(to bottom, #effefe, var(--base-bg-color05));
+	&:after{
+		display: none;
+	}
+}
 .voice-sec .inr.-m2000{
 	position: relative;
 	container-type: inline-size;
@@ -669,9 +675,9 @@
 		}
 		.risu{
 			position: absolute;
-			width: get_calc(212,1200);
-			left: get_calc(930,1200);
-			top: getCqw(-120,$conW);
+			width: get_calc(230,1200);
+			left: get_calc(850,1200);
+			top: getCqw(-135,$conW);
 			--W:212;
 			--H:186;
 			&:after{
@@ -712,9 +718,9 @@
 		}
 		.kumonchu02{
 			position: absolute;
-			width: get_calc(431,1200);
-			left: get_calc(1030,1200);
-			top: getCqw(-315,$conW);
+			width: get_calc(456,1200);
+			left: get_calc(970,1200);
+			top: getCqw(-330,$conW);
 			--W:431;
 			--H:623;
 			&:after{
@@ -768,7 +774,8 @@
 		border-radius:60px;
 		padding:getCqw(60,$conW) getCqw(80,$conW) getCqw(40,$conW);
 		box-sizing:border-box;
-		transform:translateY(getCqw(-100,$conW));
+		transform:translateY(-80px);
+		// transform:translateY(getCqw(-100,$conW));
 		z-index: 20;
 		.tit_area{
 			width: 100%;
@@ -925,11 +932,13 @@
 			&.-gray{
 				background:var(--base-color-gray09);
 				color:var(--base-color-white);
+				letter-spacing:-0.08em;
 				&:after{
 					background:var(--base-color-gray09);
 				}
 			}
 			&.-white{
+				padding:4px getCqw(14,$conW) 6px;
 				background:var(--base-color-white);
 				color:var(--base-color-green13);
 				&:after{
@@ -1012,6 +1021,14 @@
 							aspect-ratio:164/65;
 						}
 					}
+				}
+				.cloud{
+					position: absolute;
+					width: get_calc(953,460);
+					left:  getCqw(3,$conW);
+					top: getCqw(550,$conW);
+					z-index: 10;
+
 				}
 			}
 		}
@@ -1347,6 +1364,15 @@
 				left: get_calc(320,680);
 				top: auto;
 				bottom: getCqw(-12,$conW);
+				--W:200;
+				--H:204;
+				&:after{
+					--bW:318;
+					--bT:-90;
+					--bL:-266;
+					--imgURL: url("../img/voice/voice-sec_duck-sb-sp.png");
+					aspect-ratio:318/110;
+				}
 				&.-duck02{
 					&:after{
 						--bW:288;
@@ -1358,8 +1384,8 @@
 				}
 			}
 			.risu{
-				width: get_calc(200,680);
-				left: get_calc(320,680);
+				width: get_calc(254,680);
+				left: get_calc(270,680);
 				top: auto;
 				bottom: getCqw(-12,$conW);
 				--W:254;
@@ -1377,12 +1403,21 @@
 				left: get_calc(390,680);
 				top:auto;
 				bottom: getCqw(-210,$conW);
+				--W:466;
+				--H:672;
+				&:after{
+					--bW:218;
+					--bT:46;
+					--bL:-80;
+					--imgURL: url("../img/voice/voice-sec_kumonchu01-sb-sp.png");
+					aspect-ratio:218/110;
+				}
 				&.-kumonchu01-2{
 					&:after{
 						--bW:198;
 						--bT:46;
 						--bL:-60;
-						--imgURL: url("../img/voice/voice03-sec_kumonchu01-sb.png");
+						--imgURL: url("../img/voice/voice03-sec_kumonchu01-sb-sp.png");
 						aspect-ratio:198/110;
 					}
 
@@ -1507,7 +1542,10 @@
 				font-size: min(18px,getCqw(26,$conW));
 				padding:4px 12px 6px;
 				margin-bottom: getCqw(25,$conW);
-				margin-left: getCqw(20,$conW);
+				margin-left: getCqw(18,$conW);
+				&.-white{
+					padding:4px 12px  6px;
+				}
 
 			}
 			.img_area{

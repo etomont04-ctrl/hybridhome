@@ -49,13 +49,13 @@
 			background:var(--base-color-white);
 			border-radius:6rem;
 			.footer_logo-area{
-				width: getCqw(280,$conW);
+				width: getCqw(280,$areaW);
 				h2{
 					width: get_calc(202,280);
 					margin:0 auto getCqw(30,$areaW);
 				}
 				.n_txt{
-					font-size: max(12px,getCqw(13,$areaW));
+					font-size: max(12px,getCqw(14,$areaW));
 					line-height: calc(26/14);
 					text-align: center;
 					margin-bottom: getCqw(37,$areaW);
@@ -65,18 +65,20 @@
 					}
 				}
 				.link_btn{
-					width: getCqw(280,$conW);
-					border-radius:getCqw(30,$conW);
+					display: block;
+					width: getCqw(280,$areaW);
+					border-radius:getCqw(30,$areaW);
 					aspect-ratio:auto;
-					padding-top: 18px;
-					padding-bottom: 18px;
+					padding-top: getCqw(18,$areaW);
+					padding-bottom: getCqw(21,$areaW);
+					padding-left: getCqw(45,$areaW);
 					&:before{
 						// background-image:url(../img/common/link-btn_border02.png);
 						// aspect-ratio: 270 / 50;
 						border-radius:getCqw(30,$conW);
 					}
 					.text{
-						font-size: clamp(10px,getCqw(18,$conW),18px);
+						font-size: clamp(10px,getCqw(18,$areaW),20px);
 					}
 					.arrow{
 						width: getCqw(16,$conW);
@@ -264,8 +266,10 @@
 			text-align: center;
 			font-size: getCqw(12,$areaW);
 			color:#fff;
-			margin-top: getCqw(80,$areaW);
-			margin-bottom: getCqw(95,$areaW);
+			margin-top: getCqw(75,$areaW);
+			margin-bottom: getCqw(70,$areaW);
+			text-transform: uppercase;
+			letter-spacing: 0.13em;
 		}
 		@include max-width(1050){
 			width: get_calc(720,800);
@@ -302,6 +306,7 @@
 						border-radius:999px;
 						padding-top: clamp(10px,getCqw(30,$areaW),30px);
 						padding-bottom: clamp(10px,getCqw(30,$areaW),30px);
+						padding-left: clamp(10px,getCqw(60,$areaW),60px);
 						&:before{
 							border-radius:getCqw(50,$areaW);
 							background:none;

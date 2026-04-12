@@ -18,49 +18,62 @@ $(function() {
   });
 });
 
-
 document.addEventListener('DOMContentLoaded', () => {
 	const header = document.querySelector('.head');
-
 	if (!header) return;
 
-	let headerHeight = header.offsetHeight || 0;
+	let headerHeight = 0;
+	let readyThreshold = 0;
 
-	// ヘッダー高さを更新
-	const updateHeaderHeight = () => {
+	const fixOffset = 200;	// readyからfixまで
+	const opOffset = 400;	// fixからopまで
+
+	const updateValues = () => {
 		headerHeight = header.offsetHeight || 0;
+		readyThreshold = header.getBoundingClientRect().top + window.scrollY + headerHeight;
 	};
 
 	const checkScroll = () => {
 		const scrollY = window.scrollY || window.pageYOffset;
-		const opThreshold = headerHeight + 200; // .head の高さ + 200px
 
-		// ① 画面高さ分スクロールしたら .fix 付与
-		if (scrollY > window.innerHeight) {
-			header.classList.add('fix');
-		} else {
-			header.classList.remove('fix');
+		if (scrollY <= readyThreshold) {
+			header.classList.remove('ready', 'fix', 'op');
+			return;
 		}
 
-		// ② .head の高さ + 200px スクロールしたら .op 付与
-		if (scrollY > opThreshold) {
+		// ① 見えなくなった直後
+		header.classList.add('ready');
+
+		// ② 少しあとで fixed 化
+		if (scrollY > readyThreshold + fixOffset) {
+			header.classList.add('fix');
+		} else {
+			header.classList.remove('fix', 'op');
+			return;
+		}
+
+		// ③ さらに少しあとで表示
+		if (scrollY > readyThreshold + fixOffset + opOffset) {
 			header.classList.add('op');
 		} else {
 			header.classList.remove('op');
 		}
 	};
 
-	window.addEventListener('scroll', checkScroll);
+	window.addEventListener('scroll', checkScroll, { passive: true });
 
 	window.addEventListener('load', () => {
-		updateHeaderHeight();
+		updateValues();
 		checkScroll();
 	});
 
 	window.addEventListener('resize', () => {
-		updateHeaderHeight();
+		updateValues();
 		checkScroll();
 	});
+
+	updateValues();
+	checkScroll();
 });
 
 

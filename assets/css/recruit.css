@@ -841,8 +841,8 @@
   z-index: 25;
   --W:861;
   --H:1190;
-  -webkit-animation: bird-float 6s ease-in-out infinite;
-  animation: bird-float 6s ease-in-out infinite;
+  -webkit-animation: bird-float-s 6s ease-in-out infinite;
+  animation: bird-float-s 6s ease-in-out infinite;
 }
 .recruit-wrap .inr .flow .kumonchu:after {
   --bW:358;
@@ -861,8 +861,10 @@
   z-index: 25;
   --W:370;
   --H:378;
-  -webkit-animation: bird-float 6s ease-in-out infinite;
-  animation: bird-float 6s ease-in-out infinite;
+  -webkit-animation: bird-float-s 6s ease-in-out infinite;
+  animation: bird-float-s 6s ease-in-out infinite;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
 }
 .recruit-wrap .inr .flow .duck:after {
   --bW:378;
@@ -1312,7 +1314,7 @@
     padding-left: 5.2631578947cqw;
   }
   .recruit-wrap .inr .description li:before {
-    top: 2.6315789474cqw;
+    top: 3.2894736842cqw;
     left: 1.5789473684cqw;
     width: 8px;
   }
