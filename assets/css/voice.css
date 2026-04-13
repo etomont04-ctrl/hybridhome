@@ -733,10 +733,13 @@
     border-radius: 30px;
   }
   .main-links .link .title {
-    margin-bottom: 18.4210526316cqw;
+    margin-bottom: 11.4473684211cqw;
   }
   .main-links .link .link_btn {
     padding: 3.9473684211cqw 21.0526315789cqw 3.9473684211cqw 7.8947368421cqw;
+  }
+  .main-links .link .link_btn .text {
+    font-size: 17px;
   }
   .main-links .link .link_btn .arrow {
     right: 5cqw;
@@ -1441,7 +1444,7 @@
 .voice-sec .inr.-m2000 .voice-box.box04 .img_area .risu {
   position: absolute;
   width: 17.6666666667%;
-  left: 67.6666666667%;
+  left: 66.6666666667%;
   bottom: -3cqw;
   z-index: 15;
 }

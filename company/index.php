@@ -78,7 +78,7 @@ $uri = "company";
 					<h2><img src="<?= $this_img_path; ?>company_title.webp" alt="会社概要" decoding="async"></h2>
 					<p class="en">Company</p>
 				</div>
-				<figure class="kumo -kumonchu02"><img src="<?= $this_img_path; ?>company-kumonchu.webp" alt="" decoding="async"></figure>
+				<figure class="kumo -kumonchu02 inview sb"><img src="<?= $this_img_path; ?>company-kumonchu.webp" alt="" decoding="async"></figure>
 				<dl class="data-list">
 					<div class="data_row">
 						<dt class="data_head">社名</dt>

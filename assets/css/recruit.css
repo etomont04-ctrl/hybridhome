@@ -403,7 +403,7 @@
     display: block;
     padding-top: 21.875cqw;
     width: 100%;
-    margin-bottom: 180px;
+    margin-bottom: 160px;
   }
   .intro .inr h2 {
     width: 69.375%;
@@ -440,7 +440,7 @@
   .intro .town-bg {
     height: 376px;
     background-size: 2480px 376px;
-    bottom: 50px;
+    bottom: 30px;
   }
   .intro .btm_cloud {
     position: absolute;
@@ -458,7 +458,7 @@
   }
   .intro .btm_cloud.cloud03 {
     width: 490px;
-    right: calc(50% + 74px);
+    right: calc(50% + 60px);
     bottom: 325px;
     z-index: 1;
   }
@@ -927,7 +927,7 @@
 .recruit-wrap .inr .description li {
   position: relative;
   font-size: max(15px, 1.0714285714cqw);
-  line-height: 2.4375;
+  line-height: 2.1333333333;
   font-weight: 500;
   padding-left: 1.2142857143cqw;
   letter-spacing: -0.04em;
@@ -936,7 +936,7 @@
   content: "";
   position: absolute;
   left: 0;
-  top: 1.2142857143cqw;
+  top: 1.0714285714cqw;
   width: 0.5714285714cqw;
   height: 3px;
   border-radius: 3px;

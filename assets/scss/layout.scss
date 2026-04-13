@@ -834,6 +834,21 @@
 		&.-conf{
 			margin-top:getCqw(120,$conW);
 		}
+		.bird{
+			position: absolute;
+			width: get_calc(259,$conW);
+			right: get_calc(-20,$conW);
+			top: getCqw(210,$conW);
+			z-index: 20;
+			-webkit-animation: bird-float-s 6s ease-in-out infinite;
+			animation: bird-float-s 6s ease-in-out infinite;
+			img{
+				animation: bird-sway-s 4.6s ease-in-out infinite;
+				will-change: transform;
+				transform-origin: 50% 60%;
+			}
+
+		}
 		.tit_area{
 			position: relative;
 			width: 100%;
@@ -1270,7 +1285,7 @@
 				}
 			}
 			select {
-				margin-top:getCqw(12,$conW);
+				margin-top:getCqw(23,$conW);
 				font-size:max(14px,getCqw(24,$conW));
 				padding:getCqw(40,$conW);
 				background-position: right 2rem center;

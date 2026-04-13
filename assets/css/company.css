@@ -282,10 +282,10 @@
           align-items: center;
 }
 .company-wrap .tit_area .en {
-  font-size: max(13px, 1.4285714286cqw);
+  font-size: max(13px, 1.3333333333cqw);
 }
 .company-wrap h2 {
-  margin-right: 2.1428571429cqw;
+  margin-right: 2cqw;
 }
 .company-wrap .kumo {
   position: absolute;
@@ -294,14 +294,14 @@
           animation: bird-float 6s ease-in-out infinite;
 }
 .company-wrap .-risu {
-  width: 15.1428571429%;
-  left: 68.5714285714%;
-  bottom: calc(100% - 4.2857142857cqw);
+  width: 14.1333333333%;
+  left: 64%;
+  bottom: calc(100% - 4cqw);
 }
 .company-wrap .-kumonchu {
-  width: 30.7857142857%;
-  left: 76.0714285714%;
-  bottom: calc(100% - 16.0714285714cqw);
+  width: 28.7333333333%;
+  left: 71%;
+  bottom: calc(100% - 15cqw);
   -webkit-animation-delay: -0.5s;
           animation-delay: -0.5s;
 }
@@ -317,10 +317,10 @@
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  padding-top: 11.0714285714cqw;
+  padding-top: 10.3333333333cqw;
 }
 .company-wrap .-message h2 {
-  width: 20.9285714286cqw;
+  width: 19.5333333333cqw;
 }
 .company-wrap .-message .img_area {
   position: relative;
@@ -328,7 +328,7 @@
   padding-top: 20px;
   padding-right: 20px;
   padding-left: 20px;
-  margin-top: 5.7142857143cqw;
+  margin-top: 5.3333333333cqw;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -361,14 +361,14 @@
 }
 .company-wrap .-message .risu {
   position: absolute;
-  width: 16.0714285714cqw;
-  bottom: -2.5714285714cqw;
-  left: -6.7857142857cqw;
+  width: 15cqw;
+  bottom: -2.4cqw;
+  left: -6.3333333333cqw;
   z-index: 30;
 }
 .company-wrap .-message .text_area {
   width: 49.1228070175%;
-  margin-top: 5.7142857143cqw;
+  margin-top: 5.3333333333cqw;
 }
 .company-wrap .-message .text_area .n_txt {
   font-size: max(15px, 1.0714285714cqw);
@@ -384,7 +384,7 @@
   position: relative;
 }
 .company-wrap .-company h2 {
-  width: 13.9285714286cqw;
+  width: 13cqw;
 }
 .company-wrap .-company .-kumonchu02 {
   width: 37.8070175439%;
@@ -392,47 +392,69 @@
   top: 0;
   -webkit-animation-delay: -0.5s;
           animation-delay: -0.5s;
+  --W:431;
+  --H:595;
+}
+.company-wrap .-company .-kumonchu02:after {
+  --bW:207;
+  --bT:29;
+  --bL:-73;
+  --imgURL: url("../img/company/company-kumonchu-sb.png");
+  aspect-ratio: 207/68;
+  -webkit-transition-delay: 0.4s;
+          transition-delay: 0.4s;
 }
 .company-wrap .-company .data-list {
-  padding: 4.2857142857cqw 5.7142857143cqw;
-  margin-top: 5.7142857143cqw;
+  padding: 4cqw 5.3333333333cqw;
+  margin-top: 5.3333333333cqw;
 }
 .company-wrap .-company .data_head, .company-wrap .-company .data_body {
-  font-size: max(14px, 1.0714285714cqw);
-  line-height: 2.4375;
+  font-size: max(14px, 1cqw);
+  line-height: 2;
   font-weight: 500;
 }
 .company-wrap .-company li {
   position: relative;
-  font-size: max(15px, 1.0714285714cqw);
-  line-height: 2.4375;
+  font-size: max(15px, 1cqw);
+  line-height: 2;
   font-weight: 500;
-  padding-left: 1.2142857143cqw;
+  padding-left: 1.1333333333cqw;
   letter-spacing: -0.06em;
 }
 .company-wrap .-company li:before {
   content: "";
   position: absolute;
   left: 0;
-  top: 1.0714285714cqw;
-  width: 0.5714285714cqw;
+  top: 0.8666666667cqw;
+  width: 0.5333333333cqw;
   height: 3px;
   border-radius: 3px;
   background: var(--base-btn-color03);
 }
 .company-wrap .-office {
   position: relative;
-  padding-bottom: 13.5714285714cqw;
+  padding-bottom: 12.6666666667cqw;
 }
 .company-wrap .-office h2 {
-  width: 27.6428571429cqw;
+  width: 25.8cqw;
 }
 .company-wrap .-office .duck {
   position: absolute;
   width: 10.7894736842%;
   right: 3.9473684211%;
-  top: max(35px, 3.5714285714cqw);
+  top: max(35px, 3.3333333333cqw);
   z-index: 1;
+  --W:123;
+  --H:140;
+}
+.company-wrap .-office .duck:after {
+  --bW:164;
+  --bT:-74;
+  --bL:-75;
+  --imgURL: url("../img/company/office-duck-sb.png");
+  aspect-ratio: 164/65;
+  -webkit-transition-delay: 0.4s;
+          transition-delay: 0.4s;
 }
 .company-wrap .-office ul {
   position: relative;
@@ -444,7 +466,7 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-top: 5.7142857143cqw;
+  margin-top: 5.3333333333cqw;
   z-index: 10;
 }
 .company-wrap .-office li {
@@ -453,7 +475,7 @@
 .company-wrap .-office .img {
   position: relative;
   width: calc(100% - 10px);
-  margin-bottom: 2.5cqw;
+  margin-bottom: 2.3333333333cqw;
 }
 .company-wrap .-office .img img {
   position: relative;
@@ -482,16 +504,16 @@
   z-index: 30;
 }
 .company-wrap .-office h3 {
-  font-size: max(17px, 1.2857142857cqw);
+  font-size: max(17px, 1.2cqw);
   line-height: 1;
   color: var(--base-color-green05);
   font-weight: 500;
-  margin-bottom: 1.4285714286cqw;
+  margin-bottom: 1.3333333333cqw;
 }
 .company-wrap .-office .n_txt {
-  font-size: max(13px, 1cqw);
+  font-size: max(13px, 0.9333333333cqw);
   line-height: 1.8571428571;
-  margin-bottom: 1.2142857143cqw;
+  margin-bottom: 1.1333333333cqw;
   letter-spacing: -0.05em;
   font-weight: 500;
 }
@@ -574,6 +596,17 @@
     right: 54.8611111111%;
     top: -44.7368421053cqw;
     z-index: 1;
+    --W:259;
+    --H:358;
+  }
+  .company-wrap .-company .-kumonchu02:after {
+    --bW:141;
+    --bT:18;
+    --bL:181;
+    --imgURL: url("../img/company/company-kumonchu-sb-sp.png");
+    aspect-ratio: 141/49;
+    -webkit-transition-delay: 0.4s;
+            transition-delay: 0.4s;
   }
   .company-wrap .-company .-kumonchu02 img {
     -webkit-transform: var(--hantenX);
@@ -587,6 +620,7 @@
   }
   .company-wrap .-company .data-list .map_link {
     margin-left: 0;
+    margin-bottom: 10px;
   }
   .company-wrap .-company .data_row {
     display: block;
@@ -617,6 +651,17 @@
     left: 62.1212121212%;
     top: auto;
     bottom: -9.2105263158cqw;
+    --W:216;
+    --H:175;
+  }
+  .company-wrap .-office .duck:after {
+    --bW:121;
+    --bT:3;
+    --bL:-95;
+    --imgURL: url("../img/company/office-duck-sb-sp.png");
+    aspect-ratio: 121/49;
+    -webkit-transition-delay: 0.4s;
+            transition-delay: 0.4s;
   }
   .company-wrap .-office ul {
     display: block;

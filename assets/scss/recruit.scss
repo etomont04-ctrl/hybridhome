@@ -173,7 +173,7 @@
 				padding-top:getCqw(140,$conW);
 				width: 100%;
 				// margin-bottom: getCqw(400,$conW);
-				margin-bottom: 180px;
+				margin-bottom: 160px;
 			}
 			h2{
 				width: get_calc(444,640);
@@ -209,7 +209,7 @@
 		.town-bg{
 			height: 376px;
 			background-size:2480px 376px;
-			bottom: 50px;
+			bottom: 30px;
 		}
 		.btm_cloud{
 			position: absolute;
@@ -226,7 +226,7 @@
 			}
 			&.cloud03{
 				width: 490px;
-				right: calc(50% + 74px);
+				right: calc(50% + 60px);
 				bottom: 325px;
 				z-index: 1;
 			}
@@ -689,7 +689,7 @@
 			li{
 				position: relative;
 				font-size: max(15px,getCqw(15,$conW));
-				line-height: calc(39/16);
+				line-height: calc(64/30);
 				font-weight: 500;
 				padding-left: getCqw(17,$conW);
 				letter-spacing: -0.04em;
@@ -697,7 +697,7 @@
 					content: "";
 					position: absolute;
 					left: 0;
-					top: getCqw(17,$conW);
+					top: getCqw(15,$conW);
 					width: getCqw(8,$conW);
 					height: 3px;
 					border-radius:3px;

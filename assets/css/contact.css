@@ -230,7 +230,7 @@
 }
 .fv .inr h1 {
   width: 18.6805555556%;
-  min-width: 304px;
+  min-width: 269px;
 }
 @media screen and (max-width: 1050px) {
   .fv .inr h1 {
@@ -264,11 +264,22 @@
 }
 .contact_wrap .kumonchu {
   position: absolute;
-  width: 30.7857142857%;
+  width: 28.7333333333%;
   max-width: 530px;
   bottom: calc(100% - 290px);
-  left: 80%;
+  left: 74.6666666667%;
   z-index: 5;
+  --W:431;
+  --H:595;
+}
+.contact_wrap .kumonchu:after {
+  --bW:164;
+  --bT:-24;
+  --bL:-4;
+  --imgURL: url("../img/contact/contact_wrap-kumonchu-sb.png");
+  aspect-ratio: 164/65;
+  -webkit-transition-delay: 0.4s;
+          transition-delay: 0.4s;
 }
 .contact_wrap .round-con {
   background: var(--base-color-white);
@@ -616,6 +627,9 @@
     max-width: 530px;
     bottom: calc(100% - 28.9473684211cqw);
     left: 50%;
+  }
+  .contact_wrap .kumonchu:after {
+    display: none;
   }
   .contact_wrap .-tell {
     display: block;

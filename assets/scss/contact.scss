@@ -12,7 +12,7 @@
 		$conW:1440;
 		h1{
 			width: get_calc(269,$conW);
-			min-width:304px;
+			min-width:269px;
 		}
 	}
 	@include max-width(1050){
@@ -51,11 +51,22 @@
 	}
 	.kumonchu{
 		position: absolute;
-		width: get_calc(431,1400);
+		width: get_calc(431,1500);
 		max-width:530px;
 		bottom:calc(100% - 290px);
-		left: get_calc(1120,1400);
+		left: get_calc(1120,1500);
 		z-index: 5;
+		--W:431;
+		--H:595;
+		&:after{
+			--bW:164;
+			--bT:-24;
+			--bL:-4;
+			--imgURL: url("../img/contact/contact_wrap-kumonchu-sb.png");
+			aspect-ratio:164/65;
+			transition-delay:.4s;
+		}
+
 	}
 
 	.round-con{
@@ -377,6 +388,9 @@
 			max-width:530px;
 			bottom:calc(100% - getCqw(220,$conW));
 			left: get_calc(380,$conW);
+			&:after{
+				display: none;
+			}
 		}
 		.-tell{
 			display: block;

@@ -32,7 +32,7 @@
 .company-wrap{
 	position: relative;
 	z-index: 30;
-	$conW:1400;
+	$conW:1500;
 	container-type: inline-size;
 	@include gradient-bg(to bottom, transparent,var(--base-bg-color05));
 	.inr{
@@ -162,6 +162,16 @@
 			left: get_calc(930,1140);
 			top: 0;
 			animation-delay: -0.5s;
+			--W:431;
+			--H:595;
+			&:after{
+				--bW:207;
+				--bT:29;
+				--bL:-73;
+				--imgURL: url("../img/company/company-kumonchu-sb.png");
+				aspect-ratio:207/68;
+				transition-delay:.4s;
+			}
 		}
 		.data-list{
 			padding:getCqw(60,$conW) getCqw(80,$conW);
@@ -169,13 +179,13 @@
 		}
 		.data_head,.data_body{
 			font-size: max(14px,getCqw(15,$conW));
-			line-height: calc(39/16);
+			line-height: calc(64/32);
 			font-weight: 500;
 		}
 		li{
 			position: relative;
 			font-size: max(15px,getCqw(15,$conW));
-			line-height: calc(39/16);
+			line-height: calc(64/32);
 			font-weight: 500;
 			padding-left: getCqw(17,$conW);
 			letter-spacing: -0.06em;
@@ -183,7 +193,7 @@
 				content: "";
 				position: absolute;
 				left: 0;
-				top: getCqw(15,$conW);
+				top: getCqw(13,$conW);
 				width: getCqw(8,$conW);
 				height: 3px;
 				border-radius:3px;
@@ -203,6 +213,16 @@
 			right: get_calc(45,1140);
 			top: max(35px,getCqw(50,$conW));
 			z-index: 1;
+			--W:123;
+			--H:140;
+			&:after{
+				--bW:164;
+				--bT:-74;
+				--bL:-75;
+				--imgURL: url("../img/company/office-duck-sb.png");
+				aspect-ratio:164/65;
+				transition-delay:.4s;
+			}
 		}
 		ul{
 			position: relative;
@@ -330,6 +350,16 @@
 				right: get_calc(395,720);
 				top:getCqw(-340,$conW);
 				z-index: 1;
+				--W:259;
+				--H:358;
+				&:after{
+					--bW:141;
+					--bT:18;
+					--bL:181;
+					--imgURL: url("../img/company/company-kumonchu-sb-sp.png");
+					aspect-ratio:141/49;
+					transition-delay:.4s;
+				}
 				img{
 					transform:var(--hantenX);
 				}
@@ -341,6 +371,7 @@
 				z-index: 10;
 				.map_link{
 					margin-left: 0;
+					margin-bottom: 10px;
 				}
 			}
 			.data_row{
@@ -372,6 +403,16 @@
 				left: get_calc(410,660);
 				top:auto;
 				bottom: getCqw(-70,$conW);
+				--W:216;
+				--H:175;
+				&:after{
+					--bW:121;
+					--bT:3;
+					--bL:-95;
+					--imgURL: url("../img/company/office-duck-sb-sp.png");
+					aspect-ratio:121/49;
+					transition-delay:.4s;
+				}
 			}
 			ul{
 				display: block;

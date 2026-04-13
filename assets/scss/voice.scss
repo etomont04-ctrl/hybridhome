@@ -489,10 +489,13 @@
 				border-radius: 30px;
 			}
 			.title{
-				margin-bottom: getCqw(140,$conW);
+				margin-bottom: getCqw(87,$conW);
 			}
 			.link_btn{
 				padding:getCqw(30,$conW) getCqw(160,$conW) getCqw(30,$conW) getCqw(60,$conW);
+				.text{
+					font-size: 17px;
+				}
 				.arrow{
 					right: getCqw(38,$conW);
 				}
@@ -1177,7 +1180,7 @@
 				.risu{
 					position: absolute;
 					width: get_calc(212,1200);
-					left: get_calc(812,1200);
+					left: get_calc(800,1200);
 					bottom: getCqw(-45,$conW);
 					z-index: 15;
 				}

@@ -4358,6 +4358,22 @@ img.preload {
 .contact_wrap .form.-conf {
   margin-top: 8.5714285714cqw;
 }
+.contact_wrap .form .bird {
+  position: absolute;
+  width: 18.5%;
+  right: -1.4285714286%;
+  top: 15cqw;
+  z-index: 20;
+  -webkit-animation: bird-float-s 6s ease-in-out infinite;
+  animation: bird-float-s 6s ease-in-out infinite;
+}
+.contact_wrap .form .bird img {
+  -webkit-animation: bird-sway-s 4.6s ease-in-out infinite;
+          animation: bird-sway-s 4.6s ease-in-out infinite;
+  will-change: transform;
+  -webkit-transform-origin: 50% 60%;
+          transform-origin: 50% 60%;
+}
 .contact_wrap .form .tit_area {
   position: relative;
   width: 100%;
@@ -4822,7 +4838,7 @@ img.preload {
     top: 0.9210526316cqw;
   }
   .contact_wrap .form_wrap select {
-    margin-top: 1.5789473684cqw;
+    margin-top: 3.0263157895cqw;
     font-size: max(14px, 3.1578947368cqw);
     padding: 5.2631578947cqw;
     background-position: right 2rem center;
