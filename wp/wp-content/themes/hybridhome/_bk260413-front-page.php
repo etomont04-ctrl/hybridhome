@@ -66,7 +66,7 @@ $this_img_path = $img_path .  "top/";
 						<img src="<?= $this_img_path; ?>fv-yane.webp" alt="">
 					</picture>
 			</div>
-			<!-- <a href="#" class="blog-link_area">
+			<a href="#" class="blog-link_area">
 				<figure class="img_area"><img src="<?= $this_img_path; ?>blog-dummy.png" alt="" decoding="async" class="fit_img"></figure>
 				<div class="text_area">
 					<div>
@@ -74,45 +74,7 @@ $this_img_path = $img_path .  "top/";
 						<p>ブログの最新記事が１件のみ表示されます。</p>
 					</div>
 				</div>
-			</a> -->
-			<?php
-			/* ==========================================================================
-				ブログ最新記事を1件取得
-			========================================================================== */
-			$latest_post_query = new WP_Query(array(
-				'post_type'				=> 'post',
-				'posts_per_page'		=> 1,
-				'post_status'			=> 'publish',
-				'ignore_sticky_posts'	=> true,
-			));
-			if ($latest_post_query->have_posts()) :
-				while ($latest_post_query->have_posts()) :
-					$latest_post_query->the_post();
-					$post_url		= get_permalink();
-					$post_title		= get_the_title();
-					$post_date		= get_the_date('Y.m.d');
-					$thumb_url		= get_the_post_thumbnail_url(get_the_ID(), 'full');
-			?>
-			<a href="<?= esc_url($post_url); ?>" class="blog-link_area">
-				<figure class="img_area">
-					<?php if ($thumb_url) : ?>
-						<img src="<?= esc_url($thumb_url); ?>" alt="<?= esc_attr($post_title); ?>" decoding="async" class="fit_img">
-					<?php else : ?>
-						<img src="<?= $this_img_path; ?>blog-dummy.png" alt="" decoding="async" class="fit_img">
-					<?php endif; ?>
-				</figure>
-				<div class="text_area">
-					<div>
-						<span class="en"><?= esc_html($post_date); ?></span>
-						<p><?= esc_html(mb_strimwidth($post_title, 0, 60, '…', 'UTF-8')); ?></p>
-					</div>
-				</div>
 			</a>
-			<?php
-				endwhile;
-				wp_reset_postdata();
-			endif;
-			?>
 			<figure class="bird bird01"><img src="<?= $img_path; ?>common/illust/bird01.webp" alt="" decoding="async"></figure>
 			<figure class="bird bird02 tab_off"><img src="<?= $img_path; ?>common/illust/bird02.webp" alt="" decoding="async"></figure>
 			<?php
@@ -234,99 +196,56 @@ $this_img_path = $img_path .  "top/";
 					</p>
 				</a>
 			</div><!-- /title_area -->
-			<?php
-			/* ==========================================================================
-				pick up works 取得
-			========================================================================== */
-			$pickup_query = new WP_Query(array(
-				'post_type'				=> 'works',
-				'posts_per_page'		=> 3,
-				'post_status'			=> 'publish',
-				'ignore_sticky_posts'	=> true,
-			));
-
-			if ($pickup_query->have_posts()) :
-			?>
 			<section class="picks">
 				<div class="splide js-picks-splide" aria-label="おすすめ事例">
 					<div class="splide__track">
 						<ul class="splide__list">
-							<?php
-							while ($pickup_query->have_posts()) :
-								$pickup_query->the_post();
-
-								$post_id			= get_the_ID();
-								$post_url			= get_permalink();
-								$post_title			= get_the_title();
-								$thumb_url			= get_the_post_thumbnail_url($post_id, 'full');
-
-								/* --------------------------------------------------------------------------
-									renovation タクソノミー（クラス用）
-								-------------------------------------------------------------------------- */
-								$renovation_terms	= get_the_terms($post_id, 'renovation');
-								$photo_class		= '';
-
-								if (!empty($renovation_terms) && !is_wp_error($renovation_terms)) {
-									$photo_class = $renovation_terms[0]->slug;
-								}
-
-								/* --------------------------------------------------------------------------
-									area タクソノミー（1件表示）
-								-------------------------------------------------------------------------- */
-								$area_terms			= get_the_terms($post_id, 'area');
-								$area_name			= '';
-
-								if (!empty($area_terms) && !is_wp_error($area_terms)) {
-									$area_name = $area_terms[0]->name;
-								}
-
-								/* --------------------------------------------------------------------------
-									commitment タクソノミー（複数表示）
-								-------------------------------------------------------------------------- */
-								$commitment_terms	= get_the_terms($post_id, 'commitment');
-							?>
 							<li class="splide__slide">
 								<article class="pick-card">
-									<a class="pick-card__link" href="<?= esc_url($post_url); ?>">
-										<div class="pick-card__photo <?= esc_attr($photo_class); ?>">
-											<?php if ($thumb_url) : ?>
-												<img src="<?= esc_url($thumb_url); ?>" alt="<?= esc_attr($post_title); ?>" decoding="async" class="fit_img">
-											<?php else : ?>
-												<img src="<?= $this_img_path; ?>project_img.webp" alt="" decoding="async" class="fit_img">
-											<?php endif; ?>
+									<a class="pick-card__link" href="#">
+										<div class="pick-card__photo soto">
+											<img src="<?= $this_img_path; ?>project_img.webp" alt="" decoding="async" class="fit_img">
 										</div>
-
 										<div class="pick-card__body">
-											<h3 class="pick-card__title"><?= esc_html($post_title); ?></h3>
-
-											<div class="pick-card__tags">
-												<?php
-												if (!empty($commitment_terms) && !is_wp_error($commitment_terms)) :
-													foreach ($commitment_terms as $term) :
-												?>
-													<span>#<?= esc_html($term->name); ?></span>
-												<?php
-													endforeach;
-												endif;
-												?>
-											</div>
-
-											<?php if ($area_name) : ?>
-												<span class="pick-card__area"><?= esc_html($area_name); ?></span>
-											<?php endif; ?>
+											<h3 class="pick-card__title">愛車と同居できる家</h3>
+											<div class="pick-card__tags"><span>#ウッドデッキ</span>　<span>#エクステリア</span></div>
+											<span class="pick-card__area">町田市</span>
 										</div>
 									</a>
 								</article>
-							</li><!-- /splide__slide -->
-							<?php endwhile; ?>
-						</ul><!-- /splide__list -->
-					</div><!-- /splide__track -->
-				</div><!-- /splide -->
-			</section><!-- /picks -->
-			<?php
-				wp_reset_postdata();
-			endif;
-			?>
+							</li><!--/splide__slide -->
+							<li class="splide__slide">
+								<article class="pick-card">
+									<a class="pick-card__link" href="#">
+										<div class="pick-card__photo uchi">
+											<img src="<?= $this_img_path; ?>project_img.webp" alt="" decoding="async" class="fit_img">
+										</div>
+										<div class="pick-card__body">
+											<h3 class="pick-card__title">庭がカフェになる家</h3>
+											<div class="pick-card__tags"><span>#ウッドデッキ</span>　<span>#エクステリア</span></div>
+											<span class="pick-card__area">町田市</span>
+										</div>
+									</a>
+								</article>
+							</li><!--/splide__slide -->
+							<li class="splide__slide">
+								<article class="pick-card">
+									<a class="pick-card__link" href="#">
+										<div class="pick-card__photo soto">
+											<img src="<?= $this_img_path; ?>project_img.webp" alt="" decoding="async" class="fit_img">
+										</div>
+										<div class="pick-card__body">
+											<h3 class="pick-card__title">犬と暮らしやすい家</h3>
+											<div class="pick-card__tags"><span>#ウッドデッキ</span>　<span>#エクステリア</span></div>
+											<span class="pick-card__area">町田市</span>
+										</div>
+									</a>
+								</article>
+							</li><!--/splide__slide -->
+						</ul><!--/splide__likst-->
+					</div><!--/splide-->
+				</div><!--/splide-->
+			</section><!--/picks -->
 			<a href="<?= $works_link ?>" class="link_wrap tab_on">
 				<p class="link_btn -red">
 					<span class="text">事例一覧へ</span>
@@ -608,61 +527,40 @@ $this_img_path = $img_path .  "top/";
 							<i class="arrow"><img src="<?= $img_path; ?>common/arrow-w.png" alt="" decoding="async"></i>
 						</p>
 					</a>
-					<?php
-				/* ==========================================================================
-					最新のお知らせを3件取得
-				========================================================================== */
-				$news_query = new WP_Query(array(
-					'post_type'				=> 'post',
-					'posts_per_page'		=> 3,
-					'post_status'			=> 'publish',
-					'ignore_sticky_posts'	=> true,
-				));
-
-				if ($news_query->have_posts()) :
-					while ($news_query->have_posts()) :
-						$news_query->the_post();
-
-						$post_id		= get_the_ID();
-						$post_url		= get_permalink();
-						$post_title		= get_the_title();
-						$post_date		= get_the_date('Y m.d');
-						$thumb_url		= get_the_post_thumbnail_url($post_id, 'full');
-						$categories		= get_the_category();
-						$cat_name		= '';
-
-						if (!empty($categories)) {
-							$cat_name = $categories[0]->name;
-						}
-				?>
-						<a href="<?= esc_url($post_url); ?>" class="news-link">
-							<div class="img_area">
-								<figure class="img_inr">
-									<?php if ($thumb_url) : ?>
-										<img src="<?= esc_url($thumb_url); ?>" alt="<?= esc_attr($post_title); ?>" decoding="async" class="fit_img">
-									<?php else : ?>
-										<img src="<?= $this_img_path; ?>blog-dummy.png" alt="" decoding="async" class="fit_img">
-									<?php endif; ?>
-								</figure>
+					<a href="#" class="news-link">
+						<div class="img_area">
+							<figure class="img_inr">
+								<img src="<?= $this_img_path; ?>blog-dummy.png" alt="" decoding="async" class="fit_img">
+							</figure>
+						</div>
+						<div class="link_text">
+							<div>
+								<span class="en">2025 12.30</span>
+								<span class="cate">お知らせ</span>
+								<p>WEBサイトをリニューアルしました</p>
 							</div>
-
-							<div class="link_text">
-								<div>
-									<span class="en"><?= esc_html($post_date); ?></span>
-
-									<?php if ($cat_name) : ?>
-										<span class="cate"><?= esc_html($cat_name); ?></span>
-									<?php endif; ?>
-
-									<p><?= esc_html(mb_strimwidth($post_title, 0, 82, '…', 'UTF-8')); ?></p>
-								</div>
+						</div>
+					</a>
+					<a href="#" class="news-link">
+						<figure class="img_area"><img src="<?= $this_img_path; ?>blog-dummy.png" alt="" decoding="async" class="fit_img"></figure>
+						<div class="link_text">
+							<div>
+								<span class="en">2025 12.30</span>
+								<span class="cate">お知らせ</span>
+								<p>WEBサイトをリニューアルしました</p>
 							</div>
-						</a>
-				<?php
-					endwhile;
-					wp_reset_postdata();
-				endif;
-				?>
+						</div>
+					</a>
+					<a href="#" class="news-link">
+						<figure class="img_area"><img src="<?= $this_img_path; ?>blog-dummy.png" alt="" decoding="async" class="fit_img"></figure>
+						<div class="link_text">
+							<div>
+								<span class="en">2025 12.30</span>
+								<span class="cate">お知らせ</span>
+								<p>ブログのタイトルが入ります。この文章はデザイン確認用のダミー文章です。</p>
+							</div>
+						</div>
+					</a>
 				</div>
 				<figrure class="illust_base">
 					<picture>

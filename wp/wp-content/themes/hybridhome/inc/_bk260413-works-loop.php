@@ -12,17 +12,10 @@
 
 			$renovation_terms = get_the_terms(get_the_ID(), 'renovation');
 			$card_reno_slug = '';
-
-			if (is_tax('renovation')) {
-				$current_term = get_queried_object();
-
-				if (!empty($current_term) && !is_wp_error($current_term) && !empty($current_term->slug)) {
-					$card_reno_slug = $current_term->slug;
-				}
-			} elseif (!empty($renovation_terms) && !is_wp_error($renovation_terms)) {
-				$reno_slugs = wp_list_pluck($renovation_terms, 'slug');
-				$card_reno_slug = implode(' ', $reno_slugs);
+			if (!empty($renovation_terms) && !is_wp_error($renovation_terms)) {
+				$card_reno_slug = $renovation_terms[0]->slug;
 			}
+
 			$commitment_terms = get_the_terms(get_the_ID(), 'commitment');
 			$area_terms = get_the_terms(get_the_ID(), 'area');
 			$card_area_name = '';

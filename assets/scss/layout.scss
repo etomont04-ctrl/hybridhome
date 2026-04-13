@@ -1680,7 +1680,7 @@
 			#000 100%);
 		mask-image: linear-gradient(to right,#000 0,#000 25px,transparent 25px,transparent calc(100% - 25px),#000 calc(100% - 25px),#000 100%);
 		@include transition(opacity);
-	border-radius:999px;
+		border-radius:999px;
 	}
 	&::after{
 		content:"";
@@ -1737,7 +1737,7 @@
 		.arrow{
 			animation-play-state: paused;
 		}
-		&.-blue{
+		&.-blue,&.-blue2{
 			--color:var(--base-btn-color01-hv);
 		}
 		&.-red{

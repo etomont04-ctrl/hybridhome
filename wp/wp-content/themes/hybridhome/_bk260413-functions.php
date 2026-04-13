@@ -407,7 +407,6 @@ if ( ! function_exists('get_dummy_by_top_slug') ) {
 /* ==========================================================================
 	renovation タクソノミーを1つだけ選択可能にする
 ========================================================================== */
-/*
 function custom_admin_taxonomy_single_select_script() {
 	$screen = get_current_screen();
 	if (!$screen) return;
@@ -437,7 +436,7 @@ function custom_admin_taxonomy_single_select_script() {
 }
 add_action('admin_footer-post.php', 'custom_admin_taxonomy_single_select_script');
 add_action('admin_footer-post-new.php', 'custom_admin_taxonomy_single_select_script');
-*/
+
 /* ==========================================================================
 	works を 投稿ID ベースのパーマリンクに変更
 ========================================================================== */

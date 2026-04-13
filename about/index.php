@@ -132,15 +132,15 @@ $uri = "about";
 						<span class="tab_on"><img src="<?= $this_img_path; ?>policy_sec-tit02-tab01.webp" alt="家を大切にする＝" decoding="async" class="-sp_tit01"></span>
 						<span class="tab_on"><img src="<?= $this_img_path; ?>policy_sec-tit02-tab02.webp" alt="長く続く関係" decoding="async" class="-sp_tit02"></span>
 					</h3>
-					<p class="n_txt">ハイブリッドホームには、<br>
-						多くのリピーターのお客様がいらっしゃいます。<br>
-						少しずつ住まいに手を入れながら暮らしている方が多いのは、<br>
+					<p class="n_txt">ハイブリッドホームには、<br class="tab_off">
+						多くのリピーターのお客様がいらっしゃいます。<br class="tab_off">
+						少しずつ住まいに手を入れながら暮らしている方が多いのは、<br class="tab_off">
 						わたしたちを、住まいを一緒に守るパートナーだと考えてくださるから。<br>
 						<br>
 						職人たちとの関係も同じです。<br>
-						ハイブリッドホームには、長く一緒に仕事を続けている職人が多くいます。<br>
-						それは、腕がいいからだけではありません。<br>
-						住む方の気持ちに寄り添うことを大切に考える職人たちもまた<br>
+						ハイブリッドホームには、長く一緒に仕事を続けている職人が多くいます。<br class="tab_off">
+						それは、腕がいいからだけではありません。<br class="tab_off">
+						住む方の気持ちに寄り添うことを大切に考える職人たちもまた<br class="tab_off">
 						お客様の住まいを支える大切なパートナーだからです。</p>
 						<a href="<?= $voice_link ?>" class="link_wrap -slink01">
 							<p class="link_btn -blue">
@@ -148,7 +148,7 @@ $uri = "about";
 								<i class="arrow"><img src="<?= $img_path; ?>common/arrow-w.png" alt="" decoding="async"></i>
 							</p>
 						</a>
-						<a href="<?= $member_link ?>" class="link_wrap -slink02">
+						<a href="<?= $partner_link ?>" class="link_wrap -slink02">
 							<p class="link_btn -blue">
 								<span class="text">ハイブリッドホームの仲間たち</span>
 								<i class="arrow"><img src="<?= $img_path; ?>common/arrow-w.png" alt="" decoding="async"></i>

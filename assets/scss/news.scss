@@ -607,11 +607,11 @@
 		.base-wrap{
 			display: block;
 			$conW:760;
-			padding-bottom: getCqw(180,$conW);
+			// padding-bottom: getCqw(180,$conW);
 			border-radius:30px;
 			background: var(--base-bg-color06);
 			&.-archive{
-				padding-bottom: min(120px,getCqw(180,$conW));
+				// padding-bottom: min(120px,getCqw(180,$conW));
 			}
 			&.-nf{
 				padding-bottom: 0;
@@ -730,6 +730,7 @@
 				width: get_calc(640,760);
 				padding-top: 0;
 				margin:0 auto;
+				padding-bottom: 70px;
 				.non-text{
 					font-size: getCqw(18,$conW);
 				}

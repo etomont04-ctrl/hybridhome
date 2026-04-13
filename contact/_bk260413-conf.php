@@ -21,9 +21,6 @@ $uri = "contact";
 
 session_start();
 
-function h($str) {
-	return htmlspecialchars($str, ENT_QUOTES, 'UTF-8');
-}
 /* ==========================================================================
 	直接アクセス対策
 ========================================================================== */
@@ -45,6 +42,13 @@ $tel = isset($_POST['tel']) ? trim($_POST['tel']) : '';
 $message = isset($_POST['message']) ? trim($_POST['message']) : '';
 
 /* ==========================================================================
+	サニタイズ
+========================================================================== */
+function h($str) {
+	return htmlspecialchars($str, ENT_QUOTES, 'UTF-8');
+}
+
+/* ==========================================================================
 	バリデーション
 ========================================================================== */
 $errors = array();
@@ -64,30 +68,6 @@ if ($mail !== '' && !filter_var($mail, FILTER_VALIDATE_EMAIL)) {
 if ($tel !== '' && !preg_match('/^\d{2,4}-?\d{2,4}-?\d{3,4}$/', $tel)) {
 	$errors[] = 'お電話番号の形式が正しくありません。';
 }
-
-/* ==========================================================================
-	エラー時は入力画面へ戻す
-========================================================================== */
-if (!empty($errors)) {
-	$_SESSION['errors'] = $errors;
-	$_SESSION['old'] = $_POST;
-	header('Location: ./');
-	exit;
-}
-
-/* ==========================================================================
-	セッションに保存
-========================================================================== */
-$_SESSION['contact'] = array(
-	'shubetsu'	=> $shubetsu,
-	'name'		=> $name,
-	'kana'		=> $kana,
-	'todoufuken'=> $todoufuken,
-	'shichouson'=> $shichouson,
-	'mail'		=> $mail,
-	'tel'		=> $tel,
-	'message'	=> $message,
-);
 ?>
 <!DOCTYPE html>
 <html lang="ja">
@@ -208,10 +188,10 @@ $_SESSION['contact'] = array(
 							<input type="hidden" name="mail" value="<?= h($mail); ?>">
 							<input type="hidden" name="tel" value="<?= h($tel); ?>">
 							<input type="hidden" name="message" value="<?= h($message); ?>">
-							<p class="link_btn -gray -rev" id="submit_wrap02">
+							<p class="link_btn -gray -rev" id="submit_wrap">
 								<span class="text">修正する</span>
 								<i class="arrow -rev"><img src="<?= $img_path; ?>common/arrow-w.png" alt="" decoding="async"></i>
-								<input type="submit" class="submit-btn" id="submit-btn02" value="">
+								<input type="submit" class="submit-btn" id="submit-btn" value="">
 							</p>
 						</form>
 					</div>

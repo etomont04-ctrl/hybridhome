@@ -1065,8 +1065,8 @@
 	}
 	@include max-width(1050){
 		.inr{
-			$conW:640;
-			width: get_calc(640,800);
+			$conW:720;
+			width: get_calc(720,800);
 			h2{
 				width: getCqw(516,$conW);
 				margin:0 auto getCqw(60,$conW);
@@ -1089,8 +1089,10 @@
 			}
 			.text_area{
 				display: block;
-				width: get_calc(530,640);
-				margin-left: auto;
+				width: 100%;
+				padding-left: getCqw(118,$conW);
+				padding-right: getCqw(15,$conW);
+				box-sizing:border-box;
 			}
 			h3{
 				margin-bottom: getCqw(50,$conW);
@@ -1132,37 +1134,37 @@
 			}
 			.list01{
 				h3{
-					width: get_calc(200,530);
+					width: get_calc(200,480);
 				}
 			}
 			.list02{
 				h3{
-					width: get_calc(335,580);
+					width: get_calc(335,480);
 				}
 			}
 			.list03{
 				h3{
-					width: get_calc(351,580);
+					width: get_calc(351,480);
 				}
 			}
 			.list04{
 				h3{
-					width: get_calc(90,580);
+					width: get_calc(90,480);
 				}
 			}
 			.list05{
 				h3{
-					width: get_calc(61,580);
+					width: get_calc(61,480);
 				}
 			}
 			.list06{
 				h3{
-					width: get_calc(152,580);
+					width: get_calc(152,480);
 				}
 			}
 			.list07{
 				h3{
-					width: get_calc(319,580);
+					width: get_calc(319,480);
 				}
 			}
 		}
@@ -1485,6 +1487,7 @@
 			}
 			.card__photo{
 				$areaH:420;
+				margin-bottom: getCqw(40,$conW);
 				&:after{
 					left:get_calc(500,640);
 					top: get_calc(350,$areaH);

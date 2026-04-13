@@ -18,76 +18,6 @@ if ($host === 'localhost' || $host === '127.0.0.1') {
 $UNIQUE_CSS = '<link rel="stylesheet" href="../assets/css/contact.css?'.$Ymd.'">';
 $UNIQUE_SCRIPT = '';
 $uri = "contact";
-
-session_start();
-
-function h($str) {
-	return htmlspecialchars($str, ENT_QUOTES, 'UTF-8');
-}
-/* ==========================================================================
-	直接アクセス対策
-========================================================================== */
-if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-	header('Location: ./');
-	exit;
-}
-
-/* ==========================================================================
-	値の取得
-========================================================================== */
-$shubetsu = isset($_POST['shubetsu']) ? trim($_POST['shubetsu']) : '';
-$name = isset($_POST['name']) ? trim($_POST['name']) : '';
-$kana = isset($_POST['kana']) ? trim($_POST['kana']) : '';
-$todoufuken = isset($_POST['todoufuken']) ? trim($_POST['todoufuken']) : '';
-$shichouson = isset($_POST['shichouson']) ? trim($_POST['shichouson']) : '';
-$mail = isset($_POST['mail']) ? trim($_POST['mail']) : '';
-$tel = isset($_POST['tel']) ? trim($_POST['tel']) : '';
-$message = isset($_POST['message']) ? trim($_POST['message']) : '';
-
-/* ==========================================================================
-	バリデーション
-========================================================================== */
-$errors = array();
-
-if ($shubetsu === '') $errors[] = 'お問い合わせ種別を選択してください。';
-if ($name === '') $errors[] = 'お名前を入力してください。';
-if ($kana === '') $errors[] = 'ふりがなを入力してください。';
-if ($todoufuken === '') $errors[] = '住所：都道府県を入力してください。';
-if ($shichouson === '') $errors[] = '住所：市区町村を入力してください。';
-if ($mail === '') $errors[] = 'メールアドレスを入力してください。';
-if ($message === '') $errors[] = 'ご相談・お問い合わせ内容を入力してください。';
-
-if ($mail !== '' && !filter_var($mail, FILTER_VALIDATE_EMAIL)) {
-	$errors[] = 'メールアドレスの形式が正しくありません。';
-}
-
-if ($tel !== '' && !preg_match('/^\d{2,4}-?\d{2,4}-?\d{3,4}$/', $tel)) {
-	$errors[] = 'お電話番号の形式が正しくありません。';
-}
-
-/* ==========================================================================
-	エラー時は入力画面へ戻す
-========================================================================== */
-if (!empty($errors)) {
-	$_SESSION['errors'] = $errors;
-	$_SESSION['old'] = $_POST;
-	header('Location: ./');
-	exit;
-}
-
-/* ==========================================================================
-	セッションに保存
-========================================================================== */
-$_SESSION['contact'] = array(
-	'shubetsu'	=> $shubetsu,
-	'name'		=> $name,
-	'kana'		=> $kana,
-	'todoufuken'=> $todoufuken,
-	'shichouson'=> $shichouson,
-	'mail'		=> $mail,
-	'tel'		=> $tel,
-	'message'	=> $message,
-);
 ?>
 <!DOCTYPE html>
 <html lang="ja">
@@ -122,7 +52,7 @@ $_SESSION['contact'] = array(
 				<div class="tit_area">
 					<h2><img src="<?= $this_img_path; ?>form_title.png" alt="メールでお問い合わせ" decoding="async"></h2>
 					<p class="en">Mail Form</p>
-					<p class="n_txt">入力内容をご確認の上、送信ボタンを押してください。<br>1～3営業日以内に、担当よりメールにて返信させていただきます。</p>
+					<p class="n_txt">送信完了しました。</p>
 				</div>
 				<ol class="step -conf">
 					<li>
@@ -208,10 +138,10 @@ $_SESSION['contact'] = array(
 							<input type="hidden" name="mail" value="<?= h($mail); ?>">
 							<input type="hidden" name="tel" value="<?= h($tel); ?>">
 							<input type="hidden" name="message" value="<?= h($message); ?>">
-							<p class="link_btn -gray -rev" id="submit_wrap02">
+							<p class="link_btn -gray -rev" id="submit_wrap">
 								<span class="text">修正する</span>
 								<i class="arrow -rev"><img src="<?= $img_path; ?>common/arrow-w.png" alt="" decoding="async"></i>
-								<input type="submit" class="submit-btn" id="submit-btn02" value="">
+								<input type="submit" class="submit-btn" id="submit-btn" value="">
 							</p>
 						</form>
 					</div>

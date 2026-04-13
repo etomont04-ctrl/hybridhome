@@ -91,9 +91,9 @@
   --base-color-uchi:#c13e02;
   --base-color-soto:#32a4ab;
   --base-btn-color01:#1f858b;
-  --base-btn-color01-hv:#137a80;
+  --base-btn-color01-hv:#136a80;
   --base-btn-color02:#c93c02;
-  --base-btn-color02-hv:#ba3600;
+  --base-btn-color02-hv:#a22200;
   --base-btn-color03:#3da4a3;
   --base-btn-color01-hv:#137a80;
   --base-bubble-bg:#dbe2e2;
@@ -912,8 +912,19 @@ html.is-loading::after {
     top: auto;
     bottom: -14.4032921811%;
   }
+  #kv .cloud05 {
+    top: 140%;
+    left: 25.1875%;
+    width: 191.625%;
+  }
   #kv .cloud06 {
     top: 160%;
+    width: 149.625%;
+  }
+  #kv .cloud07 {
+    top: 205%;
+    left: 20.375%;
+    width: 166.75%;
   }
   #kv .blog-link_area {
     width: 90%;
@@ -1020,11 +1031,12 @@ html.is-loading::after {
 }
 @media screen and (max-width: 1050px) {
   .sv {
-    aspect-ratio: 800/1300;
+    aspect-ratio: 800/1500;
+    padding-bottom: 0;
     max-height: 13000px;
   }
   .sv .sv-cloud {
-    bottom: -300.3%;
+    display: none;
   }
 }
 
@@ -1659,6 +1671,7 @@ html.is-loading::after {
   font-size: 0.9333333333cqw;
   font-weight: 500;
   margin-right: 11px;
+  margin-bottom: 5px;
 }
 .project .pick-card__tags span:after {
   content: "";
@@ -2992,7 +3005,7 @@ html.is-loading::after {
 .news .news-contents_area .news-link .cate {
   display: inline-block;
   font-size: 0.9333333333cqw;
-  padding: 0.3333333333cqw 0.8666666667cqw;
+  padding: 0.2666666667cqw 0.8666666667cqw 0.4666666667cqw;
   background: var(--base-color-black);
   color: var(--base-color-white);
   border-radius: 0.8666666667cqw;
@@ -3115,6 +3128,7 @@ html.is-loading::after {
   }
   .news .news-contents_area .link_btn {
     width: 42.5cqw;
+    right: 11.1111111111%;
     border-radius: 6.25cqw;
   }
   .news .news-contents_area .link_btn:before {
@@ -3160,7 +3174,7 @@ html.is-loading::after {
   }
   .news .news-contents_area .news-link .cate {
     font-size: 3.25cqw;
-    padding: 5px 2.5cqw;
+    padding: 4px 2.5cqw 7px;
     border-radius: 6.25cqw;
     -webkit-transform: translateY(-0.375cqw);
             transform: translateY(-0.375cqw);
@@ -3181,6 +3195,7 @@ html.is-loading::after {
   }
   .news .news-contents_area .link_wrap + .news-link .link_text {
     text-align: center;
+    margin-left: 0;
   }
   .news .news-contents_area .link_wrap + .news-link .en {
     font-size: 3.5cqw;

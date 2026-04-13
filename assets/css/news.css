@@ -91,9 +91,9 @@
   --base-color-uchi:#c13e02;
   --base-color-soto:#32a4ab;
   --base-btn-color01:#1f858b;
-  --base-btn-color01-hv:#137a80;
+  --base-btn-color01-hv:#136a80;
   --base-btn-color02:#c93c02;
-  --base-btn-color02-hv:#ba3600;
+  --base-btn-color02-hv:#a22200;
   --base-btn-color03:#3da4a3;
   --base-btn-color01-hv:#137a80;
   --base-bubble-bg:#dbe2e2;
@@ -861,12 +861,8 @@
 @media screen and (max-width: 1050px) {
   .news_wrap .base-wrap {
     display: block;
-    padding-bottom: 23.6842105263cqw;
     border-radius: 30px;
     background: var(--base-bg-color06);
-  }
-  .news_wrap .base-wrap.-archive {
-    padding-bottom: min(120px, 23.6842105263cqw);
   }
   .news_wrap .base-wrap.-nf {
     padding-bottom: 0;
@@ -997,6 +993,7 @@
     width: 84.2105263158%;
     padding-top: 0;
     margin: 0 auto;
+    padding-bottom: 70px;
   }
   .news_wrap .base-wrap .archive_wrap .non-text {
     font-size: 2.3684210526cqw;

@@ -67,42 +67,50 @@ $this_img_path = $img_path .  "works/";
 					</span>
 				</h1>
 				<div class="cates">
-					<div class="area-links">
-					<?php
-					$renovation_terms = get_the_terms(get_the_ID(), 'renovation');
+			<?php
+$renovation_terms = get_the_terms(get_the_ID(), 'renovation');
+$area_terms = get_the_terms(get_the_ID(), 'area');
 
-					if (!empty($renovation_terms) && !is_wp_error($renovation_terms)) :
-						$renovation_term = $renovation_terms[0];
-						$renovation_slug = $renovation_term->slug;
-						$renovation_link = get_term_link($renovation_term);
-					?>
+$area_term = (!empty($area_terms) && !is_wp_error($area_terms)) ? $area_terms[0] : null;
+$area_link = ($area_term) ? get_term_link($area_term) : '';
+?>
 
-						<?php if ($renovation_slug === 'uchi') : ?>
-							<a href="<?= esc_url($renovation_link); ?>" class="area-links_item -reno -uchi">
-								<picture>
-									<source media="(max-width: 800px)" srcset="<?= $this_img_path; ?>works_d-uchi-sp.png">
-									<img src="<?= $this_img_path; ?>works_d-uchi.png" alt="うちリノ">
-								</picture>
-							</a>
+<?php if (!empty($renovation_terms) && !is_wp_error($renovation_terms)) : ?>
+	<?php foreach ($renovation_terms as $renovation_term) : ?>
+		<?php
+		$renovation_slug = $renovation_term->slug;
+		$renovation_link = get_term_link($renovation_term);
 
-						<?php elseif ($renovation_slug === 'soto') : ?>
-							<a href="<?= esc_url($renovation_link); ?>" class="area-links_item -reno -soto">
-								<picture>
-									<source media="(max-width: 800px)" srcset="<?= $this_img_path; ?>works_d-soto-sp.png">
-									<img src="<?= $this_img_path; ?>works_d-soto.png" alt="そとリノ">
-								</picture>
-							</a>
-						<?php endif; ?>
-					<?php endif; ?>
-					<?php
-					$area_terms = get_the_terms(get_the_ID(), 'area');
-					if (!empty($area_terms) && !is_wp_error($area_terms)) :
-						$area_term = $area_terms[0];
-						$area_link = get_term_link($area_term);
-					?>
-						<a href="<?= esc_url($area_link); ?>" class="area-links_item -town"><?= esc_html($area_term->name); ?></a>
-					<?php endif; ?>
-					</div>
+		if (is_wp_error($renovation_link)) continue;
+		if ($area_term && is_wp_error($area_link)) $area_term = null;
+
+		if ($renovation_slug !== 'uchi' && $renovation_slug !== 'soto') continue;
+		?>
+
+		<div class="area-links">
+			<?php if ($renovation_slug === 'uchi') : ?>
+				<a href="<?= esc_url($renovation_link); ?>" class="area-links_item -reno -uchi">
+					<picture>
+						<source media="(max-width: 800px)" srcset="<?= $this_img_path; ?>works_d-uchi-sp.png">
+						<img src="<?= $this_img_path; ?>works_d-uchi.png" alt="うちリノ">
+					</picture>
+				</a>
+
+			<?php elseif ($renovation_slug === 'soto') : ?>
+				<a href="<?= esc_url($renovation_link); ?>" class="area-links_item -reno -soto">
+					<picture>
+						<source media="(max-width: 800px)" srcset="<?= $this_img_path; ?>works_d-soto-sp.png">
+						<img src="<?= $this_img_path; ?>works_d-soto.png" alt="そとリノ">
+					</picture>
+				</a>
+			<?php endif; ?>
+
+			<?php if ($area_term) : ?>
+				<a href="<?= esc_url($area_link); ?>" class="area-links_item -town"><?= esc_html($area_term->name); ?></a>
+			<?php endif; ?>
+		</div>
+	<?php endforeach; ?>
+<?php endif; ?>
 					<?php
 					$commitment_terms = get_the_terms(get_the_ID(), 'commitment');
 					?>
