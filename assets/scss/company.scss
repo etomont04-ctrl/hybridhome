@@ -90,7 +90,8 @@
 		@include fl;
 		align-items:flex-start;
 		$areaW:2280;
-		padding-top: getCqw(155,$conW);
+		padding-top: getCqw(140,$conW);
+		margin-top: getCqw(80,$conW);
 		h2{
 			width: getCqw(293,$conW);
 		}
@@ -181,6 +182,9 @@
 			font-size: max(14px,getCqw(15,$conW));
 			line-height: calc(64/32);
 			font-weight: 500;
+		}
+		.data_row{
+			padding: 1.7rem 0;
 		}
 		li{
 			position: relative;
@@ -281,6 +285,9 @@
 	}
 	@include max-width(1050){
 		$conW:760;
+		.inr:before{
+			border-radius:30px;
+		}
 		.company-sec{
 			margin-top: getCqw(120,$conW);
 			width: get_calc(640,$conW);
@@ -376,6 +383,7 @@
 			}
 			.data_row{
 				display: block;
+				padding: 1.2rem 0;
 			}
 			.data_head,.data_body{
 				font-size: min(17px,getCqw(28,$conW));

@@ -190,7 +190,7 @@
 		}
 		.area-links{
 			position: relative;
-			width: 150px;
+			min-width: 150px;
 			border-radius: 999px;
 			overflow: hidden;
 			background: #1f1f1f;
@@ -203,9 +203,10 @@
 			.-town{
 				position: relative;
 				@include fc;
-				width: 150px;
+				min-width: 150px;
 				height: 27px;
-				padding-left: 73px;
+				padding-left: 86px;
+				padding-right: 15px;
 				box-sizing:border-box;
 				font-size: 13px;
 				font-weight: 700;
@@ -220,7 +221,8 @@
 				position: absolute;
 				left: 0;
 				top: 0;
-				width: get_calc(173,300);
+				width: 86px;
+				// width: get_calc(173,300);
 				height: 100%;
 				padding-right: 7px;
 				color: #fff;
@@ -400,23 +402,24 @@
 				margin-bottom: 3rem;
 			}
 			.cates{
-				display:block;
+				// display:block;
 				margin-bottom: getCqw(100,$conW);
 			}
 			.area-links{
-				width: 135px;
+				min-width: 135px;
 				+ .area-links{
 					margin-left: 0;
 					margin-top: 10px;
 				}
 				.-town{
-					width: 135px;
+					min-width: 135px;
 					height: 24px;
-					padding-left: 55px;
+					padding-left:77px;
 					font-size: 11px;
 				}
 				.-reno{
-					width: get_calc(154,270);
+					width: 77px;
+					// width: get_calc(154,270);
 					padding-right: 7px;
 					img{
 						width: 34px;
@@ -427,6 +430,7 @@
 				display: block;
 				margin-left: 0;
 				padding-top: 28px;
+				flex:auto;
 				a{
 					font-size: 12px;
 					margin-right: 10px;
@@ -1081,6 +1085,9 @@
 		$conW:760;
 		margin-top: getCqw(270,$conW);
 		padding-bottom:min(85px,22.5vw);
+			&:before{
+				border-radius:30px;
+			}
 		.inr{
 			padding-bottom:min(85px,22.5vw);
 			&:before{

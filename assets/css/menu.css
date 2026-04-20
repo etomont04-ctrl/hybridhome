@@ -96,6 +96,7 @@
   --base-btn-color02-hv:#a22200;
   --base-btn-color03:#3da4a3;
   --base-btn-color01-hv:#137a80;
+  --insta-color-hv:#f7228c;
   --base-bubble-bg:#dbe2e2;
   --base-bubble-bg02:#cff0f1;
   --base-bubble-bg03:#a8c4c4;
@@ -425,6 +426,9 @@
   letter-spacing: 0.04em;
   -webkit-transition: background 0.4s var(--easeOutSine);
   transition: background 0.4s var(--easeOutSine);
+}
+.head .g-nav .w_link:hover {
+  background: var(--base-btn-color01);
 }
 .head .g-nav .contact_link {
   position: relative;
@@ -835,6 +839,68 @@
 }
 .global-nav .info .link_btn .text {
   font-size: 16px;
+}
+.global-nav .info .tokushu_title {
+  width: 94.6428571429%;
+  max-width: 570px;
+  margin: 30px auto 15px;
+}
+.global-nav .info .tokushu_links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  max-width: 570px;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+.global-nav .info .tokushu_links a {
+  display: block;
+  width: 39.6875%;
+}
+@media screen and (min-width: 801px) {
+  .global-nav .info .tokushu_links a:hover {
+    opacity: 0.7;
+  }
+}
+.global-nav .info .insta_link {
+  position: relative;
+  display: table;
+  margin: 0 auto;
+  width: 71.875%;
+  text-align: center;
+  padding: 8px 0 10px;
+  border-radius: 999px;
+  border: 1px solid #030000;
+}
+.global-nav .info .insta_link .icon {
+  position: absolute;
+  left: 10px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 18px;
+  height: 18px;
+}
+.global-nav .info .insta_link span {
+  font-size: clamp(13px, 3.25vw, 16px);
+  text-transform: uppercase;
+  font-weight: 500;
+  -webkit-transition: color 0.4s var(--easeOutSine);
+  transition: color 0.4s var(--easeOutSine);
+}
+@media screen and (min-width: 801px) {
+  .global-nav .info .insta_link:hover {
+    background: var(--insta-color-hv);
+    border-color: var(--insta-color-hv);
+  }
+  .global-nav .info .insta_link:hover span {
+    color: #fff;
+  }
 }
 @media screen and (max-width: 800px) {
   .global-nav .nav_link {

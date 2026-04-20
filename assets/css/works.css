@@ -97,6 +97,7 @@
   --base-btn-color02-hv:#a22200;
   --base-btn-color03:#3da4a3;
   --base-btn-color01-hv:#137a80;
+  --insta-color-hv:#f7228c;
   --base-bubble-bg:#dbe2e2;
   --base-bubble-bg02:#cff0f1;
   --base-bubble-bg03:#a8c4c4;
@@ -402,7 +403,7 @@
 }
 .works_d-fv .inr .area-links {
   position: relative;
-  width: 150px;
+  min-width: 150px;
   border-radius: 999px;
   overflow: hidden;
   background: #1f1f1f;
@@ -424,9 +425,10 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 150px;
+  min-width: 150px;
   height: 27px;
-  padding-left: 73px;
+  padding-left: 86px;
+  padding-right: 15px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-size: 13px;
@@ -450,7 +452,7 @@
   position: absolute;
   left: 0;
   top: 0;
-  width: 57.6666666667%;
+  width: 86px;
   height: 100%;
   padding-right: 7px;
   color: #fff;
@@ -657,24 +659,23 @@
     margin-bottom: 3rem;
   }
   .works_d-fv .inr .cates {
-    display: block;
     margin-bottom: 13.5135135135cqw;
   }
   .works_d-fv .inr .area-links {
-    width: 135px;
+    min-width: 135px;
   }
   .works_d-fv .inr .area-links + .area-links {
     margin-left: 0;
     margin-top: 10px;
   }
   .works_d-fv .inr .area-links .-town {
-    width: 135px;
+    min-width: 135px;
     height: 24px;
-    padding-left: 55px;
+    padding-left: 77px;
     font-size: 11px;
   }
   .works_d-fv .inr .area-links .-reno {
-    width: 57.037037037%;
+    width: 77px;
     padding-right: 7px;
   }
   .works_d-fv .inr .area-links .-reno img {
@@ -684,6 +685,9 @@
     display: block;
     margin-left: 0;
     padding-top: 28px;
+    -webkit-box-flex: 1;
+        -ms-flex: auto;
+            flex: auto;
   }
   .works_d-fv .inr .tags a {
     font-size: 12px;
@@ -1430,6 +1434,9 @@
   .works .inr {
     margin-top: 35.5263157895cqw;
     padding-bottom: min(85px, 22.5vw);
+  }
+  .works .inr:before {
+    border-radius: 30px;
   }
   .works .inr .inr {
     padding-bottom: min(85px, 22.5vw);

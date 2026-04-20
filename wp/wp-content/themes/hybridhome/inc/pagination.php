@@ -7,6 +7,7 @@ if ($host === 'localhost' || $host === '127.0.0.1') {
 } else {
 	include($_SERVER['DOCUMENT_ROOT'] . '/assets/inc/root.php');
 }
+
 global $wp_query;
 if (!isset($wp_query) || (int) $wp_query->max_num_pages <= 1) {
 	return;
@@ -15,43 +16,66 @@ if (!isset($wp_query) || (int) $wp_query->max_num_pages <= 1) {
 $current = max(1, get_query_var('paged'));
 $total = (int) $wp_query->max_num_pages;
 
-$page_links = paginate_links(array(
-	'base'		=> str_replace(999999999, '%#%', esc_url(get_pagenum_link(999999999))),
-	'format'	=> '',
-	'current'	=> $current,
-	'total'		=> $total,
-	'type'		=> 'array',
-	'prev_next'	=> false,
-	'mid_size'	=> 1,
-	'end_size'	=> 1,
-));
-
 $prev_link = get_previous_posts_page_link();
 $next_link = get_next_posts_page_link($total);
 
 $is_prev_disabled = ($current <= 1);
 $is_next_disabled = ($current >= $total);
-?>
 
-<?php if (!empty($page_links) && is_array($page_links)) : ?>
+/* ==========================================================================
+	表示するページ番号を作成
+========================================================================== */
+$display_pages = array();
+
+// 現在のページ
+$display_pages[] = $current;
+if ($total <= 3) {
+	// 総ページ数が少ないときは全部表示
+	for ($i = 1; $i <= $total; $i++) {
+		$display_pages[] = $i;
+	}
+} elseif ($current >= $total - 1) {
+	// 最後付近のときは「1 ... 最後の1つ前 最後」
+	$display_pages[] = 1;
+	$display_pages[] = $total - 1;
+	$display_pages[] = $total;
+} else {
+	// 通常時は「現在 次 ... 最後」
+	$display_pages[] = $current;
+	$display_pages[] = $current + 1;
+	$display_pages[] = $total;
+}
+
+// 重複削除＆並び替え
+$display_pages = array_values(array_unique($display_pages));
+sort($display_pages);
+?>
 
 <div class="archive-pager_wrap">
 	<div class="archive-pager">
 		<ol class="archive-pager_num">
-			<?php foreach ($page_links as $page_link) : ?>
+			<?php foreach ($display_pages as $index => $page_num) : ?>
 				<?php
-				$is_current = strpos($page_link, 'current') !== false;
-				$page_link = str_replace('page-numbers', 'archive-pager__page', $page_link);
-
-				if ($is_current) {
-					$page_link = str_replace('archive-pager__page current', 'archive-pager__page is-current', $page_link);
+				// 「次のページ」と「最後のページ」の間が空くときだけ ... を入れる
+				if ($index > 0) {
+					$prev_page_num = $display_pages[$index - 1];
+					if ($page_num - $prev_page_num > 1) {
+						echo '<li><span class="archive-pager__page dots">...</span></li>';
+					}
 				}
 
-				$page_link = str_replace('dots', 'archive-pager__page dots', $page_link);
+				$is_current = ($page_num === $current);
+				$page_url = get_pagenum_link($page_num);
 				?>
-				<li><?= $page_link; ?></li>
+				<li>
+					<?php if ($is_current) : ?>
+						<span class="archive-pager__page is-current"><?= esc_html($page_num); ?></span>
+					<?php else : ?>
+						<a href="<?= esc_url($page_url); ?>" class="archive-pager__page"><?= esc_html($page_num); ?></a>
+					<?php endif; ?>
+				</li>
 			<?php endforeach; ?>
-		</ol><!-- /archive-pager -->
+		</ol><!-- /archive-pager_num -->
 
 		<div class="archive-pager_nav">
 			<?php if (!$is_prev_disabled && $prev_link) : ?>
@@ -76,4 +100,3 @@ $is_next_disabled = ($current >= $total);
 		</div><!-- /archive-pager_nav -->
 	</div>
 </div>
-<?php endif; ?>

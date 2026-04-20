@@ -96,7 +96,7 @@ $uri = "company";
 					</div>
 					<div class="data_row">
 						<dt class="data_head">電話</dt>
-						<dd class="data_body">TEL：03-3252-8100</dd>
+						<dd class="data_body">03-3252-8100</dd>
 					</div>
 					<div class="data_row">
 						<dt class="data_head">代表者</dt>

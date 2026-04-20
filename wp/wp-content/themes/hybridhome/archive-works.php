@@ -54,7 +54,9 @@ $this_img_path = $img_path .  "works/";
 			</div>
 		</div>
 	</section><!-- /fv -->
-	<?php get_template_part('inc/pickup-slider'); ?>
+	<?php if (!is_paged()) : ?>
+		<?php get_template_part('inc/pickup-slider'); ?>
+	<?php endif; ?>
 	<section class="works">
 	<div class="inr -w1400 round-con">
 		<?php get_template_part('inc/sort'); ?>

@@ -142,6 +142,9 @@
 			font-size: 13px;
 			letter-spacing: 0.04em;
 			@include transition(background);
+			&:hover{
+				background:var(--base-btn-color01);
+			}
 		}
 		.contact_link{
 			position: relative;
@@ -492,6 +495,61 @@
 			padding-left: 30px;
 			.text{
 				font-size: 16px;
+			}
+		}
+
+		.tokushu_title{
+			width: get_calc(265,280);
+			max-width:570px;
+			margin:30px auto 15px;
+		}
+		.tokushu_links{
+			@include fwc02;
+			max-width:570px;
+			gap:12px;
+			margin-bottom:20px;
+			a{
+				display: block;
+				width: get_calc(254,640);
+				@include min-width(801){
+					&:hover{
+						opacity:.7;
+					}
+				}
+			}
+		}
+		.insta_link{
+			position: relative;
+			display: table;
+			margin:0 auto;
+			width: get_calc(460,640);
+			text-align: center;
+			padding:8px 0 10px;
+			border-radius:999px;
+			border:1px solid #030000;
+			.icon{
+				position: absolute;
+				left: 10px;
+				top: 0;
+				bottom: 0;
+				margin:auto;
+				width: 18px;
+				height: 18px;
+			}
+			span{
+				font-size: clamp(13px,3.25vw,16px);
+				text-transform:uppercase;
+				font-weight: 500;
+				@include transition(color);
+			}
+			@include min-width(801){
+				&:hover{
+					background:var(--insta-color-hv);
+					border-color:var(--insta-color-hv);
+					span{
+						color:#fff;
+					}
+				}
 			}
 		}
 

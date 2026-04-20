@@ -68,6 +68,7 @@ $mail = "#";
 $business_hours = "9:00～18:00（日・月曜・祝祭日定休）";
 
 //外部リンク
+$insta_link = "https://www.instagram.com/hybridhome_official/";
 $map_link = "https://maps.app.goo.gl/LQ2RPs2KQAe8apW97";
 $map_hon = "https://maps.app.goo.gl/nAJmoiXcoLQdkX1W8";
 $map_machida = "https://maps.app.goo.gl/668Lpuf4FxtQJpbT6";
@@ -85,6 +86,17 @@ $news_link = $ROOT_DIR . 'news/';
 $company_link = $ROOT_DIR . 'company/';
 $recruit_link = $ROOT_DIR . 'recruit/';
 $contact_link = $ROOT_DIR . 'contact/';
+$qa_link = $ROOT_DIR . 'news/category/questions/';
+$oshirase_link = $ROOT_DIR . 'news/category/news/';
+$questionnaire_link = $ROOT_DIR . 'news/category/questionnaire/';
+$qa_link = $ROOT_DIR . 'news/category/questions/';
+$movie_link = $ROOT_DIR . 'news/category/news/category/movie/';
+$uchirino_tokushu_link = $ROOT_DIR . 'uchirino/';
+$sotorino_tokushu_link = $ROOT_DIR . 'sotorino/';
+
+$jirei_link01 = "/works/226/";
+$jirei_link02 = "/works/176/";
+$jirei_link03 = "/works/215/";
 
 //
 

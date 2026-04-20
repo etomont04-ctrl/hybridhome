@@ -364,7 +364,7 @@ $uri = "voice";
 					<figure class="duck sb inview"><img src="<?= $this_img_path; ?>voice-box-big_duck.webp" alt="" decoding="async"></figure>
 					<figure class="risu"><img src="<?= $this_img_path; ?>voice-box-risu02.webp" alt="" decoding="async"></figure>
 				</div>
-				<a href="<?= $jirei_link01; ?>" class="link_wrap">
+				<a href="<?= $jirei_link02; ?>" class="link_wrap">
 					<p class="link_btn -blue">
 						<span class="s_txt">町田市 S様邸の</span>
 						<span class="b_txt">施工事例ページを見る</span>
@@ -510,7 +510,7 @@ $uri = "voice";
 					<figure class="duck sb inview"><img src="<?= $this_img_path; ?>voice-box-big_duck.webp" alt="" decoding="async"></figure>
 					<figure class="risu"><img src="<?= $this_img_path; ?>voice-box-risu02.webp" alt="" decoding="async"></figure>
 				</div>
-				<a href="<?= $jirei_link01; ?>" class="link_wrap">
+				<a href="<?= $jirei_link03; ?>" class="link_wrap">
 					<p class="link_btn -blue">
 						<span class="s_txt">川崎市 T様邸の</span>
 						<span class="b_txt">施工事例ページを見る</span>

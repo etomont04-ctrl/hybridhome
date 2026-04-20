@@ -97,6 +97,7 @@
   --base-btn-color02-hv:#a22200;
   --base-btn-color03:#3da4a3;
   --base-btn-color01-hv:#137a80;
+  --insta-color-hv:#f7228c;
   --base-bubble-bg:#dbe2e2;
   --base-bubble-bg02:#cff0f1;
   --base-bubble-bg03:#a8c4c4;
@@ -408,7 +409,7 @@
         -ms-flex-pack: justify;
             justify-content: space-between;
     padding-top: 21.2121212121cqw;
-    padding-bottom: 28.7878787879cqw;
+    padding-bottom: 33.3333333333cqw;
   }
   .intro .inr .text_wrap h2 {
     width: max(220px, 66.6666666667%);
@@ -470,6 +471,8 @@
     bottom: 215px;
     height: 302px;
     background-size: 1300px 302px;
+    bottom: 200px;
+    z-index: 20;
   }
   .intro .btm_cloud {
     position: absolute;

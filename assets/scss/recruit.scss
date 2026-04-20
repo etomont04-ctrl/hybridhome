@@ -683,7 +683,7 @@
 			}
 			.data_head,.data_body{
 				font-size: max(14px,getCqw(15,$conW));
-				line-height: calc(39/16);
+				line-height: calc(64/30);
 				font-weight: 500;
 			}
 			li{
@@ -705,6 +705,7 @@
 				}
 			}
 			.data_row{
+				padding: 1.7rem 0;
 				.link_wrap{
 					margin-top: getCqw(30,$conW);
 				}
@@ -716,7 +717,8 @@
 						width: get_calc(740,760);
 					}
 					.text{
-						font-size: max(14px,getCqw(18,$conW));
+						// font-size: max(14px,getCqw(18,$conW));
+						// font-size: 19px;
 					}
 				}
 			}
@@ -965,7 +967,7 @@
 					padding:15px 0;
 					padding-left: getCqw(60,$conW);
 					.text{
-						font-size: max(18px,getCqw(28,$conW));
+						// font-size: max(18px,getCqw(28,$conW));
 					}
 				}
 				.list01{
@@ -1105,6 +1107,7 @@
 					}
 				}
 				.data_row{
+					padding: 1.2rem 0;
 					.link_wrap{
 						width: 100%;
 						margin-top: getCqw(30,$conW);
@@ -1114,7 +1117,7 @@
 						padding:15px 0;
 						padding-left: getCqw(60,$conW);
 						.text{
-							font-size: max(18px,getCqw(28,$conW));
+							font-size: max(17px,getCqw(28,$conW));
 						}
 					}
 				}

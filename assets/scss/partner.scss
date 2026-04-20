@@ -164,7 +164,7 @@
 				display: block;
 				@include fl;
 				padding-top:getCqw(140,$conW);
-				padding-bottom:getCqw(190,$conW);
+				padding-bottom:getCqw(220,$conW);
 				h2{
 					width: max(220px,get_calc(440,$conW));
 					padding-top: 0;
@@ -222,6 +222,8 @@
 			bottom: 215px;
 			height: 302px;
 			background-size:1300px 302px;
+			bottom: 200px;
+			z-index: 20;
 		}
 		.btm_cloud{
 			position: absolute;

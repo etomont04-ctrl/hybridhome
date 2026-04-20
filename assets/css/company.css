@@ -96,6 +96,7 @@
   --base-btn-color02-hv:#a22200;
   --base-btn-color03:#3da4a3;
   --base-btn-color01-hv:#137a80;
+  --insta-color-hv:#f7228c;
   --base-bubble-bg:#dbe2e2;
   --base-bubble-bg02:#cff0f1;
   --base-bubble-bg03:#a8c4c4;
@@ -317,7 +318,8 @@
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  padding-top: 10.3333333333cqw;
+  padding-top: 9.3333333333cqw;
+  margin-top: 5.3333333333cqw;
 }
 .company-wrap .-message h2 {
   width: 19.5333333333cqw;
@@ -412,6 +414,9 @@
   font-size: max(14px, 1cqw);
   line-height: 2;
   font-weight: 500;
+}
+.company-wrap .-company .data_row {
+  padding: 1.7rem 0;
 }
 .company-wrap .-company li {
   position: relative;
@@ -518,6 +523,9 @@
   font-weight: 500;
 }
 @media screen and (max-width: 1050px) {
+  .company-wrap .inr:before {
+    border-radius: 30px;
+  }
   .company-wrap .company-sec {
     margin-top: 15.7894736842cqw;
     width: 84.2105263158%;
@@ -624,6 +632,7 @@
   }
   .company-wrap .-company .data_row {
     display: block;
+    padding: 1.2rem 0;
   }
   .company-wrap .-company .data_head, .company-wrap .-company .data_body {
     font-size: min(17px, 3.6842105263cqw);

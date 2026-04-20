@@ -97,6 +97,7 @@
   --base-btn-color02-hv:#a22200;
   --base-btn-color03:#3da4a3;
   --base-btn-color01-hv:#137a80;
+  --insta-color-hv:#f7228c;
   --base-bubble-bg:#dbe2e2;
   --base-bubble-bg02:#cff0f1;
   --base-bubble-bg03:#a8c4c4;
@@ -1574,6 +1575,9 @@
   margin-left: 42.6666666667cqw;
 }
 @media screen and (max-width: 1050px) {
+  .voice-sec .inr.-m2000 .inr:before {
+    border-radius: 30px;
+  }
   .voice-sec .inr.-m2000 .main-img_area {
     width: 92.5%;
   }
@@ -1988,7 +1992,7 @@
   }
   .voice-sec .inr.-m2000 .voice-box.box04 .img_area .risu {
     width: 30%;
-    left: 52.9411764706%;
+    left: 50%;
     bottom: -6.25cqw;
   }
   .voice-sec .inr.-m2000 .voice-box.box04 .link_wrap {

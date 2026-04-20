@@ -118,7 +118,7 @@ $_SESSION['contact'] = array(
 	<div class="contact_wrap">
 		<figure class="kumonchu sb inview"><img src="<?= $this_img_path; ?>kumonchu.webp" alt="" decoding="async"></figure>
 		<div class="inr -w1400">
-			<section class="round-con -form -conf">
+			<section class="round-con form -conf">
 				<figure class="bird tab_off"><img src="<?= $this_img_path; ?>form-bird.webp" alt="" decoding="async"></figure>
 				<div class="tit_area">
 					<h2><img src="<?= $this_img_path; ?>form_title.png" alt="メールでお問い合わせ" decoding="async"></h2>

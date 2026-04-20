@@ -41,11 +41,22 @@
 		<div class="info">
 			<p class="logo"><img src="<?= $img_path; ?>common/logo-y.png" alt="ハイブリットホーム"></p>
 			<p class="c_txt">株式会社ハイブリッドホーム<br>営業時間：<?= $business_hours; ?></p>
+			<?php /*
 			<a href="<?= $about_link ?>" class="link_wrap">
 				<p class="link_btn -blue">
 					<span class="text">メールでお問い合わせ</span>
 					<i class="arrow"><img src="<?= $img_path; ?>common/arrow-w.png" alt="" decoding="async"></i>
 				</p>
+			</a>
+			*/ ?>
+			<h3 class="tokushu_title"><img src="<?= $img_path; ?>common/footer_tokushu-title.png" alt="まずは住まいの悩みを整理してみませんか？" decoding="async"></h3>
+			<div class="tokushu_links">
+				<a href="<?= $uchirino_tokushu_link; ?>" target="_blank"><img src="<?= $img_path; ?>common/footer_tokushu-uchirino.png" alt="うちリノ特集" decoding="async"></a>
+				<a href="<?= $sotorino_tokushu_link; ?>" target="_blank"><img src="<?= $img_path; ?>common/footer_tokushu-sotorino.png" alt="そとリノ特集" decoding="async"></a>
+			</div>
+			<a href="<?= $insta_link; ?>" class="insta_link"  target="_blank">
+				<i class="icon"><img src="<?= $img_path; ?>common/footer_tokushu-instagram.png" alt="" decoding="async"></i>
+				<span>Instagram</span>
 			</a>
 		</div>
 	</div>

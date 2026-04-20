@@ -530,21 +530,21 @@ add_action('pre_get_posts', function ($query) {
 		works 投稿タイプ
 	-------------------------------------------------------------------------- */
 	if (is_post_type_archive('works')) {
-		$query->set('posts_per_page', 1);
+		$query->set('posts_per_page', 12);
 	}
 
 	/* --------------------------------------------------------------------------
 		works のタクソノミー（pickup / renovation / area / commitment など）
 	-------------------------------------------------------------------------- */
 	if (is_tax(array('renovation', 'area', 'commitment'))) {
-		$query->set('posts_per_page', 1);
+		$query->set('posts_per_page', 12);
 	}
 
 	/* --------------------------------------------------------------------------
 		通常投稿（news）
 	-------------------------------------------------------------------------- */
 	if (is_home() || is_post_type_archive('post')) {
-		$query->set('posts_per_page', 1);
+		$query->set('posts_per_page', 6);
 	}
 
 });

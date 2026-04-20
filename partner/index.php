@@ -116,7 +116,7 @@ $uri = "partner";
 							<p class="name"><img src="<?= $this_img_path; ?>voice-name_nagata.png" alt="大工 長田さん" decoding="async"></p>
 						</div>
 						<div class="bubble_box -bubble02 -green -br">
-							<p class="n_txt">例えば壁を開けてみたら、想定していた構造と違ったとか。やっぱり図面じゃ追tいつかないことが出てくるんですよね。その時に、正直にお客さんに説明するようにしています。実際見てもらいながら、こんなふうにすれば長持ちしますよ、と伝えると、納得してくれる方が多いです</p>
+							<p class="n_txt">例えば壁を開けてみたら、想定していた構造と違ったとか。やっぱり図面じゃ追いつかないことが出てくるんですよね。その時に、正直にお客さんに説明するようにしています。実際見てもらいながら、こんなふうにすれば長持ちしますよ、と伝えると、納得してくれる方が多いです</p>
 							<span class="balloon_tail -bl"></span>
 						</div>
 					</div><!-- bubble_area -->
@@ -180,7 +180,7 @@ $uri = "partner";
 					</div><!-- bubble_box -->
 					<div class="bubble_area -bubble08 -bl inview bt">
 						<div class="people-box">
-							<img src="<?= $this_img_path; ?>voice-kikuchi.webp" alt="" decoding="async">
+							<img src="<?= $this_img_path; ?>voice-koyama.webp" alt="" decoding="async">
 							<p class="name"><img src="<?= $this_img_path; ?>voice-name_koyama.png" alt="大工 小山さん" decoding="async"></p>
 						</div>
 						<div class="bubble_box -bubble02 -white">

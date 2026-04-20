@@ -48,107 +48,39 @@ $uri = "contact";
 	<div class="contact_wrap">
 		<figure class="kumonchu sb inview"><img src="<?= $this_img_path; ?>kumonchu.webp" alt="" decoding="async"></figure>
 		<div class="inr -w1400">
-			<section class="round-con -form -conf">
+			<section class="round-con form -conf">
 				<figure class="bird tab_off"><img src="<?= $this_img_path; ?>form-bird.webp" alt="" decoding="async"></figure>
 				<div class="tit_area">
 					<h2><img src="<?= $this_img_path; ?>form_title.png" alt="メールでお問い合わせ" decoding="async"></h2>
 					<p class="en">Mail Form</p>
-					<p class="n_txt">送信完了しました。</p>
 				</div>
 				<ol class="step -conf">
 					<li>
 						<span class="en">step 01</span>
 						<p class="step-text"><img src="<?= $img_path; ?>common/step-text01.png" alt="内容入力" decoding="async"></p>
 					</li>
-					<li class="this">
+					<li>
 						<span class="en">step 02</span>
 						<p class="step-text"><img src="<?= $img_path; ?>common/step-text02.png" alt="内容確認" decoding="async"></p>
 					</li>
-					<li>
+					<li class="this">
 						<span class="en">step 03</span>
 						<p class="step-text"><img src="<?= $img_path; ?>common/step-text03.png" alt="送信完了" decoding="async"></p>
 					</li>
 				</ol>
-				<?php if (!empty($errors)) : ?>
-					<div class="error_wrap">
-						<p>入力内容に不備があります。</p>
-						<ul>
-							<?php foreach ($errors as $error) : ?>
-								<li><?= h($error); ?></li>
-							<?php endforeach; ?>
-						</ul>
-						<p><a href="javascript:history.back();">入力画面に戻る</a></p>
-					</div>
-				<?php else : ?>
-				<div class="form_wrap -contact">
-					<div class="box -full">
-						<div class="form_tit req"><label>お問い合わせ種別</label></div>
-						<div class="form_input -conf"><p class="form-item"><?= h($shubetsu); ?></p></div>
-					</div>
-					<div class="box">
-						<div class="form_tit req"><label for="name">お名前</label></div>
-						<div class="form_input -conf"><p class="form-item"><?= h($name); ?></p></div>
-					</div>
-					<div class="box">
-						<div class="form_tit req"><label for="kana">ふりがな</label></div>
-						<div class="form_input -conf"><p class="form-item"><?= h($kana); ?></p></div>
-					</div>
-					<div class="box">
-						<div class="form_tit req"><label for="todoufuken">住所：都道府県</label></div>
-						<div class="form_input -conf"><p class="form-item"><?= h($todoufuken); ?></p></div>
-					</div>
-					<div class="box">
-						<div class="form_tit req"><label for="shichouson">住所：市区町村</label></div>
-						<div class="form_input -conf"><p class="form-item"><?= h($shichouson); ?></p></div>
-					</div>
-					<div class="box">
-						<div class="form_tit req"><label for="mail">メールアドレス</label></div>
-						<div class="form_input -conf"><p class="form-item"><?= h($mail); ?></p></div>
-					</div>
-					<div class="box">
-						<div class="form_tit"><label for="tel">お電話番号</label></div>
-						<div class="form_input -conf"><p class="form-item"><?= h($tel); ?></p></div>
-					</div>
-					<div class="box -full">
-						<div class="form_tit req"><label for="message">ご相談・お問い合わせ内容</label></div>
-						<div class="form_input -conf"><p class="form-item"><?= nl2br(h($message)); ?></p></div>
-					</div>
+				<h2 class="thanks_tit">お問い合わせを送信いたしました</h2>
+				<p class="thanks_txt">お問合わせを送信いたしました。ありがとうございました。<br>
+					ご入力されたメールアドレス宛に確認のメールを送信いたしましたのでご確認ください。<br>
+					<br>
+					また、一日経過してもメールが届かない場合には、ご入力時のメールアドレスが間違っている場合がありますので、<br class="tab_off">まことに恐縮ですが再度のご連絡をよろしくお願いします。
+				</p>
 
-					<div class="btn_wrap -conf">
-						<form action="entry.php" method="post">
-							<input type="hidden" name="shubetsu" value="<?= h($shubetsu); ?>">
-							<input type="hidden" name="name" value="<?= h($name); ?>">
-							<input type="hidden" name="kana" value="<?= h($kana); ?>">
-							<input type="hidden" name="todoufuken" value="<?= h($todoufuken); ?>">
-							<input type="hidden" name="shichouson" value="<?= h($shichouson); ?>">
-							<input type="hidden" name="mail" value="<?= h($mail); ?>">
-							<input type="hidden" name="tel" value="<?= h($tel); ?>">
-							<input type="hidden" name="message" value="<?= h($message); ?>">
-							<p class="link_btn -blue -send" id="submit_wrap">
-								<span class="text">送信する</span>
-								<i class="arrow"><img src="<?= $img_path; ?>common/arrow-w.png" alt="" decoding="async"></i>
-								<input type="submit" class="submit-btn" id="submit-btn" value="">
-							</p>
-						</form>
-						<form action="./" method="post">
-							<input type="hidden" name="shubetsu" value="<?= h($shubetsu); ?>">
-							<input type="hidden" name="name" value="<?= h($name); ?>">
-							<input type="hidden" name="kana" value="<?= h($kana); ?>">
-							<input type="hidden" name="todoufuken" value="<?= h($todoufuken); ?>">
-							<input type="hidden" name="shichouson" value="<?= h($shichouson); ?>">
-							<input type="hidden" name="mail" value="<?= h($mail); ?>">
-							<input type="hidden" name="tel" value="<?= h($tel); ?>">
-							<input type="hidden" name="message" value="<?= h($message); ?>">
-							<p class="link_btn -gray -rev" id="submit_wrap">
-								<span class="text">修正する</span>
-								<i class="arrow -rev"><img src="<?= $img_path; ?>common/arrow-w.png" alt="" decoding="async"></i>
-								<input type="submit" class="submit-btn" id="submit-btn" value="">
-							</p>
-						</form>
-					</div>
-
-				</div><!-- /form_wrap -->
-				<?php endif; ?>
+				<a href="<? $ROOT_DIR; ?>" class="link_wrap">
+					<p class="link_btn -blue">
+						<span class="text">TOPへ戻る</span>
+						<i class="arrow"><img src="<?= $img_path; ?>common/arrow-w.png" alt="" decoding="async"></i>
+					</p>
+				</a>
 			</section>
 		</div><!-- /inr -->
 	</div><!--/contact_wrap -->

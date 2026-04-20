@@ -335,7 +335,7 @@ $uri = "staff";
 					<figure class="img"><img src="<?= $this_img_path; ?>profile07-img.webp" alt="" decoding="async"></figure>
 					<div class="name_area">
 						<span class="job -planner"><img src="<?= $this_img_path; ?>profile-job_planner.png" alt="プランナー" decoding="async"></span>
-						<p class="name"><img src="<?= $this_img_path; ?>profile07-name.png" alt="安藤凛" decoding="async"></p>
+						<p class="name"><img src="<?= $this_img_path; ?>profile07-name.png?v=2" alt="安藤凛" decoding="async"></p>
 					</div>
 				</div><!-- /img_area -->
 				<div class="question-box">
@@ -570,7 +570,7 @@ $uri = "staff";
 				</h2>
 				<div class="img_area">
 					<figure class="cloud cloud01 tab_off"><img src="<?= $this_img_path; ?>profile-cloud01.webp" alt="" decoding="async"></figure>
-					<figure class="img"><img src="<?= $this_img_path; ?>profile-dummy.webp" alt="" decoding="async"></figure>
+					<figure class="img"><img src="<?= $this_img_path; ?>profile15-img.webp" alt="" decoding="async"></figure>
 					<div class="name_area">
 						<span class="job -assistant"><img src="<?= $this_img_path; ?>profile-job_assistant.png" alt="アシスタント" decoding="async"></span>
 						<p class="name"><img src="<?= $this_img_path; ?>profile15-name.png" alt="中田奈美恵" decoding="async"></p>
@@ -619,7 +619,7 @@ $uri = "staff";
 				</div>
 				<div class="question-box">
 					<p class="question question03"><img src="<?= $this_img_path; ?>profile02-Q03.png" alt="自分の住まいの好きなところは？" decoding="async"></p>
-					<p class="n_txt">毎日の暮らしをより快適tにすることを、大切に思っているお客様と出会いたいです。たとえリフォームしたいけれどなにから手をつけていいかわからないという方でも、じっくりお話を聞き、一緒に理想の住まいを作っていきたいと思います。</p>
+					<p class="n_txt">毎日の暮らしをより快適にすることを、大切に思っているお客様と出会いたいです。たとえリフォームしたいけれどなにから手をつけていいかわからないという方でも、じっくりお話を聞き、一緒に理想の住まいを作っていきたいと思います。</p>
 				</div>
 			</article><!-- box16 -->
 			<article class="profile-box -box17">

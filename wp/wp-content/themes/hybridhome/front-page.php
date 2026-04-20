@@ -29,13 +29,6 @@ $this_img_path = $img_path .  "top/";
 </head>
 <body id="top">
 <div class="of-wrap">
-<!-- 	<div class="load">
-		<div class="logo-area">
-			<figure class="symbol -top"><img src="<?= $img_path; ?>common/logo-symbol-top.svg" alt="" decoding="async"></figure>
-			<figure class="text"><img src="<?= $img_path; ?>common/logo-text.svg" alt="" decoding="async"></figure>
-			<figure class="symbol -bottom"><img src="<?= $img_path; ?>common/logo-symbol-bottom.svg" alt="" decoding="async"></figure>
-		</div>
-	</div> -->
 	<main>
 	<?php include($root_path . 'assets/inc/menu.php'); ?>
 	<section id="kv" class="inview">
@@ -529,7 +522,7 @@ $this_img_path = $img_path .  "top/";
 				<div class="text_area">
 					<p class="n_txt">ハイブリッドホームでは一つの工事を仕上げるのに、多くの職人たちと連携しています。<br class="pc_off">
 それぞれの専門の分野で活躍する腕利きの職人たちにハイブリッドホームの家づくりについて話を聞きました。</p>
-					<a href="<?= $partners_link ?>" class="link_wrap">
+					<a href="<?= $partner_link; ?>" class="link_wrap">
 						<p class="link_btn -red">
 							<span class="text">詳細ページへ</span>
 							<i class="arrow"><img src="<?= $img_path; ?>common/arrow-w.png" alt="" decoding="async"></i>
@@ -602,7 +595,7 @@ $this_img_path = $img_path .  "top/";
 							<img src="<?= $this_img_path; ?>news_title.webp" alt="お知らせ NEWS">
 						</picture>
 					</h2>
-					<a href="<?= $partners_link ?>" class="link_wrap">
+					<a href="<?= $news_link; ?>" class="link_wrap">
 						<p class="link_btn -blue">
 							<span class="text"><span>お知らせ</span>一覧へ</span>
 							<i class="arrow"><img src="<?= $img_path; ?>common/arrow-w.png" alt="" decoding="async"></i>

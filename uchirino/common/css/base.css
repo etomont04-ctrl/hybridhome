@@ -1,0 +1,38 @@
+@charset "UTF-8";
+
+body { font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic","メイリオ", sans-serif; }
+
+.yumincho {
+	font-family: "游明朝体", "Yu Mincho", "YuMincho", "ＭＳ Ｐ明朝", "MS PMincho", "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", "serif";
+}
+/*  link 
+-----------------------------------------------------------------------------*/
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #000;
+  text-decoration: none;
+}
+
+a img { border: 0; }
+
+/*  align
+-----------------------------------------------------------------------------*/
+.align_r { text-align: right; }
+.align_c { text-align: center; }
+.align_l { text-align: left; }
+
+/*  float 
+-----------------------------------------------------------------------------*/
+.fl { float: left; }
+.fr { float: right; }
+
+.clearfix:after {
+  height: 0;
+  display: block;
+  clear: both;
+  content: " ";
+}

@@ -305,6 +305,7 @@ $uri = "recruit";
 		<div class="contact_wrap">
 			<div class="inr -w1400">
 			<section class="round-con form">
+				<figure class="bird -recruit tab_off"><img src="<?= $this_img_path; ?>form-bird.webp" alt="" decoding="async"></figure>
 				<div class="tit_area">
 					<h2><img src="<?= $this_img_path; ?>form_title.png" alt="エントリーフォーム" decoding="async"></h2>
 					<p class="en">Entry form</p>
@@ -378,12 +379,19 @@ $uri = "recruit";
 						</div>
 						<div class="box">
 							<div class="form_tit req"><label>希望職種</label></div>
-							<select name="shokushu[]" id="k-select">
+							<!-- <select name="shokushu[]" id="k-select">
 								<option value="" selected disabled>希望職種を選択してください</option>
 								<option value="職種1">職種1</option>
 								<option value="職種2">職種2</option>
 								<option value="職種3">職種3</option>
 								<option value="職種4">職種4</option>
+							</select> -->
+							<select name="shokushu" id="k-select" required>
+								<option value="" selected disabled>希望職種を選択してください</option>
+								<option value="営業設計">営業設計</option>
+								<option value="施工管理">施工管理</option>
+								<option value="工事スタッフ">工事スタッフ</option>
+								<option value="その他（上記以外）">その他（上記以外）</option>
 							</select>
 						</div>
 						<div class="btn_wrap">
@@ -403,5 +411,28 @@ $uri = "recruit";
 <?php include($root_path . '/assets/inc/footer.php'); ?>
 
 </div><!-- /of_wrap -->
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+	const fields = document.querySelectorAll('#form input, #form textarea, #form select');
+
+	fields.forEach(function (field) {
+		field.addEventListener('invalid', function () {
+			if (field.validity.valueMissing) {
+				field.setCustomValidity('入力してください');
+			} else if (field.validity.typeMismatch) {
+				field.setCustomValidity('正しい形式で入力してください');
+			} else if (field.validity.patternMismatch) {
+				field.setCustomValidity('入力形式が正しくありません');
+			} else {
+				field.setCustomValidity('');
+			}
+		});
+
+		field.addEventListener('input', function () {
+			field.setCustomValidity('');
+		});
+	});
+});
+</script>
 </body>
 </html>

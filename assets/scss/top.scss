@@ -29,87 +29,6 @@ html.is-loading::after{
 
 
 // ==========================================================================
-//	load
-// ==========================================================================
-.load{
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100vh;
-    height: 100dvh;
-    height: 100lvh;
-	// min-height: 850px;
-	inset: 0;
-	z-index: 999999;
-	opacity: 1;
-	background:var(--base-bg-color);
-	overflow: hidden;
-
-	.logo-area{
-		position: absolute;
-		left: 0;
-		right: 0;
-		top: 0;
-		bottom: 0;
-		width: 80%;
-		max-width: 400px;
-		aspect-ratio:491/457;
-		margin:auto;
-		z-index:10;
-		@include max-width(800){
-			transform:translateY(0);
-		}
-		figure{
-			position: absolute;
-			width:calc((var(--W)/491)*100%);
-			top:calc((var(--T)/457)*100%);
-		}
-		.symbol.-top{
-			width: 100%;
-			top:0;
-			transform:translateY(50%);
-		}
-		.symbol.-bottom{
-			--W:441;
-			top:auto;
-			bottom:0;
-			left: 0;
-			right: 0;
-			margin:auto;
-			transform:translateY(-50%);
-		}
-		.text{
-			--W:478;
-			--T:125;
-			left:calc((8/491)*100%);
-			opacity:0;
-			transition:opacity .4s var(--easeInOutQuad);
-			transition-delay:2s;
-		}
-	}
-	&.loaded {
-		.symbol.-top{
-			animation: load-symbol_top 2s var(--easeInOutQuad) both;
-		}
-		.symbol.-bottom{
-			animation: load-symbol_bottom 2s var(--easeInOutQuad) both;
-		}
-		.text{
-			opacity:1;
-		}
-
-		opacity: 0;
-		transition: opacity .8s ease;
-		transition-delay: 3.1s;
-	}
-	&.load.loaded02 {
-		z-index: -9999;
-		display: none;
-	}
-}
-
-// ==========================================================================
 //	kv
 // ==========================================================================
 #kv{
@@ -562,7 +481,8 @@ html.is-loading::after{
 			width: get_calc(2394,$conW);
 		}
 		.cloud07{
-			top: 205%;
+			// top: 205%;
+			top: 120%;
 			left: get_calc(326,$conW);
 			width: get_calc(2668,$conW);
 		}
@@ -647,7 +567,7 @@ html.is-loading::after{
 	position: relative;
 	width: 100%;
 	// aspect-ratio:1500/1052;
-	aspect-ratio:1500/1752;
+	aspect-ratio:1500/1100;
 	max-height:1763px;
 	$conW:1500;
 	// $conH:900;
@@ -681,7 +601,8 @@ html.is-loading::after{
 	}
 	@include max-width(1050){
 		// aspect-ratio:800/1800;
-		aspect-ratio:800/1500;
+		// aspect-ratio:800/1500;
+		aspect-ratio:800/800;
 		padding-bottom: 0;
 		max-height:13000px;
 		$conW:800;
@@ -2811,7 +2732,8 @@ html.is-loading::after{
 		// padding-top: getCqw(750,$conW);
 		// padding-bottom: getCqw(930,$conW);
 		// aspect-ratio:1500/2011;
-		aspect-ratio:1500/3011;
+		// aspect-ratio:1500/3011;
+		aspect-ratio:1500/1500;
 		$areaW:1500;
 		$areaH:2011;
 		.town-area{
@@ -2887,7 +2809,8 @@ html.is-loading::after{
 			z-index: 10;
 		}
 		.sc-area{
-			aspect-ratio:800/2167;
+			// aspect-ratio:800/2167;
+			aspect-ratio:800/1000;
 			$areaW:800;
 			$areaH:2367;
 			.lv-house{

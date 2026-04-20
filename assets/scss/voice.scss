@@ -1329,6 +1329,9 @@
 	}
 	@include max-width(1050){
 		$conW:800;
+		.inr:before{
+			border-radius:30px;
+		}
 		.main-img_area{
 			width: get_calc(740,800);
 			.img{
@@ -1746,7 +1749,7 @@
 					}
 					.risu{
 						width: get_calc(204,680);
-						left: get_calc(360,680);
+						left: get_calc(340,680);
 						bottom: getCqw(-50,$conW);
 					}
 				}

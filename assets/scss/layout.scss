@@ -847,6 +847,12 @@
 				will-change: transform;
 				transform-origin: 50% 60%;
 			}
+			&.-recruit{
+			width: get_calc(249,$conW);
+			right: get_calc(-20,$conW);
+			top: getCqw(55,$conW);
+
+			}
 
 		}
 		.tit_area{
@@ -1158,6 +1164,24 @@
 		}
 	}
 
+	.thanks_tit{
+		text-align: center;
+		font-size: getCqw(30,$conW);
+		margin-bottom: 4rem;
+		font-weight: 500;
+		font-family:var(--line-seed);
+	}
+
+	.thanks_txt{
+		text-align: center;
+		font-size: getCqw(16,$conW);
+		line-height: calc(60/32);
+		font-weight: 500;
+		margin-bottom: 3rem;
+	}
+	.link_wrap{
+		margin:0 auto;
+	}
 	@include max-width(1050){
 		$conW:760;
 		.form{
@@ -1326,7 +1350,17 @@
 				}
 			}
 		}
+		.thanks_tit{
+			font-size: max(25px,getCqw(36,$conW));
+			margin-bottom: 3rem;
+		}
 
+		.thanks_txt{
+			text-align: left;
+			font-size: max(16px,getCqw(28,$conW));
+			width: 85%;
+			margin:0 auto 2rem;
+		}
 	}
 
 }
