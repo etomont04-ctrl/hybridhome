@@ -4,18 +4,77 @@
 #AuthUserFile /var/www/html/.htpasswd
 #Require valid-user
 
-# BEGIN WordPress
-# "BEGIN WordPress" から "END WordPress" までのディレクティブ (行) は
-# 動的に生成され、WordPress フィルターによってのみ修正が可能です。
-# これらのマーカー間にあるディレクティブへのいかなる変更も上書きされてしまいます。
+#<IfModule mod_rewrite.c>
+#	RewriteEngine On
+#	RewriteCond %{HTTP_HOST} ^www\.hybridhome\.co\.jp$ [NC]
+#	RewriteRule ^(.*)$ https://hybridhome.co.jp/$1 [R=302,L]
+#</IfModule>
+
 <IfModule mod_rewrite.c>
 RewriteEngine On
+
+###旧URLリダイレクト
+# 旧ディレクトリ → 新ディレクトリ
+RewriteRule ^about/company/?$ /company/ [R=302,L]
+RewriteRule ^about/message/?$ /company/ [R=302,L]
+RewriteRule ^about/concept1/?$ /about/ [R=302,L]
+RewriteRule ^about/concept2/?$ /about/ [R=302,L]
+RewriteRule ^about/concept3/?$ /about/ [R=302,L]
+RewriteRule ^about/staff/?$ /staff/ [R=302,L]
+RewriteRule ^category/review/?$ /voice/ [R=302,L]
+RewriteRule ^review/?$ /voice/ [R=302,L]
+RewriteRule ^renovation/example/?$ /reform/ [R=302,L]
+RewriteRule ^maxelum/example/?$ /works/ [R=302,L]
+RewriteRule ^reform/example(/.*)?$ /works/ [R=302,L]
+RewriteRule ^renovation/alright/?$ /reform/ [R=302,L]
+RewriteRule ^renovation/?$ /reform/ [R=302,L]
+RewriteRule ^event/?$ /news/category/movie/ [R=302,L]
+RewriteRule ^reform/qa/?$ /news/category/questions/ [R=302,L]
+RewriteRule ^news/2026/01/06/13299/?$ /news/ [R=302,L]
+RewriteRule ^news/shinyurigaoka/?$ /news/ [R=302,L]
+RewriteRule ^news/machida/?$ /news/ [R=302,L]
+RewriteRule ^category/news/yokohamaaoba/?$ /news/ [R=302,L]
+RewriteRule ^news/2026/02/05/13434/?$ /news/ [R=302,L]
+RewriteRule ^news/2025/03/27/12710/?$ /news/ [R=302,L]
+RewriteRule ^review/review-2017/?$ /voice/ [R=302,L]
+RewriteRule ^reform/2025/04/24/12761/attachment/gfurui-gennkan/?$ /reform/ [R=302,L]
+RewriteRule ^siteinfo/?$ / [R=302,L]
+RewriteRule ^recruit/mid/?$ /recruit/ [R=302,L]
+RewriteRule ^sitemap/?$ / [R=302,L]
+RewriteRule ^privacy/?$ / [R=302,L]
+RewriteRule ^about/office(/.*)?$ /company/ [R=302,L]
+RewriteRule ^tag(/.*)?$ /works/ [R=302,L]
+RewriteRule ^news/2019(/.*)?$ /news/ [R=302,L]
+RewriteRule ^news/2020(/.*)?$ /news/ [R=302,L]
+RewriteRule ^news/2021(/.*)?$ /news/ [R=302,L]
+RewriteRule ^news/2022(/.*)?$ /news/ [R=302,L]
+RewriteRule ^news/2023(/.*)?$ /news/ [R=302,L]
+RewriteRule ^news/2024(/.*)?$ /news/ [R=302,L]
+RewriteRule ^review/2019(/.*)?$ /news/ [R=302,L]
+RewriteRule ^review/2020(/.*)?$ /news/ [R=302,L]
+RewriteRule ^review/2021(/.*)?$ /news/ [R=302,L]
+RewriteRule ^review/2022(/.*)?$ /news/ [R=302,L]
+RewriteRule ^review/2023(/.*)?$ /news/ [R=302,L]
+RewriteRule ^review/2024(/.*)?$ /news/ [R=302,L]
+RewriteRule ^review/2024(/.*)?$ /news/ [R=302,L]
+
 RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
-RewriteBase /hybridhome/
+RewriteBase /
 RewriteRule ^index\.php$ - [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule . /hybridhome/index.php [L]
+RewriteRule . /index.php [L]
+
 </IfModule>
 
+
+# BEGIN WordPress
+<IfModule mod_rewrite.c>
+	RewriteEngine On
+	RewriteBase /
+	RewriteRule ^index\.php$ - [L]
+	RewriteCond %{REQUEST_FILENAME} !-f
+	RewriteCond %{REQUEST_FILENAME} !-d
+	RewriteRule . /index.php [L]
+</IfModule>
 # END WordPress

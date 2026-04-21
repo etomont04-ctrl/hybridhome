@@ -28,6 +28,7 @@ $this_img_path = $img_path .  "top/";
 	<?php include($root_path . 'assets/inc/head.php'); ?>
 </head>
 <body id="top">
+<?php include($root_path . 'assets/inc/gtag.php'); ?>
 <div class="of-wrap">
 	<main>
 	<?php include($root_path . 'assets/inc/menu.php'); ?>

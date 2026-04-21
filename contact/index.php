@@ -1,5 +1,5 @@
 <?php
-$TITLE         = '';
+$TITLE         = 'お問い合わせ';
 $DESCRIPTION   = '';
 $KEYWORDS      = '';
 $swiper = "false";
@@ -25,6 +25,7 @@ $uri = "contact";
 	<?php include($root_path . 'assets/inc/head.php'); ?>
 </head>
 <body id="top">
+<?php include($root_path . 'assets/inc/gtag.php'); ?>
 <div class="of-wrap">
 	<?php include($root_path . 'assets/inc/menu.php'); ?>
 	<main>
@@ -86,6 +87,7 @@ $uri = "contact";
 					</li>
 				</ol>
 				<form id="form" action="conf.php" method="post">
+					<input type="hidden" name="recaptcha_token" id="recaptcha_token" value="">
 					<div class="form_wrap -contact">
 						<div class="box -full">
 							<div class="form_tit req"><label>お問い合わせ種別</label></div>
@@ -182,18 +184,25 @@ document.addEventListener('DOMContentLoaded', function () {
 	});
 });
 </script>
+<script src="https://www.google.com/recaptcha/api.js?render=6LdDJMIsAAAAAI_nv1ejVZB_cWbyr9VOLLj_5kMa"></script>
 <script>
-// grecaptcha.ready(function () {
-// 	grecaptcha.execute('6Lcz4w0rAAAAAE59wrLSq3kTCiKfuO77Tswn-Ax5', { action: 'contact' }).then(function (token) {
-// 	// トークンをフォームに追加
-// 	var form = document.getElementById("form");
-// 	var input = document.createElement("input");
-// 	input.type = "hidden";
-// 	input.name = "recaptcha_token";
-// 	input.value = token;
-// 	form.appendChild(input);
-// 	});
-// });
+	document.addEventListener('DOMContentLoaded', () => {
+		const form = document.querySelector('#form');
+		const tokenField = document.querySelector('#recaptcha_token');
+
+		if (!form || !tokenField || typeof grecaptcha === 'undefined') return;
+
+		form.addEventListener('submit', (e) => {
+			e.preventDefault();
+
+			grecaptcha.ready(() => {
+				grecaptcha.execute('6LdDJMIsAAAAAI_nv1ejVZB_cWbyr9VOLLj_5kMa', { action: 'contact_form' }).then((token) => {
+					tokenField.value = token;
+					form.submit();
+				});
+			});
+		});
+	});
 </script>
 </body>
 </html>

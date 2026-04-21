@@ -1,5 +1,5 @@
 <?php
-$TITLE         = '';
+$TITLE         = '採用情報';
 $DESCRIPTION   = '';
 $KEYWORDS      = '';
 $swiper = "false";
@@ -25,6 +25,7 @@ $uri = "recruit";
 	<?php include($root_path . 'assets/inc/head.php'); ?>
 </head>
 <body id="top">
+<?php include($root_path . 'assets/inc/gtag.php'); ?>
 <div class="of-wrap">
 	<?php include($root_path . 'assets/inc/menu.php'); ?>
 	<main>

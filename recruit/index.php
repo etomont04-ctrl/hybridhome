@@ -1,5 +1,5 @@
 <?php
-$TITLE         = '';
+$TITLE         = '採用情報';
 $DESCRIPTION   = '';
 $KEYWORDS      = '';
 $swiper = "false";
@@ -25,6 +25,7 @@ $uri = "recruit";
 	<?php include($root_path . 'assets/inc/head.php'); ?>
 </head>
 <body id="top">
+<?php include($root_path . 'assets/inc/gtag.php'); ?>
 <div class="of-wrap">
 	<?php include($root_path . 'assets/inc/menu.php'); ?>
 	<main>
@@ -326,6 +327,7 @@ $uri = "recruit";
 					</li>
 				</ol>
 				<form id="form" action="conf.php" method="post">
+					<input type="hidden" name="recaptcha_token" id="recaptcha_token" value="">
 					<div class="form_wrap -recruit">
 						<div class="box">
 							<div class="form_tit req"><label for="name">お名前</label></div>
@@ -433,6 +435,26 @@ document.addEventListener('DOMContentLoaded', function () {
 		});
 	});
 });
+</script>
+<script src="https://www.google.com/recaptcha/api.js?render=6LdDJMIsAAAAAI_nv1ejVZB_cWbyr9VOLLj_5kMa"></script>
+<script>
+	document.addEventListener('DOMContentLoaded', () => {
+		const form = document.querySelector('#form');
+		const tokenField = document.querySelector('#recaptcha_token');
+
+		if (!form || !tokenField || typeof grecaptcha === 'undefined') return;
+
+		form.addEventListener('submit', (e) => {
+			e.preventDefault();
+
+			grecaptcha.ready(() => {
+				grecaptcha.execute('6LdDJMIsAAAAAI_nv1ejVZB_cWbyr9VOLLj_5kMa', { action: 'contact_form' }).then((token) => {
+					tokenField.value = token;
+					form.submit();
+				});
+			});
+		});
+	});
 </script>
 </body>
 </html>

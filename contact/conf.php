@@ -1,5 +1,5 @@
 <?php
-$TITLE         = '';
+$TITLE         = 'お問い合わせ';
 $DESCRIPTION   = '';
 $KEYWORDS      = '';
 $swiper = "false";
@@ -43,7 +43,46 @@ $shichouson = isset($_POST['shichouson']) ? trim($_POST['shichouson']) : '';
 $mail = isset($_POST['mail']) ? trim($_POST['mail']) : '';
 $tel = isset($_POST['tel']) ? trim($_POST['tel']) : '';
 $message = isset($_POST['message']) ? trim($_POST['message']) : '';
+$recaptcha_token = isset($_POST['recaptcha_token']) ? trim($_POST['recaptcha_token']) : '';
 
+/* ==========================================================================
+	reCAPTCHA v3 検証
+========================================================================== */
+$recaptcha_secret = '6LdDJMIsAAAAAMlMo7e9oiLlnihtHBbcoDn7M11v';
+
+if ($recaptcha_token === '') {
+	$errors[] = 'reCAPTCHAの認証に失敗しました。';
+} else {
+	$verify_url = 'https://www.google.com/recaptcha/api/siteverify';
+
+	$post_data = array(
+		'secret'	=> $recaptcha_secret,
+		'response'	=> $recaptcha_token,
+		'remoteip'	=> $_SERVER['REMOTE_ADDR'] ?? '',
+	);
+
+	$context = stream_context_create(array(
+		'http' => array(
+			'method'	=> 'POST',
+			'header'	=> "Content-type: application/x-www-form-urlencoded\r\n",
+			'content'	=> http_build_query($post_data),
+			'timeout'	=> 10,
+		),
+	));
+
+	$response = file_get_contents($verify_url, false, $context);
+	$result = json_decode($response, true);
+
+	if (
+		empty($result['success']) ||
+		!isset($result['score']) ||
+		$result['score'] < 0.5 ||
+		empty($result['action']) ||
+		$result['action'] !== 'contact_form'
+	) {
+		$errors[] = 'reCAPTCHAの認証に失敗しました。';
+	}
+}
 /* ==========================================================================
 	バリデーション
 ========================================================================== */
@@ -95,6 +134,7 @@ $_SESSION['contact'] = array(
 	<?php include($root_path . 'assets/inc/head.php'); ?>
 </head>
 <body id="top">
+<?php include($root_path . 'assets/inc/gtag.php'); ?>
 <div class="of-wrap">
 	<?php include($root_path . 'assets/inc/menu.php'); ?>
 	<main>
@@ -194,6 +234,7 @@ $_SESSION['contact'] = array(
 							<input type="hidden" name="mail" value="<?= h($mail); ?>">
 							<input type="hidden" name="tel" value="<?= h($tel); ?>">
 							<input type="hidden" name="message" value="<?= h($message); ?>">
+							<input type="hidden" name="recaptcha_token" id="recaptcha_token_conf" value="">
 							<p class="link_btn -blue -send" id="submit_wrap">
 								<span class="text">送信する</span>
 								<i class="arrow"><img src="<?= $img_path; ?>common/arrow-w.png" alt="" decoding="async"></i>
@@ -226,18 +267,25 @@ $_SESSION['contact'] = array(
 <?php include($root_path . '/assets/inc/footer.php'); ?>
 
 </div><!-- /of_wrap -->
+<script src="https://www.google.com/recaptcha/api.js?render=6LdDJMIsAAAAAI_nv1ejVZB_cWbyr9VOLLj_5kMa"></script>
 <script>
-// grecaptcha.ready(function () {
-// 	grecaptcha.execute('6Lcz4w0rAAAAAE59wrLSq3kTCiKfuO77Tswn-Ax5', { action: 'contact' }).then(function (token) {
-// 	// トークンをフォームに追加
-// 	var form = document.getElementById("form");
-// 	var input = document.createElement("input");
-// 	input.type = "hidden";
-// 	input.name = "recaptcha_token";
-// 	input.value = token;
-// 	form.appendChild(input);
-// 	});
-// });
+	document.addEventListener('DOMContentLoaded', () => {
+		const form = document.querySelector('.btn_wrap.-conf form[action="entry.php"]');
+		const tokenField = document.querySelector('#recaptcha_token_conf');
+
+		if (!form || !tokenField || typeof grecaptcha === 'undefined') return;
+
+		form.addEventListener('submit', (e) => {
+			e.preventDefault();
+
+			grecaptcha.ready(() => {
+				grecaptcha.execute('6LdDJMIsAAAAAI_nv1ejVZB_cWbyr9VOLLj_5kMa', { action: 'contact_submit' }).then((token) => {
+					tokenField.value = token;
+					form.submit();
+				});
+			});
+		});
+	});
 </script>
 </body>
 </html>

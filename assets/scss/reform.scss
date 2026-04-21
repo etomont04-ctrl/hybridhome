@@ -1245,8 +1245,17 @@
 					.card__title{
 						font-weight: 600;
 					}
-					.card__tags span{
+					.card__tags a:hover{
 						font-weight: 600;
+						color: var(--base-color-blue);
+					}
+
+					.card__area:hover{
+						background: var(--base-color-blue);
+					}
+					.card__area.uchi:hover{
+						background: var(--base-btn-color02);
+
 					}
 				}
 			}

@@ -1,5 +1,5 @@
 <?php
-$TITLE         = '';
+$TITLE         = '私たちについて';
 $DESCRIPTION   = '';
 $KEYWORDS      = '';
 $swiper = "false";
@@ -25,6 +25,7 @@ $uri = "about";
 	<?php include($root_path . 'assets/inc/head.php'); ?>
 </head>
 <body id="top">
+<?php include($root_path . 'assets/inc/gtag.php'); ?>
 <div class="of-wrap">
 	<?php include($root_path . 'assets/inc/menu.php'); ?>
 	<main>

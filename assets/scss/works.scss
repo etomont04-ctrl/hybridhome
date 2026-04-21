@@ -542,7 +542,7 @@
 		position: relative;
 		width: 100%;
 		@include min-width(801){
-			a:hover{
+			:hover{
 				.pick-card__photo{
 					transform:rotate(5deg);
 				}

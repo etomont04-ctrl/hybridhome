@@ -1476,8 +1476,15 @@
   .works .inr .card .card__link:hover .card__title {
     font-weight: 600;
   }
-  .works .inr .card .card__link:hover .card__tags span {
+  .works .inr .card .card__link:hover .card__tags a:hover {
     font-weight: 600;
+    color: var(--base-color-blue);
+  }
+  .works .inr .card .card__link:hover .card__area:hover {
+    background: var(--base-color-blue);
+  }
+  .works .inr .card .card__link:hover .card__area.uchi:hover {
+    background: var(--base-btn-color02);
   }
 }
 .works .inr .card__link {

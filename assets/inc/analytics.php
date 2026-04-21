@@ -6,10 +6,10 @@
 	$url = $currentUrl;
 	?>
 	<meta property="og:title" content="<?php
-		if ( $url == "https://www.hybridhome.co.jp/" ) {
-			echo 'ハイブリッドホーム｜ 住まいの総合リフォーム・サービス';
+		if ( $url == "https://shishi-w.com/" ) {
+			echo '住まいの総合リフォーム HYBRID HOME（ハイブリッドホーム）｜東京・神奈川に拠点を置く総合リフォーム会社';
 		} else {
-			if ($TITLE) echo $TITLE, '｜ハイブリッドホーム｜ 住まいの総合リフォーム・サービス';
+			if ($TITLE) echo $TITLE, '｜住まいの総合リフォーム HYBRID HOME（ハイブリッドホーム）｜東京・神奈川に拠点を置く総合リフォーム会社';
 		}
 	?>">
 	<meta property="og:type" content="website">
@@ -21,35 +21,35 @@
 			echo $ROOT_DIR, 'assets/img/common/ogp.jpg';
 		}
 	?>">
-	<meta property="og:site_name" content="ハイブリッドホーム｜ 住まいの総合リフォーム・サービス">
+	<meta property="og:site_name" content="住まいの総合リフォーム HYBRID HOME（ハイブリッドホーム）｜東京・神奈川に拠点を置く総合リフォーム会社">
 	<meta property="og:locale" content="ja_JP">
 	<meta property="og:description" content="<?php
 		if ( $DESCRIPTION ) {
 			echo $DESCRIPTION;
 		} else {
-			echo 'ハイブリッドホームは、家を大切に住みつぎたい人のためのリフォーム&リノベーション会社です。家を大切にすることは、そこに住む自分を大切にすること。わたしたちハイブリッドホームが全力でお手伝いいたします。';
+			echo '住まいの総合リフォーム HYBRID HOME（ハイブリッドホーム）は東京・神奈川に拠点を置く総合リフォーム会社';
 		}
 	?>">
 	<meta name="description" content="<?php
 		if ( $DESCRIPTION ) {
 			echo $DESCRIPTION;
 		} else {
-			echo 'ハイブリッドホームは、家を大切に住みつぎたい人のためのリフォーム&リノベーション会社です。家を大切にすることは、そこに住む自分を大切にすること。わたしたちハイブリッドホームが全力でお手伝いいたします。';
+			echo '住まいの総合リフォーム HYBRID HOME（ハイブリッドホーム）は東京・神奈川に拠点を置く総合リフォーム会社';
 		}
 	?>">
 	<meta name="twitter:card" content="summary">
 	<meta name="twitter:title" content="<?php
-		if ( $url === "https://www.hybridhome.co.jp/" ) {
-			echo 'ハイブリッドホーム｜ 住まいの総合リフォーム・サービス';
+		if ( $url === "https://shishi-w.com/" ) {
+			echo '住まいの総合リフォーム HYBRID HOME（ハイブリッドホーム）｜東京・神奈川に拠点を置く総合リフォーム会社';
 		} else {
-			if ($TITLE) echo $TITLE, '｜ハイブリッドホーム｜ 住まいの総合リフォーム・サービス';
+			if ($TITLE) echo $TITLE, '｜住まいの総合リフォーム HYBRID HOME（ハイブリッドホーム）｜東京・神奈川に拠点を置く総合リフォーム会社';
 		}
 	?>">
 	<meta name="twitter:description" content="<?php
 		if ($DESCRIPTION) {
 			echo $DESCRIPTION;
 		} else {
-			echo 'ハイブリッドホームは、家を大切に住みつぎたい人のためのリフォーム&リノベーション会社です。家を大切にすることは、そこに住む自分を大切にすること。わたしたちハイブリッドホームが全力でお手伝いいたします。';
+			echo '住まいの総合リフォーム HYBRID HOME（ハイブリッドホーム）は東京・神奈川に拠点を置く総合リフォーム会社';
 		}
 	?>">
 	<meta name="twitter:image" content="<?php
@@ -60,12 +60,11 @@
 		}
 	?>">
 	<meta name="twitter:url" content="<?php echo $url; ?>">
-	<meta name="keywords" content="ハイブリッドホーム,リフォーム,リノベーション,高品質,住宅,二世帯住宅,東京都,神田鍛冶町,町田市,神奈川県,川崎市,新百合ヶ丘">
 	<title><?php
-		if ( $url === "https://www.hybridhome.co.jp/" ) {
-			echo 'ハイブリッドホーム｜ 住まいの総合リフォーム・サービス';
+		if ( $url === "https://shishi-w.com/" ) {
+			echo '住まいの総合リフォーム HYBRID HOME（ハイブリッドホーム）｜東京・神奈川に拠点を置く総合リフォーム会社';
 		} else {
-			echo ($TITLE ? $TITLE . '｜ハイブリッドホーム｜ 住まいの総合リフォーム・サービス' : 'ハイブリッドホーム｜ 住まいの総合リフォーム・サービス');
+			echo ($TITLE ? $TITLE . '｜住まいの総合リフォーム HYBRID HOME（ハイブリッドホーム）｜東京・神奈川に拠点を置く総合リフォーム会社' : '住まいの総合リフォーム HYBRID HOME（ハイブリッドホーム）｜東京・神奈川に拠点を置く総合リフォーム会社');
 		}
 	?></title>
 	<?php if ( $swiper == "true" ) { ?><link rel="stylesheet" href="<?php echo $ROOT_DIR; ?>assets/css/swiper-bundle.min.css"><?php } ?>
@@ -94,6 +93,8 @@
     ga('create', 'UA-2394085-1', 'auto');
     ga('send', 'pageview');
   </script>
+  <?php wp_head(); ?>
+
   <!-- Google Tag Manager -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],

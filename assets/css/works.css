@@ -806,14 +806,14 @@
   width: 100%;
 }
 @media screen and (min-width: 801px) {
-  .pickup .pick-card a:hover .pick-card__photo {
+  .pickup .pick-card :hover .pick-card__photo {
     -webkit-transform: rotate(5deg);
             transform: rotate(5deg);
   }
-  .pickup .pick-card a:hover .pick-card__title {
+  .pickup .pick-card :hover .pick-card__title {
     font-weight: 600;
   }
-  .pickup .pick-card a:hover .pick-card__tags span {
+  .pickup .pick-card :hover .pick-card__tags span {
     font-weight: 600;
   }
 }

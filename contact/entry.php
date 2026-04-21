@@ -36,11 +36,58 @@ $shichouson = isset($_POST['shichouson']) ? trim($_POST['shichouson']) : '';
 $mail = isset($_POST['mail']) ? trim($_POST['mail']) : '';
 $tel = isset($_POST['tel']) ? trim($_POST['tel']) : '';
 $message = isset($_POST['message']) ? trim($_POST['message']) : '';
+$recaptcha_token = isset($_POST['recaptcha_token']) ? trim($_POST['recaptcha_token']) : '';
 
 /* ==========================================================================
 	改行コード統一
 ========================================================================== */
 $message = str_replace(array("\r\n", "\r"), "\n", $message);
+
+/* ==========================================================================
+	reCAPTCHA v3 検証
+========================================================================== */
+$recaptcha_secret = '6LdDJMIsAAAAAMlMo7e9oiLlnihtHBbcoDn7M11v';
+
+if ($recaptcha_token === '') {
+	$errors[] = 'reCAPTCHAの認証に失敗しました。';
+} else {
+	$verify_url = 'https://www.google.com/recaptcha/api/siteverify';
+
+	$post_data = array(
+		'secret'	=> $recaptcha_secret,
+		'response'	=> $recaptcha_token,
+		'remoteip'	=> $_SERVER['REMOTE_ADDR'] ?? '',
+	);
+
+	$context = stream_context_create(array(
+		'http' => array(
+			'method'	=> 'POST',
+			'header'	=> "Content-type: application/x-www-form-urlencoded\r\n",
+			'content'	=> http_build_query($post_data),
+			'timeout'	=> 10,
+		),
+	));
+
+	$response = file_get_contents($verify_url, false, $context);
+	$result = json_decode($response, true);
+
+	if (
+		empty($result['success']) ||
+		!isset($result['score']) ||
+		$result['score'] < 0.5 ||
+		empty($result['action']) ||
+		$result['action'] !== 'contact_submit'
+	) {
+		$errors[] = 'reCAPTCHAの認証に失敗しました。';
+	}
+}
+
+if (!empty($errors)) {
+	$_SESSION['errors'] = $errors;
+	$_SESSION['old'] = $_POST;
+	header('Location: ./');
+	exit;
+}
 
 /* ==========================================================================
 	バリデーション

@@ -25,7 +25,6 @@ $uri = "reform";
 	<?php include($root_path . 'assets/inc/head.php'); ?>
 </head>
 <body id="top">
-<?php include($root_path . 'assets/inc/gtag.php'); ?>
 <div class="of-wrap">
 	<?php include($root_path . 'assets/inc/menu.php'); ?>
 	<main>
@@ -393,96 +392,53 @@ $uri = "reform";
 			</div>
 			<div class="works_list-wrap">
 				<figure class="duck sb inview bt_one"><img src="<?= $this_img_path; ?>works-duck.webp" alt="" decoding="async"></figure>
-				<?php
-				/* ==========================================================================
-					WordPress 読み込み
-				========================================================================== */
-				if (!defined('ABSPATH')) {
-					require_once __DIR__ . '/../wp/wp-load.php';
-				}
-
-				/* ==========================================================================
-					pickup が付いた works の最新3件を取得
-				========================================================================== */
-				$pickup_query = new WP_Query(array(
-					'post_type'			=> 'works',
-					'posts_per_page'	=> 3,
-					'post_status'		=> 'publish',
-					'orderby'			=> 'date',
-					'order'				=> 'DESC',
-					'tax_query'			=> array(
-						array(
-							'taxonomy'	=> 'pickup',
-							'field'		=> 'slug',
-							'terms'		=> 'pickup',
-						),
-					),
-				));
-				?>
-
-				<?php if ($pickup_query->have_posts()) : ?>
-					<ul class="works_list inview bt">
-						<?php while ($pickup_query->have_posts()) : $pickup_query->the_post(); ?>
-
-							<?php
-							$card_link = get_permalink();
-							$card_title = get_the_title();
-
-							$card_thumb_url = get_the_post_thumbnail_url(get_the_ID(), 'medium_large');
-							if (empty($card_thumb_url)) {
-								$card_thumb_url = $img_path . 'top/project_img.webp';
-							}
-
-							$commitment_terms = get_the_terms(get_the_ID(), 'commitment');
-							$area_terms = get_the_terms(get_the_ID(), 'area');
-							$renovation_terms = get_the_terms(get_the_ID(), 'renovation');
-
-							$card_area_name = '';
-							$card_area_link = '';
-
-							if (!empty($area_terms) && !is_wp_error($area_terms)) {
-								$card_area_name = $area_terms[0]->name;
-								$card_area_link = get_term_link($area_terms[0]);
-							}
-
-							$card_reno_slug = '';
-							if (!empty($renovation_terms) && !is_wp_error($renovation_terms)) {
-								$card_reno_slug = $renovation_terms[0]->slug;
-							}
-							?>
-
-							<li>
-								<article class="card">
-									<div class="card__link">
-										<a class="link" href="<?= esc_url($card_link); ?>"></a>
-
-										<div class="card__photo<?= !empty($card_reno_slug) ? ' ' . esc_attr($card_reno_slug) : ''; ?>">
-											<img src="<?= esc_url($card_thumb_url); ?>" alt="<?= esc_attr($card_title); ?>" decoding="async" class="fit_img">
-										</div>
-
-										<div class="card__body">
-											<h3 class="card__title"><?= esc_html($card_title); ?></h3>
-
-											<div class="card__tags">
-												<?php if (!empty($commitment_terms) && !is_wp_error($commitment_terms)) : ?>
-													<?php foreach ($commitment_terms as $commitment_term) : ?>
-														<a href="<?= esc_url(get_term_link($commitment_term)); ?>">#<?= esc_html($commitment_term->name); ?></a>
-													<?php endforeach; ?>
-												<?php endif; ?>
-											</div>
-
-											<?php if (!empty($card_area_name) && !empty($card_area_link)) : ?>
-												<a href="<?= esc_url($card_area_link); ?>" class="card__area"><?= esc_html($card_area_name); ?></a>
-											<?php endif; ?>
-										</div>
-									</div>
-								</article>
-							</li>
-
-						<?php endwhile; ?>
-					</ul><!-- /works_list -->
-					<?php wp_reset_postdata(); ?>
-				<?php endif; ?>
+				<ul class="works_list inview bt">
+					<li>
+						<article class="card">
+							<div class="card__link">
+							<a class="link" href="#"></a>
+								<div class="card__photo uchi">
+									<img src="<?= $img_path; ?>top/project_img.webp" alt="" decoding="async" class="fit_img">
+								</div>
+								<div class="card__body">
+									<h3 class="card__title">愛車と同居できる家</h3>
+									<div class="card__tags"><a href="#d">#ウッドデッキ</a>　<a href="#">#エクステリア</a></div>
+									<a href="#c" class="card__area">町田市</a>
+								</div>
+							</div>
+						</article>
+					</li>
+					<li>
+						<article class="card">
+							<div class="card__link">
+							<a class="link" href="#"></a>
+								<div class="card__photo uchi">
+									<img src="<?= $img_path; ?>top/project_img.webp" alt="" decoding="async" class="fit_img">
+								</div>
+								<div class="card__body">
+									<h3 class="card__title">愛車と同居できる家</h3>
+									<div class="card__tags"><a href="#d">#ウッドデッキ</a>　<a href="#">#エクステリア</a></div>
+									<a href="#c" class="card__area">町田市</a>
+								</div>
+							</div>
+						</article>
+					</li>
+					<li>
+						<article class="card">
+							<div class="card__link">
+							<a class="link" href="#"></a>
+								<div class="card__photo uchi">
+									<img src="<?= $img_path; ?>top/project_img.webp" alt="" decoding="async" class="fit_img">
+								</div>
+								<div class="card__body">
+									<h3 class="card__title">愛車と同居できる家</h3>
+									<div class="card__tags"><a href="#d">#ウッドデッキ</a>　<a href="#">#エクステリア</a></div>
+									<a href="#c" class="card__area">町田市</a>
+								</div>
+							</div>
+						</article>
+					</li>
+				</ul><!--/works-list -->
 			</div>
 			<a href="<?= $qa_link; ?>" class="qa-bnr">
 				<i class="icon icon01"><img src="<?= $this_img_path; ?>qa-bnr_icon01.png" alt="" decoding="async"></i>
